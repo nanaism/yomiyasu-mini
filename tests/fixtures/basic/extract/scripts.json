@@ -1,0 +1,148 @@
+{
+  "format": "yomiyasu-mini-scripts",
+  "format_version": 1,
+  "version": "1.0.0",
+  "source": {
+    "repository": "nanaism/yomiyasu",
+    "tag": "v2.1.1",
+    "commit": "fbe02c93877d697cc53d9377b7a45dd8a1dd99b3",
+    "skill_dir": "skills/yomiyasu"
+  },
+  "scripts": [
+    {
+      "kind": "extract",
+      "id": "check",
+      "modules": [
+        {
+          "name": "vis",
+          "source": "skills/yomiyasu/scripts/markdown_visibility.py"
+        },
+        {
+          "name": "diff",
+          "source": "skills/yomiyasu/scripts/yomiyasu_diff.py"
+        },
+        {
+          "name": "lint",
+          "source": "skills/yomiyasu/scripts/yomiyasu_lint.py"
+        }
+      ],
+      "roots": [
+        {
+          "module": "diff",
+          "name": "normalize"
+        },
+        {
+          "module": "diff",
+          "name": "_HALF_WIDTH"
+        },
+        {
+          "module": "diff",
+          "name": "decode_source"
+        },
+        {
+          "module": "diff",
+          "name": "normalize_doc_type"
+        },
+        {
+          "module": "lint",
+          "name": "_EMOJI_DATA_VERSION"
+        }
+      ],
+      "strip": [
+        "comments",
+        "docstrings"
+      ],
+      "notice": "unicode",
+      "packing": {
+        "limit": 1200,
+        "max_bytes": 90000,
+        "parts": "scripts/mini_diff_{n}.py",
+        "last": "scripts/mini_check.py",
+        "part_head": {
+          "text": "extract/py/part_head.py",
+          "text_sha256": "687570ec3f380f6def3bb04e083830e9400ddaf09064083ce639fc0c01c59bf6"
+        },
+        "loader": {
+          "text": "extract/py/loader.py",
+          "text_sha256": "ed5803140a5d4e14e1c955885686bc4f73f43377a054cd3c405c8ee899d2ba29"
+        },
+        "last_head": {
+          "text": "extract/py/check_head.py",
+          "text_sha256": "f47e2e72225b2ed96241d427fcdbc8bbce9d9868d10d41ba45620eb9f3dfec66"
+        },
+        "last_tail": {
+          "text": "extract/py/check_cli.py",
+          "text_sha256": "8befcd3d222de14d55f6d5480bcde1118e88fbe71e9bbfcdd9cb5224152c17ee"
+        }
+      },
+      "names": [
+        {
+          "module": "vis",
+          "name": "decode_source",
+          "stmts": 1,
+          "sha256": "5aa057e70e4890e4fc08b231038fa69b2f904ff3aba7bfcfae6bf27e496c44d3"
+        },
+        {
+          "module": "vis",
+          "name": "DOC_TYPES",
+          "stmts": 1,
+          "sha256": "81525b6538cb5519888d33f73d768686cdbc447fcd5fd9e687760600517b6c71"
+        },
+        {
+          "module": "vis",
+          "name": "_normalize_choice",
+          "stmts": 1,
+          "sha256": "7fa0c4e920178ba29ba16a8c4b461bac4af2f4e62419b7ac1d9a15ab52c14110"
+        },
+        {
+          "module": "vis",
+          "name": "normalize_doc_type",
+          "stmts": 1,
+          "sha256": "a3ff8c28f7fdd9301a1e678164fdc9d82ca8e03ba0930afe7cd44e9af83da42e"
+        },
+        {
+          "module": "diff",
+          "name": "_NORMALIZE_BOLD",
+          "stmts": 1,
+          "sha256": "57f8c7836e2ae99f78d602604fcd5096b0b425f2f3394ee488f032a8e781a66d"
+        },
+        {
+          "module": "diff",
+          "name": "_NORMALIZE_LIST",
+          "stmts": 1,
+          "sha256": "f685de33ba68dc4dcbf532248c82895d94c2b84084b500ed092522ee1ed85946"
+        },
+        {
+          "module": "diff",
+          "name": "_NORMALIZE_HEADING",
+          "stmts": 1,
+          "sha256": "e0f49aeb38d216b9d3ab373bc38d324cf11fe1462717553e1f1bbc4557264152"
+        },
+        {
+          "module": "diff",
+          "name": "_NORMALIZE_SPACES",
+          "stmts": 1,
+          "sha256": "1ba115c10c03c42ff9adb9c243cd59d03d5768f080a7fd0a29e7c09d047a0929"
+        },
+        {
+          "module": "diff",
+          "name": "normalize",
+          "stmts": 1,
+          "sha256": "1b6ebd1cc09b4fda16e7803b634dbd7b08fafe1b24fcfb2edf45c61821e29a10"
+        },
+        {
+          "module": "diff",
+          "name": "_HALF_WIDTH",
+          "stmts": 2,
+          "sha256": "b1c738409cd3575876bd60a2c1e2a6c71d1e3476731ad2316148283e380f7f00"
+        },
+        {
+          "module": "lint",
+          "name": "_EMOJI_DATA_VERSION",
+          "stmts": 1,
+          "sha256": "826c3f8d9f8e348c8ca217de6268677696c27dae6b5672f61fbd28471ccdd912"
+        }
+      ]
+    }
+  ]
+}

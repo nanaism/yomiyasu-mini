@@ -1,0 +1,7 @@
+dist/
+_main/
+__pycache__/
+*.pyc
+.DS_Store
+*.tmp-generate
+*.tmp-build-zip

@@ -1,0 +1,4419 @@
+{
+  "format": "yomiyasu-mini-manifest",
+  "format_version": 1,
+  "version": "1.0.0",
+  "source": {
+    "repository": "nanaism/yomiyasu",
+    "tag": "v2.1.1",
+    "commit": "fbe02c93877d697cc53d9377b7a45dd8a1dd99b3"
+  },
+  "output_dir": "skills/yomiyasu-mini",
+  "tables": [
+    {
+      "path": "extract/table.json",
+      "sha256": "d2eb6466b4997089a5f98505d327eac57fc3ea48b54f15a86c67b15d833a715f"
+    },
+    {
+      "path": "extract/scripts.json",
+      "sha256": "43a7971c4d1740cc3b0e486b2f524005eb6336b8c94fc8ab435c95c80baed9aa"
+    }
+  ],
+  "files": [
+    {
+      "path": "skills/yomiyasu-mini/LICENSE.txt",
+      "bytes": 1064,
+      "chars": 1064,
+      "sha256": "79d802f15bc8caf67f1a83c1bdbe214ccb41a0a0275f9046b329b89c65ee1fca"
+    },
+    {
+      "path": "skills/yomiyasu-mini/SKILL.md",
+      "bytes": 46713,
+      "chars": 16899,
+      "sha256": "6bb2e0bdd18164639de888fc87c32ff94f0a167b659774fe7572440431374b1c"
+    },
+    {
+      "path": "skills/yomiyasu-mini/references/doc-types.md",
+      "bytes": 88161,
+      "chars": 33005,
+      "sha256": "a570987b61cc13b9a3870d29d630b9e7188ff1246c83859905f89ed38edb7a6f"
+    },
+    {
+      "path": "skills/yomiyasu-mini/references/rules.md",
+      "bytes": 88665,
+      "chars": 32131,
+      "sha256": "9c03d6001058dcb4f41e9cf52e741f86069e2ee46a747e8d03a35ada58685ea2"
+    },
+    {
+      "path": "skills/yomiyasu-mini/scripts/mini_check.py",
+      "bytes": 85757,
+      "chars": 73718,
+      "sha256": "c0c23e5a3b0495c6d33ff9bb1e2079b6e613fd55f836c212d140a7e8c35a206e"
+    },
+    {
+      "path": "skills/yomiyasu-mini/scripts/mini_diff_1.py",
+      "bytes": 82175,
+      "chars": 79945,
+      "sha256": "213552c0528d8e442bbbff3b5eb893049e93c3601c57f968f7fd1f114b81c14e"
+    },
+    {
+      "path": "skills/yomiyasu-mini/scripts/mini_diff_2.py",
+      "bytes": 82354,
+      "chars": 75554,
+      "sha256": "29b8048684185ae6367377975ae2a263da7f12cc51c5ee4aeaf60543f9671ef3"
+    },
+    {
+      "path": "skills/yomiyasu-mini/scripts/mini_diff_3.py",
+      "bytes": 81272,
+      "chars": 65988,
+      "sha256": "6a0df7acb170a5aa80912290c398c518b85bcec1c7bc604a5b764c14ecdb2712"
+    }
+  ],
+  "provenance": [
+    {
+      "output": "SKILL.md",
+      "region": "front_matter",
+      "description": {
+        "text": "extract/description.txt",
+        "text_sha256": "7d9a41fac14c4a9c441fa0e7ade72025c72faf43a0a212e4b1559eaa18598894",
+        "from": [
+          {
+            "source": "skills/yomiyasu/SKILL.md",
+            "region": "front_matter",
+            "sha256": "75e8d91fbe2d9c82b39b52263f87ce48d609ba44b0570b242187dabcc842038b"
+          }
+        ]
+      }
+    },
+    {
+      "output": "SKILL.md",
+      "part": 0,
+      "kind": "own",
+      "id": "h1",
+      "text": "extract/own/h1.md",
+      "text_sha256": "41e1e70781b1e5233d9ef1c1ef8d4453824a44aecff70c39d0681bdfa0a242d2",
+      "reason": "h1 の見出し。本体の「# yomiyasu」を「# yomiyasu-mini」にした",
+      "class": "own"
+    },
+    {
+      "output": "SKILL.md",
+      "part": 1,
+      "kind": "verbatim",
+      "id": "h1-body",
+      "source": "skills/yomiyasu/SKILL.md",
+      "heading": {
+        "level": 1,
+        "text": "yomiyasu",
+        "parents": []
+      },
+      "selector": {
+        "paragraphs": [
+          1,
+          2
+        ]
+      },
+      "sha256": "919580d95effe418eae389ae2b0e85ad7a54f6e3ac6e980b284b56f3029ba967",
+      "class": "A",
+      "note": "本体の h1 の下の段落1と2（L13、L15）。段落0（L11。名前だけで呼ばれたときの対象の決め方で、CLAUDE.md、AGENTS.md、作業フォルダの一覧、material.txt を指す）は intro に書き直した"
+    },
+    {
+      "output": "SKILL.md",
+      "part": 2,
+      "kind": "own",
+      "id": "intro",
+      "text": "extract/own/intro.md",
+      "text_sha256": "0610d6b31013366a840d980cd187a2704b22efd019b11bd0b5bfdb4f4e4a7e91",
+      "reason": "mini の範囲、参照ファイルの場所、名前だけで呼ばれたときの対象の決め方（本体 L11 を Copilot などに合わせて書き直したもの）、検査を実行できなかったときの扱い",
+      "class": "own"
+    },
+    {
+      "output": "SKILL.md",
+      "part": 3,
+      "kind": "verbatim_edited",
+      "id": "usage",
+      "source": "skills/yomiyasu/SKILL.md",
+      "heading": {
+        "level": 3,
+        "text": "用途と表記の扱い",
+        "parents": [
+          "yomiyasu"
+        ]
+      },
+      "selector": {
+        "scope": "own"
+      },
+      "sha256": "daac821011fbaf855656744466b31c9dddc259349a2e0469d0109166fbd8e99d",
+      "transforms": {
+        "heading_shift": 0,
+        "drop_lines": []
+      },
+      "substitutions": [
+        {
+          "old": "原文と資料の両方があれば推敲として進め、資料も検査に渡します。",
+          "new": "原文と資料の両方があれば推敲として進めます。",
+          "count": 1
+        }
+      ],
+      "class": "A*",
+      "note": "A*。資料を渡す先の本体の検査（check の --material）が mini にないので、その句だけを外す"
+    },
+    {
+      "output": "SKILL.md",
+      "part": 4,
+      "kind": "verbatim",
+      "id": "principles-head",
+      "source": "skills/yomiyasu/SKILL.md",
+      "heading": {
+        "level": 2,
+        "text": "1. 基本原則",
+        "parents": [
+          "yomiyasu"
+        ]
+      },
+      "selector": {
+        "scope": "own"
+      },
+      "sha256": "33ed485218d8cd5fa965c429680e78ca754e6b68aa2dcc543f7fc9f40e559f85",
+      "class": "A"
+    },
+    {
+      "output": "SKILL.md",
+      "part": 5,
+      "kind": "verbatim",
+      "id": "meaning-keep",
+      "source": "skills/yomiyasu/SKILL.md",
+      "heading": {
+        "level": 3,
+        "text": "最優先ルール: 意味の保持",
+        "parents": [
+          "yomiyasu",
+          "1. 基本原則"
+        ]
+      },
+      "selector": {
+        "scope": "own"
+      },
+      "sha256": "36a3949d3fab1d0d42e6d60be28da345e97d1766a173e0da8f4b77f458a7b15d",
+      "class": "A"
+    },
+    {
+      "output": "SKILL.md",
+      "part": 6,
+      "kind": "rewritten",
+      "id": "stance-keep",
+      "text": "extract/rewritten/stance-keep.md",
+      "text_sha256": "fb17655d6793847f34767f6651316070a213cda6087de0deee91ae8f0fdac068",
+      "from": [
+        {
+          "source": "skills/yomiyasu/SKILL.md",
+          "heading": {
+            "level": 3,
+            "text": "文書の立場と文末",
+            "parents": [
+              "yomiyasu",
+              "1. 基本原則"
+            ]
+          },
+          "scope": "own",
+          "sha256": "f9da46198497d333de4976ec71815de761b3c1e47f10a685f765bc94201968c7"
+        }
+      ],
+      "class": "B",
+      "note": "言い切りの強さ（L65）、主語を足さない（L66）、依頼か説明か決まらない場合（L75）。測定で外さない"
+    },
+    {
+      "output": "SKILL.md",
+      "part": 7,
+      "kind": "rewritten",
+      "id": "stance",
+      "text": "extract/rewritten/stance.md",
+      "text_sha256": "2424e63229f2168bc0c4128fc404c2f9a73e93ce94c3a8a18f78a4316196c577",
+      "from": [
+        {
+          "source": "skills/yomiyasu/SKILL.md",
+          "heading": {
+            "level": 3,
+            "text": "文書の立場と文末",
+            "parents": [
+              "yomiyasu",
+              "1. 基本原則"
+            ]
+          },
+          "scope": "own",
+          "sha256": "f9da46198497d333de4976ec71815de761b3c1e47f10a685f765bc94201968c7"
+        }
+      ],
+      "class": "B",
+      "note": "L40、L43、L45-71 を短くした。L41-42、L44、L65、L72-74 の全文は rules.md の r-stance",
+      "drop_with": [
+        "r-stance"
+      ]
+    },
+    {
+      "output": "SKILL.md",
+      "part": 8,
+      "kind": "rewritten",
+      "id": "logic-keep",
+      "text": "extract/rewritten/logic-keep.md",
+      "text_sha256": "977e4f8fec72eaa7d0a3f76e15cf052cd3b797e7b93d9957fe32a30cb5109a3e",
+      "from": [
+        {
+          "source": "skills/yomiyasu/SKILL.md",
+          "heading": {
+            "level": 3,
+            "text": "段落と文の論理構造（つながり）",
+            "parents": [
+              "yomiyasu",
+              "1. 基本原則"
+            ]
+          },
+          "scope": "own",
+          "sha256": "7689012f0be9e2162ce78b74c135f43fba8264dcd0cb61014beeee7e6bfed1c7"
+        }
+      ],
+      "class": "B",
+      "note": "L91 の範囲と日時の規則と、確定できない関係を確かめたい点に出すこと。測定で外さない"
+    },
+    {
+      "output": "SKILL.md",
+      "part": 9,
+      "kind": "rewritten",
+      "id": "logic",
+      "text": "extract/rewritten/logic.md",
+      "text_sha256": "0298309765dfaab2bf5aa9cc34002ce4072d2ef9205af04e72f865d3e37d4900",
+      "from": [
+        {
+          "source": "skills/yomiyasu/SKILL.md",
+          "heading": {
+            "level": 3,
+            "text": "段落と文の論理構造（つながり）",
+            "parents": [
+              "yomiyasu",
+              "1. 基本原則"
+            ]
+          },
+          "scope": "own",
+          "sha256": "7689012f0be9e2162ce78b74c135f43fba8264dcd0cb61014beeee7e6bfed1c7"
+        }
+      ],
+      "class": "B",
+      "note": "L78-88 を短くした。L87、L89、L93-95 の全文は rules.md の r-logic",
+      "drop_with": [
+        "r-logic",
+        "r-logic-memo"
+      ]
+    },
+    {
+      "output": "SKILL.md",
+      "part": 10,
+      "kind": "verbatim_edited",
+      "id": "subject-keep",
+      "source": "skills/yomiyasu/SKILL.md",
+      "heading": {
+        "level": 3,
+        "text": "主語と目的語の明確化",
+        "parents": [
+          "yomiyasu",
+          "1. 基本原則"
+        ]
+      },
+      "selector": {
+        "scope": "own"
+      },
+      "sha256": "519465fd03047b72631c6ec9b9086c35d5391c09332b5887cd1f5a50e6b9f4d8",
+      "transforms": {
+        "heading_shift": 0,
+        "drop_lines": [
+          {
+            "pattern": "^目的語を書かない他動詞の",
+            "count": 1
+          },
+          {
+            "pattern": "^主題の「〜は」「〜では」",
+            "count": 1
+          },
+          {
+            "pattern": "^主述や使役の対応だけを直",
+            "count": 1
+          },
+          {
+            "pattern": "^動作を名詞にして「〜を行",
+            "count": 1
+          },
+          {
+            "pattern": "^処理や選別の対象を「もの",
+            "count": 1
+          },
+          {
+            "pattern": "^動詞を言い換えた後も語順",
+            "count": 1
+          }
+        ]
+      },
+      "substitutions": [
+        {
+          "old": "（`references/persona.md` 5章）",
+          "new": "（`references/doc-types.md` の「書き手と読み手（ペルソナ）」の5章）",
+          "count": 1
+        }
+      ],
+      "class": "A*",
+      "note": "A*。L98 と L100 をそのまま使う。L100 の参照先だけを mini の場所に替える"
+    },
+    {
+      "output": "SKILL.md",
+      "part": 11,
+      "kind": "rewritten",
+      "id": "subject",
+      "text": "extract/rewritten/subject.md",
+      "text_sha256": "da032cb0a6b2a95209a5e96ef3e293e6bc4aa0c9c66d316fb772d14a3cc0d252",
+      "from": [
+        {
+          "source": "skills/yomiyasu/SKILL.md",
+          "heading": {
+            "level": 3,
+            "text": "主語と目的語の明確化",
+            "parents": [
+              "yomiyasu",
+              "1. 基本原則"
+            ]
+          },
+          "scope": "own",
+          "sha256": "519465fd03047b72631c6ec9b9086c35d5391c09332b5887cd1f5a50e6b9f4d8"
+        }
+      ],
+      "class": "B",
+      "note": "L99、L101、L102 を短くした。L99、L101-105 の全文は rules.md の r-subject",
+      "drop_with": [
+        "r-subject",
+        "r-gemini-head",
+        "r-gemini-1"
+      ]
+    },
+    {
+      "output": "SKILL.md",
+      "part": 12,
+      "kind": "verbatim_edited",
+      "id": "personify",
+      "source": "skills/yomiyasu/SKILL.md",
+      "heading": {
+        "level": 3,
+        "text": "擬人化の解消",
+        "parents": [
+          "yomiyasu",
+          "1. 基本原則"
+        ]
+      },
+      "selector": {
+        "scope": "own"
+      },
+      "sha256": "f9a3b65efba02fa5fc6e9cc79deb13e74f060270577071d0e72877cbd1972bea",
+      "transforms": {
+        "heading_shift": 0,
+        "drop_lines": []
+      },
+      "substitutions": [
+        {
+          "old": "（gemini-syntax.md 原則3）",
+          "new": "",
+          "count": 1
+        }
+      ],
+      "class": "A*",
+      "note": "A*。mini に写さない本体の参照ファイルへの括弧だけを外す"
+    },
+    {
+      "output": "SKILL.md",
+      "part": 13,
+      "kind": "verbatim_edited",
+      "id": "hiyu-keep",
+      "source": "skills/yomiyasu/SKILL.md",
+      "heading": {
+        "level": 3,
+        "text": "比喩動詞の具体化",
+        "parents": [
+          "yomiyasu",
+          "1. 基本原則"
+        ]
+      },
+      "selector": {
+        "scope": "own"
+      },
+      "sha256": "2c5d0e31f1601da149b026b44714298e8ac05a76e20e843d37524efe40dd7925",
+      "transforms": {
+        "heading_shift": 0,
+        "drop_lines": [
+          {
+            "pattern": "^「倒す」「効く」「溶かす",
+            "count": 1
+          },
+          {
+            "pattern": "^データやシステムに対して",
+            "count": 1
+          },
+          {
+            "pattern": "^また、「骨が折れる」「手",
+            "count": 1
+          },
+          {
+            "pattern": "^エッセイと小説では、何を",
+            "count": 1
+          }
+        ]
+      },
+      "substitutions": [],
+      "class": "A",
+      "note": "A。含みの規則（L112-117）をそのまま使う"
+    },
+    {
+      "output": "SKILL.md",
+      "part": 14,
+      "kind": "rewritten",
+      "id": "hiyu",
+      "text": "extract/rewritten/hiyu.md",
+      "text_sha256": "0cf62fc5a22aaad1286e9e0bb54f3b38f6679f693f431675f97cf593dbeb7a79",
+      "from": [
+        {
+          "source": "skills/yomiyasu/SKILL.md",
+          "heading": {
+            "level": 3,
+            "text": "比喩動詞の具体化",
+            "parents": [
+              "yomiyasu",
+              "1. 基本原則"
+            ]
+          },
+          "scope": "own",
+          "sha256": "2c5d0e31f1601da149b026b44714298e8ac05a76e20e843d37524efe40dd7925"
+        }
+      ],
+      "class": "B",
+      "note": "L111 と L118-120 を短くした。L118-120 の全文は rules.md の r-hiyu",
+      "drop_with": [
+        "r-hiyu",
+        "r-slop-1",
+        "r-slop-7",
+        "r-slop-8"
+      ]
+    },
+    {
+      "output": "SKILL.md",
+      "part": 15,
+      "kind": "verbatim_edited",
+      "id": "selflabel-keep",
+      "source": "skills/yomiyasu/SKILL.md",
+      "heading": {
+        "level": 3,
+        "text": "セルフラベリングと否定対比の整理",
+        "parents": [
+          "yomiyasu",
+          "1. 基本原則"
+        ]
+      },
+      "selector": {
+        "scope": "own"
+      },
+      "sha256": "1abbbd5c849ca555f5918c3542957be5668a7174b3185e518913da51cee397e1",
+      "transforms": {
+        "heading_shift": 0,
+        "drop_lines": [
+          {
+            "pattern": "^前置きが理由・対比・結論",
+            "count": 1
+          },
+          {
+            "pattern": "^直前で問いなどとして挙げ",
+            "count": 1
+          }
+        ]
+      },
+      "substitutions": [],
+      "class": "A",
+      "note": "A。L123 と L125（否定対比）をそのまま使う。L124 は rules.md、L126 は rules.md のカタログ2章の表と重なるので外す"
+    },
+    {
+      "output": "SKILL.md",
+      "part": 16,
+      "kind": "rewritten",
+      "id": "selflabel",
+      "text": "extract/rewritten/selflabel.md",
+      "text_sha256": "f9b18779db54da30f0901fae650fdb242eaaec2188efe2926653f6aa85a97800",
+      "from": [
+        {
+          "source": "skills/yomiyasu/SKILL.md",
+          "heading": {
+            "level": 3,
+            "text": "セルフラベリングと否定対比の整理",
+            "parents": [
+              "yomiyasu",
+              "1. 基本原則"
+            ]
+          },
+          "scope": "own",
+          "sha256": "1abbbd5c849ca555f5918c3542957be5668a7174b3185e518913da51cee397e1"
+        }
+      ],
+      "class": "B",
+      "note": "L124（もちろん）を短くした。全文は rules.md の r-selflabel",
+      "drop_with": [
+        "r-selflabel",
+        "r-slop-2"
+      ]
+    },
+    {
+      "output": "SKILL.md",
+      "part": 17,
+      "kind": "verbatim_edited",
+      "id": "noadd-keep",
+      "source": "skills/yomiyasu/SKILL.md",
+      "heading": {
+        "level": 3,
+        "text": "情報の不増補（足さない）",
+        "parents": [
+          "yomiyasu",
+          "1. 基本原則"
+        ]
+      },
+      "selector": {
+        "scope": "own"
+      },
+      "sha256": "260702e07f01e8aec522fce9d5735b743e419094e7f2963141b9f6cb5d25a8f7",
+      "transforms": {
+        "heading_shift": 0,
+        "drop_lines": [
+          {
+            "pattern": "^「昨日」「先週」のような",
+            "count": 1
+          },
+          {
+            "pattern": "^書き手がAIに出した指示",
+            "count": 1
+          }
+        ]
+      },
+      "substitutions": [
+        {
+          "old": "「書き手に確かめたい点」「事実の確かめ」のすべての出力欄",
+          "new": "「書き手に確かめたい点」のすべての出力欄",
+          "count": 1
+        }
+      ],
+      "class": "A*",
+      "note": "A*。L129-130 をそのまま使い、mini にない出力欄「事実の確かめ」だけを外す。L131（相対の日付に日付を添える）は D"
+    },
+    {
+      "output": "SKILL.md",
+      "part": 18,
+      "kind": "rewritten",
+      "id": "noadd-residue",
+      "text": "extract/rewritten/noadd-residue.md",
+      "text_sha256": "1c270b2496003632465873b0a7371faacc94a855df70e7ac9dd60a75ca6e3489",
+      "from": [
+        {
+          "source": "skills/yomiyasu/SKILL.md",
+          "heading": {
+            "level": 3,
+            "text": "情報の不増補（足さない）",
+            "parents": [
+              "yomiyasu",
+              "1. 基本原則"
+            ]
+          },
+          "scope": "own",
+          "sha256": "260702e07f01e8aec522fce9d5735b743e419094e7f2963141b9f6cb5d25a8f7"
+        }
+      ],
+      "class": "B",
+      "note": "L132（指示の残り）を短くした。全文は rules.md の r-noadd",
+      "drop_with": [
+        "r-noadd",
+        "r-slop-6"
+      ]
+    },
+    {
+      "output": "SKILL.md",
+      "part": 19,
+      "kind": "verbatim",
+      "id": "tentative-keep",
+      "source": "skills/yomiyasu/SKILL.md",
+      "heading": {
+        "level": 3,
+        "text": "情報が足りない場合の暫定文",
+        "parents": [
+          "yomiyasu",
+          "1. 基本原則"
+        ]
+      },
+      "selector": {
+        "scope": "own"
+      },
+      "sha256": "68753d9f7dcdbea0e042004672624bf78445de3082e15fa6cf2494b20a7caa96",
+      "class": "A"
+    },
+    {
+      "output": "SKILL.md",
+      "part": 20,
+      "kind": "rewritten",
+      "id": "noun",
+      "text": "extract/rewritten/noun.md",
+      "text_sha256": "9652be276e8c6fc9713e6b6cbde5b9fd4a953239adafd4d452ad0a98bf8bab43",
+      "from": [
+        {
+          "source": "skills/yomiyasu/SKILL.md",
+          "heading": {
+            "level": 3,
+            "text": "内容に合わない大げさな名詞の整理",
+            "parents": [
+              "yomiyasu",
+              "1. 基本原則"
+            ]
+          },
+          "scope": "own",
+          "sha256": "487b1efdb7df11b67ba5a8aa23d0d885c8f9df2e16e984904d851d6b50f96049"
+        }
+      ],
+      "class": "B",
+      "note": "全文は rules.md の r-noun",
+      "drop_with": [
+        "r-noun",
+        "r-slop-4",
+        "r-slop-5"
+      ]
+    },
+    {
+      "output": "SKILL.md",
+      "part": 21,
+      "kind": "verbatim",
+      "id": "terms-keep",
+      "source": "skills/yomiyasu/SKILL.md",
+      "heading": {
+        "level": 3,
+        "text": "専門用語と名称の扱い",
+        "parents": [
+          "yomiyasu",
+          "1. 基本原則"
+        ]
+      },
+      "selector": {
+        "scope": "own"
+      },
+      "sha256": "7f3aa7078c5f4673d2de3896711923f0daa3a31bc5ee51ed2e30bae01609183b",
+      "class": "A"
+    },
+    {
+      "output": "SKILL.md",
+      "part": 22,
+      "kind": "rewritten",
+      "id": "length",
+      "text": "extract/rewritten/length.md",
+      "text_sha256": "2b6d9dd166015e0a33dd6aaa8055c75019008e3dc1f12b9411caa36a84418b83",
+      "from": [
+        {
+          "source": "skills/yomiyasu/SKILL.md",
+          "heading": {
+            "level": 3,
+            "text": "文長と読点の調整",
+            "parents": [
+              "yomiyasu",
+              "1. 基本原則"
+            ]
+          },
+          "scope": "own",
+          "sha256": "1ff8c648015d17d6fee3f93540f5245f13a63cbbbcec03cfa3595df83604199e"
+        }
+      ],
+      "class": "B",
+      "note": "L152-158 の全文は rules.md の r-length",
+      "drop_with": [
+        "r-length",
+        "r-slop-9"
+      ]
+    },
+    {
+      "output": "SKILL.md",
+      "part": 23,
+      "kind": "rewritten",
+      "id": "heading",
+      "text": "extract/rewritten/heading.md",
+      "text_sha256": "057e282b65a4f18eb3dd24a367198e78cd0a2345cbcdcd3be3ad1d62e593b68b",
+      "from": [
+        {
+          "source": "skills/yomiyasu/SKILL.md",
+          "heading": {
+            "level": 3,
+            "text": "案内用の見出し",
+            "parents": [
+              "yomiyasu",
+              "1. 基本原則"
+            ]
+          },
+          "scope": "own",
+          "sha256": "d324840340cb6ad0aee1ea3df559ea5cee42dda1da8db153d4c47a3228ee3c92"
+        }
+      ],
+      "class": "B",
+      "note": "全文は rules.md の r-heading",
+      "drop_with": [
+        "r-heading"
+      ]
+    },
+    {
+      "output": "SKILL.md",
+      "part": 24,
+      "kind": "rewritten",
+      "id": "copy",
+      "text": "extract/rewritten/copy.md",
+      "text_sha256": "eab7fd9e23130e8f59a76934da535fabc41bf8efaf82d6f8f246c2434eed7932",
+      "from": [
+        {
+          "source": "skills/yomiyasu/SKILL.md",
+          "heading": {
+            "level": 3,
+            "text": "コピー調の抑制",
+            "parents": [
+              "yomiyasu",
+              "1. 基本原則"
+            ]
+          },
+          "scope": "own",
+          "sha256": "b9cf87001707029fdab159271a9dded0ce753357aad6e2ecae2dae6c784d21ac"
+        }
+      ],
+      "class": "B",
+      "note": "全文は rules.md の r-copy",
+      "drop_with": [
+        "r-copy"
+      ]
+    },
+    {
+      "output": "SKILL.md",
+      "part": 25,
+      "kind": "rewritten",
+      "id": "deco",
+      "text": "extract/rewritten/deco.md",
+      "text_sha256": "6d393f22c131846019787ca1bfe11978a8ccda4abb1bcf6cb0d1c3b1e86167d6",
+      "from": [
+        {
+          "source": "skills/yomiyasu/SKILL.md",
+          "heading": {
+            "level": 3,
+            "text": "装飾記号の排除と太字の表示",
+            "parents": [
+              "yomiyasu",
+              "1. 基本原則"
+            ]
+          },
+          "scope": "own",
+          "sha256": "d3a074bea1495ed413639debee105598df93fd71d7ec2a9bfb09d0ea029c3092"
+        }
+      ],
+      "class": "B",
+      "note": "L178-179 を短くした。L180-187 の全文は rules.md の r-deco",
+      "drop_with": [
+        "r-deco"
+      ]
+    },
+    {
+      "output": "SKILL.md",
+      "part": 26,
+      "kind": "rewritten",
+      "id": "promo",
+      "text": "extract/rewritten/promo.md",
+      "text_sha256": "7cb10eda99d6fe32e7e4b7e40572caa47630a0c8eb93a128700895b8c29a1405",
+      "from": [
+        {
+          "source": "skills/yomiyasu/SKILL.md",
+          "heading": {
+            "level": 3,
+            "text": "紹介記事・宣伝文の勢い",
+            "parents": [
+              "yomiyasu",
+              "1. 基本原則"
+            ]
+          },
+          "scope": "own",
+          "sha256": "6ad0033a0fdabf2609cfdd2652a89b8acf36b85ac3dfbef7dfa61d62c8d78d43"
+        }
+      ],
+      "class": "B",
+      "note": "5項目を1文に並べた。区切りの線は steps-head に移した"
+    },
+    {
+      "output": "SKILL.md",
+      "part": 27,
+      "kind": "own",
+      "id": "steps-head",
+      "text": "extract/own/steps-head.md",
+      "text_sha256": "b91c8f2cfe81ecdefc2ab08cad0522ee57e9c9c8c6e2614ffa730a5eaf0fe0b7",
+      "reason": "区切りの線と「2. 実行手順」の見出し。紹介記事・宣伝文の勢いの節を測定で外しても線が残るように、独立させた",
+      "class": "own"
+    },
+    {
+      "output": "SKILL.md",
+      "part": 28,
+      "kind": "rewritten",
+      "id": "step1-keep",
+      "text": "extract/rewritten/step1-keep.md",
+      "text_sha256": "3368597c912eb8ad17f06bbc60cbac31b6c783b14128cc072e3e97b7dc13a55b",
+      "from": [
+        {
+          "source": "skills/yomiyasu/SKILL.md",
+          "heading": {
+            "level": 3,
+            "text": "Step 1: 文脈と段落の把握",
+            "parents": [
+              "yomiyasu",
+              "2. 実行手順"
+            ]
+          },
+          "scope": "own",
+          "sha256": "1b7fe67d77ccfd429fb9f380b5255247453f665d05876c25ee583c5d04f164b6"
+        }
+      ],
+      "class": "B",
+      "note": "意味の4点の記録（L237）と文の構造の点検（L239）と、見出しと節の数と順を変えないこと（L210）。測定で外さない"
+    },
+    {
+      "output": "SKILL.md",
+      "part": 29,
+      "kind": "rewritten",
+      "id": "step1",
+      "text": "extract/rewritten/step1.md",
+      "text_sha256": "4a5b4bc52ff904d0c1f2ea89cf689e89ef8b4caec593a1b6622462aedd987d8e",
+      "from": [
+        {
+          "source": "skills/yomiyasu/SKILL.md",
+          "heading": {
+            "level": 3,
+            "text": "Step 1: 文脈と段落の把握",
+            "parents": [
+              "yomiyasu",
+              "2. 実行手順"
+            ]
+          },
+          "scope": "own",
+          "sha256": "1b7fe67d77ccfd429fb9f380b5255247453f665d05876c25ee583c5d04f164b6"
+        }
+      ],
+      "class": "B",
+      "note": "種類、読者、書き手と読み手、段落の把握（L206-211、L228-236、L238）を短くした。種類の表と L211 の全文は doc-types.md",
+      "drop_with": [
+        "dt-table-head",
+        "dt-table",
+        "dt-pr",
+        "dt-article",
+        "dt-incident",
+        "dt-proposal",
+        "dt-minutes",
+        "dt-manual",
+        "dt-slides",
+        "dt-essay",
+        "dt-formal",
+        "dt-promo",
+        "dt-mail",
+        "dt-paper",
+        "dom-tech",
+        "dom-business",
+        "dom-essay",
+        "aud-head",
+        "aud-2",
+        "aud-6",
+        "aud-7",
+        "aud-8",
+        "aud-9",
+        "aud-10",
+        "per-head",
+        "per-skill",
+        "per-2",
+        "per-4",
+        "per-5",
+        "per-6",
+        "per-7",
+        "per-8",
+        "per-9"
+      ]
+    },
+    {
+      "output": "SKILL.md",
+      "part": 30,
+      "kind": "rewritten",
+      "id": "step2-head",
+      "text": "extract/rewritten/step2-head.md",
+      "text_sha256": "83ae4b728c430717c95ab71f9d03161937671a59714d1318b080bc24f628e5cb",
+      "from": [
+        {
+          "source": "skills/yomiyasu/SKILL.md",
+          "heading": {
+            "level": 3,
+            "text": "Step 2: 文章の書き直し",
+            "parents": [
+              "yomiyasu",
+              "2. 実行手順"
+            ]
+          },
+          "scope": "own",
+          "sha256": "7b58feafa3f86ef68002afeb927fd4b773e1cf7e329a36dbc61f845c47971f18"
+        }
+      ],
+      "class": "B",
+      "note": "L243（lint を先にかける）を、原文を読んで1章の型を探す文にした。L247（fact-recovery）を、資料や会話の値で補わず尋ねる文にした（D）"
+    },
+    {
+      "output": "SKILL.md",
+      "part": 31,
+      "kind": "verbatim_edited",
+      "id": "rephrase-keep",
+      "source": "skills/yomiyasu/SKILL.md",
+      "heading": {
+        "level": 3,
+        "text": "Step 2: 文章の書き直し",
+        "parents": [
+          "yomiyasu",
+          "2. 実行手順"
+        ]
+      },
+      "selector": {
+        "paragraphs": [
+          1,
+          1
+        ]
+      },
+      "sha256": "6d90b03fe74ecf81f2908284d952c6a34e316324aa569a0de8b29a72c4d81fb4",
+      "transforms": {
+        "heading_shift": 0,
+        "drop_lines": []
+      },
+      "substitutions": [
+        {
+          "old": "ほかの例は rephrase-test.md",
+          "new": "ほかの例は `references/rules.md` の「言い直しテスト」",
+          "count": 1
+        },
+        {
+          "old": "例は `references/rephrase-test.md` にあります。",
+          "new": "例は `references/rules.md` の「言い直しテスト」にあります。",
+          "count": 1
+        }
+      ],
+      "class": "A*",
+      "note": "A*。言い直しテスト（L245）。参照先だけを mini の場所に替える"
+    },
+    {
+      "output": "SKILL.md",
+      "part": 32,
+      "kind": "rewritten",
+      "id": "step2-steps",
+      "text": "extract/rewritten/step2-steps.md",
+      "text_sha256": "1d59d8f1a4bdce3f08f4284b56dc15bc165ac16deb4750e34a4e315c60b96b07",
+      "from": [
+        {
+          "source": "skills/yomiyasu/SKILL.md",
+          "heading": {
+            "level": 3,
+            "text": "Step 2: 文章の書き直し",
+            "parents": [
+              "yomiyasu",
+              "2. 実行手順"
+            ]
+          },
+          "scope": "own",
+          "sha256": "7b58feafa3f86ef68002afeb927fd4b773e1cf7e329a36dbc61f845c47971f18"
+        }
+      ],
+      "class": "B",
+      "note": "手順1-15（L249-265）を、1章の見出しを指す短い手順にした。5（括弧の手順）は doc-types.md から「SKILL.md「Step 2: 文章の書き直し」の5」で指される"
+    },
+    {
+      "output": "SKILL.md",
+      "part": 33,
+      "kind": "own",
+      "id": "step3",
+      "text": "extract/own/step3.md",
+      "text_sha256": "0d2cc5c3085bf9f977fbd698a8a9f806802137af6df6e0a60d920e7e2cbec4a3",
+      "reason": "mini の検査 scripts/mini_check.py の使い方、状態の行、実行できないときの扱い（DECISIONS.md 4章）。本体の Step 3（check の run）と Step 5（verify）は mini にないので元にしない",
+      "class": "own"
+    },
+    {
+      "output": "SKILL.md",
+      "part": 34,
+      "kind": "rewritten",
+      "id": "step4",
+      "text": "extract/rewritten/step4.md",
+      "text_sha256": "d0375aedc10a393240d53de55709cc4167e23b2f8e2a435c9f15f8e5933ea5a0",
+      "from": [
+        {
+          "source": "skills/yomiyasu/SKILL.md",
+          "heading": {
+            "level": 3,
+            "text": "Step 4: 足したもの・削ったものの点検（Diff検査）",
+            "parents": [
+              "yomiyasu",
+              "2. 実行手順"
+            ]
+          },
+          "scope": "own",
+          "sha256": "6f5a75aead53d4552f711a249eb6ead8f3efffcf72aadf5b8a4562c67bd48cd3"
+        }
+      ],
+      "class": "B",
+      "note": "mini_check が出す意味が変わる恐れを確かめる文（L296-302）。測定で外さない"
+    },
+    {
+      "output": "SKILL.md",
+      "part": 35,
+      "kind": "own",
+      "id": "step4-words",
+      "text": "extract/own/step4-words.md",
+      "text_sha256": "cc98bf7faaaffbc5b4ab76588190025cc1404e7eae9c07175c4dee5ab6f7763f",
+      "reason": "mini_check が本体の diff の new_words、lost_words、markers を出すときだけ使う段落。scripts 担当が出さないと決めたら --drop step4-words で外す",
+      "class": "own"
+    },
+    {
+      "output": "SKILL.md",
+      "part": 36,
+      "kind": "rewritten",
+      "id": "step4-visual",
+      "text": "extract/rewritten/step4-visual.md",
+      "text_sha256": "7a5c0b2342bfdda2cb2819eb2e8f0fb5c9784756563dd132442a85cbd34b44a1",
+      "from": [
+        {
+          "source": "skills/yomiyasu/SKILL.md",
+          "heading": {
+            "level": 3,
+            "text": "Step 4: 足したもの・削ったものの点検（Diff検査）",
+            "parents": [
+              "yomiyasu",
+              "2. 実行手順"
+            ]
+          },
+          "scope": "own",
+          "sha256": "6f5a75aead53d4552f711a249eb6ead8f3efffcf72aadf5b8a4562c67bd48cd3"
+        }
+      ],
+      "class": "B",
+      "note": "候補に出なかった所を目で見る観点と、直すのは1回だけにすること（L299-311）。測定で外さない"
+    },
+    {
+      "output": "SKILL.md",
+      "part": 37,
+      "kind": "rewritten",
+      "id": "output",
+      "text": "extract/rewritten/output.md",
+      "text_sha256": "9f753685e2110bf662f90e9c1a5e3182999351bce08a386dc1da6a64613985ef",
+      "from": [
+        {
+          "source": "skills/yomiyasu/SKILL.md",
+          "heading": {
+            "level": 2,
+            "text": "3. 出力フォーマット",
+            "parents": [
+              "yomiyasu"
+            ]
+          },
+          "scope": "subtree",
+          "sha256": "ce3964e1841429d960e0e377b7e0c852c96fec4db85cbe8c5ba9801e8ad448cc"
+        }
+      ],
+      "class": "B",
+      "note": "mini にない欄（事実の確かめ、硬化の検査、勢いの検査、見直し候補、verify の行、mode=）を外し、状態の行を mini の形にした"
+    },
+    {
+      "output": "references/rules.md",
+      "part": 0,
+      "kind": "own",
+      "id": "rules-head",
+      "text": "extract/own/rules-head.md",
+      "text_sha256": "95bf67fb6d535948fb5d06375154becd40eea1c63fcab495fda4fac01f40669b",
+      "reason": "rules.md の題と、写した節の読み方",
+      "class": "own"
+    },
+    {
+      "output": "references/rules.md",
+      "part": 1,
+      "kind": "own",
+      "id": "rules-skill-head",
+      "text": "extract/own/rules-skill-head.md",
+      "text_sha256": "688643c29f7795c76e122bb07bd7189901c3c53bf73fe23dc5f5b0e4496f2ba0",
+      "reason": "SKILL.md から移した細部をまとめる見出し",
+      "class": "own"
+    },
+    {
+      "output": "references/rules.md",
+      "part": 2,
+      "kind": "verbatim_edited",
+      "id": "r-stance",
+      "source": "skills/yomiyasu/SKILL.md",
+      "heading": {
+        "level": 3,
+        "text": "文書の立場と文末",
+        "parents": [
+          "yomiyasu",
+          "1. 基本原則"
+        ]
+      },
+      "selector": {
+        "scope": "own"
+      },
+      "sha256": "f9da46198497d333de4976ec71815de761b3c1e47f10a685f765bc94201968c7",
+      "transforms": {
+        "heading_shift": 0,
+        "drop_lines": [
+          {
+            "pattern": "^日本語は主語を省くことが",
+            "count": 1
+          },
+          {
+            "pattern": "^常体・敬体は、変更の指定",
+            "count": 1
+          },
+          {
+            "pattern": "^\\-\\ 立場は次の3つのどれ",
+            "count": 1
+          },
+          {
+            "pattern": "^\\ \\ \\-\\ \\*\\*勧め\\*\\*:\\ ",
+            "count": 1
+          },
+          {
+            "pattern": "^\\ \\ \\-\\ \\*\\*決まり\\*\\*:",
+            "count": 1
+          },
+          {
+            "pattern": "^\\ \\ \\-\\ \\*\\*説明\\*\\*:\\ ",
+            "count": 1
+          },
+          {
+            "pattern": "^\\-\\ 立場は、上の手がかり",
+            "count": 1
+          },
+          {
+            "pattern": "^\\ \\ 1\\.\\ 依頼にある行き",
+            "count": 1
+          },
+          {
+            "pattern": "^\\ \\ 2\\.\\ 本文の手がかり",
+            "count": 1
+          },
+          {
+            "pattern": "^\\ \\ 3\\.\\ 決まりと読む手",
+            "count": 1
+          },
+          {
+            "pattern": "^\\-\\ 文末や語尾を見直すの",
+            "count": 1
+          },
+          {
+            "pattern": "^\\ \\ \\-\\ 文末によって動作",
+            "count": 1
+          },
+          {
+            "pattern": "^\\ \\ \\-\\ 指定された文体へ",
+            "count": 1
+          },
+          {
+            "pattern": "^\\ \\ \\-\\ 依頼にある行き先",
+            "count": 1
+          },
+          {
+            "pattern": "^\\ \\ \\-\\ 地の文の「です・ます」と「だ・である」が意図なく混在するとき。",
+            "count": 1
+          },
+          {
+            "pattern": "^\\ \\ \\-\\ 立場や時制が適切",
+            "count": 1
+          },
+          {
+            "pattern": "^\\ \\ 文末が文書の中でそろ",
+            "count": 1
+          },
+          {
+            "pattern": "^\\-\\ 立場・働き・時制を直",
+            "count": 1
+          },
+          {
+            "pattern": "^\\ \\ \\-\\ 読み手への助言を",
+            "count": 1
+          },
+          {
+            "pattern": "^\\ \\ \\-\\ 決まりの文書で、",
+            "count": 1
+          },
+          {
+            "pattern": "^\\ \\ \\-\\ 説明の文書で、書",
+            "count": 1
+          },
+          {
+            "pattern": "^\\ \\ \\-\\ 地の文の「です・ます」と「だ・である」が意図なく混在するときは、",
+            "count": 1
+          },
+          {
+            "pattern": "^\\-\\ 文末をそろえるためだ",
+            "count": 1
+          },
+          {
+            "pattern": "^\\-\\ 文末をそろえたときは",
+            "count": 1
+          },
+          {
+            "pattern": "^\\-\\ 次のときは、「書き手",
+            "count": 1
+          },
+          {
+            "pattern": "^\\ \\ \\-\\ 手がかりから立場",
+            "count": 1
+          },
+          {
+            "pattern": "^\\ \\ \\-\\ 依頼の分野や行き",
+            "count": 1
+          },
+          {
+            "pattern": "^\\ \\ 文末を1つも変えなか",
+            "count": 1
+          },
+          {
+            "pattern": "^\\-\\ 依頼か説明か決まらな",
+            "count": 1
+          }
+        ]
+      },
+      "substitutions": [],
+      "class": "C",
+      "note": "C。変更報告と現在の方針（L41-42）、文脈が明確でない場合（L44）、強さと依頼の語調（L65）、呼びかけと箇条書き（L72-74）"
+    },
+    {
+      "output": "references/rules.md",
+      "part": 3,
+      "kind": "verbatim_edited",
+      "id": "r-logic",
+      "source": "skills/yomiyasu/SKILL.md",
+      "heading": {
+        "level": 3,
+        "text": "段落と文の論理構造（つながり）",
+        "parents": [
+          "yomiyasu",
+          "1. 基本原則"
+        ]
+      },
+      "selector": {
+        "scope": "own"
+      },
+      "sha256": "7689012f0be9e2162ce78b74c135f43fba8264dcd0cb61014beeee7e6bfed1c7",
+      "transforms": {
+        "heading_shift": 0,
+        "drop_lines": [
+          {
+            "pattern": "^AIが生成した文章は、文",
+            "count": 1
+          },
+          {
+            "pattern": "^1\\.\\ \\*\\*文と文の接続関",
+            "count": 1
+          },
+          {
+            "pattern": "^2\\.\\ \\*\\*予告だけの文の",
+            "count": 1
+          },
+          {
+            "pattern": "^3\\.\\ \\*\\*1段落1話題の",
+            "count": 1
+          },
+          {
+            "pattern": "^4\\.\\ \\*\\*主述のかみ合わ",
+            "count": 1
+          },
+          {
+            "pattern": "^5\\.\\ \\*\\*修飾・条件・並",
+            "count": 1
+          },
+          {
+            "pattern": "^6\\.\\ \\*\\*名詞の連続と長",
+            "count": 1
+          },
+          {
+            "pattern": "^7\\.\\ \\*\\*操作と結果の対",
+            "count": 1
+          },
+          {
+            "pattern": "^本文で言い終えた内容を「",
+            "count": 1
+          },
+          {
+            "pattern": "^読み違い、または関係を追",
+            "count": 1
+          },
+          {
+            "pattern": "^接続を削る・変えるときは",
+            "count": 1
+          },
+          {
+            "pattern": "^構造を直す箇所では、原文",
+            "count": 1
+          },
+          {
+            "pattern": "^助詞や修飾の位置を変えた",
+            "count": 1
+          }
+        ]
+      },
+      "substitutions": [],
+      "class": "C",
+      "note": "C。反復（L87）と改行（L89）。L93-95 は空行が続かないように r-logic-memo に分けた"
+    },
+    {
+      "output": "references/rules.md",
+      "part": 4,
+      "kind": "verbatim",
+      "id": "r-logic-memo",
+      "source": "skills/yomiyasu/SKILL.md",
+      "heading": {
+        "level": 3,
+        "text": "段落と文の論理構造（つながり）",
+        "parents": [
+          "yomiyasu",
+          "1. 基本原則"
+        ]
+      },
+      "selector": {
+        "paragraphs": [
+          3,
+          3
+        ]
+      },
+      "sha256": "35d1cefcaa13088a11be99ef18fb469566b1632717e3f8e45eda1814e31dd1c3",
+      "class": "C",
+      "note": "C。内部メモと係り先の点検（L93-95）"
+    },
+    {
+      "output": "references/rules.md",
+      "part": 5,
+      "kind": "verbatim_edited",
+      "id": "r-subject",
+      "source": "skills/yomiyasu/SKILL.md",
+      "heading": {
+        "level": 3,
+        "text": "主語と目的語の明確化",
+        "parents": [
+          "yomiyasu",
+          "1. 基本原則"
+        ]
+      },
+      "selector": {
+        "scope": "own"
+      },
+      "sha256": "519465fd03047b72631c6ec9b9086c35d5391c09332b5887cd1f5a50e6b9f4d8",
+      "transforms": {
+        "heading_shift": 0,
+        "drop_lines": [
+          {
+            "pattern": "^単語の言い換えにとどまら",
+            "count": 1
+          },
+          {
+            "pattern": "^複数の述語で動作主が変わ",
+            "count": 1
+          }
+        ]
+      },
+      "substitutions": [
+        {
+          "old": "例は `references/gemini-syntax.md` 原則1にあります。",
+          "new": "例は、この文書の「原則 1: 動作主・対象・動作の明確化」にあります。",
+          "count": 1
+        },
+        {
+          "old": "（例は `references/gemini-syntax.md` 原則1）",
+          "new": "（例は、この文書の「原則 1: 動作主・対象・動作の明確化」）",
+          "count": 1
+        },
+        {
+          "old": "上の「直前から同じ対象の話が続いて読み違えない文」",
+          "new": "SKILL.md「主語と目的語の明確化」の「直前から同じ対象の話が続いて読み違えない文」",
+          "count": 1
+        }
+      ],
+      "class": "C",
+      "note": "C。L99、L101-105"
+    },
+    {
+      "output": "references/rules.md",
+      "part": 6,
+      "kind": "verbatim_edited",
+      "id": "r-hiyu",
+      "source": "skills/yomiyasu/SKILL.md",
+      "heading": {
+        "level": 3,
+        "text": "比喩動詞の具体化",
+        "parents": [
+          "yomiyasu",
+          "1. 基本原則"
+        ]
+      },
+      "selector": {
+        "scope": "own"
+      },
+      "sha256": "2c5d0e31f1601da149b026b44714298e8ac05a76e20e843d37524efe40dd7925",
+      "transforms": {
+        "heading_shift": 0,
+        "drop_lines": [
+          {
+            "pattern": "^「倒す」「効く」「溶かす",
+            "count": 1
+          },
+          {
+            "pattern": "^\\*\\*比喩や言い回しが持っ",
+            "count": 1
+          },
+          {
+            "pattern": "^\\-\\ 含みの例:\\ 「うっか",
+            "count": 1
+          },
+          {
+            "pattern": "^\\-\\ 比喩の語は言い換えて",
+            "count": 1
+          },
+          {
+            "pattern": "^\\-\\ 言い換えるときは、「",
+            "count": 1
+          },
+          {
+            "pattern": "^\\-\\ 含みを補うときも、誇",
+            "count": 1
+          },
+          {
+            "pattern": "^\\-\\ 比喩動詞だけでなく、",
+            "count": 1
+          }
+        ]
+      },
+      "substitutions": [
+        {
+          "old": "目印と例は `references/slop-catalog.md` 8章と `references/doc-types/essay.md` にあります。",
+          "new": "目印と例は、この文書の「AI生成文の不自然な語彙・構文カタログ」の8章と、`references/doc-types.md` の「エッセイ・小説（essay）」にあります。",
+          "count": 1
+        }
+      ],
+      "class": "C",
+      "note": "C。L118-120"
+    },
+    {
+      "output": "references/rules.md",
+      "part": 7,
+      "kind": "verbatim_edited",
+      "id": "r-selflabel",
+      "source": "skills/yomiyasu/SKILL.md",
+      "heading": {
+        "level": 3,
+        "text": "セルフラベリングと否定対比の整理",
+        "parents": [
+          "yomiyasu",
+          "1. 基本原則"
+        ]
+      },
+      "selector": {
+        "scope": "own"
+      },
+      "sha256": "1abbbd5c849ca555f5918c3542957be5668a7174b3185e518913da51cee397e1",
+      "transforms": {
+        "heading_shift": 0,
+        "drop_lines": [
+          {
+            "pattern": "^「重要なのは」「大事なの",
+            "count": 1
+          },
+          {
+            "pattern": "^否定対比（AではなくB）",
+            "count": 1
+          },
+          {
+            "pattern": "^直前で問いなどとして挙げ",
+            "count": 1
+          }
+        ]
+      },
+      "substitutions": [],
+      "class": "C",
+      "note": "C。L124（もちろん）"
+    },
+    {
+      "output": "references/rules.md",
+      "part": 8,
+      "kind": "verbatim_edited",
+      "id": "r-noadd",
+      "source": "skills/yomiyasu/SKILL.md",
+      "heading": {
+        "level": 3,
+        "text": "情報の不増補（足さない）",
+        "parents": [
+          "yomiyasu",
+          "1. 基本原則"
+        ]
+      },
+      "selector": {
+        "scope": "own"
+      },
+      "sha256": "260702e07f01e8aec522fce9d5735b743e419094e7f2963141b9f6cb5d25a8f7",
+      "transforms": {
+        "heading_shift": 0,
+        "drop_lines": [
+          {
+            "pattern": "^「勝手に足さない」は、原",
+            "count": 1
+          },
+          {
+            "pattern": "^一方で、読み手に不要な説",
+            "count": 1
+          },
+          {
+            "pattern": "^「昨日」「先週」のような",
+            "count": 1
+          }
+        ]
+      },
+      "substitutions": [
+        {
+          "old": "`references/slop-catalog.md` 6章",
+          "new": "この文書の「AI生成文の不自然な語彙・構文カタログ」の6章",
+          "count": 1
+        }
+      ],
+      "class": "C",
+      "note": "C。L132（指示の残り）"
+    },
+    {
+      "output": "references/rules.md",
+      "part": 9,
+      "kind": "verbatim_edited",
+      "id": "r-noun",
+      "source": "skills/yomiyasu/SKILL.md",
+      "heading": {
+        "level": 3,
+        "text": "内容に合わない大げさな名詞の整理",
+        "parents": [
+          "yomiyasu",
+          "1. 基本原則"
+        ]
+      },
+      "selector": {
+        "scope": "own"
+      },
+      "sha256": "487b1efdb7df11b67ba5a8aa23d0d885c8f9df2e16e984904d851d6b50f96049",
+      "transforms": {
+        "heading_shift": 0,
+        "drop_lines": []
+      },
+      "substitutions": [
+        {
+          "old": "`references/slop-catalog.md`",
+          "new": "この文書の「AI生成文の不自然な語彙・構文カタログ」",
+          "count": 1
+        }
+      ],
+      "class": "C",
+      "note": "C。節の全文"
+    },
+    {
+      "output": "references/rules.md",
+      "part": 10,
+      "kind": "verbatim_edited",
+      "id": "r-length",
+      "source": "skills/yomiyasu/SKILL.md",
+      "heading": {
+        "level": 3,
+        "text": "文長と読点の調整",
+        "parents": [
+          "yomiyasu",
+          "1. 基本原則"
+        ]
+      },
+      "selector": {
+        "scope": "own"
+      },
+      "sha256": "1ff8c648015d17d6fee3f93540f5245f13a63cbbbcec03cfa3595df83604199e",
+      "transforms": {
+        "heading_shift": 0,
+        "drop_lines": [
+          {
+            "pattern": "^文の平均の長さは30〜4",
+            "count": 1
+          }
+        ]
+      },
+      "substitutions": [
+        {
+          "old": "lint の pause_comma の候補は手がかりで（「を、」は候補に出ません）、候補でも上の残す読点",
+          "new": "上の残す読点",
+          "count": 1
+        },
+        {
+          "old": "文書の種類を決めずに lint の候補が出ないときも、提出の前に",
+          "new": "提出の前に",
+          "count": 1
+        }
+      ],
+      "class": "C",
+      "note": "C。L152-158。lint の候補を指す句を外す"
+    },
+    {
+      "output": "references/rules.md",
+      "part": 11,
+      "kind": "verbatim_edited",
+      "id": "r-heading",
+      "source": "skills/yomiyasu/SKILL.md",
+      "heading": {
+        "level": 3,
+        "text": "案内用の見出し",
+        "parents": [
+          "yomiyasu",
+          "1. 基本原則"
+        ]
+      },
+      "selector": {
+        "scope": "own"
+      },
+      "sha256": "d324840340cb6ad0aee1ea3df559ea5cee42dda1da8db153d4c47a3228ee3c92",
+      "transforms": {
+        "heading_shift": 0,
+        "drop_lines": []
+      },
+      "substitutions": [
+        {
+          "old": "`references/domains/business.md` 3章",
+          "new": "`references/doc-types.md` の「業務・仕様・実務ドキュメント向け仕様」の3章",
+          "count": 1
+        }
+      ],
+      "class": "C",
+      "note": "C。節の全文"
+    },
+    {
+      "output": "references/rules.md",
+      "part": 12,
+      "kind": "verbatim_edited",
+      "id": "r-copy",
+      "source": "skills/yomiyasu/SKILL.md",
+      "heading": {
+        "level": 3,
+        "text": "コピー調の抑制",
+        "parents": [
+          "yomiyasu",
+          "1. 基本原則"
+        ]
+      },
+      "selector": {
+        "scope": "own"
+      },
+      "sha256": "b9cf87001707029fdab159271a9dded0ce753357aad6e2ecae2dae6c784d21ac",
+      "transforms": {
+        "heading_shift": 0,
+        "drop_lines": []
+      },
+      "substitutions": [
+        {
+          "old": "。lint の cleft_list_ending はこの形の候補です。",
+          "new": "。",
+          "count": 1
+        }
+      ],
+      "class": "C",
+      "note": "C。節の全文。lint の規則の名前の文を外す"
+    },
+    {
+      "output": "references/rules.md",
+      "part": 13,
+      "kind": "verbatim_edited",
+      "id": "r-deco",
+      "source": "skills/yomiyasu/SKILL.md",
+      "heading": {
+        "level": 3,
+        "text": "装飾記号の排除と太字の表示",
+        "parents": [
+          "yomiyasu",
+          "1. 基本原則"
+        ]
+      },
+      "selector": {
+        "scope": "own"
+      },
+      "sha256": "d3a074bea1495ed413639debee105598df93fd71d7ec2a9bfb09d0ea029c3092",
+      "transforms": {
+        "heading_shift": 0,
+        "drop_lines": [
+          {
+            "pattern": "^絵文字、文末コロン、ダッ",
+            "count": 1
+          },
+          {
+            "pattern": "^ただし、「日時：10時」",
+            "count": 1
+          }
+        ]
+      },
+      "substitutions": [
+        {
+          "old": "（`references/doc-types/pr.md`）",
+          "new": "（`references/doc-types.md` の「PR説明（pr）」）",
+          "count": 1
+        },
+        {
+          "old": "lint の bold_label_list の候補は手がかりで、ラベルとコロンと太字はこの段落で決めます。",
+          "new": "ラベルとコロンと太字はこの段落で決めます。",
+          "count": 1
+        },
+        {
+          "old": "（`references/doc-types/`）",
+          "new": "（`references/doc-types.md`）",
+          "count": 1
+        },
+        {
+          "old": "（gemini-syntax.md 原則14）",
+          "new": "",
+          "count": 1
+        },
+        {
+          "old": "（domains/tech.md の1,000文字あたり1〜2箇所など）",
+          "new": "（`references/doc-types.md` の「技術記事・エンジニア発信向け仕様」の1,000文字あたり1〜2箇所など）",
+          "count": 1
+        }
+      ],
+      "class": "C",
+      "note": "C。L180-187"
+    },
+    {
+      "output": "references/rules.md",
+      "part": 14,
+      "kind": "verbatim_edited",
+      "id": "r-rephrase",
+      "source": "skills/yomiyasu/references/rephrase-test.md",
+      "heading": {
+        "level": 1,
+        "text": "言い直しテスト",
+        "parents": []
+      },
+      "selector": {
+        "scope": "subtree"
+      },
+      "sha256": "65f5c8fc5d0f4cc42a1f951a863e3b6ef4947e31e29793c2f63bb1094a381693",
+      "transforms": {
+        "heading_shift": 1,
+        "drop_lines": []
+      },
+      "substitutions": [
+        {
+          "old": "SKILL.md 2章 Step 2 の言い直しテストの細部。1章の型",
+          "new": "SKILL.md「Step 2: 文章の書き直し」の言い直しテストの細部。SKILL.md「1. 基本原則」の型",
+          "count": 1
+        },
+        {
+          "old": "（整え方は gemini-syntax.md 原則5）",
+          "new": "（整え方は SKILL.md「セルフラベリングと否定対比の整理」）",
+          "count": 1
+        },
+        {
+          "old": "（gemini-syntax.md 原則5）",
+          "new": "（SKILL.md「セルフラベリングと否定対比の整理」）",
+          "count": 1
+        },
+        {
+          "old": "直し方の誤り。diff は、",
+          "new": "直し方の誤り。scripts/mini_check.py は、",
+          "count": 1
+        },
+        {
+          "old": "意味が変わる恐れとして出す（check の diff の出力）。",
+          "new": "意味が変わる恐れとして出す。",
+          "count": 1
+        },
+        {
+          "old": "原文を残す。diff はこの形を「否定対比の主張が逆になった恐れ」として出す",
+          "new": "原文を残す。scripts/mini_check.py はこの形を意味が変わる恐れとして出す",
+          "count": 1
+        },
+        {
+          "old": "slop-catalog.md 6章",
+          "new": "この文書の「AI生成文の不自然な語彙・構文カタログ」の6章",
+          "count": 1
+        },
+        {
+          "old": "slop-catalog.md 7章",
+          "new": "この文書の「AI生成文の不自然な語彙・構文カタログ」の7章",
+          "count": 1
+        }
+      ],
+      "class": "C",
+      "note": "C。本体の rephrase-test.md の全文。本体の diff を指す所を mini_check に替える（mini_check は本体 diff の meaning_risks を同じ値で出す）"
+    },
+    {
+      "output": "references/rules.md",
+      "part": 15,
+      "kind": "verbatim_edited",
+      "id": "r-slop-head",
+      "source": "skills/yomiyasu/references/slop-catalog.md",
+      "heading": {
+        "level": 1,
+        "text": "AI生成文の不自然な語彙・構文カタログ",
+        "parents": []
+      },
+      "selector": {
+        "scope": "own"
+      },
+      "sha256": "ccd5b07cadfc318f5ac4445364ed02e3d6266610a89b0f112b94e9cebdc02722",
+      "transforms": {
+        "heading_shift": 1,
+        "drop_lines": []
+      },
+      "substitutions": [],
+      "class": "C",
+      "note": "C。カタログの題と前書き"
+    },
+    {
+      "output": "references/rules.md",
+      "part": 16,
+      "kind": "verbatim_edited",
+      "id": "r-slop-1",
+      "source": "skills/yomiyasu/references/slop-catalog.md",
+      "heading": {
+        "level": 2,
+        "text": "1. 比喩的に使われる動詞",
+        "parents": [
+          "AI生成文の不自然な語彙・構文カタログ"
+        ]
+      },
+      "selector": {
+        "scope": "subtree"
+      },
+      "sha256": "23d3314affe5284a6909777542ffdc969c720921126f531a42368a66ba2aca63",
+      "transforms": {
+        "heading_shift": 1,
+        "drop_lines": []
+      },
+      "substitutions": [],
+      "class": "C",
+      "note": "C。カタログの1章"
+    },
+    {
+      "output": "references/rules.md",
+      "part": 17,
+      "kind": "verbatim_edited",
+      "id": "r-slop-2",
+      "source": "skills/yomiyasu/references/slop-catalog.md",
+      "heading": {
+        "level": 2,
+        "text": "2. 英語を直訳したような構文",
+        "parents": [
+          "AI生成文の不自然な語彙・構文カタログ"
+        ]
+      },
+      "selector": {
+        "scope": "subtree"
+      },
+      "sha256": "a82306fa86882cc42681d16ae96fd824d65986fc0e053e3eaffff55b249ac7b1",
+      "transforms": {
+        "heading_shift": 1,
+        "drop_lines": []
+      },
+      "substitutions": [],
+      "class": "C",
+      "note": "C。カタログの2章"
+    },
+    {
+      "output": "references/rules.md",
+      "part": 18,
+      "kind": "verbatim_edited",
+      "id": "r-slop-4",
+      "source": "skills/yomiyasu/references/slop-catalog.md",
+      "heading": {
+        "level": 2,
+        "text": "4. 体験を大げさに見せる熟語",
+        "parents": [
+          "AI生成文の不自然な語彙・構文カタログ"
+        ]
+      },
+      "selector": {
+        "scope": "subtree"
+      },
+      "sha256": "5534a4e8821a23c7c1965a955f1faef390b6d811701e83c51554bb1783f79c1e",
+      "transforms": {
+        "heading_shift": 1,
+        "drop_lines": []
+      },
+      "substitutions": [],
+      "class": "C",
+      "note": "C。カタログの4章"
+    },
+    {
+      "output": "references/rules.md",
+      "part": 19,
+      "kind": "verbatim_edited",
+      "id": "r-slop-5",
+      "source": "skills/yomiyasu/references/slop-catalog.md",
+      "heading": {
+        "level": 2,
+        "text": "5. 具体的に見えて意味が曖昧な言葉",
+        "parents": [
+          "AI生成文の不自然な語彙・構文カタログ"
+        ]
+      },
+      "selector": {
+        "scope": "subtree"
+      },
+      "sha256": "7425280820a9cfbcd561a7c525f8558c9295747df0c2aa147893d4e1664f1f7a",
+      "transforms": {
+        "heading_shift": 1,
+        "drop_lines": []
+      },
+      "substitutions": [],
+      "class": "C",
+      "note": "C。カタログの5章"
+    },
+    {
+      "output": "references/rules.md",
+      "part": 20,
+      "kind": "verbatim_edited",
+      "id": "r-slop-6",
+      "source": "skills/yomiyasu/references/slop-catalog.md",
+      "heading": {
+        "level": 2,
+        "text": "6. 不要な前置きと定型の結び",
+        "parents": [
+          "AI生成文の不自然な語彙・構文カタログ"
+        ]
+      },
+      "selector": {
+        "scope": "subtree"
+      },
+      "sha256": "c973b653c8917bc13c9b205cb3f34321686fe157a2849a3105812932cf8a6cf5",
+      "transforms": {
+        "heading_shift": 1,
+        "drop_lines": []
+      },
+      "substitutions": [
+        {
+          "old": "（domains/business.md と同じ扱い）",
+          "new": "（`references/doc-types.md` の「業務・仕様・実務ドキュメント向け仕様」と同じ扱い）",
+          "count": 1
+        },
+        {
+          "old": "SKILL.md「予告だけの文の解消」",
+          "new": "SKILL.md「段落と文の論理構造（つながり）」の「予告だけの文の解消」",
+          "count": 2
+        },
+        {
+          "old": "doc-types/promo.md",
+          "new": "`references/doc-types.md` の「紹介記事・宣伝文（promo）」",
+          "count": 1
+        }
+      ],
+      "class": "C",
+      "note": "C。カタログの6章"
+    },
+    {
+      "output": "references/rules.md",
+      "part": 21,
+      "kind": "verbatim_edited",
+      "id": "r-slop-7",
+      "source": "skills/yomiyasu/references/slop-catalog.md",
+      "heading": {
+        "level": 2,
+        "text": "7. 硬い漢語と決まり文句",
+        "parents": [
+          "AI生成文の不自然な語彙・構文カタログ"
+        ]
+      },
+      "selector": {
+        "scope": "subtree"
+      },
+      "sha256": "e684f3668757a93bba472314f464377af3ae5bff5014ebc77190a64c021137ef",
+      "transforms": {
+        "heading_shift": 1,
+        "drop_lines": []
+      },
+      "substitutions": [
+        {
+          "old": "。diff は references/lists/nominalization.txt の一覧で推敲の前後の数を比べ、増えたら文体の硬化の候補に出す（一覧の語は足したり外したりしてよい）。",
+          "new": "。",
+          "count": 1
+        },
+        {
+          "old": "SKILL.md「主語と目的語の明確化」の「〜を行う」の扱い",
+          "new": "SKILL.md「主語と目的語の明確化」と、この文書の同じ名前の節の「〜を行う」の扱い",
+          "count": 1
+        },
+        {
+          "old": "doc-types/promo.md",
+          "new": "`references/doc-types.md` の「紹介記事・宣伝文（promo）」",
+          "count": 1
+        }
+      ],
+      "class": "C",
+      "note": "C。カタログの7章"
+    },
+    {
+      "output": "references/rules.md",
+      "part": 22,
+      "kind": "verbatim_edited",
+      "id": "r-slop-8",
+      "source": "skills/yomiyasu/references/slop-catalog.md",
+      "heading": {
+        "level": 2,
+        "text": "8. 成り立たない比喩と、残してよい比喩",
+        "parents": [
+          "AI生成文の不自然な語彙・構文カタログ"
+        ]
+      },
+      "selector": {
+        "scope": "subtree"
+      },
+      "sha256": "5a8a26b172fdd2be9a9407022693a1d989916d0e515af080355dcf81c00c2370",
+      "transforms": {
+        "heading_shift": 1,
+        "drop_lines": []
+      },
+      "substitutions": [
+        {
+          "old": "1章と gemini-syntax.md 原則4、domains の各ファイルのとおり",
+          "new": "1章と SKILL.md「比喩動詞の具体化」、`references/doc-types.md` の分野の節のとおり",
+          "count": 1
+        },
+        {
+          "old": "doc-types/essay.md",
+          "new": "`references/doc-types.md` の「エッセイ・小説（essay）」",
+          "count": 1
+        }
+      ],
+      "class": "C",
+      "note": "C。カタログの8章"
+    },
+    {
+      "output": "references/rules.md",
+      "part": 23,
+      "kind": "verbatim_edited",
+      "id": "r-slop-9",
+      "source": "skills/yomiyasu/references/slop-catalog.md",
+      "heading": {
+        "level": 2,
+        "text": "9. 間を作るだけの読点",
+        "parents": [
+          "AI生成文の不自然な語彙・構文カタログ"
+        ]
+      },
+      "selector": {
+        "scope": "subtree"
+      },
+      "sha256": "4d18f309f84b8b5f91dd30c4bc81db161a2e6a545fb7844342710cba71342422",
+      "transforms": {
+        "heading_shift": 1,
+        "drop_lines": []
+      },
+      "substitutions": [
+        {
+          "old": "。lint は種類を指定したときに `pause_comma`（info）の候補として出す（「を、」は候補に出ない）。",
+          "new": "。",
+          "count": 1
+        }
+      ],
+      "class": "C",
+      "note": "C。カタログの9章"
+    },
+    {
+      "output": "references/rules.md",
+      "part": 24,
+      "kind": "verbatim_edited",
+      "id": "r-gemini-head",
+      "source": "skills/yomiyasu/references/gemini-syntax.md",
+      "heading": {
+        "level": 1,
+        "text": "自然な日本語への構文変換原則",
+        "parents": []
+      },
+      "selector": {
+        "scope": "own"
+      },
+      "sha256": "39ac30982a6b01ee998a4dee2758f74f25ca28274865e4e53ca4a253333ffcab",
+      "transforms": {
+        "heading_shift": 1,
+        "drop_lines": []
+      },
+      "substitutions": [
+        {
+          "old": "この文書はAI生成文で",
+          "new": "この節はAI生成文で",
+          "count": 1
+        }
+      ],
+      "class": "C",
+      "note": "C。構文変換の原則の題と前書き。研究と調査の節は写さない"
+    },
+    {
+      "output": "references/rules.md",
+      "part": 25,
+      "kind": "verbatim_edited",
+      "id": "r-gemini-1",
+      "source": "skills/yomiyasu/references/gemini-syntax.md",
+      "heading": {
+        "level": 3,
+        "text": "原則 1: 動作主・対象・動作の明確化",
+        "parents": [
+          "自然な日本語への構文変換原則",
+          "文章を整える原則"
+        ]
+      },
+      "selector": {
+        "scope": "subtree"
+      },
+      "sha256": "bafce9f12d0fb6da1c93fbdef7384d6f0fce76cde31fa2b6cc314d29e04b6f00",
+      "transforms": {
+        "heading_shift": 0,
+        "drop_lines": [
+          {
+            "pattern": "^動作主（S）は、元の文や",
+            "count": 1
+          },
+          {
+            "pattern": "^元から「もの」「それら」",
+            "count": 1
+          },
+          {
+            "pattern": "^語が既出でも、語どうしの",
+            "count": 1
+          },
+          {
+            "pattern": "^原文と改稿の両方で、述語",
+            "count": 1
+          },
+          {
+            "pattern": "^主述や使役の対応を直すと",
+            "count": 1
+          },
+          {
+            "pattern": "^動詞を平易に言い換えた後",
+            "count": 1
+          }
+        ]
+      },
+      "substitutions": [],
+      "class": "C",
+      "note": "C。原則 1。L41-45 と L47 は、この文書の「主語と目的語の明確化」と「段落と文の論理構造（つながり）」に同じ中身があるので外す"
+    },
+    {
+      "output": "references/rules.md",
+      "part": 26,
+      "kind": "rewritten",
+      "id": "r-review-head",
+      "text": "extract/rewritten/r-review-head.md",
+      "text_sha256": "17f25e5a9dfe03bcb42eb8a3e5a21f20f0733c56a117d2c76f1b2a276b698d5d",
+      "from": [
+        {
+          "source": "skills/yomiyasu/references/review-points.md",
+          "heading": {
+            "level": 1,
+            "text": "検査の出力の見方と目視の点検",
+            "parents": []
+          },
+          "scope": "own",
+          "sha256": "0ec361ac77c38ff3a06d87fd9697c6891d86c949216352c1ab876cb02351a093"
+        }
+      ],
+      "class": "B",
+      "note": "本体の前書きは check の run の出力を指すので、mini の Step 4 の候補を指す文に書き直した"
+    },
+    {
+      "output": "references/rules.md",
+      "part": 27,
+      "kind": "verbatim_edited",
+      "id": "r-review-3",
+      "source": "skills/yomiyasu/references/review-points.md",
+      "heading": {
+        "level": 2,
+        "text": "3. 候補に出なくても確かめること",
+        "parents": [
+          "検査の出力の見方と目視の点検"
+        ]
+      },
+      "selector": {
+        "scope": "subtree"
+      },
+      "sha256": "f4d528d916f8dd5ead52559f07b4e5bc3e16c97a08783a09135a44110ef29610",
+      "transforms": {
+        "heading_shift": 1,
+        "drop_lines": []
+      },
+      "substitutions": [
+        {
+          "old": "doc-types/promo.md",
+          "new": "`references/doc-types.md` の「紹介記事・宣伝文（promo）」",
+          "count": 1
+        }
+      ],
+      "class": "C",
+      "note": "C。候補に出なくても確かめること"
+    },
+    {
+      "output": "references/rules.md",
+      "part": 28,
+      "kind": "verbatim_edited",
+      "id": "r-review-4",
+      "source": "skills/yomiyasu/references/review-points.md",
+      "heading": {
+        "level": 2,
+        "text": "4. 目視の点検（Python を実行できないとき）",
+        "parents": [
+          "検査の出力の見方と目視の点検"
+        ]
+      },
+      "selector": {
+        "scope": "subtree"
+      },
+      "sha256": "a28e8ab5ba84add4ea0d60cbfb5be19bb6b15d2bd417ec924dd2de093d361d72",
+      "transforms": {
+        "heading_shift": 1,
+        "drop_lines": []
+      },
+      "substitutions": [
+        {
+          "old": "「実行しなかった検査: lint、diff、最終稿の照合（Python を実行できないため。観点を目で点検した）」と書き、状態の行は `yomiyasu-check: not_run reason=no_python` にする。新規作成では diff の代わりに資料との照合を挙げる。",
+          "new": "「実行しなかった検査: mini_check（Python を実行できないため。観点を目で点検した）」と書き、状態の行は `yomiyasu-mini-check: not_run reason=no_python`（実行を断られたときは `reason=not_allowed`）にする。",
+          "count": 1
+        }
+      ],
+      "class": "C",
+      "note": "C。目視の点検。確認の記録と状態の行を mini の形に替える"
+    },
+    {
+      "output": "references/doc-types.md",
+      "part": 0,
+      "kind": "own",
+      "id": "dt-head",
+      "text": "extract/own/dt-head.md",
+      "text_sha256": "db7dcdb6786357dacc1cb178d07da554d56b67e5387bbe5c0e8b7243d6fd8b35",
+      "reason": "doc-types.md の題と、写した節の読み方",
+      "class": "own"
+    },
+    {
+      "output": "references/doc-types.md",
+      "part": 1,
+      "kind": "own",
+      "id": "dt-table-head",
+      "text": "extract/own/dt-table-head.md",
+      "text_sha256": "62a59f9e859195f3a6ba2aa16f4fdd9bbf5fc8bef12ac6c06da33f4ccb071469",
+      "reason": "SKILL.md の Step 1 から移した種類の表の見出し",
+      "class": "own"
+    },
+    {
+      "output": "references/doc-types.md",
+      "part": 2,
+      "kind": "verbatim",
+      "id": "dt-table",
+      "source": "skills/yomiyasu/SKILL.md",
+      "heading": {
+        "level": 3,
+        "text": "Step 1: 文脈と段落の把握",
+        "parents": [
+          "yomiyasu",
+          "2. 実行手順"
+        ]
+      },
+      "selector": {
+        "paragraphs": [
+          1,
+          1
+        ]
+      },
+      "sha256": "50a7d1337eca598b3d96f5369601a317dbe9befb85eac91b44133ccc1bac5af8",
+      "class": "C",
+      "note": "C。SKILL.md Step 1 の種類の表（L213-226）"
+    },
+    {
+      "output": "references/doc-types.md",
+      "part": 3,
+      "kind": "verbatim_edited",
+      "id": "dt-pr",
+      "source": "skills/yomiyasu/references/doc-types/pr.md",
+      "heading": {
+        "level": 1,
+        "text": "PR説明（pr）",
+        "parents": []
+      },
+      "selector": {
+        "scope": "subtree"
+      },
+      "sha256": "d7bb8a4ac7f5344abf66bb7dfe893480c67ea8d635078c5a8d2582264a21506b",
+      "transforms": {
+        "heading_shift": 1,
+        "drop_lines": [
+          {
+            "pattern": "^lint\\ で外す規則:\\ ",
+            "count": 1
+          }
+        ]
+      },
+      "substitutions": [
+        {
+          "old": "（太字でなくても同じ。lint の bold_label_list はこの種類でも外さない）",
+          "new": "（太字でなくても同じ）",
+          "count": 1
+        },
+        {
+          "old": "domains/business.md",
+          "new": "「業務・仕様・実務ドキュメント向け仕様」",
+          "count": 1
+        },
+        {
+          "old": "audience.md 7章",
+          "new": "「文書の種類と読者」の7章",
+          "count": 1
+        }
+      ],
+      "class": "C",
+      "note": "C。本体の doc-types/pr.md。lint の規則の行と、mini にない検査・事実の補いを指す句を外す"
+    },
+    {
+      "output": "references/doc-types.md",
+      "part": 4,
+      "kind": "verbatim_edited",
+      "id": "dt-article",
+      "source": "skills/yomiyasu/references/doc-types/article.md",
+      "heading": {
+        "level": 1,
+        "text": "技術記事（article）",
+        "parents": []
+      },
+      "selector": {
+        "scope": "subtree"
+      },
+      "sha256": "e5009c496b4b4ac8974c16f2f15b0f8ce93620863dfe721803b01138db845716",
+      "transforms": {
+        "heading_shift": 1,
+        "drop_lines": [
+          {
+            "pattern": "^lint\\ で外す規則:\\ ",
+            "count": 1
+          }
+        ]
+      },
+      "substitutions": [
+        {
+          "old": "SKILL.md 1章",
+          "new": "SKILL.md「1. 基本原則」",
+          "count": 1
+        },
+        {
+          "old": "domains/tech.md",
+          "new": "「技術記事・エンジニア発信向け仕様」",
+          "count": 1
+        },
+        {
+          "old": "audience.md 9章",
+          "new": "「文書の種類と読者」の9章",
+          "count": 1
+        },
+        {
+          "old": "slop-catalog.md 6章",
+          "new": "`references/rules.md` の「AI生成文の不自然な語彙・構文カタログ」の6章",
+          "count": 1
+        }
+      ],
+      "class": "C",
+      "note": "C。本体の doc-types/article.md。lint の規則の行と、mini にない検査・事実の補いを指す句を外す"
+    },
+    {
+      "output": "references/doc-types.md",
+      "part": 5,
+      "kind": "verbatim_edited",
+      "id": "dt-incident",
+      "source": "skills/yomiyasu/references/doc-types/incident.md",
+      "heading": {
+        "level": 1,
+        "text": "障害報告（incident）",
+        "parents": []
+      },
+      "selector": {
+        "scope": "subtree"
+      },
+      "sha256": "d25282690b220e5d4fa2595228d282d65f7b03d8d4b325c30bf251b58a474b77",
+      "transforms": {
+        "heading_shift": 1,
+        "drop_lines": [
+          {
+            "pattern": "^lint\\ で外す規則:\\ ",
+            "count": 1
+          }
+        ]
+      },
+      "substitutions": [
+        {
+          "old": "。diff の文体の硬化の候補は、この種類では参考として出るだけで、直す指示ではない。",
+          "new": "。",
+          "count": 1
+        },
+        {
+          "old": "domains/business.md",
+          "new": "「業務・仕様・実務ドキュメント向け仕様」",
+          "count": 1
+        },
+        {
+          "old": "persona.md 8章",
+          "new": "「書き手と読み手（ペルソナ）」の8章",
+          "count": 1
+        },
+        {
+          "old": "persona.md",
+          "new": "「書き手と読み手（ペルソナ）」",
+          "count": 1
+        }
+      ],
+      "class": "C",
+      "note": "C。本体の doc-types/incident.md。lint の規則の行と、mini にない検査・事実の補いを指す句を外す"
+    },
+    {
+      "output": "references/doc-types.md",
+      "part": 6,
+      "kind": "verbatim_edited",
+      "id": "dt-proposal",
+      "source": "skills/yomiyasu/references/doc-types/proposal.md",
+      "heading": {
+        "level": 1,
+        "text": "提案書（proposal）",
+        "parents": []
+      },
+      "selector": {
+        "scope": "subtree"
+      },
+      "sha256": "2a8d8a557b33f2df51aedeed02ba5bb8ed623fcde55f6a42ff4b477920853731",
+      "transforms": {
+        "heading_shift": 1,
+        "drop_lines": [
+          {
+            "pattern": "^lint\\ で外す規則:\\ ",
+            "count": 1
+          }
+        ]
+      },
+      "substitutions": [
+        {
+          "old": "domains/business.md 2章",
+          "new": "「業務・仕様・実務ドキュメント向け仕様」の2章",
+          "count": 1
+        },
+        {
+          "old": "domains/business.md",
+          "new": "「業務・仕様・実務ドキュメント向け仕様」",
+          "count": 1
+        },
+        {
+          "old": "persona.md 5章",
+          "new": "「書き手と読み手（ペルソナ）」の5章",
+          "count": 1
+        }
+      ],
+      "class": "C",
+      "note": "C。本体の doc-types/proposal.md。lint の規則の行と、mini にない検査・事実の補いを指す句を外す"
+    },
+    {
+      "output": "references/doc-types.md",
+      "part": 7,
+      "kind": "verbatim_edited",
+      "id": "dt-minutes",
+      "source": "skills/yomiyasu/references/doc-types/minutes.md",
+      "heading": {
+        "level": 1,
+        "text": "議事録（minutes）",
+        "parents": []
+      },
+      "selector": {
+        "scope": "subtree"
+      },
+      "sha256": "7869c10e72e0e4ce6ecb94833e84452beba7f8b676230908fe623deddc49b140",
+      "transforms": {
+        "heading_shift": 1,
+        "drop_lines": [
+          {
+            "pattern": "^lint\\ で外す規則:\\ ",
+            "count": 1
+          }
+        ]
+      },
+      "substitutions": [
+        {
+          "old": "domains/business.md 2章",
+          "new": "「業務・仕様・実務ドキュメント向け仕様」の2章",
+          "count": 1
+        },
+        {
+          "old": "domains/business.md 3章",
+          "new": "「業務・仕様・実務ドキュメント向け仕様」の3章",
+          "count": 1
+        },
+        {
+          "old": "domains/business.md",
+          "new": "「業務・仕様・実務ドキュメント向け仕様」",
+          "count": 1
+        }
+      ],
+      "class": "C",
+      "note": "C。本体の doc-types/minutes.md。lint の規則の行と、mini にない検査・事実の補いを指す句を外す"
+    },
+    {
+      "output": "references/doc-types.md",
+      "part": 8,
+      "kind": "verbatim_edited",
+      "id": "dt-manual",
+      "source": "skills/yomiyasu/references/doc-types/manual.md",
+      "heading": {
+        "level": 1,
+        "text": "マニュアル（manual）",
+        "parents": []
+      },
+      "selector": {
+        "scope": "subtree"
+      },
+      "sha256": "37971c4b7cf8159656a2435b30444a05692fbdffdd7dc3dd8e8f4ada90e8ef8f",
+      "transforms": {
+        "heading_shift": 1,
+        "drop_lines": [
+          {
+            "pattern": "^lint\\ で外す規則:\\ ",
+            "count": 1
+          }
+        ]
+      },
+      "substitutions": [
+        {
+          "old": "SKILL.md 2章 Step 2 の5",
+          "new": "SKILL.md「Step 2: 文章の書き直し」の5",
+          "count": 1
+        },
+        {
+          "old": "domains/business.md",
+          "new": "「業務・仕様・実務ドキュメント向け仕様」",
+          "count": 1
+        },
+        {
+          "old": "domains/tech.md",
+          "new": "「技術記事・エンジニア発信向け仕様」",
+          "count": 1
+        },
+        {
+          "old": "persona.md 7章",
+          "new": "「書き手と読み手（ペルソナ）」の7章",
+          "count": 1
+        },
+        {
+          "old": "slop-catalog.md 6章",
+          "new": "`references/rules.md` の「AI生成文の不自然な語彙・構文カタログ」の6章",
+          "count": 1
+        }
+      ],
+      "class": "C",
+      "note": "C。本体の doc-types/manual.md。lint の規則の行と、mini にない検査・事実の補いを指す句を外す"
+    },
+    {
+      "output": "references/doc-types.md",
+      "part": 9,
+      "kind": "verbatim_edited",
+      "id": "dt-slides",
+      "source": "skills/yomiyasu/references/doc-types/slides.md",
+      "heading": {
+        "level": 1,
+        "text": "スライド（slides）",
+        "parents": []
+      },
+      "selector": {
+        "scope": "subtree"
+      },
+      "sha256": "65ba6b3e37da99a8cd3021088b5a1a27f95fefae4b5bfdf7c7bf0ef2439d071c",
+      "transforms": {
+        "heading_shift": 1,
+        "drop_lines": [
+          {
+            "pattern": "^lint\\ で外す規則:\\ ",
+            "count": 1
+          }
+        ]
+      },
+      "substitutions": [
+        {
+          "old": "（lint の cleft_list_ending はこの種類では外す）",
+          "new": "",
+          "count": 1
+        },
+        {
+          "old": "（lint の fragment_run はこの種類でも外さない）",
+          "new": "",
+          "count": 1
+        },
+        {
+          "old": "domains/business.md",
+          "new": "「業務・仕様・実務ドキュメント向け仕様」",
+          "count": 1
+        },
+        {
+          "old": "domains/tech.md",
+          "new": "「技術記事・エンジニア発信向け仕様」",
+          "count": 1
+        }
+      ],
+      "class": "C",
+      "note": "C。本体の doc-types/slides.md。lint の規則の行と、mini にない検査・事実の補いを指す句を外す"
+    },
+    {
+      "output": "references/doc-types.md",
+      "part": 10,
+      "kind": "verbatim_edited",
+      "id": "dt-essay",
+      "source": "skills/yomiyasu/references/doc-types/essay.md",
+      "heading": {
+        "level": 1,
+        "text": "エッセイ・小説（essay）",
+        "parents": []
+      },
+      "selector": {
+        "scope": "subtree"
+      },
+      "sha256": "0f937b0dc89094813f83cdc51bc89c1eb3c9dc99a6ab08302941825ac1f54646",
+      "transforms": {
+        "heading_shift": 1,
+        "drop_lines": [
+          {
+            "pattern": "^lint\\ で外す規則:\\ ",
+            "count": 1
+          }
+        ]
+      },
+      "substitutions": [
+        {
+          "old": "。lint はエッセイと小説を区別しないので、小説の本文の候補は確かめるだけにする。",
+          "new": "。",
+          "count": 1
+        },
+        {
+          "old": "（`references/fact-recovery-details.md` 6章）",
+          "new": "",
+          "count": 1
+        },
+        {
+          "old": "domains/essay.md",
+          "new": "「エッセイ・オピニオン・個人発信向け仕様」",
+          "count": 2
+        },
+        {
+          "old": "persona.md 8章",
+          "new": "「書き手と読み手（ペルソナ）」の8章",
+          "count": 1
+        },
+        {
+          "old": "slop-catalog.md 1章",
+          "new": "`references/rules.md` の「AI生成文の不自然な語彙・構文カタログ」の1章",
+          "count": 1
+        },
+        {
+          "old": "slop-catalog.md 8章",
+          "new": "`references/rules.md` の「AI生成文の不自然な語彙・構文カタログ」の8章",
+          "count": 2
+        },
+        {
+          "old": "完了報告の最後（確認の記録の下）",
+          "new": "確認の記録の下",
+          "count": 1
+        }
+      ],
+      "class": "C",
+      "note": "C。本体の doc-types/essay.md。lint の規則の行と、mini にない検査・事実の補いを指す句を外す"
+    },
+    {
+      "output": "references/doc-types.md",
+      "part": 11,
+      "kind": "verbatim_edited",
+      "id": "dt-formal",
+      "source": "skills/yomiyasu/references/doc-types/formal.md",
+      "heading": {
+        "level": 1,
+        "text": "公用文、規程、契約書、仕様書（formal）",
+        "parents": []
+      },
+      "selector": {
+        "scope": "subtree"
+      },
+      "sha256": "6b4121d4e57d52fb60fb428770a4504c53e1fb06c3fa20e57a1fcd56ce933141",
+      "transforms": {
+        "heading_shift": 1,
+        "drop_lines": [
+          {
+            "pattern": "^lint\\ で外す規則:\\ ",
+            "count": 1
+          }
+        ]
+      },
+      "substitutions": [
+        {
+          "old": "。diff の文体の硬化の候補は、この種類では参考として出るだけで、直す指示ではない。",
+          "new": "。",
+          "count": 1
+        },
+        {
+          "old": "。文脈にない穴だけを問い、文脈に中身がある穴は「補える事実（本文には入れていません）」として報告に書く（`references/fact-recovery-details.md` 6章）。",
+          "new": "。",
+          "count": 1
+        },
+        {
+          "old": "domains/business.md",
+          "new": "「業務・仕様・実務ドキュメント向け仕様」",
+          "count": 1
+        },
+        {
+          "old": "domains/tech.md",
+          "new": "「技術記事・エンジニア発信向け仕様」",
+          "count": 1
+        },
+        {
+          "old": "slop-catalog.md 6章",
+          "new": "`references/rules.md` の「AI生成文の不自然な語彙・構文カタログ」の6章",
+          "count": 1
+        },
+        {
+          "old": "slop-catalog.md 7章",
+          "new": "`references/rules.md` の「AI生成文の不自然な語彙・構文カタログ」の7章",
+          "count": 2
+        }
+      ],
+      "class": "C",
+      "note": "C。本体の doc-types/formal.md。lint の規則の行と、mini にない検査・事実の補いを指す句を外す"
+    },
+    {
+      "output": "references/doc-types.md",
+      "part": 12,
+      "kind": "verbatim_edited",
+      "id": "dt-promo",
+      "source": "skills/yomiyasu/references/doc-types/promo.md",
+      "heading": {
+        "level": 1,
+        "text": "紹介記事・宣伝文（promo）",
+        "parents": []
+      },
+      "selector": {
+        "scope": "subtree"
+      },
+      "sha256": "248f57ae1f4565df79f8b8d06081187a1b7af3d7271d7f76764fc1cfd3a0ac3e",
+      "transforms": {
+        "heading_shift": 1,
+        "drop_lines": [
+          {
+            "pattern": "^lint\\ で外す規則:\\ ",
+            "count": 1
+          }
+        ]
+      },
+      "substitutions": [
+        {
+          "old": "（個人の記事は essay.md、店や会社の宣伝文は business.md）",
+          "new": "（個人の記事はエッセイの節、店や会社の宣伝文は業務の節）",
+          "count": 1
+        },
+        {
+          "old": "（`--doc-type promo` の diff の勢いの検査も、これらを見出しに数える。箇条書きの太字の行（- **…**）は数えないので、縮めていないかを読み比べる）",
+          "new": "",
+          "count": 1
+        },
+        {
+          "old": "（lint の meta_filler の候補は確かめるだけにする）",
+          "new": "",
+          "count": 1
+        },
+        {
+          "old": "yomiyasu は事実を確かめられないので",
+          "new": "yomiyasu-mini は事実を確かめられないので",
+          "count": 1
+        },
+        {
+          "old": "。文脈に中身がある穴は「補える事実（本文には入れていません）」として報告に書く（`references/fact-recovery-details.md` 6章）。",
+          "new": "。",
+          "count": 1
+        },
+        {
+          "old": "domains/business.md",
+          "new": "「業務・仕様・実務ドキュメント向け仕様」",
+          "count": 2
+        },
+        {
+          "old": "domains/essay.md",
+          "new": "「エッセイ・オピニオン・個人発信向け仕様」",
+          "count": 2
+        },
+        {
+          "old": "persona.md 8章",
+          "new": "「書き手と読み手（ペルソナ）」の8章",
+          "count": 1
+        },
+        {
+          "old": "slop-catalog.md 7章",
+          "new": "`references/rules.md` の「AI生成文の不自然な語彙・構文カタログ」の7章",
+          "count": 1
+        },
+        {
+          "old": "doc-types/essay.md 3章",
+          "new": "「エッセイ・小説（essay）」の3章",
+          "count": 1
+        },
+        {
+          "old": "完了報告の最後（確認の記録の下）",
+          "new": "確認の記録の下",
+          "count": 1
+        }
+      ],
+      "class": "C",
+      "note": "C。本体の doc-types/promo.md。lint の規則の行と、mini にない検査・事実の補いを指す句を外す"
+    },
+    {
+      "output": "references/doc-types.md",
+      "part": 13,
+      "kind": "verbatim_edited",
+      "id": "dt-mail",
+      "source": "skills/yomiyasu/references/doc-types/mail.md",
+      "heading": {
+        "level": 1,
+        "text": "メール・チャット（mail）",
+        "parents": []
+      },
+      "selector": {
+        "scope": "subtree"
+      },
+      "sha256": "43c84865368c6e1e61c0ac1645583933092ddcaabb49b6ed4b6c4621e9ba2d4f",
+      "transforms": {
+        "heading_shift": 1,
+        "drop_lines": [
+          {
+            "pattern": "^lint\\ で外す規則:\\ ",
+            "count": 1
+          },
+          {
+            "pattern": "^\\-\\ diff\\ の検査（S",
+            "count": 1
+          },
+          {
+            "pattern": "^\\ \\ \\-\\ 「■\\ 敬語の度合",
+            "count": 1
+          },
+          {
+            "pattern": "^\\ \\ \\-\\ 「■\\ 動かしては",
+            "count": 1
+          },
+          {
+            "pattern": "^\\ \\ \\-\\ 「■\\ 勢い」の候",
+            "count": 1
+          },
+          {
+            "pattern": "^\\-\\ 宛先が社外なら、会話",
+            "count": 1
+          }
+        ]
+      },
+      "substitutions": [
+        {
+          "old": "。lint もこの種類では、meta_filler のうち返信と結びの5つの型（「ご質問ありがとうございます」「必要なら次に〜します」「いかがでしたでしょうか」「ぜひ〜してみてください」「参考になれば幸いです」など）の候補を外す。meta_filler のほかの型（誇張や中身のない前置き）は外さない。",
+          "new": "。",
+          "count": 1
+        },
+        {
+          "old": "。lint はこの種類で emoji_prohibited を外す。",
+          "new": "。",
+          "count": 1
+        },
+        {
+          "old": "lint の同じ文末が続く候補（sentence_end_repetition）が出ても、",
+          "new": "",
+          "count": 1
+        },
+        {
+          "old": "SKILL.md 2章 Step 1 の1",
+          "new": "この文書の「書き手と読み手（ペルソナ）」",
+          "count": 1
+        },
+        {
+          "old": "domains/business.md",
+          "new": "「業務・仕様・実務ドキュメント向け仕様」",
+          "count": 1
+        },
+        {
+          "old": "persona.md 7章",
+          "new": "「書き手と読み手（ペルソナ）」の7章",
+          "count": 1
+        },
+        {
+          "old": "slop-catalog.md 6章",
+          "new": "`references/rules.md` の「AI生成文の不自然な語彙・構文カタログ」の6章",
+          "count": 2
+        }
+      ],
+      "class": "C",
+      "note": "C。本体の doc-types/mail.md。lint の規則の行と、mini にない検査・事実の補いを指す句を外す"
+    },
+    {
+      "output": "references/doc-types.md",
+      "part": 14,
+      "kind": "verbatim_edited",
+      "id": "dt-paper",
+      "source": "skills/yomiyasu/references/doc-types/paper.md",
+      "heading": {
+        "level": 1,
+        "text": "論文・研究レポート（paper）",
+        "parents": []
+      },
+      "selector": {
+        "scope": "subtree"
+      },
+      "sha256": "ed2957332ef12464d4bc43bc22ca2250229eca57f39b11597d2632fab020f12c",
+      "transforms": {
+        "heading_shift": 1,
+        "drop_lines": [
+          {
+            "pattern": "^lint\\ で外す規則:\\ ",
+            "count": 1
+          },
+          {
+            "pattern": "^\\-\\ diff\\ の検査（S",
+            "count": 1
+          },
+          {
+            "pattern": "^\\ \\ \\-\\ 「■\\ 慎重な言い",
+            "count": 1
+          },
+          {
+            "pattern": "^\\ \\ \\-\\ 引用の印の変化は",
+            "count": 1
+          },
+          {
+            "pattern": "^\\ \\ \\-\\ 文体の硬化と勢い",
+            "count": 1
+          }
+        ]
+      },
+      "substitutions": [
+        {
+          "old": "。diff の文体の硬化と勢いの候補は、この種類では参考として出るだけで、直す指示ではない。",
+          "new": "。",
+          "count": 1
+        },
+        {
+          "old": "。文脈にない穴だけを問い、文脈に中身がある穴は「補える事実（本文には入れていません）」として報告に書く（`references/fact-recovery-details.md` 6章）。",
+          "new": "。",
+          "count": 1
+        },
+        {
+          "old": "domains/tech.md 3章",
+          "new": "「技術記事・エンジニア発信向け仕様」の3章",
+          "count": 1
+        },
+        {
+          "old": "domains/tech.md",
+          "new": "「技術記事・エンジニア発信向け仕様」",
+          "count": 1
+        },
+        {
+          "old": "audience.md 8章",
+          "new": "「文書の種類と読者」の8章",
+          "count": 1
+        },
+        {
+          "old": "slop-catalog.md 6章",
+          "new": "`references/rules.md` の「AI生成文の不自然な語彙・構文カタログ」の6章",
+          "count": 1
+        },
+        {
+          "old": "slop-catalog.md 7章",
+          "new": "`references/rules.md` の「AI生成文の不自然な語彙・構文カタログ」の7章",
+          "count": 1
+        }
+      ],
+      "class": "C",
+      "note": "C。本体の doc-types/paper.md。lint の規則の行と、mini にない検査・事実の補いを指す句を外す"
+    },
+    {
+      "output": "references/doc-types.md",
+      "part": 15,
+      "kind": "verbatim_edited",
+      "id": "dom-tech",
+      "source": "skills/yomiyasu/references/domains/tech.md",
+      "heading": {
+        "level": 1,
+        "text": "技術記事・エンジニア発信向け仕様",
+        "parents": []
+      },
+      "selector": {
+        "scope": "subtree"
+      },
+      "sha256": "faeaf3ea41d93e11ef3f679263df23b02a6156da6baecb4eb4dd03f58aa41dd1",
+      "transforms": {
+        "heading_shift": 1,
+        "drop_lines": []
+      },
+      "substitutions": [
+        {
+          "old": "[Qiita 7万件調査（逆瀬川 2026）](https://nyosegawa.com/posts/qiita-writing-before-after-ai/)を参考に、",
+          "new": "",
+          "count": 1
+        },
+        {
+          "old": "SKILL.mdの構造点検",
+          "new": "SKILL.md「Step 1: 文脈と段落の把握」の文の構造の点検",
+          "count": 1
+        }
+      ],
+      "class": "C",
+      "note": "C。本体の domains/tech.md。調査の出典の人名とリンクを外す"
+    },
+    {
+      "output": "references/doc-types.md",
+      "part": 16,
+      "kind": "verbatim_edited",
+      "id": "dom-business",
+      "source": "skills/yomiyasu/references/domains/business.md",
+      "heading": {
+        "level": 1,
+        "text": "業務・仕様・実務ドキュメント向け仕様（PR / 仕様書 / 社内レポート / 提案書）",
+        "parents": []
+      },
+      "selector": {
+        "scope": "subtree"
+      },
+      "sha256": "7d5be30f2bac61b7f47849193f02eaecebd8b27ef5f00e75af12144c9ab061ea",
+      "transforms": {
+        "heading_shift": 1,
+        "drop_lines": []
+      },
+      "substitutions": [
+        {
+          "old": "SKILL.mdの構造点検",
+          "new": "SKILL.md「Step 1: 文脈と段落の把握」の文の構造の点検",
+          "count": 1
+        }
+      ],
+      "class": "C",
+      "note": "C。本体の domains/business.md"
+    },
+    {
+      "output": "references/doc-types.md",
+      "part": 17,
+      "kind": "verbatim_edited",
+      "id": "dom-essay",
+      "source": "skills/yomiyasu/references/domains/essay.md",
+      "heading": {
+        "level": 1,
+        "text": "エッセイ・オピニオン・個人発信向け仕様（note / 個人ブログ）",
+        "parents": []
+      },
+      "selector": {
+        "scope": "subtree"
+      },
+      "sha256": "aeeeb9f9c842d68fa0fcf2e956bd2f87c5f450bc820df931f3f94b903a8a8c7a",
+      "transforms": {
+        "heading_shift": 1,
+        "drop_lines": []
+      },
+      "substitutions": [
+        {
+          "old": "SKILL.mdの構造点検",
+          "new": "SKILL.md「Step 1: 文脈と段落の把握」の文の構造の点検",
+          "count": 1
+        },
+        {
+          "old": "doc-types/promo.md",
+          "new": "「紹介記事・宣伝文（promo）」",
+          "count": 2
+        }
+      ],
+      "class": "C",
+      "note": "C。本体の domains/essay.md"
+    },
+    {
+      "output": "references/doc-types.md",
+      "part": 18,
+      "kind": "verbatim_edited",
+      "id": "aud-head",
+      "source": "skills/yomiyasu/references/audience.md",
+      "heading": {
+        "level": 1,
+        "text": "文書の種類と読者",
+        "parents": []
+      },
+      "selector": {
+        "scope": "own"
+      },
+      "sha256": "b9ee23578fd009bf6cd0061348f7a9a8bce160d0496e23d3eee68c1c01175565",
+      "transforms": {
+        "heading_shift": 1,
+        "drop_lines": []
+      },
+      "substitutions": [
+        {
+          "old": "SKILL.md 2章 Step 1 の種類と読者の決め方の細部",
+          "new": "SKILL.md「Step 1: 文脈と段落の把握」の種類と読者の決め方の細部",
+          "count": 1
+        },
+        {
+          "old": "`persona.md`",
+          "new": "「書き手と読み手（ペルソナ）」",
+          "count": 1
+        },
+        {
+          "old": "足さないこと（「情報の不増補」）",
+          "new": "足さないこと（SKILL.md「情報の不増補（足さない）」）",
+          "count": 1
+        }
+      ],
+      "class": "C",
+      "note": "C。本体の audience.md の題と前書き"
+    },
+    {
+      "output": "references/doc-types.md",
+      "part": 19,
+      "kind": "verbatim_edited",
+      "id": "aud-2",
+      "source": "skills/yomiyasu/references/audience.md",
+      "heading": {
+        "level": 2,
+        "text": "2. 読者の手がかり",
+        "parents": [
+          "文書の種類と読者"
+        ]
+      },
+      "selector": {
+        "scope": "subtree"
+      },
+      "sha256": "cc590d34b860af41b0689583fe67adfcdd89607a2ba446080cea22865facf40a",
+      "transforms": {
+        "heading_shift": 1,
+        "drop_lines": []
+      },
+      "substitutions": [
+        {
+          "old": "persona.md 2章",
+          "new": "「書き手と読み手（ペルソナ）」の2章",
+          "count": 1
+        }
+      ],
+      "class": "C",
+      "note": "C。本体の audience.md の2章"
+    },
+    {
+      "output": "references/doc-types.md",
+      "part": 20,
+      "kind": "verbatim_edited",
+      "id": "aud-6",
+      "source": "skills/yomiyasu/references/audience.md",
+      "heading": {
+        "level": 2,
+        "text": "6. 推定のときに使う調整の範囲",
+        "parents": [
+          "文書の種類と読者"
+        ]
+      },
+      "selector": {
+        "scope": "subtree"
+      },
+      "sha256": "70c6a2764d163fd9a7cd6e41adbc69ff7098f95c4d1d6a568c58f3dd8dba07ce",
+      "transforms": {
+        "heading_shift": 1,
+        "drop_lines": []
+      },
+      "substitutions": [],
+      "class": "C",
+      "note": "C。本体の audience.md の6章"
+    },
+    {
+      "output": "references/doc-types.md",
+      "part": 21,
+      "kind": "verbatim_edited",
+      "id": "aud-7",
+      "source": "skills/yomiyasu/references/audience.md",
+      "heading": {
+        "level": 2,
+        "text": "7. 読者の3段階",
+        "parents": [
+          "文書の種類と読者"
+        ]
+      },
+      "selector": {
+        "scope": "subtree"
+      },
+      "sha256": "39a9942fcf7421459b1cc08c5a8179b876627da06adae316cda1d7c048496529",
+      "transforms": {
+        "heading_shift": 1,
+        "drop_lines": []
+      },
+      "substitutions": [],
+      "class": "C",
+      "note": "C。本体の audience.md の7章"
+    },
+    {
+      "output": "references/doc-types.md",
+      "part": 22,
+      "kind": "verbatim_edited",
+      "id": "aud-8",
+      "source": "skills/yomiyasu/references/audience.md",
+      "heading": {
+        "level": 2,
+        "text": "8. 用語の扱い",
+        "parents": [
+          "文書の種類と読者"
+        ]
+      },
+      "selector": {
+        "scope": "subtree"
+      },
+      "sha256": "91ac6c95288257c9d6bfefda97d357f95023ffee15de8aa24e4ce509027663a9",
+      "transforms": {
+        "heading_shift": 1,
+        "drop_lines": []
+      },
+      "substitutions": [
+        {
+          "old": "（slop-catalog.md 2章、5章）",
+          "new": "（`references/rules.md` の「AI生成文の不自然な語彙・構文カタログ」の2章、5章）",
+          "count": 1
+        },
+        {
+          "old": "SKILL.md「情報の不増補」",
+          "new": "SKILL.md「情報の不増補（足さない）」",
+          "count": 1
+        }
+      ],
+      "class": "C",
+      "note": "C。本体の audience.md の8章"
+    },
+    {
+      "output": "references/doc-types.md",
+      "part": 23,
+      "kind": "verbatim_edited",
+      "id": "aud-9",
+      "source": "skills/yomiyasu/references/audience.md",
+      "heading": {
+        "level": 2,
+        "text": "9. 文の長さと省略",
+        "parents": [
+          "文書の種類と読者"
+        ]
+      },
+      "selector": {
+        "scope": "subtree"
+      },
+      "sha256": "c285205127abdef90e15c49191a8045423dd1a2be6a0cc1aa38dfa9bef9da84f",
+      "transforms": {
+        "heading_shift": 1,
+        "drop_lines": []
+      },
+      "substitutions": [
+        {
+          "old": "doc-types の各ファイルの3章",
+          "new": "この文書の種類ごとの節の3章",
+          "count": 1
+        },
+        {
+          "old": "（平均30〜45字の目安は gemini-syntax.md 原則7）",
+          "new": "（平均30〜45字の目安は SKILL.md「文長と読点の調整」）",
+          "count": 1
+        }
+      ],
+      "class": "C",
+      "note": "C。本体の audience.md の9章"
+    },
+    {
+      "output": "references/doc-types.md",
+      "part": 24,
+      "kind": "verbatim_edited",
+      "id": "aud-10",
+      "source": "skills/yomiyasu/references/audience.md",
+      "heading": {
+        "level": 2,
+        "text": "10. 「ここに説明が必要です」の書き方",
+        "parents": [
+          "文書の種類と読者"
+        ]
+      },
+      "selector": {
+        "scope": "subtree"
+      },
+      "sha256": "5731799c178a4a79031775834a210b9d606c1d9179aa31c3c8b1e7d9adfab3d3",
+      "transforms": {
+        "heading_shift": 1,
+        "drop_lines": []
+      },
+      "substitutions": [
+        {
+          "old": "SKILL.md 3章の",
+          "new": "SKILL.md「3. 出力フォーマット」の",
+          "count": 1
+        }
+      ],
+      "class": "C",
+      "note": "C。本体の audience.md の10章"
+    },
+    {
+      "output": "references/doc-types.md",
+      "part": 25,
+      "kind": "verbatim_edited",
+      "id": "per-head",
+      "source": "skills/yomiyasu/references/persona.md",
+      "heading": {
+        "level": 1,
+        "text": "書き手と読み手（ペルソナ）",
+        "parents": []
+      },
+      "selector": {
+        "scope": "own"
+      },
+      "sha256": "59b3bf853f8333983fbb565270cc58a684929067f8379e58620e7080851b58a9",
+      "transforms": {
+        "heading_shift": 1,
+        "drop_lines": []
+      },
+      "substitutions": [
+        {
+          "old": "SKILL.md 2章 Step 1 の1の、",
+          "new": "SKILL.md「Step 1: 文脈と段落の把握」の、",
+          "count": 1
+        }
+      ],
+      "class": "C",
+      "note": "C。本体の persona.md の題と前書き"
+    },
+    {
+      "output": "references/doc-types.md",
+      "part": 26,
+      "kind": "verbatim_edited",
+      "id": "per-skill",
+      "source": "skills/yomiyasu/SKILL.md",
+      "heading": {
+        "level": 3,
+        "text": "Step 1: 文脈と段落の把握",
+        "parents": [
+          "yomiyasu",
+          "2. 実行手順"
+        ]
+      },
+      "selector": {
+        "paragraphs": [
+          0,
+          0
+        ]
+      },
+      "sha256": "33e11e93cdcc4fa3d5ba05397d694831c6c027917c3e204b8169dfa3b696e535",
+      "transforms": {
+        "heading_shift": 0,
+        "drop_lines": [
+          {
+            "pattern": "^書き直す前に、文章全体と",
+            "count": 1
+          },
+          {
+            "pattern": "^1\\.\\ \\*\\*文書の種類と読",
+            "count": 1
+          },
+          {
+            "pattern": "^\\ \\ \\ \\-\\ 文書の種類は下",
+            "count": 1
+          },
+          {
+            "pattern": "^\\ \\ \\ \\-\\ 読者は、exp",
+            "count": 1
+          },
+          {
+            "pattern": "^\\ \\ \\ \\-\\ 自信がなく、決",
+            "count": 1
+          },
+          {
+            "pattern": "^\\ \\ \\ \\-\\ expert\\ ",
+            "count": 1
+          }
+        ]
+      },
+      "substitutions": [
+        {
+          "old": "直す前に `references/persona.md` を読み、",
+          "new": "直す前にこの節を読み、",
+          "count": 1
+        },
+        {
+          "old": "形は persona.md 7章に従い",
+          "new": "形は7章に従い",
+          "count": 1
+        },
+        {
+          "old": "persona.md 9章の形で",
+          "new": "9章の形で",
+          "count": 1
+        }
+      ],
+      "class": "C",
+      "note": "C。SKILL.md Step 1 の書き手と読み手の段落（L211）"
+    },
+    {
+      "output": "references/doc-types.md",
+      "part": 27,
+      "kind": "verbatim_edited",
+      "id": "per-2",
+      "source": "skills/yomiyasu/references/persona.md",
+      "heading": {
+        "level": 2,
+        "text": "2. 3つの値と区分",
+        "parents": [
+          "書き手と読み手（ペルソナ）"
+        ]
+      },
+      "selector": {
+        "scope": "subtree"
+      },
+      "sha256": "46e230cd88ef174b1822f6d9de11e224038ce1208af823e93f34b57184f3f3b3",
+      "transforms": {
+        "heading_shift": 1,
+        "drop_lines": []
+      },
+      "substitutions": [
+        {
+          "old": "SKILL.md 2章 Step 1 の表",
+          "new": "この文書の「種類の一覧」",
+          "count": 1
+        },
+        {
+          "old": "audience.md 7章",
+          "new": "「文書の種類と読者」の7章",
+          "count": 1
+        }
+      ],
+      "class": "C",
+      "note": "C。本体の persona.md の2章"
+    },
+    {
+      "output": "references/doc-types.md",
+      "part": 28,
+      "kind": "verbatim_edited",
+      "id": "per-4",
+      "source": "skills/yomiyasu/references/persona.md",
+      "heading": {
+        "level": 2,
+        "text": "4. 推定のときの範囲",
+        "parents": [
+          "書き手と読み手（ペルソナ）"
+        ]
+      },
+      "selector": {
+        "scope": "subtree"
+      },
+      "sha256": "751a79885a8a2df0e60497e886483d5c4c99f43fb1c703bfe5c3023987dc32f7",
+      "transforms": {
+        "heading_shift": 1,
+        "drop_lines": []
+      },
+      "substitutions": [
+        {
+          "old": "（audience.md 2章の手がかりだけ）",
+          "new": "（「文書の種類と読者」の2章の手がかりだけ）",
+          "count": 1
+        }
+      ],
+      "class": "C",
+      "note": "C。本体の persona.md の4章"
+    },
+    {
+      "output": "references/doc-types.md",
+      "part": 29,
+      "kind": "verbatim_edited",
+      "id": "per-5",
+      "source": "skills/yomiyasu/references/persona.md",
+      "heading": {
+        "level": 2,
+        "text": "5. 誰がの扱い",
+        "parents": [
+          "書き手と読み手（ペルソナ）"
+        ]
+      },
+      "selector": {
+        "scope": "subtree"
+      },
+      "sha256": "c584a4378135be6b5605623541d04a5eaa908190e8f30cf3b763c6778e04067e",
+      "transforms": {
+        "heading_shift": 1,
+        "drop_lines": []
+      },
+      "substitutions": [],
+      "class": "C",
+      "note": "C。本体の persona.md の5章"
+    },
+    {
+      "output": "references/doc-types.md",
+      "part": 30,
+      "kind": "verbatim_edited",
+      "id": "per-6",
+      "source": "skills/yomiyasu/references/persona.md",
+      "heading": {
+        "level": 2,
+        "text": "6. 誰にの扱い",
+        "parents": [
+          "書き手と読み手（ペルソナ）"
+        ]
+      },
+      "selector": {
+        "scope": "subtree"
+      },
+      "sha256": "a59bc13aef2999b69eba817be3ec6f60a400c53fe06f77a4d18910ab6ac7e6ec",
+      "transforms": {
+        "heading_shift": 1,
+        "drop_lines": []
+      },
+      "substitutions": [
+        {
+          "old": "原文の宛先が指定の読み手と違う（3章）",
+          "new": "原文の宛先が指定の読み手と違う",
+          "count": 1
+        },
+        {
+          "old": "SKILL.md の「相手との関係…が分かる依頼では…語調を整えます」",
+          "new": "`references/rules.md` の「文書の立場と文末」の「相手との関係…が分かる依頼では…語調を整えます」",
+          "count": 1
+        },
+        {
+          "old": "「用途や読み手を、短い見出しや冒頭の説明で示します」",
+          "new": "同じ節の「用途や読み手を、短い見出しや冒頭の説明で示します」",
+          "count": 1
+        },
+        {
+          "old": "audience.md 8章",
+          "new": "「文書の種類と読者」の8章",
+          "count": 1
+        }
+      ],
+      "class": "C",
+      "note": "C。本体の persona.md の6章"
+    },
+    {
+      "output": "references/doc-types.md",
+      "part": 31,
+      "kind": "verbatim_edited",
+      "id": "per-7",
+      "source": "skills/yomiyasu/references/persona.md",
+      "heading": {
+        "level": 2,
+        "text": "7. 敬語の度合いの合わせ方",
+        "parents": [
+          "書き手と読み手（ペルソナ）"
+        ]
+      },
+      "selector": {
+        "scope": "subtree"
+      },
+      "sha256": "28d2e2cab63c840f51369951794ab3f6c76492ae36a921ce0b5dd06a04523fd9",
+      "transforms": {
+        "heading_shift": 1,
+        "drop_lines": []
+      },
+      "substitutions": [],
+      "class": "C",
+      "note": "C。本体の persona.md の7章"
+    },
+    {
+      "output": "references/doc-types.md",
+      "part": 32,
+      "kind": "verbatim_edited",
+      "id": "per-8",
+      "source": "skills/yomiyasu/references/persona.md",
+      "heading": {
+        "level": 2,
+        "text": "8. 場面ごとの注意",
+        "parents": [
+          "書き手と読み手（ペルソナ）"
+        ]
+      },
+      "selector": {
+        "scope": "subtree"
+      },
+      "sha256": "357c1902180bf56f2617d9c075d31001107e9a77e7eb3973fc61b2686ff0af65",
+      "transforms": {
+        "heading_shift": 1,
+        "drop_lines": []
+      },
+      "substitutions": [],
+      "class": "C",
+      "note": "C。本体の persona.md の8章"
+    },
+    {
+      "output": "references/doc-types.md",
+      "part": 33,
+      "kind": "verbatim_edited",
+      "id": "per-9",
+      "source": "skills/yomiyasu/references/persona.md",
+      "heading": {
+        "level": 2,
+        "text": "9. 知らせ方と示し方",
+        "parents": [
+          "書き手と読み手（ペルソナ）"
+        ]
+      },
+      "selector": {
+        "scope": "subtree"
+      },
+      "sha256": "e023420aa35aeaab2232143eb431bbb934deb878eae5069d4711784ed0567f97",
+      "transforms": {
+        "heading_shift": 1,
+        "drop_lines": []
+      },
+      "substitutions": [],
+      "class": "C",
+      "note": "C。本体の persona.md の9章"
+    }
+  ],
+  "scripts": [
+    {
+      "id": "scripts",
+      "modules": [
+        {
+          "name": "vis",
+          "source": "skills/yomiyasu/scripts/markdown_visibility.py"
+        },
+        {
+          "name": "diff",
+          "source": "skills/yomiyasu/scripts/yomiyasu_diff.py"
+        }
+      ],
+      "outputs": [
+        {
+          "output": "scripts/mini_diff_1.py",
+          "bytes": 82175,
+          "units": 184,
+          "body_bytes": 79611,
+          "names": [
+            "vis:_ASCII_PUNCT",
+            "vis:_HTML_BLOCK_TAGS",
+            "vis:_TAG_NAME",
+            "vis:_ATTRIBUTE_NAME",
+            "vis:_AUTOLINK",
+            "vis:_CONTAINER_MARKER",
+            "vis:_CONTAINER_MARKER_DEFAULT",
+            "vis:_BARE_URL",
+            "vis:_BLANK_TITLE_LINE",
+            "vis:_SETEXT",
+            "vis:_THEMATIC",
+            "vis:_INLINE_EVENTS",
+            "vis:_FENCE_OPEN",
+            "vis:_ATX_HEADING",
+            "vis:unicode_whitespace",
+            "vis:_escaped",
+            "vis:_tag_space_end",
+            "vis:_terminator_positions",
+            "vis:_tag_end",
+            "vis:_link_end",
+            "vis:inline_protected_spans",
+            "vis:_columns",
+            "vis:_containers",
+            "vis:_physical_lines",
+            "vis:_table_cells",
+            "vis:_RowCursor",
+            "vis:_reference_gap",
+            "vis:_reference_destination",
+            "vis:_reference_title_end",
+            "vis:reference_definition_end",
+            "vis:analyze_markdown",
+            "vis:decode_source",
+            "vis:DOC_TYPES",
+            "vis:_normalize_choice",
+            "vis:normalize_doc_type",
+            "diff:_END",
+            "diff:_NORMALIZE_BOLD",
+            "diff:_NORMALIZE_LIST",
+            "diff:_NORMALIZE_HEADING",
+            "diff:_NORMALIZE_SPACES",
+            "diff:normalize",
+            "diff:_MATCH_SMALL_AREA",
+            "diff:_MATCH_PROBE_MAX",
+            "diff:_MATCH_SEED_SHORT",
+            "diff:_MATCH_SEED_LONG",
+            "diff:_MATCH_SAMPLE_MIN",
+            "diff:_MATCH_SAMPLE_BUDGET_DIV",
+            "diff:_MATCH_SAM_FACTOR",
+            "diff:_MATCH_WHOLE_INDEX_MIN",
+            "diff:_MATCH_PROBE_CACHE",
+            "diff:_MATCH_LOCAL_DIV",
+            "diff:_MATCH_AUTOMATON_MAX",
+            "diff:_MATCH_ROLLING_MIN",
+            "diff:_ROLLING_MOD",
+            "diff:_ROLLING_BASE",
+            "diff:_common_prefix_len",
+            "diff:_common_suffix_len",
+            "diff:_automaton_longest",
+            "diff:_gram_index",
+            "diff:_rolling_hashes",
+            "diff:_ExactSequenceMatcher",
+            "diff:_CHAR_ALIGN_LIMIT",
+            "diff:_BLOCK_ALIGN_LIMIT",
+            "diff:_CHAR_BUDGET",
+            "diff:_PAIR_WINDOW",
+            "diff:_PAIR_RATIO",
+            "diff:_FRAGMENT",
+            "diff:_SPACES",
+            "diff:_ATX",
+            "diff:_LIMIT_NAMES",
+            "diff:_split_lines",
+            "diff:_line_starts",
+            "diff:_is_blank",
+            "diff:_analyze",
+            "diff:_URL_CHARS",
+            "diff:_align",
+            "diff:_SMALL_GAP",
+            "diff:_GAP_WINDOW",
+            "diff:_ALIGN_DEPTH",
+            "diff:_align_range",
+            "diff:_unique_anchors",
+            "diff:_fill_gap",
+            "diff:_common_affix",
+            "diff:_affix_ratio",
+            "diff:_pair_similar",
+            "diff:_opcodes",
+            "diff:_merge_segments",
+            "diff:_char_segments",
+            "diff:_fragments",
+            "diff:_plan_segments",
+            "diff:_kinds",
+            "diff:_Sides",
+            "diff:full_diff",
+            "diff:_build_full_diff",
+            "diff:_make_hunk",
+            "diff:_mark_moved",
+            "diff:_LINE_PREFIX",
+            "diff:_RISK_SENTENCE_PIECE",
+            "diff:_NO_SENTENCE_KINDS",
+            "diff:_Sentence",
+            "diff:_line_sentences",
+            "diff:_sentence_pairs",
+            "diff:_hunk_group",
+            "diff:_blank_between",
+            "diff:_run_shifted",
+            "diff:_paragraph_count",
+            "diff:_HALF_WIDTH",
+            "diff:_ARABIC",
+            "diff:_EMPHASIS",
+            "diff:_THOUSANDS",
+            "diff:_UNITS",
+            "diff:_UNIT_NOT_BEFORE",
+            "diff:_unit_pattern",
+            "diff:_UNIT",
+            "diff:_SPACED_UNIT",
+            "diff:_LETTER_UNIT",
+            "diff:_THOUSAND",
+            "diff:_SAME_UNIT",
+            "diff:_KANJI_COUNTERS",
+            "diff:_KANJI_NUMBER",
+            "diff:_KANJI_DIGITS",
+            "diff:_KANJI_UNITS",
+            "diff:_KANJI_BEFORE",
+            "diff:_KANJI_BEFORE_WORDS",
+            "diff:_TIME_OF_DAY_WORDS",
+            "diff:_TIME_OF_DAY_CHARS",
+            "diff:_ICHIJI_HOUR_NEXT",
+            "diff:_KANJI",
+            "diff:_WHOLE_PERIOD_WORDS",
+            "diff:_SAME_PERIOD",
+            "diff:_KANJI_CHAIN",
+            "diff:_KANJI_HOUR_BEFORE",
+            "diff:_JIPPUN_AFTER",
+            "diff:_JIPPUN_DE",
+            "diff:_JIPPUN_DE_NOT",
+            "diff:_ICHIJI_JIPPUN_AFTER",
+            "diff:_KANJI_CHAIN_REACH",
+            "diff:_KANJI_EXCLUDED",
+            "diff:_KANJI_NUMERALS",
+            "diff:_BUN_NOT_BEFORE",
+            "diff:_NIBUN_NOT_BEFORE",
+            "diff:_JUNIBUN_NOT_BEFORE",
+            "diff:_JOU_NOT_BEFORE",
+            "diff:_KANJI_RANGE_HEAD",
+            "diff:_KANJI_RANGE_REACH",
+            "diff:_NOTATION_JOIN",
+            "diff:_JOIN_RANGE",
+            "diff:_NOTATION_SPACE",
+            "diff:_WEAK_ONE_AFTER",
+            "diff:_WEAK_ONE_BEFORE",
+            "diff:_WEAK_ONE_REPEATED",
+            "diff:_WEAK_ONE_MO",
+            "diff:_WEAK_ONE_PAIRED",
+            "diff:_WEAK_ONE_ONLY",
+            "diff:_WEAK_SINGLE",
+            "diff:_WEAK_EACH",
+            "diff:_KANA_NUMBERS",
+            "diff:_KANA_NUMBER",
+            "diff:_KANA_NUMBER_NOT_NEXT",
+            "diff:_KANA_NUMBER_NEXT_STRICT",
+            "diff:_KANA_NUMBER_STRICT",
+            "diff:_KANA_NUMBER_NOT_KANJI_NEXT",
+            "diff:_KANA_NUMBER_BEFORE",
+            "diff:_KANA_NUMBER_KATAKANA",
+            "diff:_HIRAGANA_CHAR",
+            "diff:_KANA_ONLY",
+            "diff:_LIST_NUMBER",
+            "diff:_NUMBER_MASKED",
+            "diff:_image_path_start",
+            "diff:_Number",
+            "diff:_plain_number",
+            "diff:_kanji_value",
+            "diff:_number_mask",
+            "diff:_find_numbers",
+            "diff:_kana_number_ok",
+            "diff:_kanji_head_ok",
+            "diff:_kanji_before_ok",
+            "diff:_whole_period",
+            "diff:_kanji_excluded",
+            "diff:_hour_word_before",
+            "diff:_join_kind",
+            "diff:_with_notation",
+            "diff:_KeySet"
+          ],
+          "bound": [],
+          "imports": []
+        },
+        {
+          "output": "scripts/mini_diff_2.py",
+          "bytes": 82354,
+          "units": 164,
+          "body_bytes": 79618,
+          "names": [
+            "diff:_TYPE_PATTERNS",
+            "diff:TYPE_MARKERS",
+            "diff:_TYPE_LITERALS",
+            "diff:_SIMILE_HEADS",
+            "diff:_SIMILE_LIKE",
+            "diff:_STOPS",
+            "diff:_STOP",
+            "diff:_NOT_BODY",
+            "diff:_SENTENCE_PIECE",
+            "diff:_mark_positions",
+            "diff:_marks_in",
+            "diff:_sentence_spans",
+            "diff:_slide_to_sentence_edges",
+            "diff:_bigrams",
+            "diff:_LAST_TYPE_RANGES",
+            "diff:_type_changes",
+            "diff:_range_sentences",
+            "diff:_type_ranges",
+            "diff:_overlapping",
+            "diff:_pair_gone_sentences",
+            "diff:_widen_to_sentences",
+            "diff:_SENTENCE_END",
+            "diff:_PROTECTED_SPANS",
+            "diff:_PROTECTED_LINES",
+            "diff:_RISK_ORDER",
+            "diff:_risk",
+            "diff:_group_index",
+            "diff:_DATE_UNITS",
+            "diff:_TIME_UNITS",
+            "diff:_NEXT_UNIT",
+            "diff:_QUANTITY_WORDS",
+            "diff:_QUANTITY_SAME",
+            "diff:_QUANTITY_CLAUSE_WORDS",
+            "diff:_QUANTITY_FOR",
+            "diff:_QUANTITY_KEEP_ANY",
+            "diff:_QUANTITY_OTHER_NOUN",
+            "diff:_QUANTITY_TOPIC",
+            "diff:_QUANTITY_SUBJECT",
+            "diff:_QUANTITY_CLAUSE_END",
+            "diff:_QUANTITY_NEG",
+            "diff:_QUANTITY_LEAD",
+            "diff:_QUANTITY_SCOPE_END",
+            "diff:_QUANTITY_NOT_NEG",
+            "diff:_QUANTITY_LIMIT_OFF",
+            "diff:_QUANTITY_SENTENCE_END",
+            "diff:_QUANTITY_CLAUSE_SPLIT",
+            "diff:_QUANTITY_PARTICLE_END",
+            "diff:_QUANTITY_HEAD",
+            "diff:_QUANTITY_KEEP_BEFORE",
+            "diff:_QUANTITY_CHANGE_BEFORE",
+            "diff:_sentence_numbers",
+            "diff:_CLAUSE_END",
+            "diff:_CONTEXT_WORD",
+            "diff:_number_contexts",
+            "diff:_number_texts",
+            "diff:_number_risks",
+            "diff:_order_changed",
+            "diff:_LEAD_MODIFIERS",
+            "diff:_lead",
+            "diff:_strong_swapped",
+            "diff:_unit_orders",
+            "diff:_number_phrases",
+            "diff:_cluster_partners",
+            "diff:_moved_keys",
+            "diff:_text_ratio",
+            "diff:_ratio_bound",
+            "diff:_unpaired_around",
+            "diff:_quantity_text",
+            "diff:_weak_head",
+            "diff:_quantity_negated",
+            "diff:_head_clauses",
+            "diff:_one_sentence_without",
+            "diff:_other_subject_masked",
+            "diff:_quantity_changed",
+            "diff:_with_unpaired_text",
+            "diff:_following_unpaired",
+            "diff:_cancel_notation",
+            "diff:_quantity_words",
+            "diff:_quantity_word_counts",
+            "diff:_drop_weak",
+            "diff:_notation_index",
+            "diff:_notation_match",
+            "diff:_units_fit",
+            "diff:_present",
+            "diff:_sentence_finder",
+            "diff:_hunk_finder",
+            "diff:_NEGATION",
+            "diff:_NEGATION_MASKED",
+            "diff:_NEGATION_WORDS",
+            "diff:_ADVERB_MAZU",
+            "diff:_NEGATION_LIMIT",
+            "diff:_NEGATION_END_RULE",
+            "diff:_END_WINDOW",
+            "diff:_PLACE_GAP",
+            "diff:_SENTENCE_TAIL",
+            "diff:_HIRAGANA",
+            "diff:_WORD_CHAR",
+            "diff:_negation_marks",
+            "diff:_char_opcodes",
+            "diff:_WIDEN_RIGHT",
+            "diff:_widen",
+            "diff:_covered",
+            "diff:_changed_places",
+            "diff:_unmarked_letters",
+            "diff:_ZU_TO_TE",
+            "diff:_verb_stem_change",
+            "diff:_negation_flip",
+            "diff:_negation_risks",
+            "diff:_CASE_WORD",
+            "diff:_HONORIFIC",
+            "diff:_CASE_PARTICLE",
+            "diff:_case_map",
+            "diff:_PASSIVE",
+            "diff:_passive_rewrite",
+            "diff:_swap_risks",
+            "diff:_QUESTION",
+            "diff:_NOT_QUESTION_KA",
+            "diff:_is_question",
+            "diff:_question_risks",
+            "diff:_is_quote_row",
+            "diff:_protected_spans",
+            "diff:_protected_risks",
+            "diff:_protected_contents",
+            "diff:_protected_hits",
+            "diff:_find_line",
+            "diff:_marks_risks",
+            "diff:_modality_risks",
+            "diff:_logic_risks",
+            "diff:_QUALIFIER_JOIN",
+            "diff:_QUALIFIER_SKIP",
+            "diff:_QUALIFIER_SHOWN",
+            "diff:_QUALIFIER_KATAKANA_UNIT",
+            "diff:_QUALIFIER_PART",
+            "diff:_QUALIFIER_AFTER",
+            "diff:_QUALIFIER_UNIT_ONLY",
+            "diff:_QUALIFIER_PLACE_UNITS",
+            "diff:_QUALIFIER_VERSION_BEFORE",
+            "diff:_QUALIFIER_BEFORE",
+            "diff:_QUALIFIER_BEFORE_REACH",
+            "diff:_QUALIFIER_YAKU_WORDS",
+            "diff:_QUALIFIER_YAKU_NOUNS",
+            "diff:_QUALIFIER_NEAR_AFTER",
+            "diff:_QUALIFIER_NEAR_BEFORE",
+            "diff:_QUALIFIER_SENTENCE",
+            "diff:_QUALIFIER_FAMILIES",
+            "diff:_QUALIFIER_BOUNDS",
+            "diff:_QUALIFIER_STRICT",
+            "diff:_qualifier_yaku_ok",
+            "diff:_qualifier_tail",
+            "diff:_qualifier_shown_end",
+            "diff:_qualifier_after",
+            "diff:_qualifier_marks",
+            "diff:_qualifier_joined",
+            "diff:_qualifier_states",
+            "diff:_qualifier_change",
+            "diff:_qualifier_risks",
+            "diff:_BODY_SKIP_KINDS",
+            "diff:_BODY_MASK_KINDS",
+            "diff:_K",
+            "diff:_STIFF_KANJI",
+            "diff:_Body",
+            "diff:_ZU_PREV",
+            "diff:_ZU_NEXT",
+            "diff:_negative_zu"
+          ],
+          "bound": [
+            "mini_diff_1:_CHAR_ALIGN_LIMIT",
+            "mini_diff_1:_END",
+            "mini_diff_1:_HALF_WIDTH",
+            "mini_diff_1:_KeySet",
+            "mini_diff_1:_UNITS",
+            "mini_diff_1:_WEAK_EACH",
+            "mini_diff_1:_WEAK_SINGLE",
+            "mini_diff_1:_affix_ratio",
+            "mini_diff_1:_common_affix",
+            "mini_diff_1:_image_path_start",
+            "mini_diff_1:_unit_pattern"
+          ],
+          "imports": []
+        },
+        {
+          "output": "scripts/mini_diff_3.py",
+          "bytes": 81272,
+          "units": 175,
+          "body_bytes": 78429,
+          "names": [
+            "diff:COUNTED_TYPES",
+            "diff:BUILTIN_LISTS",
+            "diff:_LIST_PATTERNS",
+            "diff:_LIST_THIRD_COLUMN",
+            "diff:_LIST_CACHE",
+            "diff:_LIST_PROBLEMS",
+            "diff:_LIST_ABSENT",
+            "diff:_LIST_PROBLEM_WIDTH",
+            "diff:parse_list",
+            "diff:_compile_item",
+            "diff:_ANY_OF_CACHE",
+            "diff:_any_of",
+            "diff:_list_problem_text",
+            "diff:_load_list",
+            "diff:_Masker",
+            "diff:_all_bodies",
+            "diff:_CONTRAST",
+            "diff:_ZU_MARK",
+            "diff:_NOT_ONLY",
+            "diff:_RHETORICAL",
+            "diff:_SUBORDINATE",
+            "diff:_CLAUSE_BREAK",
+            "diff:_TOPIC",
+            "diff:_OKURI_MID",
+            "diff:_OKURI_TAIL",
+            "diff:_TOKEN_OKURI_MID",
+            "diff:_TOKEN",
+            "diff:CONTRAST_WEIGHTS",
+            "diff:_STOP_TOKENS",
+            "diff:_NEG_AFTER",
+            "diff:_DEMOTE_WORD",
+            "diff:_OTHER_NOUN",
+            "diff:_DEMOTE_WORD_OTHER",
+            "diff:_LEXICAL_NEG",
+            "diff:_COORD_HEAD",
+            "diff:_TOPIC_MARKS",
+            "diff:_PROMOTE_TO",
+            "diff:_USE_A",
+            "diff:_DEMOTE_REDUCE",
+            "diff:_DEMOTE",
+            "diff:_REDUCE_ITSELF",
+            "diff:_DEMOTE_ANCHORED",
+            "diff:_A_PHRASE",
+            "diff:_OTHER_OBJECT",
+            "diff:_SWITCH_TO",
+            "diff:_SWITCH_FROM",
+            "diff:_CONTRAST_SKIP_KINDS",
+            "diff:_ALSO_AFTER",
+            "diff:_COORD_AFTER",
+            "diff:_COMPARE_CLAUSE",
+            "diff:_HYPOTHESIS",
+            "diff:_ADVERSATIVE_END",
+            "diff:_WEIGHT_PATTERN",
+            "diff:_WEIGHT_ONLY_CLAUSE",
+            "diff:_neg_after",
+            "diff:_clause_bounds",
+            "diff:_KATAKANA_HEAD",
+            "diff:_LATIN_HEAD",
+            "diff:_is_token",
+            "diff:_ADJ_NOUN",
+            "diff:_negated_tokens",
+            "diff:_SHOWN_TAIL",
+            "diff:_SHOWN_TAIL_NOT_HEAD",
+            "diff:_SHOWN_TAIL_PARTICLES",
+            "diff:_SHOWN_TAIL_MO_GA",
+            "diff:_shown_word",
+            "diff:_demoted",
+            "diff:_other_object",
+            "diff:_affirmed_with_weight",
+            "diff:_SIDE_REPLACED",
+            "diff:_SIDE_REJECTED",
+            "diff:_side_affirmed",
+            "diff:_affirmed_plain",
+            "diff:_original_affirms",
+            "diff:_continues_word",
+            "diff:_b_side_phrases",
+            "diff:_head_clue",
+            "diff:_contrast_risks",
+            "diff:_feeling_risks",
+            "diff:_CERTAINTY_VERB",
+            "diff:_PREDICATE_END",
+            "diff:_PREDICATE_STEM",
+            "diff:_PREDICATE_BEFORE",
+            "diff:_YOTEI",
+            "diff:_MIKOMI",
+            "diff:_APPEARANCE",
+            "diff:_CERTAINTY_TABLE",
+            "diff:_CERT",
+            "diff:_COUNTED_FROM",
+            "diff:_CERTAINTY_NEG_AFTER",
+            "diff:_CERTAINTY_NEG_FORMS",
+            "diff:_CERTAINTY_QUESTION",
+            "diff:_certainty_words",
+            "diff:_certainty_word_spans",
+            "diff:_certainty_negations",
+            "diff:_cancel_same_level",
+            "diff:_cancel_pairs",
+            "diff:_HEDGE_CONDITION",
+            "diff:_HEDGE_CLAUSE_STOP",
+            "diff:_HEDGE_CONTENT",
+            "diff:_hedge_polarity",
+            "diff:_hedge_conditions",
+            "diff:_hedge_clause",
+            "diff:_classify_hedge_marks",
+            "diff:_cancel_with_context",
+            "diff:_COUNTED_BY_DOC_TYPE_FROM",
+            "diff:_CERTAINTY_FREQUENCY",
+            "diff:_CERTAINTY_DUTY",
+            "diff:_certainty_change",
+            "diff:_same_review_sentence",
+            "diff:_unpaired_neighbors",
+            "diff:_certainty_risks",
+            "diff:_ADD_K",
+            "diff:_ADD_NEG",
+            "diff:_ADD_PERF_NEG",
+            "diff:_ADD_CHU",
+            "diff:_ADD_CHU_COMMA",
+            "diff:_ADD_STATE",
+            "diff:_ADD_STATE_RX",
+            "diff:_ADD_STATE_ANY",
+            "diff:_ADD_KEEP_EXTRA",
+            "diff:_ADD_KEEP_CROSS",
+            "diff:_ADD_KEEP_EXTRA_RX",
+            "diff:_ADD_COND",
+            "diff:_ADD_STATE_DENIED",
+            "diff:_ADD_SEND_OFF_OBJECT",
+            "diff:_ADD_DONE",
+            "diff:_ADD_PROGRESSIVE",
+            "diff:_ADD_APOLOGY",
+            "diff:_ADD_ANY_NEG",
+            "diff:_ADD_PERFORMATIVE",
+            "diff:_ADD_REPORT",
+            "diff:_ADD_REPORT_MAYBE",
+            "diff:_ADD_PERF_MARK",
+            "diff:_ADD_FUTURE_MARK",
+            "diff:_ADD_LATER_MARK",
+            "diff:_ADD_LATER_STRONG",
+            "diff:_ADD_OTHER_SUBJECT",
+            "diff:_ADD_WRITER_MARK",
+            "diff:_ADD_STATIVE",
+            "diff:_ADD_OLD_FUTURE",
+            "diff:_ADD_PROMISE",
+            "diff:_ADD_PROMISE_RX",
+            "diff:_ADD_REQUEST",
+            "diff:_ADD_INTRANSITIVE_SAHEN",
+            "diff:_ADD_AGENTIVE_SAHEN",
+            "diff:_ADD_E_ROW",
+            "diff:_ADD_INTRANSITIVE_TAIL",
+            "diff:_ADD_PAST_END",
+            "diff:_ADD_OLD_INTRANSITIVE",
+            "diff:_ADD_OLD_STATIVE",
+            "diff:_ADD_PREVENT_ANY",
+            "diff:_ADD_PREVENT_UNSETTLED",
+            "diff:_ADD_PREVENT_ACT",
+            "diff:_ADD_PREVENT_NOT_ACT",
+            "diff:_ADD_CAUSAL",
+            "diff:_ADD_CAUSAL_RX",
+            "diff:_ADD_INQUIRY_RESULT",
+            "diff:_addition_state_words",
+            "diff:_addition_stem_neg",
+            "diff:_addition_promise_clauses",
+            "diff:_ADD_PRED_SKIP",
+            "diff:_addition_pred_stem",
+            "diff:_addition_old_futures",
+            "diff:_addition_old_negatives",
+            "diff:_addition_find_all",
+            "diff:_addition_causal_words",
+            "diff:_addition_bigrams",
+            "diff:_AdditionDocument",
+            "diff:_GAP_DEGREE",
+            "diff:_GAP_CHANGE",
+            "diff:_GAP_EFFECT",
+            "diff:_GAP_FIGURE"
+          ],
+          "bound": [
+            "mini_diff_1:_line_sentences",
+            "mini_diff_1:normalize",
+            "mini_diff_2:TYPE_MARKERS",
+            "mini_diff_2:_BODY_MASK_KINDS",
+            "mini_diff_2:_BODY_SKIP_KINDS",
+            "mini_diff_2:_Body",
+            "mini_diff_2:_K",
+            "mini_diff_2:_STIFF_KANJI",
+            "mini_diff_2:_bigrams",
+            "mini_diff_2:_group_index",
+            "mini_diff_2:_is_question",
+            "mini_diff_2:_mark_positions",
+            "mini_diff_2:_negation_marks",
+            "mini_diff_2:_negative_zu",
+            "mini_diff_2:_risk",
+            "mini_diff_2:_sentence_spans"
+          ],
+          "imports": []
+        },
+        {
+          "output": "scripts/mini_check.py",
+          "bytes": 85757,
+          "units": 98,
+          "body_bytes": 74360,
+          "names": [
+            "diff:MARKERS",
+            "diff:_MARKER_REGEXES",
+            "diff:_MODALITY_ENDS",
+            "diff:_PERMISSION_END",
+            "diff:_PERMISSION_TAIL",
+            "diff:_MODALITY_PATTERNS",
+            "diff:MODALITY_MARKERS",
+            "diff:_MODALITY_LITERALS",
+            "diff:_ABILITY_NEGATIVE",
+            "diff:_MODALITY_NAMES",
+            "diff:_modality_positions",
+            "diff:_modality_names",
+            "diff:_shared_ranges",
+            "diff:_modality_changes",
+            "diff:_CHOICE_NOUN",
+            "diff:_CHOICE_ITEM",
+            "diff:_CHOICE_PHRASE",
+            "diff:_CHOICE_BEFORE",
+            "diff:_RELATION_END",
+            "diff:_RELATION_PRED",
+            "diff:_RELATION_STATE",
+            "diff:_CAUSE_LEAD",
+            "diff:_LOGIC_PATTERNS",
+            "diff:LOGIC_MARKERS",
+            "diff:_LOGIC_LITERALS",
+            "diff:_LOGIC_CHANGES",
+            "diff:_QUESTION_KA_LEFT",
+            "diff:_QUESTION_KA_RIGHT",
+            "diff:_CHOICE_NOUN_CHAR",
+            "diff:_CHOICE_HEAD",
+            "diff:_choice_item_start",
+            "diff:_logic_positions",
+            "diff:_logic_hits",
+            "diff:_logic_tails",
+            "diff:_adnominal_noun",
+            "diff:_unique",
+            "diff:_logic_changes",
+            "diff:CONTENT",
+            "diff:bold_head",
+            "diff:bold_lines",
+            "diff:_PROTECTED_LABELS",
+            "diff:FAIL_ON_KINDS",
+            "diff:fail_on_count",
+            "diff:_QUALIFIER_LABELS",
+            "diff:meaning_risks",
+            "diff:_meaning_risks",
+            "diff:_CERTAINTY_LEVELS",
+            "diff:_DIALOGUE",
+            "diff:_QUOTE_CLOSE",
+            "diff:_QUOTE_DROP",
+            "diff:_ADD_TOPIC_STOP",
+            "diff:_ADD_GUARANTEE_FAM",
+            "diff:_ADD_TIME_LINK",
+            "diff:_ADD_CONTENT",
+            "diff:_addition_topic",
+            "diff:_addition_on_topic",
+            "diff:_addition_key_head",
+            "diff:_ADD_PRED_SYNONYMS",
+            "diff:_addition_same_act",
+            "diff:_addition_novelty",
+            "diff:_addition_time_to_cause",
+            "diff:_addition_cause_span",
+            "diff:_AdditionGroup",
+            "diff:_addition_state_risks",
+            "diff:_addition_promise_risk",
+            "diff:_addition_cancel",
+            "diff:_addition_claim_risks",
+            "diff:_addition_risks",
+            "diff:_quote_normalize",
+            "diff:_line_quotes",
+            "diff:_blank_masked",
+            "diff:_QuoteSide",
+            "diff:_quote_risks",
+            "diff:_review_section",
+            "diff:_review_candidate",
+            "diff:_CITATION_LATIN",
+            "diff:_CITATION_JA",
+            "diff:_CITATION",
+            "diff:_CITATION_KEY",
+            "diff:_citation_key",
+            "diff:_SCIENTIFIC_VALUE",
+            "diff:_SIGNED_VALUE",
+            "diff:_STATISTIC_VALUE",
+            "diff:_EMAIL",
+            "diff:_ADDRESSEE",
+            "diff:_ADDRESSEE_FAMILY",
+            "diff:_VALUE_SKIP_KINDS",
+            "diff:_value_tokens",
+            "diff:_value_places",
+            "diff:_sentence_at",
+            "diff:_uncancelled_tokens",
+            "diff:_citation_number_covered",
+            "diff:_immutable_values",
+            "diff:_where",
+            "diff:_risk_line",
+            "diff:_modality_side",
+            "diff:_risk_section",
+            "diff:_rule_lines"
+          ],
+          "bound": [
+            "mini_diff_1:_ExactSequenceMatcher",
+            "mini_diff_1:_Sides",
+            "mini_diff_1:_line_sentences",
+            "mini_diff_1:_sentence_pairs",
+            "mini_diff_1:decode_source",
+            "mini_diff_1:full_diff",
+            "mini_diff_1:normalize",
+            "mini_diff_1:normalize_doc_type",
+            "mini_diff_2:_BODY_MASK_KINDS",
+            "mini_diff_2:_Body",
+            "mini_diff_2:_LAST_TYPE_RANGES",
+            "mini_diff_2:_RISK_ORDER",
+            "mini_diff_2:_is_quote_row",
+            "mini_diff_2:_logic_risks",
+            "mini_diff_2:_mark_positions",
+            "mini_diff_2:_marks_in",
+            "mini_diff_2:_marks_risks",
+            "mini_diff_2:_modality_risks",
+            "mini_diff_2:_negation_marks",
+            "mini_diff_2:_negation_risks",
+            "mini_diff_2:_number_risks",
+            "mini_diff_2:_protected_risks",
+            "mini_diff_2:_qualifier_risks",
+            "mini_diff_2:_question_risks",
+            "mini_diff_2:_range_sentences",
+            "mini_diff_2:_risk",
+            "mini_diff_2:_sentence_spans",
+            "mini_diff_2:_swap_risks",
+            "mini_diff_2:_type_changes",
+            "mini_diff_2:_type_ranges",
+            "mini_diff_3:_ADD_CAUSAL_RX",
+            "mini_diff_3:_ADD_K",
+            "mini_diff_3:_ADD_PROMISE_RX",
+            "mini_diff_3:_ADD_REQUEST",
+            "mini_diff_3:_ADD_STATE_ANY",
+            "mini_diff_3:_AdditionDocument",
+            "mini_diff_3:_Masker",
+            "mini_diff_3:_addition_bigrams",
+            "mini_diff_3:_addition_causal_words",
+            "mini_diff_3:_addition_old_futures",
+            "mini_diff_3:_addition_old_negatives",
+            "mini_diff_3:_certainty_risks",
+            "mini_diff_3:_classify_hedge_marks",
+            "mini_diff_3:_contrast_risks",
+            "mini_diff_3:_feeling_risks",
+            "mini_diff_3:_same_review_sentence",
+            "mini_diff_3:_unpaired_neighbors"
+          ],
+          "imports": []
+        }
+      ]
+    }
+  ],
+  "copies": [
+    {
+      "output": "LICENSE.txt",
+      "from_repo": "LICENSE"
+    }
+  ]
+}

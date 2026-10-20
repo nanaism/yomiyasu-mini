@@ -1,0 +1,421 @@
+{
+  "format": "yomiyasu-mini-manifest",
+  "format_version": 1,
+  "version": "1.0.0",
+  "source": {
+    "repository": "nanaism/yomiyasu",
+    "tag": "v2.1.1",
+    "commit": "fbe02c93877d697cc53d9377b7a45dd8a1dd99b3"
+  },
+  "output_dir": "skills/yomiyasu-mini",
+  "tables": [
+    {
+      "path": "extract/table.json",
+      "sha256": "d92cfea94cef4ec12517248b473812a93a1fe1df8bd19757a62973fd0a4422f5"
+    },
+    {
+      "path": "extract/scripts.json",
+      "sha256": "02f03f3a7aa81dafafaaf935087bdaf29323756ea2340610c6e6f9078243e077"
+    }
+  ],
+  "files": [
+    {
+      "path": "skills/yomiyasu-mini/LICENSE.txt",
+      "bytes": 1064,
+      "chars": 1064,
+      "sha256": "79d802f15bc8caf67f1a83c1bdbe214ccb41a0a0275f9046b329b89c65ee1fca"
+    },
+    {
+      "path": "skills/yomiyasu-mini/SKILL.md",
+      "bytes": 11890,
+      "chars": 4294,
+      "sha256": "38cf65fd2e5bec5c43746e8b2fdecb1f8de489d92fbdca939ab5deaf92c8a769"
+    },
+    {
+      "path": "skills/yomiyasu-mini/UNICODE-LICENSE.txt",
+      "bytes": 1995,
+      "chars": 1994,
+      "sha256": "e7a93b009565cfce55919a381437ac4db883e9da2126fa28b91d12732bc53d96"
+    },
+    {
+      "path": "skills/yomiyasu-mini/references/doc-types.md",
+      "bytes": 1643,
+      "chars": 669,
+      "sha256": "781779df9e9feae141b4bd3c6363d7c3e7b7ee7d46fbc1672c3f2bbd4e2f0961"
+    },
+    {
+      "path": "skills/yomiyasu-mini/scripts/mini_check.py",
+      "bytes": 3008,
+      "chars": 2780,
+      "sha256": "39497fcad238049609e4d53bfc08b49689d512104013135452c832516d152d59"
+    },
+    {
+      "path": "skills/yomiyasu-mini/scripts/mini_diff_1.py",
+      "bytes": 1574,
+      "chars": 1478,
+      "sha256": "a06f4e47515bf7ddd234a04dc821a404ad3aaeddebfb807ee32124e71e258e6e"
+    },
+    {
+      "path": "skills/yomiyasu-mini/scripts/mini_diff_2.py",
+      "bytes": 1638,
+      "chars": 1356,
+      "sha256": "a2ed91b90941e51a88933c1edab9b2f067d67166fdeaa111da6e3cc75f493494"
+    }
+  ],
+  "provenance": [
+    {
+      "output": "SKILL.md",
+      "region": "front_matter",
+      "description": {
+        "text": "extract/description.txt",
+        "from": [
+          {
+            "source": "skills/yomiyasu/SKILL.md",
+            "region": "front_matter",
+            "sha256": "75e8d91fbe2d9c82b39b52263f87ce48d609ba44b0570b242187dabcc842038b"
+          }
+        ],
+        "text_sha256": "9f0fb879fc8608657429c50c8bda111fd72020b9ea46b9c4aa07664d6b868581"
+      }
+    },
+    {
+      "output": "SKILL.md",
+      "part": 0,
+      "kind": "own",
+      "id": "intro",
+      "text": "extract/own/intro.md",
+      "reason": "mini の題と範囲",
+      "text_sha256": "47fffbc1b4d05a190ffa8056e7235da64c28074ec4406df4f719117c7d669add"
+    },
+    {
+      "output": "SKILL.md",
+      "part": 1,
+      "kind": "verbatim",
+      "id": "principles-head",
+      "class": "A",
+      "source": "skills/yomiyasu/SKILL.md",
+      "heading": {
+        "level": 2,
+        "text": "1. 基本原則",
+        "parents": [
+          "yomiyasu"
+        ]
+      },
+      "selector": {
+        "scope": "own"
+      },
+      "sha256": "33ed485218d8cd5fa965c429680e78ca754e6b68aa2dcc543f7fc9f40e559f85"
+    },
+    {
+      "output": "SKILL.md",
+      "part": 2,
+      "kind": "verbatim",
+      "id": "keep-meaning",
+      "class": "A",
+      "source": "skills/yomiyasu/SKILL.md",
+      "heading": {
+        "level": 3,
+        "text": "最優先ルール: 意味の保持",
+        "parents": [
+          "yomiyasu",
+          "1. 基本原則"
+        ]
+      },
+      "selector": {
+        "scope": "subtree"
+      },
+      "sha256": "36a3949d3fab1d0d42e6d60be28da345e97d1766a173e0da8f4b77f458a7b15d"
+    },
+    {
+      "output": "SKILL.md",
+      "part": 3,
+      "kind": "rewritten",
+      "id": "subject-head",
+      "class": "B",
+      "text": "extract/rewritten/subject-head.md",
+      "from": [
+        {
+          "source": "skills/yomiyasu/SKILL.md",
+          "heading": {
+            "level": 3,
+            "text": "主語と目的語の明確化",
+            "parents": [
+              "yomiyasu",
+              "1. 基本原則"
+            ]
+          },
+          "selector": {
+            "scope": "own"
+          },
+          "sha256": "519465fd03047b72631c6ec9b9086c35d5391c09332b5887cd1f5a50e6b9f4d8"
+        }
+      ],
+      "text_sha256": "8b9c64c453e753f559a887ee89f7a020202305e44619afa35b47e3ad612c05d8"
+    },
+    {
+      "output": "SKILL.md",
+      "part": 4,
+      "kind": "verbatim",
+      "id": "subject-first",
+      "class": "A",
+      "source": "skills/yomiyasu/SKILL.md",
+      "heading": {
+        "level": 3,
+        "text": "主語と目的語の明確化",
+        "parents": [
+          "yomiyasu",
+          "1. 基本原則"
+        ]
+      },
+      "selector": {
+        "lines": [
+          0,
+          0
+        ]
+      },
+      "sha256": "c4747d9098e0108e860ae96598b945b57c913237f66114bc69e418a8162cc010"
+    },
+    {
+      "output": "SKILL.md",
+      "part": 5,
+      "kind": "verbatim_edited",
+      "id": "subject-third",
+      "class": "A*",
+      "source": "skills/yomiyasu/SKILL.md",
+      "heading": {
+        "level": 3,
+        "text": "主語と目的語の明確化",
+        "parents": [
+          "yomiyasu",
+          "1. 基本原則"
+        ]
+      },
+      "selector": {
+        "lines": [
+          2,
+          2
+        ]
+      },
+      "substitutions": [
+        {
+          "old": "（`references/persona.md` 5章）",
+          "new": "（`references/doc-types.md`）",
+          "count": 1
+        }
+      ],
+      "sha256": "b9fa544d054d290cd2b342ad8fbd0e0f1f2b9ad3dd54e76dbe6e0cb18922e31e"
+    },
+    {
+      "output": "SKILL.md",
+      "part": 6,
+      "kind": "verbatim_edited",
+      "id": "personify",
+      "class": "A*",
+      "source": "skills/yomiyasu/SKILL.md",
+      "heading": {
+        "level": 3,
+        "text": "擬人化の解消",
+        "parents": [
+          "yomiyasu",
+          "1. 基本原則"
+        ]
+      },
+      "selector": {
+        "scope": "own"
+      },
+      "substitutions": [
+        {
+          "old": "（gemini-syntax.md 原則3）",
+          "new": "",
+          "count": 1
+        }
+      ],
+      "sha256": "f9a3b65efba02fa5fc6e9cc79deb13e74f060270577071d0e72877cbd1972bea"
+    },
+    {
+      "output": "SKILL.md",
+      "part": 7,
+      "kind": "verbatim",
+      "id": "provisional",
+      "class": "A",
+      "source": "skills/yomiyasu/SKILL.md",
+      "heading": {
+        "level": 3,
+        "text": "情報が足りない場合の暫定文",
+        "parents": [
+          "yomiyasu",
+          "1. 基本原則"
+        ]
+      },
+      "sha256": "68753d9f7dcdbea0e042004672624bf78445de3082e15fa6cf2494b20a7caa96"
+    },
+    {
+      "output": "SKILL.md",
+      "part": 8,
+      "kind": "rewritten",
+      "id": "step3",
+      "class": "B",
+      "text": "extract/rewritten/step3.md",
+      "drop_with": [
+        "status"
+      ],
+      "from": [
+        {
+          "source": "skills/yomiyasu/SKILL.md",
+          "heading": {
+            "level": 3,
+            "text": "Step 3: 検査（リンターと Diff 検査をまとめて実行）",
+            "parents": [
+              "yomiyasu",
+              "2. 実行手順"
+            ]
+          },
+          "sha256": "296b196d51fe7553476dfb325541981029711a63f247a201cfbfced39d57596b"
+        }
+      ],
+      "text_sha256": "8c84dabdf95159725b6f152204a90c00a0e861f0c1a322e381a6bd8495b92b60"
+    },
+    {
+      "output": "SKILL.md",
+      "part": 9,
+      "kind": "own",
+      "id": "status",
+      "class": "B",
+      "text": "extract/own/status.md",
+      "reason": "mini の状態の行の扱い",
+      "text_sha256": "70f064b28606f6466afd5d062e29799df1d6767e4612745aa0e4fd63ce2520b5"
+    },
+    {
+      "output": "references/doc-types.md",
+      "part": 0,
+      "kind": "own",
+      "id": "doc-types-head",
+      "text": "extract/own/doc-types-head.md",
+      "reason": "参照ファイルの題",
+      "text_sha256": "a526bfce9b5375b315aae864616af48243441f2987ae7d7bc1f57562a087740f"
+    },
+    {
+      "output": "references/doc-types.md",
+      "part": 1,
+      "kind": "verbatim_edited",
+      "id": "pr",
+      "class": "C",
+      "source": "skills/yomiyasu/references/doc-types/pr.md",
+      "heading": {
+        "level": 1,
+        "text": "PR説明（pr）",
+        "parents": []
+      },
+      "substitutions": [
+        {
+          "old": "（audience.md 7章）",
+          "new": "",
+          "count": 1
+        },
+        {
+          "old": "。lint の bold_label_list はこの種類でも外さない",
+          "new": "",
+          "count": 1
+        }
+      ],
+      "transforms": {
+        "heading_shift": 1,
+        "drop_lines": [
+          {
+            "pattern": "^あわせて読む:",
+            "count": 1
+          },
+          {
+            "pattern": "^lint で外す規則:",
+            "count": 1
+          }
+        ]
+      },
+      "sha256": "d7bb8a4ac7f5344abf66bb7dfe893480c67ea8d635078c5a8d2582264a21506b"
+    }
+  ],
+  "scripts": [
+    {
+      "id": "check",
+      "modules": [
+        {
+          "name": "vis",
+          "source": "skills/yomiyasu/scripts/markdown_visibility.py"
+        },
+        {
+          "name": "diff",
+          "source": "skills/yomiyasu/scripts/yomiyasu_diff.py"
+        },
+        {
+          "name": "lint",
+          "source": "skills/yomiyasu/scripts/yomiyasu_lint.py"
+        }
+      ],
+      "outputs": [
+        {
+          "output": "scripts/mini_diff_1.py",
+          "bytes": 1574,
+          "units": 8,
+          "body_bytes": 1141,
+          "names": [
+            "vis:decode_source",
+            "diff:_NORMALIZE_BOLD",
+            "diff:_NORMALIZE_LIST",
+            "diff:_NORMALIZE_HEADING",
+            "diff:_NORMALIZE_SPACES",
+            "diff:normalize",
+            "diff:_HALF_WIDTH"
+          ],
+          "bound": [],
+          "imports": [
+            "import re"
+          ]
+        },
+        {
+          "output": "scripts/mini_diff_2.py",
+          "bytes": 1638,
+          "units": 2,
+          "body_bytes": 1198,
+          "names": [
+            "vis:DOC_TYPES",
+            "vis:_normalize_choice"
+          ],
+          "bound": [],
+          "imports": [
+            "import unicodedata"
+          ]
+        },
+        {
+          "output": "scripts/mini_check.py",
+          "bytes": 3008,
+          "units": 2,
+          "body_bytes": 500,
+          "names": [
+            "vis:normalize_doc_type",
+            "lint:_EMOJI_DATA_VERSION"
+          ],
+          "bound": [
+            "mini_diff_1:_HALF_WIDTH",
+            "mini_diff_1:decode_source",
+            "mini_diff_1:normalize",
+            "mini_diff_2:DOC_TYPES",
+            "mini_diff_2:_normalize_choice"
+          ],
+          "imports": []
+        }
+      ]
+    }
+  ],
+  "copies": [
+    {
+      "output": "LICENSE.txt",
+      "source": "skills/yomiyasu/LICENSE",
+      "sha256": "79d802f15bc8caf67f1a83c1bdbe214ccb41a0a0275f9046b329b89c65ee1fca"
+    },
+    {
+      "output": "UNICODE-LICENSE.txt",
+      "source": "skills/yomiyasu/UNICODE-LICENSE.txt",
+      "sha256": "e7a93b009565cfce55919a381437ac4db883e9da2126fa28b91d12732bc53d96"
+    }
+  ]
+}

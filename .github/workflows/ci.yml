@@ -1,0 +1,54 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  generate-and-test:
+    name: generate + tests (Python ${{ matrix.python-version }})
+    # 本体と同じく ubuntu-24.04 に固定する（Python 3.9 を確実に使えるようにするため）。
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.9", "3.14"]
+    steps:
+      - uses: actions/checkout@v5
+      # 抽出の元。ref は extract/table.json の source.tag と同じにする（tests/test_generate.py が確かめる）。
+      - name: Check out nanaism/yomiyasu into _main
+        uses: actions/checkout@v5
+        with:
+          repository: nanaism/yomiyasu
+          ref: v2.1.1
+          path: _main
+          fetch-depth: 1
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: ${{ matrix.python-version }}
+      # pip は使わない（標準ライブラリだけで動かす）。
+      - name: Generate from _main and compare with the committed files
+        run: python -I -B tools/generate.py --source _main --check
+      - name: Tests
+        env:
+          YOMIYASU_MAIN: _main
+          YOMIYASU_REQUIRE_MAIN: "1"
+        # -s tests だけにして、_main/tests の試験を拾わない。
+        run: python -I -B -m unittest discover -s tests -v
+      - name: Build the zip twice and compare
+        run: |
+          python -I -B tools/build_zip.py --out "$RUNNER_TEMP/a.zip"
+          python -I -B tools/build_zip.py --out "$RUNNER_TEMP/b.zip"
+          cmp "$RUNNER_TEMP/a.zip" "$RUNNER_TEMP/b.zip"
+          sha256sum "$RUNNER_TEMP/a.zip"

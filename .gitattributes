@@ -1,0 +1,4 @@
+# Windows で取り出しても改行を LF のままにする（生成物をバイトで比べるため）。
+* text=auto eol=lf
+*.png binary
+*.zip binary
