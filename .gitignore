@@ -5,3 +5,4 @@ __pycache__/
 .DS_Store
 *.tmp-generate
 *.tmp-build-zip
+measurement/variants/
