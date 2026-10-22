@@ -1,4 +1,4 @@
-# yomiyasu-mini 1.0.0。nanaism/yomiyasu v2.1.1（fbe02c93877d697cc53d9377b7a45dd8a1dd99b3）から tools/generate.py で生成した。手で直さない。
+# yomiyasu-mini 1.0.0。nanaism/yomiyasu v2.1.3（c09270bc93daab14e253fb3ef406182011b79ccb）から tools/generate.py で生成した。手で直さない。
 # 取り出した名前と中身の sha256 は extract/scripts.json と MANIFEST.json にある。
 """yomiyasu-mini の意味の検査の部品。本体の yomiyasu_diff.py と markdown_visibility.py の定義を、元の字のまま入れている。
 単独では使わない。同じフォルダの mini_check.py が読む。"""
@@ -57,11 +57,11 @@ def _mini_bind(name, names):
         _mini_on_error(name, error)
 
 __version__ = "1.0.0"
-SOURCE_TAG = "v2.1.1"
-SOURCE_COMMIT = "fbe02c93877d697cc53d9377b7a45dd8a1dd99b3"
+SOURCE_TAG = "v2.1.3"
+SOURCE_COMMIT = "c09270bc93daab14e253fb3ef406182011b79ccb"
 
 _mini_bind("mini_diff_1", "_line_sentences normalize")
-_mini_bind("mini_diff_2", "TYPE_MARKERS _BODY_MASK_KINDS _BODY_SKIP_KINDS _Body _K _STIFF_KANJI _bigrams _group_index _is_question _mark_positions _negation_marks _negative_zu _risk _sentence_spans")
+_mini_bind("mini_diff_2", "TYPE_MARKERS _K _STIFF_KANJI _bigrams _group_index _is_question _mark_positions _negation_marks _negative_zu _risk _sentence_spans")
 
 COUNTED_TYPES = ("pr", "article", "incident", "proposal", "manual", "formal", "paper")
 
@@ -236,6 +236,22 @@ def _load_list(name):
     _LIST_CACHE[name] = (items, source)
     _LIST_PROBLEMS[name] = problem
     return _LIST_CACHE[name]
+
+_BODY_SKIP_KINDS = frozenset(("code", "frontmatter", "html_block", "table", "heading", "heading_underline",
+                              "reference_definition", "thematic_break", "blank"))
+
+_BODY_MASK_KINDS = frozenset(("inline_code", "autolink", "bare_url", "link_destination", "image", "html_token"))
+
+class _Body(tuple):
+    __slots__ = ()
+
+    def __new__(cls, text, raw, line, start):
+        return tuple.__new__(cls, (text, raw, line, start))
+
+    text = property(lambda self: self[0])
+    raw = property(lambda self: self[1])
+    line = property(lambda self: self[2])
+    start = property(lambda self: self[3])
 
 class _Masker:
 

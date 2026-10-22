@@ -36,7 +36,7 @@ def require_main(test):
     """本体の木を返す。なければ飛ばす（YOMIYASU_REQUIRE_MAIN=1 なら失敗にする）。"""
     tree = main_tree()
     if tree is None:
-        message = "本体 v2.1.1 の木がありません。環境変数 YOMIYASU_MAIN に、取り出したフォルダを指定してください。"
+        message = "本体の木がありません。環境変数 YOMIYASU_MAIN に、取り出したフォルダを指定してください。"
         if os.environ.get("YOMIYASU_REQUIRE_MAIN") == "1":
             test.fail(message)
         raise unittest.SkipTest(message)

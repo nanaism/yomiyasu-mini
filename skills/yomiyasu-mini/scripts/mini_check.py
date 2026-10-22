@@ -1,7 +1,7 @@
-# yomiyasu-mini 1.0.0。nanaism/yomiyasu v2.1.1（fbe02c93877d697cc53d9377b7a45dd8a1dd99b3）から tools/generate.py で生成した。手で直さない。
+# yomiyasu-mini 1.0.0。nanaism/yomiyasu v2.1.3（c09270bc93daab14e253fb3ef406182011b79ccb）から tools/generate.py で生成した。手で直さない。
 # 取り出した名前と中身の sha256 は extract/scripts.json と MANIFEST.json にある。
 """yomiyasu-mini の意味の検査。原文と最終稿を比べ、意味が変わる恐れのある場所を挙げる。
-本体 yomiyasu v2.1.1 の diff() の meaning_risks、markers、new_words、lost_words、type_changes と同じ値を出す。
+本体 yomiyasu（版は SOURCE_TAG）の diff() の meaning_risks、markers、new_words、lost_words、type_changes と同じ値を出す。
 検出の定義は本体から元の字のまま取り出し、mini_diff_*.py とこのファイルに分けて入れている。標準ライブラリだけで動き、外へ通信しない。"""
 import os
 import re
@@ -101,12 +101,12 @@ def _mini_bind(name, names):
         _mini_on_error(name, error)
 
 __version__ = "1.0.0"
-SOURCE_TAG = "v2.1.1"
-SOURCE_COMMIT = "fbe02c93877d697cc53d9377b7a45dd8a1dd99b3"
+SOURCE_TAG = "v2.1.3"
+SOURCE_COMMIT = "c09270bc93daab14e253fb3ef406182011b79ccb"
 
 _mini_bind("mini_diff_1", "_ExactSequenceMatcher _Sides _line_sentences _sentence_pairs decode_source full_diff normalize normalize_doc_type")
-_mini_bind("mini_diff_2", "_BODY_MASK_KINDS _Body _LAST_TYPE_RANGES _RISK_ORDER _is_quote_row _logic_risks _mark_positions _marks_in _marks_risks _modality_risks _negation_marks _negation_risks _number_risks _protected_risks _qualifier_risks _question_risks _range_sentences _risk _sentence_spans _swap_risks _type_changes _type_ranges")
-_mini_bind("mini_diff_3", "_ADD_CAUSAL_RX _ADD_K _ADD_PROMISE_RX _ADD_REQUEST _ADD_STATE_ANY _AdditionDocument _Masker _addition_bigrams _addition_causal_words _addition_old_futures _addition_old_negatives _certainty_risks _classify_hedge_marks _contrast_risks _feeling_risks _same_review_sentence _unpaired_neighbors")
+_mini_bind("mini_diff_2", "_LAST_TYPE_RANGES _RISK_ORDER _is_quote_row _logic_risks _mark_positions _marks_in _marks_risks _modality_risks _negation_marks _negation_risks _number_risks _protected_risks _qualifier_risks _question_risks _range_sentences _risk _sentence_spans _swap_risks _type_changes _type_ranges")
+_mini_bind("mini_diff_3", "_ADD_CAUSAL_RX _ADD_K _ADD_PROMISE_RX _ADD_REQUEST _ADD_STATE_ANY _AdditionDocument _BODY_MASK_KINDS _Body _Masker _addition_bigrams _addition_causal_words _addition_old_futures _addition_old_negatives _certainty_risks _classify_hedge_marks _contrast_risks _feeling_risks _same_review_sentence _unpaired_neighbors")
 
 MARKERS = {
     "依頼": r"(?:て|で)ください",

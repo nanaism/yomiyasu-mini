@@ -4,18 +4,18 @@
   "version": "1.0.0",
   "source": {
     "repository": "nanaism/yomiyasu",
-    "tag": "v2.1.1",
-    "commit": "fbe02c93877d697cc53d9377b7a45dd8a1dd99b3"
+    "tag": "v2.1.3",
+    "commit": "c09270bc93daab14e253fb3ef406182011b79ccb"
   },
   "output_dir": "skills/yomiyasu-mini",
   "tables": [
     {
       "path": "extract/table.json",
-      "sha256": "d2eb6466b4997089a5f98505d327eac57fc3ea48b54f15a86c67b15d833a715f"
+      "sha256": "cde407d4903ddc84de3a69e0d7a971c70a92c464a6ee2996f8a0f0c505c6ed69"
     },
     {
       "path": "extract/scripts.json",
-      "sha256": "43a7971c4d1740cc3b0e486b2f524005eb6336b8c94fc8ab435c95c80baed9aa"
+      "sha256": "21ce23b8698a71ad9daab808feca5c717cf0ebada596a71b4188e39a977c66a9"
     }
   ],
   "files": [
@@ -27,45 +27,45 @@
     },
     {
       "path": "skills/yomiyasu-mini/SKILL.md",
-      "bytes": 46713,
-      "chars": 16899,
-      "sha256": "6bb2e0bdd18164639de888fc87c32ff94f0a167b659774fe7572440431374b1c"
+      "bytes": 46787,
+      "chars": 16929,
+      "sha256": "63000eccb36527c3e9e4ce94a40ecd736b303614e9e460aa6a6979c79ceb409a"
     },
     {
       "path": "skills/yomiyasu-mini/references/doc-types.md",
-      "bytes": 88161,
-      "chars": 33005,
-      "sha256": "a570987b61cc13b9a3870d29d630b9e7188ff1246c83859905f89ed38edb7a6f"
+      "bytes": 88154,
+      "chars": 32998,
+      "sha256": "e22fcd21a484ac722b3fd16469493753ac20275b077753f54da28146d4e96eb8"
     },
     {
       "path": "skills/yomiyasu-mini/references/rules.md",
-      "bytes": 88665,
-      "chars": 32131,
-      "sha256": "9c03d6001058dcb4f41e9cf52e741f86069e2ee46a747e8d03a35ada58685ea2"
+      "bytes": 88658,
+      "chars": 32124,
+      "sha256": "f8522d273c5db94141c136c5c5a424af03b19445cc810aaf4ce9e7e8c80941a9"
     },
     {
       "path": "skills/yomiyasu-mini/scripts/mini_check.py",
-      "bytes": 85757,
-      "chars": 73718,
-      "sha256": "c0c23e5a3b0495c6d33ff9bb1e2079b6e613fd55f836c212d140a7e8c35a206e"
+      "bytes": 85772,
+      "chars": 73725,
+      "sha256": "e5766a6b74e78f0880e25a9c68141e69ea78a83b67cb3a7819bceb753c8bbf63"
     },
     {
       "path": "skills/yomiyasu-mini/scripts/mini_diff_1.py",
       "bytes": 82175,
       "chars": 79945,
-      "sha256": "213552c0528d8e442bbbff3b5eb893049e93c3601c57f968f7fd1f114b81c14e"
+      "sha256": "2cd62c8750a2839c2498c68b7aad8d1d58d1e5060dd3daa47d5d7f8362461af8"
     },
     {
       "path": "skills/yomiyasu-mini/scripts/mini_diff_2.py",
-      "bytes": 82354,
-      "chars": 75554,
-      "sha256": "29b8048684185ae6367377975ae2a263da7f12cc51c5ee4aeaf60543f9671ef3"
+      "bytes": 82514,
+      "chars": 75702,
+      "sha256": "f59f41303d7674cf44326c8eb7735fb5057573bc58158d43d978247e3fa9c39e"
     },
     {
       "path": "skills/yomiyasu-mini/scripts/mini_diff_3.py",
-      "bytes": 81272,
-      "chars": 65988,
-      "sha256": "6a0df7acb170a5aa80912290c398c518b85bcec1c7bc604a5b764c14ecdb2712"
+      "bytes": 81853,
+      "chars": 66569,
+      "sha256": "3973ea9b60007f6e66fc9a90a74da4d7b3b54c461c16dc4e59b8b41ff12d97bb"
     }
   ],
   "provenance": [
@@ -74,12 +74,12 @@
       "region": "front_matter",
       "description": {
         "text": "extract/description.txt",
-        "text_sha256": "7d9a41fac14c4a9c441fa0e7ade72025c72faf43a0a212e4b1559eaa18598894",
+        "text_sha256": "326c6ef874b48956817e4400334f9ebe67e8316b5bebc16480d4fad57c67229f",
         "from": [
           {
             "source": "skills/yomiyasu/SKILL.md",
             "region": "front_matter",
-            "sha256": "75e8d91fbe2d9c82b39b52263f87ce48d609ba44b0570b242187dabcc842038b"
+            "sha256": "96e07089aa021abbde78626964fa5b1063645b442298292f7bd48b2c25d31388"
           }
         ]
       }
@@ -121,7 +121,7 @@
       "kind": "own",
       "id": "intro",
       "text": "extract/own/intro.md",
-      "text_sha256": "0610d6b31013366a840d980cd187a2704b22efd019b11bd0b5bfdb4f4e4a7e91",
+      "text_sha256": "25f4a8d08d92a7229eea21f58cdd666d40634494f08ba2db412176ecda5f5ecc",
       "reason": "mini の範囲、参照ファイルの場所、名前だけで呼ばれたときの対象の決め方（本体 L11 を Copilot などに合わせて書き直したもの）、検査を実行できなかったときの扱い",
       "class": "own"
     },
@@ -1122,7 +1122,7 @@
       "kind": "own",
       "id": "rules-head",
       "text": "extract/own/rules-head.md",
-      "text_sha256": "95bf67fb6d535948fb5d06375154becd40eea1c63fcab495fda4fac01f40669b",
+      "text_sha256": "2a01173a75be933573f5c45759b62e8b62fc7d747b11c2d38b0d6b823c86d524",
       "reason": "rules.md の題と、写した節の読み方",
       "class": "own"
     },
@@ -2283,7 +2283,7 @@
       "kind": "own",
       "id": "dt-head",
       "text": "extract/own/dt-head.md",
-      "text_sha256": "db7dcdb6786357dacc1cb178d07da554d56b67e5387bbe5c0e8b7243d6fd8b35",
+      "text_sha256": "e2d591740d601a260808a76c6097280b17705143961f39d1884731145d0e2894",
       "reason": "doc-types.md の題と、写した節の読み方",
       "class": "own"
     },
@@ -3867,9 +3867,9 @@
         },
         {
           "output": "scripts/mini_diff_2.py",
-          "bytes": 82354,
+          "bytes": 82514,
           "units": 164,
-          "body_bytes": 79618,
+          "body_bytes": 79778,
           "names": [
             "diff:_TYPE_PATTERNS",
             "diff:TYPE_MARKERS",
@@ -4024,14 +4024,14 @@
             "diff:_qualifier_after",
             "diff:_qualifier_marks",
             "diff:_qualifier_joined",
+            "diff:_QUALIFIER_SENTENCE_STOP",
+            "diff:_QUALIFIER_SPLIT_DECIMAL",
+            "diff:_qualifier_reach",
             "diff:_qualifier_states",
             "diff:_qualifier_change",
             "diff:_qualifier_risks",
-            "diff:_BODY_SKIP_KINDS",
-            "diff:_BODY_MASK_KINDS",
             "diff:_K",
             "diff:_STIFF_KANJI",
-            "diff:_Body",
             "diff:_ZU_PREV",
             "diff:_ZU_NEXT",
             "diff:_negative_zu"
@@ -4053,9 +4053,9 @@
         },
         {
           "output": "scripts/mini_diff_3.py",
-          "bytes": 81272,
-          "units": 175,
-          "body_bytes": 78429,
+          "bytes": 81853,
+          "units": 178,
+          "body_bytes": 79047,
           "names": [
             "diff:COUNTED_TYPES",
             "diff:BUILTIN_LISTS",
@@ -4071,6 +4071,9 @@
             "diff:_any_of",
             "diff:_list_problem_text",
             "diff:_load_list",
+            "diff:_BODY_SKIP_KINDS",
+            "diff:_BODY_MASK_KINDS",
+            "diff:_Body",
             "diff:_Masker",
             "diff:_all_bodies",
             "diff:_CONTRAST",
@@ -4235,9 +4238,6 @@
             "mini_diff_1:_line_sentences",
             "mini_diff_1:normalize",
             "mini_diff_2:TYPE_MARKERS",
-            "mini_diff_2:_BODY_MASK_KINDS",
-            "mini_diff_2:_BODY_SKIP_KINDS",
-            "mini_diff_2:_Body",
             "mini_diff_2:_K",
             "mini_diff_2:_STIFF_KANJI",
             "mini_diff_2:_bigrams",
@@ -4253,7 +4253,7 @@
         },
         {
           "output": "scripts/mini_check.py",
-          "bytes": 85757,
+          "bytes": 85772,
           "units": 98,
           "body_bytes": 74360,
           "names": [
@@ -4365,8 +4365,6 @@
             "mini_diff_1:full_diff",
             "mini_diff_1:normalize",
             "mini_diff_1:normalize_doc_type",
-            "mini_diff_2:_BODY_MASK_KINDS",
-            "mini_diff_2:_Body",
             "mini_diff_2:_LAST_TYPE_RANGES",
             "mini_diff_2:_RISK_ORDER",
             "mini_diff_2:_is_quote_row",
@@ -4393,6 +4391,8 @@
             "mini_diff_3:_ADD_REQUEST",
             "mini_diff_3:_ADD_STATE_ANY",
             "mini_diff_3:_AdditionDocument",
+            "mini_diff_3:_BODY_MASK_KINDS",
+            "mini_diff_3:_Body",
             "mini_diff_3:_Masker",
             "mini_diff_3:_addition_bigrams",
             "mini_diff_3:_addition_causal_words",

@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
-# yomiyasu-mini 1.0.0。nanaism/yomiyasu v2.1.1（fbe02c93877d697cc53d9377b7a45dd8a1dd99b3）から tools/generate.py で生成した。手で直さない。
+# yomiyasu-mini 1.0.0。nanaism/yomiyasu v2.1.3（c09270bc93daab14e253fb3ef406182011b79ccb）から tools/generate.py で生成した。手で直さない。
 # 取り出した名前と中身の sha256 は extract/scripts.json と MANIFEST.json にある。
 """試験用の CLI。2つのファイルを読み、本体と同じ normalize で比べる。"""
 import argparse
 import sys
 
 __version__ = "1.0.0"
-SOURCE_TAG = "v2.1.1"
-SOURCE_COMMIT = "fbe02c93877d697cc53d9377b7a45dd8a1dd99b3"
+SOURCE_TAG = "v2.1.3"
+SOURCE_COMMIT = "c09270bc93daab14e253fb3ef406182011b79ccb"
 
 import importlib.util as _mini_iu
 import os as _mini_os

@@ -1,4 +1,4 @@
-# yomiyasu-mini 1.0.0。nanaism/yomiyasu v2.1.1（fbe02c93877d697cc53d9377b7a45dd8a1dd99b3）から tools/generate.py で生成した。手で直さない。
+# yomiyasu-mini 1.0.0。nanaism/yomiyasu v2.1.3（c09270bc93daab14e253fb3ef406182011b79ccb）から tools/generate.py で生成した。手で直さない。
 # 取り出した名前と中身の sha256 は extract/scripts.json と MANIFEST.json にある。
 """yomiyasu-mini の意味の検査の部品。本体の yomiyasu_diff.py と markdown_visibility.py の定義を、元の字のまま入れている。
 単独では使わない。同じフォルダの mini_check.py が読む。"""
@@ -57,8 +57,8 @@ def _mini_bind(name, names):
         _mini_on_error(name, error)
 
 __version__ = "1.0.0"
-SOURCE_TAG = "v2.1.1"
-SOURCE_COMMIT = "fbe02c93877d697cc53d9377b7a45dd8a1dd99b3"
+SOURCE_TAG = "v2.1.3"
+SOURCE_COMMIT = "c09270bc93daab14e253fb3ef406182011b79ccb"
 
 _mini_bind("mini_diff_1", "_CHAR_ALIGN_LIMIT _END _HALF_WIDTH _KeySet _UNITS _WEAK_EACH _WEAK_SINGLE _affix_ratio _common_affix _image_path_start _unit_pattern")
 
@@ -1520,9 +1520,22 @@ def _qualifier_joined(text, previous, number, end):
         return compound or at == previous.end
     return "\n" not in between and _QUALIFIER_JOIN.fullmatch(between) is not None
 
-def _qualifier_states(sides, side, sentence, numbers):
+_QUALIFIER_SENTENCE_STOP = re.compile(r"[。！？!?\n]")
+_QUALIFIER_SPLIT_DECIMAL = re.compile(r"[0-9０-９]．$")
+
+def _qualifier_reach(sides, side, sentence, numbers):
     text = sides.texts[side]
     start, end = sentence.start, sentence.start + len(sentence.text)
+    reach = max([end] + [number.end for number in numbers])
+    if reach > end:
+        stop = _QUALIFIER_SENTENCE_STOP.search(text, reach)
+        end = stop.end() if stop is not None else len(text)
+    return text[start:end]
+
+def _qualifier_states(sides, side, sentence, numbers):
+    text = sides.texts[side]
+    start = sentence.start
+    end = start + len(_qualifier_reach(sides, side, sentence, numbers))
     marks = [_qualifier_marks(text, start, end, number) for number in numbers]
     groups = list(range(len(numbers)))
     for index in range(1, len(numbers)):
@@ -1569,13 +1582,16 @@ def _qualifier_risks(sides, groups):
     for group in groups:
         for i, j in group["pairs"]:
             old, new = group["old"][i], group["new"][j]
-            if old.text == new.text:
+            if old.text == new.text and not _QUALIFIER_SPLIT_DECIMAL.search(old.text):
                 continue
             old_numbers = _sentence_numbers(sides, 0, old)
             if not old_numbers:
                 continue
             new_numbers = _sentence_numbers(sides, 1, new)
             if not new_numbers:
+                continue
+            if old.text == new.text and (_qualifier_reach(sides, 0, old, old_numbers)
+                                         == _qualifier_reach(sides, 1, new, new_numbers)):
                 continue
             olds = _qualifier_states(sides, 0, old, old_numbers)
             news = _qualifier_states(sides, 1, new, new_numbers)
@@ -1619,23 +1635,8 @@ def _qualifier_risks(sides, groups):
                                       "old_markers": list(before[2]), "new_markers": list(after[2])}))
     return out
 
-_BODY_SKIP_KINDS = frozenset(("code", "frontmatter", "html_block", "table", "heading", "heading_underline",
-                              "reference_definition", "thematic_break", "blank"))
-
-_BODY_MASK_KINDS = frozenset(("inline_code", "autolink", "bare_url", "link_destination", "image", "html_token"))
 _K = "㐀-䶿一-鿿豈-﫿々〆"
 _STIFF_KANJI = re.compile("[" + _K + "]")
-
-class _Body(tuple):
-    __slots__ = ()
-
-    def __new__(cls, text, raw, line, start):
-        return tuple.__new__(cls, (text, raw, line, start))
-
-    text = property(lambda self: self[0])
-    raw = property(lambda self: self[1])
-    line = property(lambda self: self[2])
-    start = property(lambda self: self[3])
 
 _ZU_PREV = frozenset("わかさたなまらがばぱせけげてでねべめれえきぎしじちにびみりい")
 _ZU_NEXT = re.compile("[、。，．" + _K + "ァ-ヴA-Za-zＡ-Ｚａ-ｚ]|に")

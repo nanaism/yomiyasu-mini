@@ -18,8 +18,8 @@ import _util  # noqa: E402
 limits = _util.load_tool("limits")
 
 GOOD_FRONT = ('---\nname: yomiyasu-mini\ndescription: 試験の説明。\nlicense: MIT\nmetadata:\n  version: "1.0.0"\n'
-              '  source-repository: "nanaism/yomiyasu"\n  source-tag: "v2.1.1"\n'
-              '  source-commit: "fbe02c93877d697cc53d9377b7a45dd8a1dd99b3"\n---\n')
+              '  source-repository: "nanaism/yomiyasu"\n  source-tag: "v2.1.3"\n'
+              '  source-commit: "c09270bc93daab14e253fb3ef406182011b79ccb"\n---\n')
 
 
 def skill(body="# yomiyasu-mini\n\n本文。\n", front=GOOD_FRONT):
@@ -50,7 +50,7 @@ class LimitValuesTest(unittest.TestCase):
             skill(front=GOOD_FRONT.replace("試験の説明。", "あ" * 270).replace("license: MIT\n", "license: MIT\n" + "x: " + "y" * 200 + "\n")))))
         self.assertTrue(limits.skill_md_problems(skill(front=GOOD_FRONT.replace("name: yomiyasu-mini", "name: Yomiyasu_Mini"))))
         self.assertTrue(limits.skill_md_problems(skill(), "other-name"))
-        self.assertTrue(limits.skill_md_problems(skill(front=GOOD_FRONT.replace('  source-commit: "fbe02c93877d697cc53d9377b7a45dd8a1dd99b3"\n', ""))))
+        self.assertTrue(limits.skill_md_problems(skill(front=GOOD_FRONT.replace('  source-commit: "c09270bc93daab14e253fb3ef406182011b79ccb"\n', ""))))
         self.assertTrue(limits.skill_md_problems(skill(front=GOOD_FRONT.replace("試験の説明。", "<b>説明</b>"))))
 
     def test_files(self):

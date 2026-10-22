@@ -1,4 +1,4 @@
-"""mini_check.py が、本体 v2.1.1 の yomiyasu_diff.diff() と同じ値を出すかを確かめる。
+"""mini_check.py が、本体の yomiyasu_diff.diff() と同じ値を出すかを確かめる。
 
 比べる値: meaning_risks（全種類）、markers、new_words、lost_words、type_changes と、--fail-on に当たる件数。
 本体と mini は、この試験と同じ Python で動かす。この試験は何も生成しない。生成物は tools/generate.py で作る。
@@ -11,7 +11,7 @@
   3,885件）。ファイルごとに別のプロセスと別の写しで、並べて走らせる。
 
 場所:
-- 本体の木: 環境変数 YOMIYASU_MAIN。なければ、このリポジトリの _main/（CI が v2.1.1 を取り出す場所）。
+- 本体の木: 環境変数 YOMIYASU_MAIN。なければ、このリポジトリの _main/（CI が本体を取り出す場所）。
 - mini のスクリプト: 環境変数 YOMIYASU_MINI_SCRIPTS。なければ skills/yomiyasu-mini/scripts/。
 どちらかがないときは飛ばす。YOMIYASU_REQUIRE_MAIN=1 のときは、飛ばさずに失敗にする。
 本体の試験の入力を集める段を飛ばすときは YOMIYASU_PARITY_HARVEST=0、全部の試験のファイルを走らせるときは all にする。"""

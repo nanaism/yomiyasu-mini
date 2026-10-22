@@ -4,8 +4,8 @@
   "version": "1.0.0",
   "source": {
     "repository": "nanaism/yomiyasu",
-    "tag": "v2.1.1",
-    "commit": "fbe02c93877d697cc53d9377b7a45dd8a1dd99b3",
+    "tag": "v2.1.3",
+    "commit": "c09270bc93daab14e253fb3ef406182011b79ccb",
     "skill_dir": "skills/yomiyasu"
   },
   "output_dir": "skills/yomiyasu-mini",
@@ -21,7 +21,7 @@
         {
           "source": "skills/yomiyasu/SKILL.md",
           "region": "front_matter",
-          "sha256": "75e8d91fbe2d9c82b39b52263f87ce48d609ba44b0570b242187dabcc842038b"
+          "sha256": "96e07089aa021abbde78626964fa5b1063645b442298292f7bd48b2c25d31388"
         }
       ],
       "text_sha256": "9f0fb879fc8608657429c50c8bda111fd72020b9ea46b9c4aa07664d6b868581"

@@ -1,5 +1,5 @@
 """yomiyasu-mini の意味の検査。原文と最終稿を比べ、意味が変わる恐れのある場所を挙げる。
-本体 yomiyasu v2.1.1 の diff() の meaning_risks、markers、new_words、lost_words、type_changes と同じ値を出す。
+本体 yomiyasu（版は SOURCE_TAG）の diff() の meaning_risks、markers、new_words、lost_words、type_changes と同じ値を出す。
 検出の定義は本体から元の字のまま取り出し、mini_diff_*.py とこのファイルに分けて入れている。標準ライブラリだけで動き、外へ通信しない。"""
 import os
 import re

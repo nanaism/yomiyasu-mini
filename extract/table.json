@@ -4,8 +4,8 @@
   "version": "1.0.0",
   "source": {
     "repository": "nanaism/yomiyasu",
-    "tag": "v2.1.1",
-    "commit": "fbe02c93877d697cc53d9377b7a45dd8a1dd99b3",
+    "tag": "v2.1.3",
+    "commit": "c09270bc93daab14e253fb3ef406182011b79ccb",
     "skill_dir": "skills/yomiyasu"
   },
   "output_dir": "skills/yomiyasu-mini",
@@ -17,12 +17,12 @@
     "name": "yomiyasu-mini",
     "description": {
       "text": "extract/description.txt",
-      "text_sha256": "7d9a41fac14c4a9c441fa0e7ade72025c72faf43a0a212e4b1559eaa18598894",
+      "text_sha256": "326c6ef874b48956817e4400334f9ebe67e8316b5bebc16480d4fad57c67229f",
       "from": [
         {
           "source": "skills/yomiyasu/SKILL.md",
           "region": "front_matter",
-          "sha256": "75e8d91fbe2d9c82b39b52263f87ce48d609ba44b0570b242187dabcc842038b"
+          "sha256": "96e07089aa021abbde78626964fa5b1063645b442298292f7bd48b2c25d31388"
         }
       ]
     },
@@ -63,7 +63,7 @@
           "kind": "own",
           "id": "intro",
           "text": "extract/own/intro.md",
-          "text_sha256": "0610d6b31013366a840d980cd187a2704b22efd019b11bd0b5bfdb4f4e4a7e91",
+          "text_sha256": "25f4a8d08d92a7229eea21f58cdd666d40634494f08ba2db412176ecda5f5ecc",
           "reason": "mini の範囲、参照ファイルの場所、名前だけで呼ばれたときの対象の決め方（本体 L11 を Copilot などに合わせて書き直したもの）、検査を実行できなかったときの扱い",
           "class": "own"
         },
@@ -997,7 +997,7 @@
           "kind": "own",
           "id": "rules-head",
           "text": "extract/own/rules-head.md",
-          "text_sha256": "95bf67fb6d535948fb5d06375154becd40eea1c63fcab495fda4fac01f40669b",
+          "text_sha256": "2a01173a75be933573f5c45759b62e8b62fc7d747b11c2d38b0d6b823c86d524",
           "reason": "rules.md の題と、写した節の読み方",
           "class": "own"
         },
@@ -2105,7 +2105,7 @@
           "kind": "own",
           "id": "dt-head",
           "text": "extract/own/dt-head.md",
-          "text_sha256": "db7dcdb6786357dacc1cb178d07da554d56b67e5387bbe5c0e8b7243d6fd8b35",
+          "text_sha256": "e2d591740d601a260808a76c6097280b17705143961f39d1884731145d0e2894",
           "reason": "doc-types.md の題と、写した節の読み方",
           "class": "own"
         },

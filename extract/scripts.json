@@ -4,8 +4,8 @@
   "version": "1.0.0",
   "source": {
     "repository": "nanaism/yomiyasu",
-    "tag": "v2.1.1",
-    "commit": "fbe02c93877d697cc53d9377b7a45dd8a1dd99b3",
+    "tag": "v2.1.3",
+    "commit": "c09270bc93daab14e253fb3ef406182011b79ccb",
     "skill_dir": "skills/yomiyasu"
   },
   "modules": [
@@ -131,7 +131,7 @@
     {
       "id": "check-head",
       "text": "extract/py/check_head.py",
-      "text_sha256": "d09366b442bb92888b9996f72b5c46887535e765b7a656f790ee325856b31633",
+      "text_sha256": "a00f8147768a13902fa26f99f02b6975c337c0ca9c27aad4d5c964ec41af7b51",
       "reason": "mini_check.py の docstring、import、使い方の文、状態の行。部品を読めないときに状態の行を出す扱い"
     },
     {
@@ -2472,9 +2472,27 @@
     },
     {
       "module": "diff",
+      "name": "_QUALIFIER_SENTENCE_STOP",
+      "stmts": 1,
+      "sha256": "44fda3bce95a5eaa2ce5f905238ac20727e9bf051a024204b848a8afec03186a"
+    },
+    {
+      "module": "diff",
+      "name": "_QUALIFIER_SPLIT_DECIMAL",
+      "stmts": 1,
+      "sha256": "e1692d97f15ad276ec308266debec6efa72f201fd11e7370413769b50d3700e9"
+    },
+    {
+      "module": "diff",
+      "name": "_qualifier_reach",
+      "stmts": 1,
+      "sha256": "b990c9689ff79991c3b92a995788fa4e355c7ba6e968f844047017c6e7be85eb"
+    },
+    {
+      "module": "diff",
       "name": "_qualifier_states",
       "stmts": 1,
-      "sha256": "7021feebbf09e7815fc7b9291409adb154add85c60e66b089fc98a105db484da"
+      "sha256": "cb2b1de054e92c48565f084b8dc024680919fce2714fc77cca068734d65b4cb1"
     },
     {
       "module": "diff",
@@ -2486,7 +2504,7 @@
       "module": "diff",
       "name": "_qualifier_risks",
       "stmts": 1,
-      "sha256": "e418896d79626c74c0ec75fbd465f1f59abb8c5dd354424ae8fa275f3ab12770"
+      "sha256": "8e5d71e1cdeb75f02cd3e77d5e98687de8efebc67ed340363a94201c325a4c27"
     },
     {
       "module": "diff",
