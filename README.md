@@ -1,6 +1,6 @@
 <p align="center"><img src="./assets/yomiyasu-mini.png" alt="yomiyasu-mini logo" width="600"></p>
 
-# yomiyasu-mini（よみやす みに）
+# yomiyasu mini（よみやす みに）
 
 ## これは何？
 
