@@ -7,8 +7,8 @@ generate.py、build_zip.py、tests/test_limits.py が同じ値を使う。標準
 値の出どころ:
 - Microsoft の文書（宣言型エージェントのカスタムスキル）の上限: SKILL.md の指示は2万字未満、.zip は50MBまで、
   1ファイルは25MBまで、ファイルはすべてのスキルを合わせて350個まで、フォルダの深さは3まで。
-- 依頼書の目安: SKILL.md はファイル全体で18,000字以下、スクリプトは1本90KB以下。
-- 決め（DECISIONS.md 5章）: front matter は500字以内、description は280字以内。
+- 設計の目安: SKILL.md はファイル全体で18,000字以下、スクリプトは1本90KB以下。
+- 設計の決め: front matter は500字以内、description は280字以内。
 - 自前の目安: references/ の参照ファイルは1本100,000バイト以下（Microsoft の上限ではない。v2.2.2 から作り直したときに決めた）。
 KB と MB は10進で数える（90KB は 90,000 バイト、25MB は 25,000,000 バイト）。字は Python の len で数える。
 """
@@ -37,7 +37,7 @@ FILE_NAME_RE = re.compile(r"^[A-Za-z0-9._-]+$")
 SKILL_NAME_RE = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
 # スクリプトで使わないモジュール（ネットワークと別のプロセス）
 FORBIDDEN_IMPORTS = ("ftplib", "http", "smtplib", "socket", "ssl", "subprocess", "urllib", "xmlrpc")
-# README に書かないこと（依頼書の「README には事実だけを書きます」）。正規表現と、その理由。
+# README に書かないこと（README には設計の狙いと測った数字だけを書く）。正規表現と、その理由。
 README_FORBIDDEN = (
     (r"claude\.ai", "claude.ai で使えるとは書かない"),
     (r"未確認", "「未確認」と書かない"),

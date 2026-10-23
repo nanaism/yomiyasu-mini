@@ -941,7 +941,7 @@
           "id": "step3",
           "text": "extract/own/step3.md",
           "text_sha256": "0d2cc5c3085bf9f977fbd698a8a9f806802137af6df6e0a60d920e7e2cbec4a3",
-          "reason": "mini の検査 scripts/mini_check.py の使い方、状態の行、実行できないときの扱い（DECISIONS.md 4章）。本体の Step 3（check の run）と Step 5（verify）は mini にないので元にしない",
+          "reason": "mini の検査 scripts/mini_check.py の使い方、状態の行、実行できないときの扱い。本体の Step 3（check の run）と Step 5（verify）は mini にないので元にしない",
           "class": "own"
         },
         {
@@ -972,7 +972,7 @@
           "id": "step4-words",
           "text": "extract/own/step4-words.md",
           "text_sha256": "b2f5b58b26d6d6f1ce42070943e82477aee2debb07f47e12cdfeba28c432c518",
-          "reason": "mini_check が本体の diff の new_words、lost_words、markers を出すときだけ使う段落。scripts 担当が出さないと決めたら --drop step4-words で外す",
+          "reason": "mini_check が本体の diff の new_words、lost_words、markers を出すので、その語を確かめる段落",
           "class": "own"
         },
         {
@@ -3008,18 +3008,13 @@
           },
           "substitutions": [
             {
-              "old": "[Qiita 7万件調査（逆瀬川 2026）](https://nyosegawa.com/posts/qiita-writing-before-after-ai/)を参考に、",
-              "new": "",
-              "count": 1
-            },
-            {
               "old": "SKILL.mdの構造点検",
               "new": "SKILL.md「Step 1: 文脈と段落の把握」の文の構造の点検",
               "count": 1
             }
           ],
           "class": "C",
-          "note": "C。本体の domains/tech.md。調査の出典の人名とリンクを外す"
+          "note": "C。本体の domains/tech.md。調査の出典（著者とリンク）は本体のまま写す"
         },
         {
           "kind": "verbatim_edited",

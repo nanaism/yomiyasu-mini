@@ -64,7 +64,7 @@ mini のスクリプトは、本体 v2.1.1（fbe02c9）の `skills/yomiyasu/scri
 - `check_head.py`: mini_check.py の docstring、import、使い方の文、状態の行の作り方。部品を読めないときは、スクリプトとして実行していれば状態の行 `not_run reason=check_error` を出して終了コード3、モジュールとして読んでいれば ImportError。
 - `check_cli.py`: `check(orig, rw, doc_type=None)` と CLI。
 
-## 5. mini_check.py の使い方と状態の行（DECISIONS.md 4章）
+## 5. mini_check.py の使い方と状態の行
 
 - `python3 scripts/mini_check.py --source 原文.md --final 最終稿.md [--json]`。`--source=…` の形も読む。
 - `--source -` か `--final -` で、片方を標準入力から読む。両方を `-` にすると入力の誤り。
@@ -81,20 +81,17 @@ mini のスクリプトは、本体 v2.1.1（fbe02c9）の `skills/yomiyasu/scri
 
 tests/test_parity.py が、生成した mini_check.py の `check()` と本体の `diff()` を、同じ Python で比べる。比べる値は meaning_risks、markers、new_words、lost_words、type_changes と、--fail-on に当たる件数。JSON にして（sort_keys）完全に一致することを見る。CLI（`--final -` と `--json`）の値と、状態の行と終了コードも見る。
 
-手元での結果（v2.1.1 から生成した4本。Python 3.9.6 と 3.14.5 の両方で同じ結果）:
+結果（v2.1.1 から生成した4本。Python 3.9.6 と 3.14.5 の両方で同じ結果）:
 
 | 入力 | 文書の種類 | 比べた数 | 本体の恐れ | 数える恐れ | 食い違い |
 |---|---|---|---|---|---|
 | 本体の tests/corpus の組 | なし | 48組 | 20 | 13 | 0 |
 | 本体の tests/corpus の組 | pr | 48組 | 20 | 13 | 0 |
 | 本体の試験が diff() に渡した入力（36ファイル、1,312件の試験から集めた） | 試験のとおり | 3,885件 | 2,297（20種類すべて） | — | 0 |
-| 手元の推敲の組（公開しない） | なし | 1,715組 | 739 | 483 | 0 |
-| 手元の推敲の組（公開しない） | pr | 1,715組 | 739 | 489 | 0 |
 
-- 48組のうち、markers が出た組は41、new_words は46、lost_words は47、type_changes は5。1,715組では markers 627組、new_words 868組、lost_words 683組、type_changes 158件。
+- 48組のうち、markers が出た組は41、new_words は46、lost_words は47、type_changes は5。
 - 3,885件の種類ごとの件数: number 663、sentence_type 280、contrast_reversal 262、number_qualifier 241、protected 138、certainty_review 100、promise_review 79、claim 69、quote 62、negation 59、feeling 58、choice 49、promise 48、modality 39、causality 33、certainty 33、modality_review 31、state 26、swap 18、citation 9。
 - test_parity.py の6件は、3.9.6 と 3.14.5 のどちらでも通った（1回 約200秒。ほとんどが本体の試験を走らせて入力を集める時間）。
-- 1,715組の処理時間の合計: 本体の diff() 14.6秒、mini の check() 11.6秒（3.9.6）。3.14.5 では 10.9秒と 8.9秒。
 
 試験の回し方: `YOMIYASU_MAIN=<本体 v2.1.1 の木> python3 -B -m unittest discover -s tests -p test_parity.py`。本体の木がなければ `_main/` を見て、どちらもなければ飛ばす（YOMIYASU_REQUIRE_MAIN=1 なら失敗）。生成物がまだなければ飛ばす。本体の試験の入力を集める段は、`YOMIYASU_PARITY_HARVEST=0` で飛ばせる。集めた入力はどこにも保存しない。
 

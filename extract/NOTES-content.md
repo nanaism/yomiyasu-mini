@@ -1,8 +1,8 @@
-# 抽出表の文書の側の決め（content 担当）
+# 抽出表の文書の側の決め
 
-`extract/table.json` の文書の側（front_matter、documents、copies、forbidden_strings、reference_allow、measure_keep、file_budget、include）と、`extract/description.txt`、`extract/rewritten/`、`extract/own/` の決めを書く。設計は mini-development/design/ の DECISIONS.md と skill-design.md に従い、表の形は tools/generate.py の頭の説明に合わせた。
+`extract/table.json` の文書の側（front_matter、documents、copies、forbidden_strings、reference_allow、measure_keep、file_budget、include）と、`extract/description.txt`、`extract/rewritten/`、`extract/own/` の決めを書く。表の形は tools/generate.py の頭の説明に合わせた。
 
-## 1. 出力と大きさ
+## 1. 出力と大きさ（本体 v2.1.1 から作ったとき）
 
 | 出力 | 字数（Python の len） | バイト（UTF-8） | 部品の数 |
 |---|---|---|---|
@@ -13,7 +13,7 @@
 - SKILL.md の上限は 18,000字、目安は 17,000字。front matter は 481字（予算 500字）、description は 271字（上限 280字）。
 - SKILL.md の内訳: A と A* の部品（本体の文をそのまま写したもの）7,478字、測定で外さない書き直しと mini だけの文 4,143字、測定で外せる部品 4,759字（6章の logic の直しで42字増えた）。
 - 参照ファイルは、どちらも自前の目安の 90,000 バイトの内側にある。rules.md の余りは約 1.3KB なので、足すときは大きさを測ってから足す。
-- tools/generate.py（この時点の版）で、scripts.json を読まない写しの表から生成し、手元の組み立てとバイトで同じになった。止めた理由は、スクリプトがまだない写しなので `scripts/mini_check.py`、`--source`、`--final` を指す文だけだった。`--drop stance` と `--drop step1` を `--measure-variant` で回すと、drop_with の部品も一緒に外れた。`--drop meaning-keep` は measure_keep なので止まった。
+- `--drop stance` と `--drop step1` を `--measure-variant` で回すと、drop_with の部品も一緒に外れる。`--drop meaning-keep` は measure_keep なので止まる。
 
 ## 2. 部品の書き方
 
@@ -27,19 +27,19 @@
 ## 3. 測定で外す単位
 
 - measure_keep（29個）: A と A* の部品、意味を守る文を書き直した部品（stance-keep、logic-keep、step1-keep、step4、step4-visual、step4-close）、手順と出力の形（step2-head、step2-steps、step3、output）、見出しと前書き（h1、h1-body、intro、steps-head、rules-head、rules-skill-head、dt-head、dt-notation）。
-- SKILL.md の B の部品には drop_with を付け、rules.md と doc-types.md の同じ中身の部品が一緒に外れるようにした（DECISIONS.md 7章）。measure-design.md の群は、次の SKILL.md の部品を `--drop` に並べれば作れる。
+- SKILL.md の B の部品には drop_with を付け、rules.md と doc-types.md の同じ中身の部品が一緒に外れるようにした。測定の群は、次の SKILL.md の部品を `--drop` に並べれば作れる。
 
-| 群（conditions-plan.json の名前） | `--drop` に渡す id | 一緒に外れる部品（drop_with） |
+| 群 | `--drop` に渡す id | 一緒に外れる部品（drop_with） |
 |---|---|---|
-| abl-G1-bunmatsu | stance | r-stance、dt-intro-stance、per-6-stance |
-| abl-G2-tsunagari | logic | r-logic、r-logic-memo |
-| abl-G3-shugo | subject | r-subject、r-gemini-head、r-gemini-1 |
-| abl-G4-hiyu | hiyu | r-hiyu、r-slop-1、r-slop-7、r-slop-8 |
-| abl-G5-kimari | selflabel、noadd-residue、noun、copy、promo | r-selflabel、r-slop-2、r-noadd、r-slop-6、r-noun、r-slop-4、r-slop-5、r-copy |
-| abl-G6-bunchou | length | r-length、r-slop-9 |
-| abl-G7-shoshiki | heading、deco | r-heading、r-deco |
-| abl-G8-bunmyaku | step1 | doc-types.md の dt-intro-types と、種類・分野・読者・書き手と読み手の34個（dt-script を含む）、per-6-stance |
-| abl-G11-chokuyaku | calque | r-calque、step4-calque |
+| G1（文末） | stance | r-stance、dt-intro-stance、per-6-stance |
+| G2（つながり） | logic | r-logic、r-logic-memo |
+| G3（主語） | subject | r-subject、r-gemini-head、r-gemini-1 |
+| G4（比喩） | hiyu | r-hiyu、r-slop-1、r-slop-7、r-slop-8 |
+| G5（決まった言い回し） | selflabel、noadd-residue、noun、copy、promo | r-selflabel、r-slop-2、r-noadd、r-slop-6、r-noun、r-slop-4、r-slop-5、r-copy |
+| G6（文の長さ） | length | r-length、r-slop-9 |
+| G7（書式） | heading、deco | r-heading、r-deco |
+| G8（文書の種類と読者） | step1 | doc-types.md の dt-intro-types と、種類・分野・読者・書き手と読み手の34個（dt-script を含む）、per-6-stance |
+| G11（直訳語） | calque | r-calque、step4-calque |
 
 - G1 の言い切りの強さの文（強さを上げない、期限と必須の指示を弱めない、主語を足さない、依頼か説明か決まらない文）は stance-keep に、G2 の数と条件の文（条件・否定・因果・時系列・比重の範囲、見聞きした日時）は logic-keep に、G8 の意味の4点の記録と文の構造の点検は step1-keep に分けたので、群を外しても残る。
 - G9（scripts なし）と G10（references なし）は、ファイルごと外す条件。どの SKILL.md の部品にも付いていない参照ファイルの部品（r-rephrase、r-slop-head、r-review-head、r-review-3、r-review-4）は、G10 でだけ外れる。
@@ -52,7 +52,7 @@
   - G10: SKILL.md から references/ の2本と、その中の見出し（「言い直しテスト」「目で見る点検」など）。
   - G11: 見出しへの欠けはない。SKILL.md「Step 1」の6番目の「flag.txt の語は…直訳語と同じく書き直す」は残る（語の一覧の決まりで、直訳語の段落を指さない）。
   - G1: 見出しへの欠けはない（per-6-stance と dt-intro-stance も一緒に外れる）。
-- `step4-words` は、scripts 担当が mini_check で new_words、lost_words、markers を出さないと決めたら外す部品。外しても、step4-visual の目で見る観点に「元にない語と消えた語」が残る。
+- `step4-words` は、mini_check が出す new_words、lost_words、markers を確かめる段落。外しても、step4-visual の目で見る観点に「元にない語と消えた語」が残る。
 
 ## 4. 本体から変えた所
 
@@ -60,19 +60,17 @@
 - 参照ファイルの中の本体の中身への参照（SKILL.md 1章、2章 Step 1 の表、Step 1 の1、Step 2 の5、3章、構造点検、略した節の名前、slop-catalog.md、persona.md、audience.md、domains/、doc-types/、gemini-syntax.md の原則、rephrase-test.md、review-points.md）は、すべて mini の SKILL.md の見出しか、rules.md と doc-types.md の見出しに置き換え、substitutions に記録した。SKILL.md のあとのかぎかっこの名前は、どれも mini の SKILL.md の見出しと同じ文字列にした。
 - 本体の道具を指す行と句（lint の規則の名前、diff の文体の硬化と勢い、`--doc-type`、「■ 」の節、references/lists、`yomiyasu-check: not_run`、fact-recovery-details.md、完了報告）は、drop_lines か置き換えで外した。rephrase-test.md の「diff は…意味が変わる恐れとして出す」の2か所は、mini_check が本体 diff の meaning_risks を同じ値で出す前提で `scripts/mini_check.py` に替えた。
 - A* の置き換えは5つの部品にある。用途と表記の「資料も検査に渡します」（mini の検査は資料を受けない）、主語と目的語の L100 の persona.md 5章、擬人化の「（gemini-syntax.md 原則3）」、不増補の出力欄の「事実の確かめ」、言い直しテストの rephrase-test.md の2か所。どれも参照先か mini にない欄だけを替え、規則の文は変えていない。
-- 本体の domains/tech.md の調査の出典（人名とリンク）は、人名を書かない決まりに合わせて外した。doc-types と persona の例の中の宛名や引用の印の名前は合成の例なので、そのまま写した。
-- 依頼の書き方では output と step4 は own だったが、本体に元の節があるので rewritten にし、from で本体の節のハッシュを見張るようにした。本体に元のない h1、intro、step3、step4-words などは own にした。
+- 本体の domains/tech.md の調査の出典（著者とリンク）は、本体のまま写した。調査の数字を出典なしで残さないため（v2.2.2 からの作り直しの前は外していた）。doc-types と persona の例の中の宛名や引用の印の名前は合成の例なので、そのまま写した。
+- 初めの設計では output と step4 は own だったが、本体に元の節があるので rewritten にし、from で本体の節のハッシュを見張るようにした。本体に元のない h1、intro、step3、step4-words などは own にした。
 
-## 5. ほかの担当への連絡
+## 5. スクリプトの側との取り決め
 
-- copies は LICENSE.txt だけにした。scripts 担当が UNICODE-LICENSE.txt を要ると決めたら、copies に次を足し、file_budget を 9 にする。
-  `{"output": "UNICODE-LICENSE.txt", "source": "skills/yomiyasu/UNICODE-LICENSE.txt", "sha256": "e7a93b009565cfce55919a381437ac4db883e9da2126fa28b91d12732bc53d96"}`
+- copies は LICENSE.txt だけにした。取り出したコードに Unicode のデータ由来の表は入らないので、UNICODE-LICENSE.txt は入れない（NOTES-scripts.md 3章）。
 - forbidden_strings は `yomiyasu-check: executed`、`yomiyasu-check: not_run`、`Co-Authored-By`、`Generated with` の4つ。生成する .md と .py の両方に当たる。
-- SKILL.md の Step 3 は DECISIONS.md 4章の CLI と状態の行をそのまま書いている（`--source`、`--final`、片方だけの `-`、2行目と最後の行、ran、not_run の input と check_error、モデルが書く no_python と not_allowed）。scripts の側でこれが変わったら、own/step3.md と rewritten/output.md を直す。mini_check.py の文に `--source` と `--final` がないと、generate.py の参照の検査で止まる。
+- SKILL.md の Step 3 は mini_check.py の CLI と状態の行（NOTES-scripts.md 5章）をそのまま書いている（`--source`、`--final`、片方だけの `-`、2行目と最後の行、ran、not_run の input と check_error、モデルが書く no_python と not_allowed）。scripts の側でこれが変わったら、own/step3.md と rewritten/output.md を直す。mini_check.py の文に `--source` と `--final` がないと、generate.py の参照の検査で止まる。
 - SKILL.md が指すスクリプトは `scripts/mini_check.py` だけで、部品の mini_diff_N.py は名前で指していない。
-- 手元の道具（組み立てと照合）は mini-development/impl/content/ の build.py、verify_table.py、mdsec.py。build.py が table.json を書く。
 
-## 6. 生成物を読み手として読んで直したところ（integrate の担当）
+## 6. 生成物を読み手として読んで直したところ
 
 生成した SKILL.md と参照ファイル2つを通して読み、次の5か所を抽出表で直した（A と A* の部品は、本体の節と1行ずつ比べ、置き換えと削除が記録のとおりであることを確かめた。直したのは C と B の部品だけ）。
 
@@ -84,7 +82,7 @@
 
 ## 7. 本体 v2.2.2 から作り直したときの決め
 
-抽出の元を本体 v2.2.2（タグ v2.2.2、488dd37c0baa67ec65bf155aced9fa1a01d261e2）にした。v2.2.0 からの作り直しの途中（ブランチ wip/rebase-v220 の 0638c25）を読み直して確かめ、そこから続けた。1章から6章の数は v2.1.1 から作ったときのもので、今の数はこの章の表にある。
+抽出の元を本体 v2.2.2（タグ v2.2.2、488dd37c0baa67ec65bf155aced9fa1a01d261e2）にした。v2.2.0 から作り直しかけた状態を読み直して確かめ、そこから続けた。1章から6章の数は v2.1.1 から作ったときのもので、今の数はこの章の表にある。
 
 ### 7.1 生成の止まりと見直しの一覧
 
@@ -94,7 +92,7 @@
   - step4-visual の from（本体の Step 5）: v2.2.1 で「残した印の語」を見て尋ねるか残す理由を書く文が足された。7.3 のとおり step4-visual を書き直した。
   - r-calque: v2.2.1 の4章の書き足し（意味の広い語に替えるだけにしない、見出しの印の語、その動作をする人、呼び名がそろわないとき）と、3章の flag.txt の語を広い言い方に替えない文、5章の例（入口の行の書き直しと、「全店舗に響く」の2行）。そのまま受け入れ、置き換えは上の回数の直しと、7.2 の見出しの行の置き換えだけを足した。
   - scripts の `_ExactSequenceMatcher`: v2.2.2 の diff の速さの直し（`_seeded` に `cap` を渡し、上限と同じ長さの段で最初に一致が見つかった所で止める。`_extend_seeds` をメソッドとして足した）。どちらもクラスの中なので、閉包に新しい名前は入らない。本体は出力が1字も変わらないことを確かめており、mini でも parity の試験で同じ値になった（7.5）。
-- v2.2.0 で足された名前（`_FINAL_PERIOD_IN_QUOTE`、`_only_final_period_removed`。台詞の最後の「。」だけを外した組を問いの変化に数えない）は、前の担当の作り直しで閉包に入っていた。`diff` の見張りのハッシュの変化（words の引数と context.words を足しただけ）も受け入れてあり、check-cli が写している type_changes と meaning_risks の作り方は変わっていないことを本体の差分で確かめた。`_rule_candidates` は v2.1.3 から変わっていない。
+- v2.2.0 で足された名前（`_FINAL_PERIOD_IN_QUOTE`、`_only_final_period_removed`。台詞の最後の「。」だけを外した組を問いの変化に数えない）は、v2.2.0 からの作り直しで閉包に入っていた。`diff` の見張りのハッシュの変化（words の引数と context.words を足しただけ）も受け入れてあり、check-cli が写している type_changes と meaning_risks の作り方は変わっていないことを本体の差分で確かめた。`_rule_candidates` は v2.1.3 から変わっていない。
 
 ### 7.2 v2.2.x の新しい材料の扱い
 
@@ -119,31 +117,46 @@
 
 ### 7.4 SKILL.md の字数
 
-- 17,654字（上限 18,000字、目安 17,500字）。v2.2.0 からの作り直しの途中は 17,479字だった。増えたのは step4-visual の残した語の段落と、calque の v2.2.1 の3点。重なる文を削って（step4-visual から直訳語の観点の句を外し、step4-words を1文にまとめた）増え方を抑えたが、目安には 154字届かない。これより削るには意味を守る規則か、本体から写した A の部品を削ることになるので、目安を超えたままにした。
-- 前の担当が intro から「（どの版から作ったかは、先頭の metadata の source-tag にあります）」を外していた（字数のため）。版は metadata の source-tag と source-commit に残るので、そのままにした。
-- front matter 464字、description 264字。
+- 17,668字（上限 18,000字、目安 17,500字。7.7 の直しのあとの値）。v2.2.0 からの作り直しの途中は 17,479字だった。増えたのは step4-visual の残した語の段落と、calque の v2.2.1 の3点。重なる文を削って（step4-visual から直訳語の観点の句を外し、step4-words を1文にまとめた）増え方を抑えたが、目安を168字超えている。これより削るには意味を守る規則か、本体から写した A の部品を削ることになるので、目安を超えたままにした。
+- v2.2.0 からの作り直しで、intro から「（どの版から作ったかは、先頭の metadata の source-tag にあります）」を外した（字数のため）。版は metadata の source-tag と source-commit に残る。
+- front matter 471字、description 264字。
 
-### 7.5 大きさ（v2.2.2 から生成。Python 3.9.6 と 3.14.5 で同じバイト）
+### 7.5 大きさ（v2.2.2 から生成し、7.7 の直しを入れたあと。Python 3.9.6 と 3.14.5 で同じバイト）
 
 | ファイル | バイト | 字 | 部品の数 |
 |---|---|---|---|
-| SKILL.md | 48,668 | 17,654 | 39 |
-| references/rules.md | 97,499 | 35,445 | 29 |
-| references/doc-types.md | 97,054 | 36,130 | 36 |
+| SKILL.md | 48,710 | 17,668 | 41 |
+| references/rules.md | 97,371 | 35,401 | 29 |
+| references/doc-types.md | 97,181 | 36,239 | 40 |
 
 ファイルの数は8個（SKILL.md、参照ファイル2つ、スクリプト4本、LICENSE.txt）で、file_budget と同じ。
 
 ### 7.6 測定で外す単位への影響
 
-- calque（SKILL.md、B）は drop_with に r-calque を持つ。測定では G11（calque だけを外す）として raw_ai の26本で回す（主担当の決め。直訳語は v2.2.x の主な追加で、G3 や G4 に混ぜると効き目を分けられない）。
+- calque（SKILL.md、B）は drop_with に r-calque を持つ。測定の群では G11（calque だけを外す）にした。直訳語は v2.2.x の主な追加で、G3 や G4 に混ぜると効き目を分けられないため。
 - r-stance は doc-types.md に移ったが、id で外すので、G1（stance）の drop_with はそのまま働く。G8（step1）の drop_with は dt-intro-types、dt-script、per-6-stance を含めて36個で、r-stance は含まない（G1 の部品のため）。
 
-### 7.7 反証のあとに直したところ（主担当）
+### 7.7 見直しのあとに直したところ
 
 - 出力の雛形の「残したAIっぽいところ」の括弧を「残した前置きや結び、直訳語などがあるときだけ」に開いた。Step 4 の目で見る点検が、尋ねずに残した直訳語の理由をこの欄に書くよう求めているのに、雛形が前置きと結びだけに閉じていて食い違っていた（本体の雛形は「など」で開いている）。
 - SKILL.md の直訳語の段落で、書き直しに使ってよい根拠を「原文や資料」から「原文、依頼、提供資料、文脈」にした。「情報の不増補」の根拠の4つと、本体の calques.md 4章にそろえた。
 - 参照ファイルの1本 100,000 バイトの上限を tools/limits.py の REFERENCE_MAX_BYTES にし、files_problems で確かめるようにした。generate と build_zip が上限を超えた一式を止める。試験もこの値を使う。
 - 測定の写しで、外した節を前書きや別の部品が指したまま残らないように、部品を分けた。配る一式の文は、下の言い直しのほかは前と同じ中身。
   - doc-types.md の前書き（dt-head）を、題と1文（dt-head）、種類・分野・読者・書き手と読み手の節の出どころ（dt-intro-types、step1 の drop_with）、最後の「文書の立場と文末」の出どころ（dt-intro-stance、stance の drop_with）、指し方の段落（dt-notation、measure_keep）に分けた。dt-notation の見出しの例と、rules-head の写した節の一覧は、どの写しでも外れない書き方にするため外した。
-  - per-6（本体の persona.md 6章）の最後の項目は、本体の本文の「文書の立場と文末」の3つの文を指す（本体 v2.2.2 の SKILL.md の44行目、65行目と、40行目の「誰が、誰に、何のために…」。指し先は本体でも正しい）。mini ではこの節が SKILL.md の stance（書き直し）と doc-types.md の r-stance（44行目と65行目を含む細部）に分かれているので、項目を per-6-stance に書き直して分け、どちらの節かを書いて指した。stance と step1 の drop_with に入れ、G1 と G8 で一緒に外れる。一度、本体の指し先が古いと読み違えて別の節を指したが、反証で本体の SKILL.md にあることを確かめて戻した。
+  - per-6（本体の persona.md 6章）の最後の項目は、本体の本文の「文書の立場と文末」の3つの文を指す（本体 v2.2.2 の SKILL.md の44行目、65行目と、40行目の「誰が、誰に、何のために…」。指し先は本体でも正しい）。mini ではこの節が SKILL.md の stance（書き直し）と doc-types.md の r-stance（44行目と65行目を含む細部）に分かれているので、項目を per-6-stance に書き直して分け、どちらの節かを書いて指した。stance と step1 の drop_with に入れ、G1 と G8 で一緒に外れる。一度、本体の指し先が古いと読み違えて別の節を指したが、本体の SKILL.md にあることを確かめて戻した。
   - Step 4 の目で見る点検（step4-visual）を、観点の段落（step4-visual）、直訳語の段落（step4-calque、calque の drop_with）、最後の「直すのは1回だけ」（step4-close、measure_keep）に分けた。G11 で直訳語の段落が「Step 2 の問い」を指したまま残らないようにするため。
+- 本体の domains/tech.md の調査の出典（著者とリンク）を、本体のまま写すようにした（dom-tech の置き換えを1つ外した）。
+
+## 8. 本体から写していないもの
+
+部品ごとの扱いは extract/table.json の各部品の class と note にある。写していないもの（D）は次のとおり。
+
+- 本体の道具に関わる手順と欄: SKILL.md Step 3 の check の CLI（run、--stdin、--stance、--fact-gaps、--material、--doc-type、--reader）、Step 5「提出の前の照合」（verify、ハッシュ、記録、--no-record）、出力の雛形の「事実の確かめ」「硬化の検査」「勢いの検査」「見直し候補」と verify の行、lint の規則の名前と「lint は…候補として出す」の文、diff の文体の硬化と勢い。mini には lint も check の記録もない。Step 5 のうち、残った直訳語と flag.txt の語を見直す確かめは、Step 4 の目で見る点検（step4-calque）に書き直した。
+- 本体 SKILL.md「情報の不増補（足さない）」の、相対の日付（昨日、先週）に日付を添える段落。本文に足す規則で、本体では check の「資料にない数値・名前」と組んで働くため。
+- references/fact-recovery.md と fact-recovery-details.md（資料と会話から事実を補う、直す）。check の --fact-gaps と「事実の確かめ」の欄に頼る仕組みなので、mini は資料から事実を補ったり直したりしない。
+- references/lists/ の語のファイル5個。本体の lint と diff が読む一覧で、mini には lint がない。rules.md のカタログの行は例の語を行の中に持っている。
+- references/slop-catalog.md の3章（2026年急増語）。lint の語彙と同じ一覧で、大きさの余りを残すため。
+- references/gemini-syntax.md の調査の節と原則2〜14。SKILL.md 1章と、rules.md に写した節と重なる。写したのは頭と原則1（SKILL.md が「例は原則1」と指す先）だけ。
+- references/persona.md の1章（いつ読むか）と3章（決め方）、references/audience.md の1章、3〜5章、11〜14章。読むときと決め方は SKILL.md の Step 1 にあり、audience.md 13章の表は SKILL.md の種類の表と重なる。ほかは読者像の書き方と例。
+- references/review-points.md の1章と2章（本体の check の出力の読み方）。
+- assets/ の画像と .codex-plugin/plugin.json。

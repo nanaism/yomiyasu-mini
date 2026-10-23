@@ -224,7 +224,7 @@ class HarvestParity(unittest.TestCase):
 
 
 class CliStatus(unittest.TestCase):
-    """状態の行と終了コード（DECISIONS.md 4章）。"""
+    """状態の行と終了コード。"""
 
     def run_cli(self, script, *args, stdin=b""):
         run = subprocess.run([sys.executable, "-I", "-B", str(script)] + list(args), input=stdin, capture_output=True,

@@ -362,7 +362,7 @@ class FixtureTableStopTest(unittest.TestCase):
         self.assertStopped(self.generate(), "_IMPORT_ERROR")
 
     def test_old_version_form_stops(self):
-        # mini の版は 1.0.0 の形。依頼書の 2.1.1-r1 の形は使わない（DECISIONS.md 9章）。
+        # mini の版は 1.0.0 の形。本体の版を含む 2.1.1-r1 のような形は使わない。
         for value in ("2.1.1-r1", "1.0", "v1.0.0", "01.0.0"):
             self.table["version"] = value
             self.scripts["version"] = value

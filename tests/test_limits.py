@@ -199,11 +199,13 @@ class RealBundleTest(BundleCheck, unittest.TestCase):
             self.assertLessEqual(size, limits.REFERENCE_MAX_BYTES, "references/{} が {:,}バイトあります".format(name, size))
 
     def test_readme_has_only_facts(self):
-        path = os.path.join(_util.REPO, "README.md")
-        if not os.path.isfile(path):
-            self.skipTest("README.md がまだありません")
-        with open(path, encoding="utf-8") as handle:
-            self.assertEqual(limits.readme_problems(handle.read()), [])
+        # 公開する README は2つ（リポジトリの根と、測定の記録）。どちらも同じ決まりで見る。
+        for name in ("README.md", os.path.join("measurement", "README.md")):
+            with self.subTest(name=name):
+                path = os.path.join(_util.REPO, name)
+                self.assertTrue(os.path.isfile(path), "{} がありません".format(name))
+                with open(path, encoding="utf-8") as handle:
+                    self.assertEqual(limits.readme_problems(handle.read()), [])
 
 
 class GenerateEnforcesLimitsTest(unittest.TestCase):
