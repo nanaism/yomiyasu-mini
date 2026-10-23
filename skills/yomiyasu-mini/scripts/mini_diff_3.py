@@ -1,4 +1,4 @@
-# yomiyasu-mini 1.0.0。nanaism/yomiyasu v2.1.3（c09270bc93daab14e253fb3ef406182011b79ccb）から tools/generate.py で生成した。手で直さない。
+# yomiyasu-mini 1.0.0。nanaism/yomiyasu v2.2.2（488dd37c0baa67ec65bf155aced9fa1a01d261e2）から tools/generate.py で生成した。手で直さない。
 # 取り出した名前と中身の sha256 は extract/scripts.json と MANIFEST.json にある。
 """yomiyasu-mini の意味の検査の部品。本体の yomiyasu_diff.py と markdown_visibility.py の定義を、元の字のまま入れている。
 単独では使わない。同じフォルダの mini_check.py が読む。"""
@@ -57,13 +57,71 @@ def _mini_bind(name, names):
         _mini_on_error(name, error)
 
 __version__ = "1.0.0"
-SOURCE_TAG = "v2.1.3"
-SOURCE_COMMIT = "c09270bc93daab14e253fb3ef406182011b79ccb"
+SOURCE_TAG = "v2.2.2"
+SOURCE_COMMIT = "488dd37c0baa67ec65bf155aced9fa1a01d261e2"
 
 _mini_bind("mini_diff_1", "_line_sentences normalize")
-_mini_bind("mini_diff_2", "TYPE_MARKERS _K _STIFF_KANJI _bigrams _group_index _is_question _mark_positions _negation_marks _negative_zu _risk _sentence_spans")
+_mini_bind("mini_diff_2", "TYPE_MARKERS _K _QUALIFIER_SENTENCE _QUALIFIER_SPLIT_DECIMAL _STIFF_KANJI _bigrams _group_index _is_question _mark_positions _negation_marks _negative_zu _qualifier_change _qualifier_reach _qualifier_states _risk _sentence_numbers _sentence_spans")
 
 COUNTED_TYPES = ("pr", "article", "incident", "proposal", "manual", "formal", "paper")
+
+def _qualifier_risks(sides, groups):
+    out = []
+    for group in groups:
+        for i, j in group["pairs"]:
+            old, new = group["old"][i], group["new"][j]
+            if old.text == new.text and not _QUALIFIER_SPLIT_DECIMAL.search(old.text):
+                continue
+            old_numbers = _sentence_numbers(sides, 0, old)
+            if not old_numbers:
+                continue
+            new_numbers = _sentence_numbers(sides, 1, new)
+            if not new_numbers:
+                continue
+            if old.text == new.text and (_qualifier_reach(sides, 0, old, old_numbers)
+                                         == _qualifier_reach(sides, 1, new, new_numbers)):
+                continue
+            olds = _qualifier_states(sides, 0, old, old_numbers)
+            news = _qualifier_states(sides, 1, new, new_numbers)
+            old_count = Counter(state[0] for state in olds)
+            new_count = Counter(state[0] for state in news)
+            words = [None, None]
+            for key in old_count:
+                if old_count[key] != new_count.get(key):
+                    continue
+                old_states = [state for state in olds if state[0] == key]
+                new_states = [state for state in news if state[0] == key]
+                if Counter(s[1] for s in old_states) == Counter(s[1] for s in new_states):
+                    continue
+                if len(old_states) > 1:
+                    rest = Counter(s[1] for s in new_states)
+                    kept_old = []
+                    for state in old_states:
+                        if rest[state[1]] > 0:
+                            rest[state[1]] -= 1
+                        else:
+                            kept_old.append(state)
+                    rest = Counter(s[1] for s in old_states)
+                    kept_new = []
+                    for state in new_states:
+                        if rest[state[1]] > 0:
+                            rest[state[1]] -= 1
+                        else:
+                            kept_new.append(state)
+                    old_states, new_states = kept_old, kept_new
+                for before, after in zip(old_states, new_states):
+                    if words[0] is None:
+                        words = [set(f for f, regex in _QUALIFIER_SENTENCE.items() if regex.search(old.text)),
+                                    set(f for f, regex in _QUALIFIER_SENTENCE.items() if regex.search(new.text))]
+                    lost, added, strict = _qualifier_change(before[1], after[1], before[3], after[3], words[0], words[1])
+                    if not (lost or added or strict):
+                        continue
+                    subkind = "lost" if lost and not added and not strict else (
+                        "added" if added and not lost and not strict else "changed")
+                    out.append(_risk("number_qualifier", subkind, old.line, new.line, old.text, new.text,
+                                     {"old_number": before[4], "new_number": after[4], "from": sorted(before[1]), "to": sorted(after[1]),
+                                      "old_markers": list(before[2]), "new_markers": list(after[2])}))
+    return out
 
 BUILTIN_LISTS = {
     "hedges": ("と考えられる", "と思われる", "可能性がある", "示唆する", "推測される", "の範囲では", "かもしれない"),
@@ -1179,10 +1237,6 @@ _ADD_INTRANSITIVE_TAIL = re.compile(r"(?:わり|まり|がり|さり|たり|な�
 
 _ADD_PAST_END = re.compile(r"(?:た|ました|でした|だった)[。]?[」』）)]*$")
 
-_ADD_OLD_INTRANSITIVE = re.compile(r"(?:見つか|分か|わか|消え|変わ|増え|減|届|始ま|終わ|決ま|遅れ|止ま|動|起き|起こ|残|続|かか|間に合|替わ|上が|下が|広が|つなが|生じ|現れ|壊れ|外れ|漏れ|集ま|伸び|延び|縮)(?:る|く|う|ります|ります|きます|えます|れます|びます|ません|らない|かない|わない|ない)$")
-
-_ADD_OLD_STATIVE = re.compile(r"(?:あり|い|おり|でき|ござい|分かり|わかり|なり)(?:ます|ません)$")
-
 _ADD_PREVENT_ANY = re.compile(r"再発|今後[^。]{0,16}(?:ない|ぬ)よう|二度と|徹底|気を(?:つけ|付け|引き締め)|注意(?:を払|し|いた)|心がけ|心掛け|肝に銘じ|努め|取り組")
 
 _ADD_PREVENT_UNSETTLED = re.compile(r"[^。]{0,10}?(?:未定|未|検討中|調査中|調整中|ない|ありません|不要|なし|求め|要請)")
@@ -1283,40 +1337,6 @@ def _addition_promise_clauses(text):
             found.append((sub, name, key, m.start(), strong or sub != "promise"))
     return found
 
-_ADD_PRED_SKIP = set("来週月日年今明後前次回時分秒中内外本当弊社私様方等毎朝夕夜昼午予定針第度場合上下末初")
-
-def _addition_pred_stem(text, end):
-    left = text[:end]
-    for _ in range(2):
-        seg = re.search("[" + _ADD_K + "ァ-ヴー]*[ぁ-ん]*$", left).group(0)
-        stem = frozenset(c for c in seg if re.match("[" + _ADD_K + "ァ-ヴー]", c) and c not in _ADD_PRED_SKIP)
-        if stem or not seg:
-            return stem
-        left = left[:len(left) - len(seg)]
-    return frozenset()
-
-def _addition_old_futures(text):
-    if _ADD_PAST_END.search(text.rstrip()) and not re.search(r"(?:ます|する|ない|ません)(?:が|ので|、)", text):
-        return []
-    if _is_question(text) or text.rstrip().endswith("か"):
-        return []
-    out = []
-    for m in _ADD_OLD_FUTURE.finditer(text):
-        if re.match(r"(?:予定|つもり|方針)(?:は|が|も)?(?:ない|なく|ありません|ございません|なし)", text[m.start():m.start() + 12]):
-            continue
-        s = text[max(0, m.start() - 4):m.end()]
-        if _ADD_OLD_STATIVE.search(s) and not re.search(r"いたします$", s) or _ADD_OLD_INTRANSITIVE.search(s) or re.search(r"(?:です|でした|だ|である)$", s):
-            continue
-        out.append(_addition_pred_stem(text, m.end()))
-    stripped = text.rstrip().rstrip("。")
-    if re.search("[" + _ADD_K + "]{2}$", stripped):
-        out.append(_addition_pred_stem(stripped, len(stripped)))
-    return out
-
-def _addition_old_negatives(text):
-    return [_addition_pred_stem(text, m.end()) for m in
-            re.finditer(r"(?<!あり)(?<!ござい)(?:ない|ません)(?=[。、]|$|ので|が)", text)]
-
 def _addition_find_all(table, text):
     found, taken = [], []
     for fam, rx in table:
@@ -1330,10 +1350,6 @@ def _addition_find_all(table, text):
 def _addition_causal_words(text):
     return [w for w in _addition_find_all(_ADD_CAUSAL_RX, text)
             if not (w[1].startswith("結果") and _ADD_INQUIRY_RESULT.search(text[:w[2]]))]
-
-def _addition_bigrams(text):
-    t = re.sub(r"[\s、。，．・「」『』（）()]", "", text)
-    return set(t[i:i + 2] for i in range(len(t) - 1))
 
 class _AdditionDocument:
 

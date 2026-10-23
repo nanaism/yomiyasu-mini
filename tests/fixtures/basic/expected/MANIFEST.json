@@ -4,18 +4,18 @@
   "version": "1.0.0",
   "source": {
     "repository": "nanaism/yomiyasu",
-    "tag": "v2.1.3",
-    "commit": "c09270bc93daab14e253fb3ef406182011b79ccb"
+    "tag": "v2.2.2",
+    "commit": "488dd37c0baa67ec65bf155aced9fa1a01d261e2"
   },
   "output_dir": "skills/yomiyasu-mini",
   "tables": [
     {
       "path": "extract/table.json",
-      "sha256": "239dbda8fd4bd1ac6459b1922d317e1f3b9e9d72c3c737e4beb7cc7fe24a3a4a"
+      "sha256": "b0c62b4176ed9a4edb5c958e6dd6227023524da51daf60ca9e6eab71d46c9867"
     },
     {
       "path": "extract/scripts.json",
-      "sha256": "a2dadadb7bd04197ae4d068600a3a5871bf3b9199e2cc5d4516d6c9444d1dcdd"
+      "sha256": "41f7358c0de19733f9bc28730814f6554a1a601880c4c90729ca13997a898276"
     }
   ],
   "files": [
@@ -29,7 +29,7 @@
       "path": "skills/yomiyasu-mini/SKILL.md",
       "bytes": 11890,
       "chars": 4294,
-      "sha256": "deb2d644e3f5ba75a9e401cecf89098da8a45510e7d17b5eff3cac21c0233c38"
+      "sha256": "db68c1622fd931b71cde9c0a4973a311a21e03ece16a3e9d359e1bf2ed037b52"
     },
     {
       "path": "skills/yomiyasu-mini/UNICODE-LICENSE.txt",
@@ -45,21 +45,21 @@
     },
     {
       "path": "skills/yomiyasu-mini/scripts/mini_check.py",
-      "bytes": 3008,
-      "chars": 2780,
-      "sha256": "a20f6cbe9c8fb1172bb94b1c60485b2d7134b628717779e9588c3d8c4d5c369d"
+      "bytes": 3495,
+      "chars": 3221,
+      "sha256": "2f4b7da8560a50a59203411a304703d04276c93c21a3d56a8776ee76a4ca38ea"
     },
     {
       "path": "skills/yomiyasu-mini/scripts/mini_diff_1.py",
       "bytes": 1574,
       "chars": 1478,
-      "sha256": "6434286dc8400c9c3baf3bbcee8faf9041774165a26b6beef4129fbfe2c8b86c"
+      "sha256": "5379064b547c04af1d1b64cbcc45730436ef1faaa2cca9aaa59e0e93e6a883f4"
     },
     {
       "path": "skills/yomiyasu-mini/scripts/mini_diff_2.py",
-      "bytes": 1638,
-      "chars": 1356,
-      "sha256": "b14535aa5a407c9a15ac1fb6ff7126e7a1f37efbbdba8fba6d6879466de9c325"
+      "bytes": 1183,
+      "chars": 937,
+      "sha256": "3594ea1ee3dc39da2093dec79e940aa542895b84fadbda009fdd557dca553ebb"
     }
   ],
   "provenance": [
@@ -72,7 +72,7 @@
           {
             "source": "skills/yomiyasu/SKILL.md",
             "region": "front_matter",
-            "sha256": "96e07089aa021abbde78626964fa5b1063645b442298292f7bd48b2c25d31388"
+            "sha256": "c7207175a688329a311d1a5492544a6b7204b81efa994b8a1e89b89cc99829cb"
           }
         ],
         "text_sha256": "9f0fb879fc8608657429c50c8bda111fd72020b9ea46b9c4aa07664d6b868581"
@@ -147,7 +147,7 @@
           "selector": {
             "scope": "own"
           },
-          "sha256": "519465fd03047b72631c6ec9b9086c35d5391c09332b5887cd1f5a50e6b9f4d8"
+          "sha256": "4ea84b32aeef7cd020976fa582f974120c29987210b725aa250a9a98250245b6"
         }
       ],
       "text_sha256": "8b9c64c453e753f559a887ee89f7a020202305e44619afa35b47e3ad612c05d8"
@@ -373,24 +373,22 @@
         },
         {
           "output": "scripts/mini_diff_2.py",
-          "bytes": 1638,
-          "units": 2,
-          "body_bytes": 1198,
+          "bytes": 1183,
+          "units": 1,
+          "body_bytes": 764,
           "names": [
-            "vis:DOC_TYPES",
-            "vis:_normalize_choice"
+            "vis:DOC_TYPES"
           ],
           "bound": [],
-          "imports": [
-            "import unicodedata"
-          ]
+          "imports": []
         },
         {
           "output": "scripts/mini_check.py",
-          "bytes": 3008,
-          "units": 2,
-          "body_bytes": 500,
+          "bytes": 3495,
+          "units": 3,
+          "body_bytes": 984,
           "names": [
+            "vis:_normalize_choice",
             "vis:normalize_doc_type",
             "lint:_EMOJI_DATA_VERSION"
           ],
@@ -398,10 +396,11 @@
             "mini_diff_1:_HALF_WIDTH",
             "mini_diff_1:decode_source",
             "mini_diff_1:normalize",
-            "mini_diff_2:DOC_TYPES",
-            "mini_diff_2:_normalize_choice"
+            "mini_diff_2:DOC_TYPES"
           ],
-          "imports": []
+          "imports": [
+            "import unicodedata"
+          ]
         }
       ]
     }

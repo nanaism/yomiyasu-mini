@@ -97,3 +97,22 @@ tests/test_parity.py が、生成した mini_check.py の `check()` と本体の
 - 1,715組の処理時間の合計: 本体の diff() 14.6秒、mini の check() 11.6秒（3.9.6）。3.14.5 では 10.9秒と 8.9秒。
 
 試験の回し方: `YOMIYASU_MAIN=<本体 v2.1.1 の木> python3 -B -m unittest discover -s tests -p test_parity.py`。本体の木がなければ `_main/` を見て、どちらもなければ飛ばす（YOMIYASU_REQUIRE_MAIN=1 なら失敗）。生成物がまだなければ飛ばす。本体の試験の入力を集める段は、`YOMIYASU_PARITY_HARVEST=0` で飛ばせる。集めた入力はどこにも保存しない。
+
+## 7. 本体 v2.2.2 から作り直したとき
+
+抽出の元を本体 v2.2.2（488dd37）にした。上の1〜6章の数は v2.1.1 から作ったときのもので、今の数はこの章にある。
+
+- 閉包の名前は623個（v2.1.3 から作ったときは621個）。v2.2.0 で `_FINAL_PERIOD_IN_QUOTE` と `_only_final_period_removed`（台詞の最後の「。」だけを外した組を、問いと平叙の変化に数えない）が `_question_risks` から入った。`DOC_TYPES` は script が足されて変わった。
+- v2.2.2 で変わったのは `_ExactSequenceMatcher` だけ（`_seeded` に上限 `cap` を渡し、上限と同じ長さの段で最初に一致が見つかった所で止める。種を伸ばす手順は `_extend_seeds` メソッドに分けた）。クラスの中の変化なので、閉包に新しい名前は入らない。本体は出力が1字も変わらない直しとしていて、mini でも下の parity で同じ値になった。
+- 見張りの2つ: `diff` は v2.2.0 で words の引数と `context["words"]` を足しただけで、check-cli が写している type_changes と meaning_risks の作り方は変わっていない（本体の差分で確かめて受け入れた）。`_rule_candidates` は v2.1.3 から変わっていない。
+- mini_check は語の一覧（`.yomiyasu-words/`）を読まない。本体の diff でも、語の一覧は context に残すだけで差分と候補を変えない。
+- 大きさ（Python 3.9.6 と 3.14.5 で同じバイト。上限は1本 90,000 バイト）:
+
+| ファイル | バイト | 取り出した文 | 名前の数 |
+|---|---|---|---|
+| mini_diff_1.py | 82,556 | 79,994 | 181 |
+| mini_diff_2.py | 79,801 | 77,039 | 167 |
+| mini_diff_3.py | 82,778 | 79,862 | 170 |
+| mini_check.py | 88,132 | 76,734 | 105 |
+
+- parity（tests/test_parity.py と同じ比べ方。Python 3.9.6 と 3.14.5 のどちらでも同じ結果）: 本体の tests/corpus の48組は、文書の種類なしと pr のどちらも恐れ20件、数える恐れ13件、食い違い0。本体の試験89本のうち本文に「diff(」がある41本（1,416件の試験）から集めた3,919件の入力で、食い違い0、恐れ2,311件、20種類すべてが出た。

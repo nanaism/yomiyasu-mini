@@ -1,4 +1,4 @@
-# yomiyasu-mini 1.0.0。nanaism/yomiyasu v2.1.3（c09270bc93daab14e253fb3ef406182011b79ccb）から tools/generate.py で生成した。手で直さない。
+# yomiyasu-mini 1.0.0。nanaism/yomiyasu v2.2.2（488dd37c0baa67ec65bf155aced9fa1a01d261e2）から tools/generate.py で生成した。手で直さない。
 # 取り出した名前と中身の sha256 は extract/scripts.json と MANIFEST.json にある。
 """yomiyasu-mini の意味の検査の部品。本体の yomiyasu_diff.py と markdown_visibility.py の定義を、元の字のまま入れている。
 単独では使わない。同じフォルダの mini_check.py が読む。"""
@@ -57,8 +57,8 @@ def _mini_bind(name, names):
         _mini_on_error(name, error)
 
 __version__ = "1.0.0"
-SOURCE_TAG = "v2.1.3"
-SOURCE_COMMIT = "c09270bc93daab14e253fb3ef406182011b79ccb"
+SOURCE_TAG = "v2.2.2"
+SOURCE_COMMIT = "488dd37c0baa67ec65bf155aced9fa1a01d261e2"
 
 _ASCII_PUNCT = set('!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~')
 _HTML_BLOCK_TAGS = set(('address article aside base basefont blockquote body caption center col colgroup '
@@ -688,6 +688,7 @@ DOC_TYPES = (
     ("promo", "紹介記事・宣伝文", ("essay.md", "business.md")),
     ("mail", "メール・チャット", ("business.md",)),
     ("paper", "論文・研究レポート", ("tech.md",)),
+    ("script", "台詞・脚本", ("essay.md",)),
 )
 
 def _normalize_choice(option, value, rows):
@@ -700,11 +701,6 @@ def _normalize_choice(option, value, rows):
     shown = value if str(value).strip() else "（空）"
     raise ValueError("{} に使えない値です: {}。使えるのは {}です。".format(
         option, shown, "、".join("{}（{}）".format(row[0], row[1]) for row in rows)))
-
-def normalize_doc_type(value):
-    return _normalize_choice("--doc-type", value, DOC_TYPES)
-
-_END = r"(?=[。、！!？?よねがけのかし]|です|$)"
 
 _NORMALIZE_BOLD = re.compile(r"\*\*(.+?)\*\*")
 _NORMALIZE_LIST = re.compile(r"(?m)^\s*(?:[*\-・]|\d+[.)])\s+")
@@ -931,7 +927,7 @@ class _ExactSequenceMatcher(difflib.SequenceMatcher):
             return difflib.Match(alo, blo, 0)
         length = cap
         while length >= _MATCH_SAMPLE_MIN:
-            found = self._seeded(alo, ahi, blo, bhi, length, (la + lb) // _MATCH_SAMPLE_BUDGET_DIV)
+            found = self._seeded(alo, ahi, blo, bhi, length, cap, (la + lb) // _MATCH_SAMPLE_BUDGET_DIV)
             if found is None:
                 break
             if found is not False:
@@ -1048,7 +1044,7 @@ class _ExactSequenceMatcher(difflib.SequenceMatcher):
                     break
         return None if best is None else difflib.Match(best[0], best[1], size)
 
-    def _seeded(self, alo, ahi, blo, bhi, length, budget):
+    def _seeded(self, alo, ahi, blo, bhi, length, cap, budget):
         a, b = self.a, self.b
         q = _MATCH_SEED_LONG if length >= 2 * _MATCH_SEED_LONG else _MATCH_SEED_SHORT
         indexes = self.__dict__.setdefault("_seed_indexes", {})
@@ -1059,6 +1055,7 @@ class _ExactSequenceMatcher(difflib.SequenceMatcher):
         count = len(keys)
         step = length - q + 1
         last = bhi - q
+        early = length >= cap
         seeds = []
         total = 0
         for t in range(alo + step - 1, ahi - q + 1, step):
@@ -1074,17 +1071,28 @@ class _ExactSequenceMatcher(difflib.SequenceMatcher):
                     if total > budget:
                         return None
                 p += 1
+            if early and seeds:
+                best = self._extend_seeds(seeds, alo, ahi, blo, bhi, q, length, cap)
+                if best is not None:
+                    break
+                seeds = []
+        else:
+            best = self._extend_seeds(seeds, alo, ahi, blo, bhi, q, length, cap)
+        if best is None:
+            return False
+        return difflib.Match(best[1], best[2], -best[0])
+
+    def _extend_seeds(self, seeds, alo, ahi, blo, bhi, q, length, cap):
+        a, b = self.a, self.b
         best = None
         for t, u in seeds:
-            back = _common_suffix_len(a, t, b, u, min(t - alo, u - blo))
-            size = back + q + _common_prefix_len(a, t + q, b, u + q, min(ahi - t, bhi - u) - q)
+            back = _common_suffix_len(a, t, b, u, min(t - alo, u - blo, cap - q))
+            size = back + q + _common_prefix_len(a, t + q, b, u + q, min(ahi - t, bhi - u, cap - back) - q)
             if size >= length:
                 candidate = (-size, t - back, u - back)
                 if best is None or candidate < best:
                     best = candidate
-        if best is None:
-            return False
-        return difflib.Match(best[1], best[2], -best[0])
+        return best
 
     def _collision(self):
         rate = self.__dict__.get("_collision_rate")

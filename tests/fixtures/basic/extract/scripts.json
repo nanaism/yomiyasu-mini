@@ -4,8 +4,8 @@
   "version": "1.0.0",
   "source": {
     "repository": "nanaism/yomiyasu",
-    "tag": "v2.1.3",
-    "commit": "c09270bc93daab14e253fb3ef406182011b79ccb",
+    "tag": "v2.2.2",
+    "commit": "488dd37c0baa67ec65bf155aced9fa1a01d261e2",
     "skill_dir": "skills/yomiyasu"
   },
   "scripts": [
@@ -86,7 +86,7 @@
           "module": "vis",
           "name": "DOC_TYPES",
           "stmts": 1,
-          "sha256": "81525b6538cb5519888d33f73d768686cdbc447fcd5fd9e687760600517b6c71"
+          "sha256": "62bff1d8965033461548c9ad4ad9309f6581404ee1f44807b414ab702341a024"
         },
         {
           "module": "vis",

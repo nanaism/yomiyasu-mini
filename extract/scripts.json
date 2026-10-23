@@ -4,8 +4,8 @@
   "version": "1.0.0",
   "source": {
     "repository": "nanaism/yomiyasu",
-    "tag": "v2.1.3",
-    "commit": "c09270bc93daab14e253fb3ef406182011b79ccb",
+    "tag": "v2.2.2",
+    "commit": "488dd37c0baa67ec65bf155aced9fa1a01d261e2",
     "skill_dir": "skills/yomiyasu"
   },
   "modules": [
@@ -380,7 +380,7 @@
       "module": "vis",
       "name": "DOC_TYPES",
       "stmts": 1,
-      "sha256": "81525b6538cb5519888d33f73d768686cdbc447fcd5fd9e687760600517b6c71"
+      "sha256": "62bff1d8965033461548c9ad4ad9309f6581404ee1f44807b414ab702341a024"
     },
     {
       "module": "vis",
@@ -908,7 +908,7 @@
       "module": "diff",
       "name": "_ExactSequenceMatcher",
       "stmts": 1,
-      "sha256": "cda3d4e6a108ce7e2de23d6b65892bd56d0f2f1367ee07e2005330ffb87261bb"
+      "sha256": "f47d0863b9d9b8e1e722602cd5fade3dacc5d1c3f794c388402dc8a80ca27841"
     },
     {
       "module": "diff",
@@ -2256,9 +2256,21 @@
     },
     {
       "module": "diff",
+      "name": "_FINAL_PERIOD_IN_QUOTE",
+      "stmts": 1,
+      "sha256": "cc5e0e937514127acaf8eba5d7f3a84f7c288189bc63dd9fb17df6ebea89a3d0"
+    },
+    {
+      "module": "diff",
+      "name": "_only_final_period_removed",
+      "stmts": 1,
+      "sha256": "4b408363e4c7b100083fec83c617669b7bdc59e0acda4d9734ddd9c6e7395ab5"
+    },
+    {
+      "module": "diff",
       "name": "_question_risks",
       "stmts": 1,
-      "sha256": "37c7138a233530ff7dcce600e30ac21eb7f479ae235bea7e5b39600352b20441"
+      "sha256": "8063b7e8b4b34fc20d7093af2bb115ae58768f4aec531084c2f6350e2205c2c8"
     },
     {
       "module": "diff",
@@ -3923,7 +3935,7 @@
       "module": "diff",
       "name": "diff",
       "stmts": 1,
-      "sha256": "93aa51d48febabd51e967cebed77c89617dce912b84be37efe9e1f1f4b65b33b",
+      "sha256": "a0f7b8d1f84b1616d43c04d0f62758ccc28ed58f483475593bf781d15f604d80",
       "reason": "check() が、diff() の type_changes と meaning_risks の作り方を写している。変わったら check-cli を見直す"
     }
   ]

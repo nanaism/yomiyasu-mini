@@ -18,8 +18,8 @@ import _util  # noqa: E402
 limits = _util.load_tool("limits")
 
 GOOD_FRONT = ('---\nname: yomiyasu-mini\ndescription: 試験の説明。\nlicense: MIT\nmetadata:\n  version: "1.0.0"\n'
-              '  source-repository: "nanaism/yomiyasu"\n  source-tag: "v2.1.3"\n'
-              '  source-commit: "c09270bc93daab14e253fb3ef406182011b79ccb"\n---\n')
+              '  source-repository: "nanaism/yomiyasu"\n  source-tag: "v2.2.2"\n'
+              '  source-commit: "488dd37c0baa67ec65bf155aced9fa1a01d261e2"\n---\n')
 
 
 def skill(body="# yomiyasu-mini\n\n本文。\n", front=GOOD_FRONT):
@@ -33,6 +33,7 @@ class LimitValuesTest(unittest.TestCase):
         self.assertEqual(limits.DESCRIPTION_MAX_CHARS, 280)
         self.assertEqual(limits.FRONT_MATTER_MAX_CHARS, 500)
         self.assertEqual(limits.SCRIPT_MAX_BYTES, 90000)
+        self.assertEqual(limits.REFERENCE_MAX_BYTES, 100000)
         self.assertEqual(limits.FILE_MAX_BYTES, 25000000)
         self.assertEqual(limits.ZIP_MAX_BYTES, 50000000)
         self.assertEqual(limits.MAX_FILES_TOTAL, 350)
@@ -50,7 +51,7 @@ class LimitValuesTest(unittest.TestCase):
             skill(front=GOOD_FRONT.replace("試験の説明。", "あ" * 270).replace("license: MIT\n", "license: MIT\n" + "x: " + "y" * 200 + "\n")))))
         self.assertTrue(limits.skill_md_problems(skill(front=GOOD_FRONT.replace("name: yomiyasu-mini", "name: Yomiyasu_Mini"))))
         self.assertTrue(limits.skill_md_problems(skill(), "other-name"))
-        self.assertTrue(limits.skill_md_problems(skill(front=GOOD_FRONT.replace('  source-commit: "c09270bc93daab14e253fb3ef406182011b79ccb"\n', ""))))
+        self.assertTrue(limits.skill_md_problems(skill(front=GOOD_FRONT.replace('  source-commit: "488dd37c0baa67ec65bf155aced9fa1a01d261e2"\n', ""))))
         self.assertTrue(limits.skill_md_problems(skill(front=GOOD_FRONT.replace("試験の説明。", "<b>説明</b>"))))
 
     def test_files(self):
@@ -67,6 +68,7 @@ class LimitValuesTest(unittest.TestCase):
             "subprocess": dict(base, **{"scripts/a.py": b"from subprocess import run\n"}),
             "読めません": dict(base, **{"scripts/a.py": b"def (:\n"}),
             "25,000,000": dict(base, **{"big.txt": b"x" * 25000001}),
+            "100,000": dict(base, **{"references/rules.md": b"x" * 100001}),
         }
         for needle, files in cases.items():
             with self.subTest(needle=needle):
@@ -78,6 +80,7 @@ class LimitValuesTest(unittest.TestCase):
         many = dict(base, **{"f{}.txt".format(i): b"x" for i in range(349)})
         self.assertTrue(any("350" in p for p in limits.files_problems(many, "yomiyasu-mini")))
         self.assertEqual(limits.files_problems({"SKILL.md": base["SKILL.md"], "scripts/a.py": b"import json\n"}, "yomiyasu-mini"), [])
+        self.assertEqual(limits.files_problems(dict(base, **{"references/rules.md": b"x" * 100000}), "yomiyasu-mini"), [])
 
     def test_bundle_rejects_symlink(self):
         folder = os.path.join(_util.temp_dir(self), "yomiyasu-mini")
@@ -184,6 +187,16 @@ class RealBundleTest(BundleCheck, unittest.TestCase):
         self.forbidden = list(table.get("forbidden_strings", []))
         for path in _util.table_files(table_path)[1:]:
             self.forbidden += _util.load_json(path).get("forbidden_strings", [])
+
+    def test_reference_files_fit_the_budget(self):
+        # 参照ファイルは1本 100,000 バイト以下に収める（自前の目安。Microsoft の上限ではない）。
+        # v2.2.2 の calques.md の追記で rules.md が 101,669 バイトになり、r-stance を doc-types.md に移した。
+        folder = os.path.join(self.bundle, "references")
+        names = sorted(n for n in os.listdir(folder) if n.endswith(".md"))
+        self.assertTrue(names)
+        for name in names:
+            size = os.path.getsize(os.path.join(folder, name))
+            self.assertLessEqual(size, limits.REFERENCE_MAX_BYTES, "references/{} が {:,}バイトあります".format(name, size))
 
     def test_readme_has_only_facts(self):
         path = os.path.join(_util.REPO, "README.md")

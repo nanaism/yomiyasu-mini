@@ -9,6 +9,7 @@ generate.py、build_zip.py、tests/test_limits.py が同じ値を使う。標準
   1ファイルは25MBまで、ファイルはすべてのスキルを合わせて350個まで、フォルダの深さは3まで。
 - 依頼書の目安: SKILL.md はファイル全体で18,000字以下、スクリプトは1本90KB以下。
 - 決め（DECISIONS.md 5章）: front matter は500字以内、description は280字以内。
+- 自前の目安: references/ の参照ファイルは1本100,000バイト以下（Microsoft の上限ではない。v2.2.2 から作り直したときに決めた）。
 KB と MB は10進で数える（90KB は 90,000 バイト、25MB は 25,000,000 バイト）。字は Python の len で数える。
 """
 import ast
@@ -25,6 +26,7 @@ DESCRIPTION_MAX_CHARS = 280
 DESCRIPTION_SPEC_MAX_CHARS = 1024   # Agent Skills の規約
 NAME_MAX_CHARS = 64
 SCRIPT_MAX_BYTES = 90000            # .py 1本
+REFERENCE_MAX_BYTES = 100000        # references/ の参照ファイル1本
 FILE_MAX_BYTES = 25000000           # どのファイルも
 ZIP_MAX_BYTES = 50000000
 MAX_FILES_TOTAL = 350               # すべてのスキルを合わせた数の上限
@@ -192,6 +194,9 @@ def files_problems(files, root_name, file_budget=None, exact_budget=False):
             problems.append("{} の拡張子は配る一式に置けません（置けるのは {}）。".format(path, "、".join(ALLOWED_EXTENSIONS)))
         if len(data) > FILE_MAX_BYTES:
             problems.append("{} が {:,}バイトあり、上限の {:,}バイトを超えています。".format(path, len(data), FILE_MAX_BYTES))
+        if parts[0] == "references" and len(data) > REFERENCE_MAX_BYTES:
+            problems.append("{} が {:,}バイトあり、参照ファイルの目安の {:,}バイトを超えています。".format(
+                path, len(data), REFERENCE_MAX_BYTES))
         if ext == ".py":
             try:
                 text = data.decode("utf-8")

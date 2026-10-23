@@ -1,4 +1,4 @@
-# yomiyasu-mini 1.0.0。nanaism/yomiyasu v2.1.3（c09270bc93daab14e253fb3ef406182011b79ccb）から tools/generate.py で生成した。手で直さない。
+# yomiyasu-mini 1.0.0。nanaism/yomiyasu v2.2.2（488dd37c0baa67ec65bf155aced9fa1a01d261e2）から tools/generate.py で生成した。手で直さない。
 # 取り出した名前と中身の sha256 は extract/scripts.json と MANIFEST.json にある。
 """yomiyasu-mini の意味の検査。原文と最終稿を比べ、意味が変わる恐れのある場所を挙げる。
 本体 yomiyasu（版は SOURCE_TAG）の diff() の meaning_risks、markers、new_words、lost_words、type_changes と同じ値を出す。
@@ -101,12 +101,12 @@ def _mini_bind(name, names):
         _mini_on_error(name, error)
 
 __version__ = "1.0.0"
-SOURCE_TAG = "v2.1.3"
-SOURCE_COMMIT = "c09270bc93daab14e253fb3ef406182011b79ccb"
+SOURCE_TAG = "v2.2.2"
+SOURCE_COMMIT = "488dd37c0baa67ec65bf155aced9fa1a01d261e2"
 
-_mini_bind("mini_diff_1", "_ExactSequenceMatcher _Sides _line_sentences _sentence_pairs decode_source full_diff normalize normalize_doc_type")
-_mini_bind("mini_diff_2", "_LAST_TYPE_RANGES _RISK_ORDER _is_quote_row _logic_risks _mark_positions _marks_in _marks_risks _modality_risks _negation_marks _negation_risks _number_risks _protected_risks _qualifier_risks _question_risks _range_sentences _risk _sentence_spans _swap_risks _type_changes _type_ranges")
-_mini_bind("mini_diff_3", "_ADD_CAUSAL_RX _ADD_K _ADD_PROMISE_RX _ADD_REQUEST _ADD_STATE_ANY _AdditionDocument _BODY_MASK_KINDS _Body _Masker _addition_bigrams _addition_causal_words _addition_old_futures _addition_old_negatives _certainty_risks _classify_hedge_marks _contrast_risks _feeling_risks _same_review_sentence _unpaired_neighbors")
+_mini_bind("mini_diff_1", "_ExactSequenceMatcher _Sides _line_sentences _sentence_pairs decode_source full_diff normalize")
+_mini_bind("mini_diff_2", "_LAST_TYPE_RANGES _RISK_ORDER _is_question _is_quote_row _logic_risks _mark_positions _marks_in _marks_risks _modality_risks _negation_marks _negation_risks _number_risks _protected_risks _question_risks _range_sentences _risk _sentence_spans _swap_risks _type_changes _type_ranges normalize_doc_type")
+_mini_bind("mini_diff_3", "_ADD_CAUSAL_RX _ADD_K _ADD_OLD_FUTURE _ADD_PAST_END _ADD_PROMISE_RX _ADD_REQUEST _ADD_STATE_ANY _AdditionDocument _BODY_MASK_KINDS _Body _Masker _addition_causal_words _certainty_risks _classify_hedge_marks _contrast_risks _feeling_risks _qualifier_risks _same_review_sentence _unpaired_neighbors")
 
 MARKERS = {
     "依頼": r"(?:て|で)ください",
@@ -532,6 +532,10 @@ _QUOTE_DROP = re.compile(r"[\s、。，．,.!！…‥・〜~－-]|\.\.\.")
 
 _ADD_TOPIC_STOP = ("現在", "現時点", "時点", "今回", "本日", "当日", "以下", "下記", "件")
 
+_ADD_OLD_INTRANSITIVE = re.compile(r"(?:見つか|分か|わか|消え|変わ|増え|減|届|始ま|終わ|決ま|遅れ|止ま|動|起き|起こ|残|続|かか|間に合|替わ|上が|下が|広が|つなが|生じ|現れ|壊れ|外れ|漏れ|集ま|伸び|延び|縮)(?:る|く|う|ります|ります|きます|えます|れます|びます|ません|らない|かない|わない|ない)$")
+
+_ADD_OLD_STATIVE = re.compile(r"(?:あり|い|おり|でき|ござい|分かり|わかり|なり)(?:ます|ません)$")
+
 _ADD_GUARANTEE_FAM = {"ことはない": r"ことは(?:ありません|ございません|ない)",
                  "費用はかからない": r"(?:費用|料金|料(?=は|が|を|も)|負担|手数料)(?:は|が|も)?[^。]{0,8}?(?:かから|かかりません|発生し(?:ない|ません)|いただき?ません|不要|なし|ゼロ|[0０〇]円)|無料|無償|[0０〇]円",
                  "まま使える": r"まま|問題なく|支障なく|これまでどおり|これまで通り|安心",
@@ -561,6 +565,8 @@ def _addition_key_head(key):
         head = key[:2]
     return head
 
+_ADD_PRED_SKIP = set("来週月日年今明後前次回時分秒中内外本当弊社私様方等毎朝夕夜昼午予定針第度場合上下末初")
+
 _ADD_PRED_SYNONYMS = {
     "直": ("修正", "修理", "訂正", "改修", "是正", "対応"), "出": ("提出", "送付", "発行", "提示", "お送"),
     "送": ("送付", "発送", "送信", "お送"), "作": ("作成", "作製", "制作", "用意", "準備"), "調": ("調査", "確認"),
@@ -572,12 +578,48 @@ _ADD_PRED_SYNONYMS = {
     "準": ("用意", "手配"), "手": ("準備", "用意"),
 }
 
+def _addition_pred_stem(text, end):
+    left = text[:end]
+    for _ in range(2):
+        seg = re.search("[" + _ADD_K + "ァ-ヴー]*[ぁ-ん]*$", left).group(0)
+        stem = frozenset(c for c in seg if re.match("[" + _ADD_K + "ァ-ヴー]", c) and c not in _ADD_PRED_SKIP)
+        if stem or not seg:
+            return stem
+        left = left[:len(left) - len(seg)]
+    return frozenset()
+
+def _addition_old_futures(text):
+    if _ADD_PAST_END.search(text.rstrip()) and not re.search(r"(?:ます|する|ない|ません)(?:が|ので|、)", text):
+        return []
+    if _is_question(text) or text.rstrip().endswith("か"):
+        return []
+    out = []
+    for m in _ADD_OLD_FUTURE.finditer(text):
+        if re.match(r"(?:予定|つもり|方針)(?:は|が|も)?(?:ない|なく|ありません|ございません|なし)", text[m.start():m.start() + 12]):
+            continue
+        s = text[max(0, m.start() - 4):m.end()]
+        if _ADD_OLD_STATIVE.search(s) and not re.search(r"いたします$", s) or _ADD_OLD_INTRANSITIVE.search(s) or re.search(r"(?:です|でした|だ|である)$", s):
+            continue
+        out.append(_addition_pred_stem(text, m.end()))
+    stripped = text.rstrip().rstrip("。")
+    if re.search("[" + _ADD_K + "]{2}$", stripped):
+        out.append(_addition_pred_stem(stripped, len(stripped)))
+    return out
+
+def _addition_old_negatives(text):
+    return [_addition_pred_stem(text, m.end()) for m in
+            re.finditer(r"(?<!あり)(?<!ござい)(?:ない|ません)(?=[。、]|$|ので|が)", text)]
+
 def _addition_same_act(stem, part):
     if not stem:
         return True
     if any(c in part for c in stem):
         return True
     return any(word in part for c in stem for word in _ADD_PRED_SYNONYMS.get(c, ()))
+
+def _addition_bigrams(text):
+    t = re.sub(r"[\s、。，．・「」『』（）()]", "", text)
+    return set(t[i:i + 2] for i in range(len(t) - 1))
 
 def _addition_novelty(span, old_doc, old_bigrams=None):
     words = [w for w in _ADD_CONTENT.findall(span)]

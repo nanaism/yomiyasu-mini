@@ -4,11 +4,11 @@
 本体と mini は、この試験と同じ Python で動かす。この試験は何も生成しない。生成物は tools/generate.py で作る。
 
 入力（どれも公開しているもの）:
-- 本体の tests/corpus の組（yomiyasu_rewritten の書き直しと、元の raw_ai か blacklist_ai の文。v2.1.1 では48組）。
+- 本体の tests/corpus の組（yomiyasu_rewritten の書き直しと、元の raw_ai か blacklist_ai の文。v2.1.1 と v2.2.2 では48組）。
   文書の種類なしと pr の2通り。CLI（--json）でも同じ値になるかを見る。
 - 本体の試験を一時フォルダの写しで走らせ、diff() に渡された入力をその場で集めたもの（集めた入力は保存しない）。
-  走らせるのは、本文に「diff(」がある試験のファイルだけ（v2.1.1 では75本のうち36本。集まる入力は全部を走らせたときと同じ
-  3,885件）。ファイルごとに別のプロセスと別の写しで、並べて走らせる。
+  走らせるのは、本文に「diff(」がある試験のファイルだけ（v2.1.1 では75本のうち36本で、集まる入力は全部を走らせたときと同じ
+  3,885件。v2.2.2 では89本のうち41本で3,919件）。ファイルごとに別のプロセスと別の写しで、並べて走らせる。
 
 場所:
 - 本体の木: 環境変数 YOMIYASU_MAIN。なければ、このリポジトリの _main/（CI が本体を取り出す場所）。
@@ -44,13 +44,14 @@ os.chdir(root)
 import yomiyasu_diff as D
 seen, inputs = set(), []
 original = D.diff
-def wrapped(orig_raw, rw_raw, stance=None, *, encoding_notes=None, doc_type=None, reader=None):
+def wrapped(orig_raw, rw_raw, stance=None, *, encoding_notes=None, doc_type=None, reader=None, **extra):
     if isinstance(orig_raw, str) and isinstance(rw_raw, str) and (doc_type is None or isinstance(doc_type, str)):
         key = hashlib.sha256(json.dumps([orig_raw, rw_raw, doc_type]).encode("ascii")).hexdigest()
         if key not in seen:
             seen.add(key)
             inputs.append([orig_raw, rw_raw, doc_type])
-    return original(orig_raw, rw_raw, stance, encoding_notes=encoding_notes, doc_type=doc_type, reader=reader)
+    # extra は本体 v2.2.0 で足された words（語の一覧）など。そのまま渡す（差分と候補は変わらない）
+    return original(orig_raw, rw_raw, stance, encoding_notes=encoding_notes, doc_type=doc_type, reader=reader, **extra)
 D.diff = wrapped
 suite = unittest.defaultTestLoader.discover(os.path.join(root, "tests"), pattern=pattern,
                                             top_level_dir=os.path.join(root, "tests"))
@@ -218,7 +219,7 @@ class HarvestParity(unittest.TestCase):
                     self.assertEqual(_dump(got[key]), _dump(want[key]), key)
                 self.assertEqual(mini.fail_on_count(got["meaning_risks"]), counted)
         self.assertGreater(compared, 100)
-        # v2.1.1 の本体の試験の入力では、meaning_risks の20種類がすべて出る
+        # v2.1.1 と v2.2.2 の本体の試験の入力では、meaning_risks の20種類がすべて出る
         self.assertGreaterEqual(len(kinds), 15, sorted(kinds))
 
 

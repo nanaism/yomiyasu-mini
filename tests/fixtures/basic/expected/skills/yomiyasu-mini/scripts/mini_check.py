@@ -1,13 +1,15 @@
 #!/usr/bin/env python3
-# yomiyasu-mini 1.0.0。nanaism/yomiyasu v2.1.3（c09270bc93daab14e253fb3ef406182011b79ccb）から tools/generate.py で生成した。手で直さない。
+# yomiyasu-mini 1.0.0。nanaism/yomiyasu v2.2.2（488dd37c0baa67ec65bf155aced9fa1a01d261e2）から tools/generate.py で生成した。手で直さない。
 # 取り出した名前と中身の sha256 は extract/scripts.json と MANIFEST.json にある。
 """試験用の CLI。2つのファイルを読み、本体と同じ normalize で比べる。"""
 import argparse
 import sys
 
 __version__ = "1.0.0"
-SOURCE_TAG = "v2.1.3"
-SOURCE_COMMIT = "c09270bc93daab14e253fb3ef406182011b79ccb"
+SOURCE_TAG = "v2.2.2"
+SOURCE_COMMIT = "488dd37c0baa67ec65bf155aced9fa1a01d261e2"
+
+import unicodedata
 
 import importlib.util as _mini_iu
 import os as _mini_os
@@ -39,8 +41,19 @@ _mini_m = _mini_load("mini_diff_1")
 for _mini_n in "_HALF_WIDTH decode_source normalize".split():
     globals()[_mini_n] = getattr(_mini_m, _mini_n)
 _mini_m = _mini_load("mini_diff_2")
-for _mini_n in "DOC_TYPES _normalize_choice".split():
+for _mini_n in "DOC_TYPES".split():
     globals()[_mini_n] = getattr(_mini_m, _mini_n)
+
+def _normalize_choice(option, value, rows):
+    if value is None:
+        return None
+    normalized = unicodedata.normalize("NFKC", str(value)).strip().lower()
+    for row in rows:
+        if row[0] == normalized:
+            return normalized
+    shown = value if str(value).strip() else "（空）"
+    raise ValueError("{} に使えない値です: {}。使えるのは {}です。".format(
+        option, shown, "、".join("{}（{}）".format(row[0], row[1]) for row in rows)))
 
 def normalize_doc_type(value):
     return _normalize_choice("--doc-type", value, DOC_TYPES)

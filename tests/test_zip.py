@@ -17,7 +17,7 @@ limits = _util.load_tool("limits")
 
 # 試験用の見本（tests/fixtures/basic/expected）から作った .zip の sha256。Python 3.9 と 3.14 で同じになる。
 # 見本を作り直したら、この値も書き換える。
-FIXTURE_ZIP_SHA256 = "8655884e9b53104db6460faf46722f44c1e91f570d9a6848ba9ffe13f01fded6"
+FIXTURE_ZIP_SHA256 = "e8b251150d16455981a02f9c1fa107809dc67a18bc43a4f61c65cbaa34ec61a7"
 
 
 class ZipCheck:

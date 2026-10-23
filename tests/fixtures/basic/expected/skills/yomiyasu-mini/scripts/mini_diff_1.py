@@ -1,10 +1,10 @@
-# yomiyasu-mini 1.0.0。nanaism/yomiyasu v2.1.3（c09270bc93daab14e253fb3ef406182011b79ccb）から tools/generate.py で生成した。手で直さない。
+# yomiyasu-mini 1.0.0。nanaism/yomiyasu v2.2.2（488dd37c0baa67ec65bf155aced9fa1a01d261e2）から tools/generate.py で生成した。手で直さない。
 # 取り出した名前と中身の sha256 は extract/scripts.json と MANIFEST.json にある。
 """試験用の部品。mini_check.py から読む。"""
 
 __version__ = "1.0.0"
-SOURCE_TAG = "v2.1.3"
-SOURCE_COMMIT = "c09270bc93daab14e253fb3ef406182011b79ccb"
+SOURCE_TAG = "v2.2.2"
+SOURCE_COMMIT = "488dd37c0baa67ec65bf155aced9fa1a01d261e2"
 
 import re
 

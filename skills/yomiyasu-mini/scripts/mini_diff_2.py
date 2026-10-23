@@ -1,4 +1,4 @@
-# yomiyasu-mini 1.0.0。nanaism/yomiyasu v2.1.3（c09270bc93daab14e253fb3ef406182011b79ccb）から tools/generate.py で生成した。手で直さない。
+# yomiyasu-mini 1.0.0。nanaism/yomiyasu v2.2.2（488dd37c0baa67ec65bf155aced9fa1a01d261e2）から tools/generate.py で生成した。手で直さない。
 # 取り出した名前と中身の sha256 は extract/scripts.json と MANIFEST.json にある。
 """yomiyasu-mini の意味の検査の部品。本体の yomiyasu_diff.py と markdown_visibility.py の定義を、元の字のまま入れている。
 単独では使わない。同じフォルダの mini_check.py が読む。"""
@@ -57,10 +57,15 @@ def _mini_bind(name, names):
         _mini_on_error(name, error)
 
 __version__ = "1.0.0"
-SOURCE_TAG = "v2.1.3"
-SOURCE_COMMIT = "c09270bc93daab14e253fb3ef406182011b79ccb"
+SOURCE_TAG = "v2.2.2"
+SOURCE_COMMIT = "488dd37c0baa67ec65bf155aced9fa1a01d261e2"
 
-_mini_bind("mini_diff_1", "_CHAR_ALIGN_LIMIT _END _HALF_WIDTH _KeySet _UNITS _WEAK_EACH _WEAK_SINGLE _affix_ratio _common_affix _image_path_start _unit_pattern")
+_mini_bind("mini_diff_1", "DOC_TYPES _CHAR_ALIGN_LIMIT _HALF_WIDTH _KeySet _UNITS _WEAK_EACH _WEAK_SINGLE _affix_ratio _common_affix _image_path_start _normalize_choice _unit_pattern")
+
+def normalize_doc_type(value):
+    return _normalize_choice("--doc-type", value, DOC_TYPES)
+
+_END = r"(?=[。、！!？?よねがけのかし]|です|$)"
 
 _TYPE_PATTERNS = (
     ("伝聞", r"そう(?:(?<=[るうくすつぬぶむぐ]そう)|(?<=だそう)|(?<=ったそう)|(?<=んだそう)|(?<=ないそう))"
@@ -1221,6 +1226,12 @@ def _is_question(text):
     text = text.rstrip()
     return bool(_QUESTION.search(text)) and not _NOT_QUESTION_KA.search(text)
 
+_FINAL_PERIOD_IN_QUOTE = re.compile(r"。(?=[」』]+$)")
+
+def _only_final_period_removed(old, new):
+    old, new = old.rstrip(), new.rstrip()
+    return _FINAL_PERIOD_IN_QUOTE.sub("", old) == new or _FINAL_PERIOD_IN_QUOTE.sub("", new) == old
+
 def _question_risks(sides, groups):
     out = []
     order = 0
@@ -1228,7 +1239,7 @@ def _question_risks(sides, groups):
         for i, j in group["pairs"]:
             old, new = group["old"][i], group["new"][j]
             old_question, new_question = _is_question(old.text), _is_question(new.text)
-            if old_question != new_question:
+            if old_question != new_question and not _only_final_period_removed(old.text, new.text):
                 out.append((_group_index(group, new), order, _risk(
                     "sentence_type", "question", old.line, new.line, old.text, new.text,
                     {"old_is_question": old_question, "new_is_question": new_question})))
@@ -1576,64 +1587,6 @@ def _qualifier_change(old_names, new_names, old_near, new_near, old_words, new_w
         if len(olds) == 1 and len(news) == 1 and olds != news and (olds | news) <= _QUALIFIER_STRICT:
             strict.append(family)
     return lost, added, strict
-
-def _qualifier_risks(sides, groups):
-    out = []
-    for group in groups:
-        for i, j in group["pairs"]:
-            old, new = group["old"][i], group["new"][j]
-            if old.text == new.text and not _QUALIFIER_SPLIT_DECIMAL.search(old.text):
-                continue
-            old_numbers = _sentence_numbers(sides, 0, old)
-            if not old_numbers:
-                continue
-            new_numbers = _sentence_numbers(sides, 1, new)
-            if not new_numbers:
-                continue
-            if old.text == new.text and (_qualifier_reach(sides, 0, old, old_numbers)
-                                         == _qualifier_reach(sides, 1, new, new_numbers)):
-                continue
-            olds = _qualifier_states(sides, 0, old, old_numbers)
-            news = _qualifier_states(sides, 1, new, new_numbers)
-            old_count = Counter(state[0] for state in olds)
-            new_count = Counter(state[0] for state in news)
-            words = [None, None]
-            for key in old_count:
-                if old_count[key] != new_count.get(key):
-                    continue
-                old_states = [state for state in olds if state[0] == key]
-                new_states = [state for state in news if state[0] == key]
-                if Counter(s[1] for s in old_states) == Counter(s[1] for s in new_states):
-                    continue
-                if len(old_states) > 1:
-                    rest = Counter(s[1] for s in new_states)
-                    kept_old = []
-                    for state in old_states:
-                        if rest[state[1]] > 0:
-                            rest[state[1]] -= 1
-                        else:
-                            kept_old.append(state)
-                    rest = Counter(s[1] for s in old_states)
-                    kept_new = []
-                    for state in new_states:
-                        if rest[state[1]] > 0:
-                            rest[state[1]] -= 1
-                        else:
-                            kept_new.append(state)
-                    old_states, new_states = kept_old, kept_new
-                for before, after in zip(old_states, new_states):
-                    if words[0] is None:
-                        words = [set(f for f, regex in _QUALIFIER_SENTENCE.items() if regex.search(old.text)),
-                                    set(f for f, regex in _QUALIFIER_SENTENCE.items() if regex.search(new.text))]
-                    lost, added, strict = _qualifier_change(before[1], after[1], before[3], after[3], words[0], words[1])
-                    if not (lost or added or strict):
-                        continue
-                    subkind = "lost" if lost and not added and not strict else (
-                        "added" if added and not lost and not strict else "changed")
-                    out.append(_risk("number_qualifier", subkind, old.line, new.line, old.text, new.text,
-                                     {"old_number": before[4], "new_number": after[4], "from": sorted(before[1]), "to": sorted(after[1]),
-                                      "old_markers": list(before[2]), "new_markers": list(after[2])}))
-    return out
 
 _K = "㐀-䶿一-鿿豈-﫿々〆"
 _STIFF_KANJI = re.compile("[" + _K + "]")

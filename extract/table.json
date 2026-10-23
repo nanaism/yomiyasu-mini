@@ -4,8 +4,8 @@
   "version": "1.0.0",
   "source": {
     "repository": "nanaism/yomiyasu",
-    "tag": "v2.1.3",
-    "commit": "c09270bc93daab14e253fb3ef406182011b79ccb",
+    "tag": "v2.2.2",
+    "commit": "488dd37c0baa67ec65bf155aced9fa1a01d261e2",
     "skill_dir": "skills/yomiyasu"
   },
   "output_dir": "skills/yomiyasu-mini",
@@ -22,7 +22,7 @@
         {
           "source": "skills/yomiyasu/SKILL.md",
           "region": "front_matter",
-          "sha256": "96e07089aa021abbde78626964fa5b1063645b442298292f7bd48b2c25d31388"
+          "sha256": "c7207175a688329a311d1a5492544a6b7204b81efa994b8a1e89b89cc99829cb"
         }
       ]
     },
@@ -63,7 +63,7 @@
           "kind": "own",
           "id": "intro",
           "text": "extract/own/intro.md",
-          "text_sha256": "25f4a8d08d92a7229eea21f58cdd666d40634494f08ba2db412176ecda5f5ecc",
+          "text_sha256": "a75990a0e5f2de353168366bd5c51bbe96cbdfe6790b14cee3d78b35b80c16f3",
           "reason": "mini の範囲、参照ファイルの場所、名前だけで呼ばれたときの対象の決め方（本体 L11 を Copilot などに合わせて書き直したもの）、検査を実行できなかったときの扱い",
           "class": "own"
         },
@@ -158,7 +158,7 @@
           "kind": "rewritten",
           "id": "stance",
           "text": "extract/rewritten/stance.md",
-          "text_sha256": "2424e63229f2168bc0c4128fc404c2f9a73e93ce94c3a8a18f78a4316196c577",
+          "text_sha256": "f36b277fc3679b6a5305e795d616f7f9b62894efbc3e3ba79fe925751f5412a6",
           "from": [
             {
               "source": "skills/yomiyasu/SKILL.md",
@@ -175,9 +175,11 @@
             }
           ],
           "class": "B",
-          "note": "L40、L43、L45-71 を短くした。L41-42、L44、L65、L72-74 の全文は rules.md の r-stance",
+          "note": "L40、L43、L45-71 を短くした。L41-42、L44、L65、L72-74 の全文は doc-types.md の r-stance",
           "drop_with": [
-            "r-stance"
+            "r-stance",
+            "dt-intro-stance",
+            "per-6-stance"
           ]
         },
         {
@@ -245,7 +247,7 @@
           "selector": {
             "scope": "own"
           },
-          "sha256": "519465fd03047b72631c6ec9b9086c35d5391c09332b5887cd1f5a50e6b9f4d8",
+          "sha256": "4ea84b32aeef7cd020976fa582f974120c29987210b725aa250a9a98250245b6",
           "transforms": {
             "heading_shift": 0,
             "drop_lines": [
@@ -302,11 +304,11 @@
                 ]
               },
               "scope": "own",
-              "sha256": "519465fd03047b72631c6ec9b9086c35d5391c09332b5887cd1f5a50e6b9f4d8"
+              "sha256": "4ea84b32aeef7cd020976fa582f974120c29987210b725aa250a9a98250245b6"
             }
           ],
           "class": "B",
-          "note": "L99、L101、L102 を短くした。L99、L101-105 の全文は rules.md の r-subject",
+          "note": "L99、L101、L102 を短くした。L99、L101-105 の全文は rules.md の r-subject。v2.2.0 で L99 に足された、他動詞を読点で並べて止める文の1文も r-subject にだけ置いた（本体の推敲の前後の比べで、直せた件数が 4/6 のまま変わらなかったため）",
           "drop_with": [
             "r-subject",
             "r-gemini-head",
@@ -647,11 +649,11 @@
                 ]
               },
               "scope": "own",
-              "sha256": "d324840340cb6ad0aee1ea3df559ea5cee42dda1da8db153d4c47a3228ee3c92"
+              "sha256": "f7bde245670cb44d6fff8a2f2f686f465f478c5fb9d22970444bb049b91a3b81"
             }
           ],
           "class": "B",
-          "note": "全文は rules.md の r-heading",
+          "note": "全文は rules.md の r-heading。v2.2.0 で足された見出しと1行目の比喩ラベルの行も r-heading にだけ置いた（本体の推敲の前後の比べで、直せた件数が 2.1.3 と同じ 8/10 だったため。SKILL.md の字数の目安を守る）",
           "drop_with": [
             "r-heading"
           ]
@@ -660,7 +662,7 @@
           "kind": "rewritten",
           "id": "copy",
           "text": "extract/rewritten/copy.md",
-          "text_sha256": "eab7fd9e23130e8f59a76934da535fabc41bf8efaf82d6f8f246c2434eed7932",
+          "text_sha256": "f2d761f0e3610238f56775e61f4db3e1dd8f6a2e95ddd2bac0722bf13c9bc41d",
           "from": [
             {
               "source": "skills/yomiyasu/SKILL.md",
@@ -673,7 +675,7 @@
                 ]
               },
               "scope": "own",
-              "sha256": "b9cf87001707029fdab159271a9dded0ce753357aad6e2ecae2dae6c784d21ac"
+              "sha256": "3fb018556f2f27a2b1b4b7d2c51c792121dcc5be9786cfb585570f5579033e51"
             }
           ],
           "class": "B",
@@ -756,7 +758,7 @@
                 ]
               },
               "scope": "own",
-              "sha256": "1b7fe67d77ccfd429fb9f380b5255247453f665d05876c25ee583c5d04f164b6"
+              "sha256": "ab89982a4c51eb0cffffd2d1cd852a2b623924488a0a9ec658b3cfb295a6ab05"
             }
           ],
           "class": "B",
@@ -766,7 +768,7 @@
           "kind": "rewritten",
           "id": "step1",
           "text": "extract/rewritten/step1.md",
-          "text_sha256": "4a5b4bc52ff904d0c1f2ea89cf689e89ef8b4caec593a1b6622462aedd987d8e",
+          "text_sha256": "6bc85ca9964fa1e1b276603eb7d0c850b5e78ed74e8c462c5114d20362b867a7",
           "from": [
             {
               "source": "skills/yomiyasu/SKILL.md",
@@ -779,12 +781,13 @@
                 ]
               },
               "scope": "own",
-              "sha256": "1b7fe67d77ccfd429fb9f380b5255247453f665d05876c25ee583c5d04f164b6"
+              "sha256": "ab89982a4c51eb0cffffd2d1cd852a2b623924488a0a9ec658b3cfb295a6ab05"
             }
           ],
           "class": "B",
-          "note": "種類、読者、書き手と読み手、段落の把握（L206-211、L228-236、L238）を短くした。種類の表と L211 の全文は doc-types.md",
+          "note": "種類、読者、書き手と読み手、段落の把握（L206-211、L228-236、L238）と、語の一覧（.yomiyasu-words/ の allow.txt と flag.txt。v2.2.0）を短くした。種類の表と L211 の全文は doc-types.md",
           "drop_with": [
+            "dt-intro-types",
             "dt-table-head",
             "dt-table",
             "dt-pr",
@@ -799,6 +802,7 @@
             "dt-promo",
             "dt-mail",
             "dt-paper",
+            "dt-script",
             "dom-tech",
             "dom-business",
             "dom-essay",
@@ -817,7 +821,8 @@
             "per-6",
             "per-7",
             "per-8",
-            "per-9"
+            "per-9",
+            "per-6-stance"
           ]
         },
         {
@@ -837,11 +842,38 @@
                 ]
               },
               "scope": "own",
-              "sha256": "7b58feafa3f86ef68002afeb927fd4b773e1cf7e329a36dbc61f845c47971f18"
+              "sha256": "3bf6970c1856214fde014da7626c1679a81441e7cf2ee9ec19b13557272c0c60"
             }
           ],
           "class": "B",
           "note": "L243（lint を先にかける）を、原文を読んで1章の型を探す文にした。L247（fact-recovery）を、資料や会話の値で補わず尋ねる文にした（D）"
+        },
+        {
+          "kind": "rewritten",
+          "id": "calque",
+          "text": "extract/rewritten/calque.md",
+          "text_sha256": "b7e55779cd9c5adde460d462d083724dd6c1743bcfa9e42281bc6bf88a3dd90c",
+          "from": [
+            {
+              "source": "skills/yomiyasu/SKILL.md",
+              "heading": {
+                "level": 3,
+                "text": "Step 2: 文章の書き直し",
+                "parents": [
+                  "yomiyasu",
+                  "2. 実行手順"
+                ]
+              },
+              "scope": "own",
+              "sha256": "3bf6970c1856214fde014da7626c1679a81441e7cf2ee9ec19b13557272c0c60"
+            }
+          ],
+          "class": "B",
+          "note": "v2.2.0 で足された直訳語の段落（lint の印の扱いと直訳語の2つの問い）を、lint を使わない文にした。型の3つ、2つの問い、文として書き直すこと、名前と動作がなければ尋ねること、残す言い方。全文と例は rules.md の r-calque",
+          "drop_with": [
+            "r-calque",
+            "step4-calque"
+          ]
         },
         {
           "kind": "verbatim_edited",
@@ -857,8 +889,8 @@
           },
           "selector": {
             "paragraphs": [
-              1,
-              1
+              2,
+              2
             ]
           },
           "sha256": "6d90b03fe74ecf81f2908284d952c6a34e316324aa569a0de8b29a72c4d81fb4",
@@ -898,7 +930,7 @@
                 ]
               },
               "scope": "own",
-              "sha256": "7b58feafa3f86ef68002afeb927fd4b773e1cf7e329a36dbc61f845c47971f18"
+              "sha256": "3bf6970c1856214fde014da7626c1679a81441e7cf2ee9ec19b13557272c0c60"
             }
           ],
           "class": "B",
@@ -939,7 +971,7 @@
           "kind": "own",
           "id": "step4-words",
           "text": "extract/own/step4-words.md",
-          "text_sha256": "cc98bf7faaaffbc5b4ab76588190025cc1404e7eae9c07175c4dee5ab6f7763f",
+          "text_sha256": "b2f5b58b26d6d6f1ce42070943e82477aee2debb07f47e12cdfeba28c432c518",
           "reason": "mini_check が本体の diff の new_words、lost_words、markers を出すときだけ使う段落。scripts 担当が出さないと決めたら --drop step4-words で外す",
           "class": "own"
         },
@@ -947,7 +979,7 @@
           "kind": "rewritten",
           "id": "step4-visual",
           "text": "extract/rewritten/step4-visual.md",
-          "text_sha256": "7a5c0b2342bfdda2cb2819eb2e8f0fb5c9784756563dd132442a85cbd34b44a1",
+          "text_sha256": "aa3d1c1f2432be54b176fad5f870bee5c4cf1ab8abf55692e4bb1de09c17c065",
           "from": [
             {
               "source": "skills/yomiyasu/SKILL.md",
@@ -961,16 +993,101 @@
               },
               "scope": "own",
               "sha256": "6f5a75aead53d4552f711a249eb6ead8f3efffcf72aadf5b8a4562c67bd48cd3"
+            },
+            {
+              "source": "skills/yomiyasu/SKILL.md",
+              "heading": {
+                "level": 3,
+                "text": "Step 5: 提出の前の照合",
+                "parents": [
+                  "yomiyasu",
+                  "2. 実行手順"
+                ]
+              },
+              "scope": "own",
+              "sha256": "805950a0736c99dc8ae63170921307cfb69a0ba3a056ceb49ff117c628034b87"
             }
           ],
           "class": "B",
-          "note": "候補に出なかった所を目で見る観点と、直すのは1回だけにすること（L299-311）。測定で外さない"
+          "note": "候補に出なかった所を目で見る観点と、直すのは1回だけにすること（L299-311）。本体 Step 5 の、最終稿に残った直訳語と語の一覧の印を Step 2 の問いで読み直すこと（v2.2.0）を、lint を使わない観点の1つにした。測定で外さない。直訳語の段落は step4-calque（calque と一緒に外す）、最後の段落は step4-close に分けた"
+        },
+        {
+          "kind": "rewritten",
+          "id": "step4-calque",
+          "text": "extract/rewritten/step4-calque.md",
+          "text_sha256": "acebaf88eaab5dde13df9d0a8063911256896d0caeb1fca8997556dc708498e0",
+          "from": [
+            {
+              "source": "skills/yomiyasu/SKILL.md",
+              "heading": {
+                "level": 3,
+                "text": "Step 4: 足したもの・削ったものの点検（Diff検査）",
+                "parents": [
+                  "yomiyasu",
+                  "2. 実行手順"
+                ]
+              },
+              "scope": "own",
+              "sha256": "6f5a75aead53d4552f711a249eb6ead8f3efffcf72aadf5b8a4562c67bd48cd3"
+            },
+            {
+              "source": "skills/yomiyasu/SKILL.md",
+              "heading": {
+                "level": 3,
+                "text": "Step 5: 提出の前の照合",
+                "parents": [
+                  "yomiyasu",
+                  "2. 実行手順"
+                ]
+              },
+              "scope": "own",
+              "sha256": "805950a0736c99dc8ae63170921307cfb69a0ba3a056ceb49ff117c628034b87"
+            }
+          ],
+          "class": "B",
+          "note": "v2.2.1 の Step 5 の「残した印の語」の確かめを、lint と check の記録なしで目で探す文にした。G11 で calque と一緒に外す"
+        },
+        {
+          "kind": "rewritten",
+          "id": "step4-close",
+          "text": "extract/rewritten/step4-close.md",
+          "text_sha256": "55ac1c68f87874ab65c9fea7e308da28ef6a85c71d44b23d0ca4dfb17972bf02",
+          "from": [
+            {
+              "source": "skills/yomiyasu/SKILL.md",
+              "heading": {
+                "level": 3,
+                "text": "Step 4: 足したもの・削ったものの点検（Diff検査）",
+                "parents": [
+                  "yomiyasu",
+                  "2. 実行手順"
+                ]
+              },
+              "scope": "own",
+              "sha256": "6f5a75aead53d4552f711a249eb6ead8f3efffcf72aadf5b8a4562c67bd48cd3"
+            },
+            {
+              "source": "skills/yomiyasu/SKILL.md",
+              "heading": {
+                "level": 3,
+                "text": "Step 5: 提出の前の照合",
+                "parents": [
+                  "yomiyasu",
+                  "2. 実行手順"
+                ]
+              },
+              "scope": "own",
+              "sha256": "805950a0736c99dc8ae63170921307cfb69a0ba3a056ceb49ff117c628034b87"
+            }
+          ],
+          "class": "B",
+          "note": "step4-visual の最後の段落（直すのは1回だけ）"
         },
         {
           "kind": "rewritten",
           "id": "output",
           "text": "extract/rewritten/output.md",
-          "text_sha256": "9f753685e2110bf662f90e9c1a5e3182999351bce08a386dc1da6a64613985ef",
+          "text_sha256": "5a541e19504a8bd0d22c451900a4b9402b0a685ddbce0ed96f5af9cd7f30da18",
           "from": [
             {
               "source": "skills/yomiyasu/SKILL.md",
@@ -997,7 +1114,7 @@
           "kind": "own",
           "id": "rules-head",
           "text": "extract/own/rules-head.md",
-          "text_sha256": "2a01173a75be933573f5c45759b62e8b62fc7d747b11c2d38b0d6b823c86d524",
+          "text_sha256": "ec82f0a86eeca31ba5e8298db2858e65d410e10274059a8d6fb4d6fb991ca07d",
           "reason": "rules.md の題と、写した節の読み方",
           "class": "own"
         },
@@ -1008,147 +1125,6 @@
           "text_sha256": "688643c29f7795c76e122bb07bd7189901c3c53bf73fe23dc5f5b0e4496f2ba0",
           "reason": "SKILL.md から移した細部をまとめる見出し",
           "class": "own"
-        },
-        {
-          "kind": "verbatim_edited",
-          "id": "r-stance",
-          "source": "skills/yomiyasu/SKILL.md",
-          "heading": {
-            "level": 3,
-            "text": "文書の立場と文末",
-            "parents": [
-              "yomiyasu",
-              "1. 基本原則"
-            ]
-          },
-          "selector": {
-            "scope": "own"
-          },
-          "sha256": "f9da46198497d333de4976ec71815de761b3c1e47f10a685f765bc94201968c7",
-          "transforms": {
-            "heading_shift": 0,
-            "drop_lines": [
-              {
-                "pattern": "^日本語は主語を省くことが",
-                "count": 1
-              },
-              {
-                "pattern": "^常体・敬体は、変更の指定",
-                "count": 1
-              },
-              {
-                "pattern": "^\\-\\ 立場は次の3つのどれ",
-                "count": 1
-              },
-              {
-                "pattern": "^\\ \\ \\-\\ \\*\\*勧め\\*\\*:\\ ",
-                "count": 1
-              },
-              {
-                "pattern": "^\\ \\ \\-\\ \\*\\*決まり\\*\\*:",
-                "count": 1
-              },
-              {
-                "pattern": "^\\ \\ \\-\\ \\*\\*説明\\*\\*:\\ ",
-                "count": 1
-              },
-              {
-                "pattern": "^\\-\\ 立場は、上の手がかり",
-                "count": 1
-              },
-              {
-                "pattern": "^\\ \\ 1\\.\\ 依頼にある行き",
-                "count": 1
-              },
-              {
-                "pattern": "^\\ \\ 2\\.\\ 本文の手がかり",
-                "count": 1
-              },
-              {
-                "pattern": "^\\ \\ 3\\.\\ 決まりと読む手",
-                "count": 1
-              },
-              {
-                "pattern": "^\\-\\ 文末や語尾を見直すの",
-                "count": 1
-              },
-              {
-                "pattern": "^\\ \\ \\-\\ 文末によって動作",
-                "count": 1
-              },
-              {
-                "pattern": "^\\ \\ \\-\\ 指定された文体へ",
-                "count": 1
-              },
-              {
-                "pattern": "^\\ \\ \\-\\ 依頼にある行き先",
-                "count": 1
-              },
-              {
-                "pattern": "^\\ \\ \\-\\ 地の文の「です・ます」と「だ・である」が意図なく混在するとき。",
-                "count": 1
-              },
-              {
-                "pattern": "^\\ \\ \\-\\ 立場や時制が適切",
-                "count": 1
-              },
-              {
-                "pattern": "^\\ \\ 文末が文書の中でそろ",
-                "count": 1
-              },
-              {
-                "pattern": "^\\-\\ 立場・働き・時制を直",
-                "count": 1
-              },
-              {
-                "pattern": "^\\ \\ \\-\\ 読み手への助言を",
-                "count": 1
-              },
-              {
-                "pattern": "^\\ \\ \\-\\ 決まりの文書で、",
-                "count": 1
-              },
-              {
-                "pattern": "^\\ \\ \\-\\ 説明の文書で、書",
-                "count": 1
-              },
-              {
-                "pattern": "^\\ \\ \\-\\ 地の文の「です・ます」と「だ・である」が意図なく混在するときは、",
-                "count": 1
-              },
-              {
-                "pattern": "^\\-\\ 文末をそろえるためだ",
-                "count": 1
-              },
-              {
-                "pattern": "^\\-\\ 文末をそろえたときは",
-                "count": 1
-              },
-              {
-                "pattern": "^\\-\\ 次のときは、「書き手",
-                "count": 1
-              },
-              {
-                "pattern": "^\\ \\ \\-\\ 手がかりから立場",
-                "count": 1
-              },
-              {
-                "pattern": "^\\ \\ \\-\\ 依頼の分野や行き",
-                "count": 1
-              },
-              {
-                "pattern": "^\\ \\ 文末を1つも変えなか",
-                "count": 1
-              },
-              {
-                "pattern": "^\\-\\ 依頼か説明か決まらな",
-                "count": 1
-              }
-            ]
-          },
-          "substitutions": [],
-          "class": "C",
-          "note": "C。変更報告と現在の方針（L41-42）、文脈が明確でない場合（L44）、強さと依頼の語調（L65）、呼びかけと箇条書き（L72-74）"
         },
         {
           "kind": "verbatim_edited",
@@ -1264,7 +1240,7 @@
           "selector": {
             "scope": "own"
           },
-          "sha256": "519465fd03047b72631c6ec9b9086c35d5391c09332b5887cd1f5a50e6b9f4d8",
+          "sha256": "4ea84b32aeef7cd020976fa582f974120c29987210b725aa250a9a98250245b6",
           "transforms": {
             "heading_shift": 0,
             "drop_lines": [
@@ -1522,7 +1498,7 @@
           "selector": {
             "scope": "own"
           },
-          "sha256": "d324840340cb6ad0aee1ea3df559ea5cee42dda1da8db153d4c47a3228ee3c92",
+          "sha256": "f7bde245670cb44d6fff8a2f2f686f465f478c5fb9d22970444bb049b91a3b81",
           "transforms": {
             "heading_shift": 0,
             "drop_lines": []
@@ -1552,7 +1528,7 @@
           "selector": {
             "scope": "own"
           },
-          "sha256": "b9cf87001707029fdab159271a9dded0ce753357aad6e2ecae2dae6c784d21ac",
+          "sha256": "3fb018556f2f27a2b1b4b7d2c51c792121dcc5be9786cfb585570f5579033e51",
           "transforms": {
             "heading_shift": 0,
             "drop_lines": []
@@ -1792,14 +1768,35 @@
           "selector": {
             "scope": "subtree"
           },
-          "sha256": "7425280820a9cfbcd561a7c525f8558c9295747df0c2aa147893d4e1664f1f7a",
+          "sha256": "bf8682280bc08a581e5d838539fd5e8d722491dd4f378be648ac62c6a339be99",
           "transforms": {
             "heading_shift": 1,
             "drop_lines": []
           },
-          "substitutions": [],
+          "substitutions": [
+            {
+              "old": "。lint は `thin_evaluation`（info）の候補として出す（語の組は `references/lists/thin-evaluation.txt`）。",
+              "new": "。",
+              "count": 1
+            },
+            {
+              "old": "（`references/lists/katakana-terms.txt`。`シナジー` は7章）",
+              "new": "（`シナジー` は7章）",
+              "count": 1
+            },
+            {
+              "old": "。lint は `katakana_term`（info）の候補として出す。",
+              "new": "。",
+              "count": 1
+            },
+            {
+              "old": "。lint は essay、promo、script 以外で `metaphor_label`（info）の候補として出す。",
+              "new": "。",
+              "count": 1
+            }
+          ],
           "class": "C",
-          "note": "C。カタログの5章"
+          "note": "C。カタログの5章。v2.2.0 で足された3行の lint の規則の名前と一覧のファイルの文を外す"
         },
         {
           "kind": "verbatim_edited",
@@ -1815,7 +1812,7 @@
           "selector": {
             "scope": "subtree"
           },
-          "sha256": "c973b653c8917bc13c9b205cb3f34321686fe157a2849a3105812932cf8a6cf5",
+          "sha256": "5de0f0f9d8c35c33f057507fea5a5d18ade77febf874ede44ae2d2f58fa6d92a",
           "transforms": {
             "heading_shift": 1,
             "drop_lines": []
@@ -1834,6 +1831,11 @@
             {
               "old": "doc-types/promo.md",
               "new": "`references/doc-types.md` の「紹介記事・宣伝文（promo）」",
+              "count": 1
+            },
+            {
+              "old": "。lint はこの文に印をつけないので、印のない「と言えるでしょう」は直さない。lint は `say_hedge`（info）の候補として出す。",
+              "new": "。",
               "count": 1
             }
           ],
@@ -1927,7 +1929,7 @@
           "selector": {
             "scope": "subtree"
           },
-          "sha256": "4d18f309f84b8b5f91dd30c4bc81db161a2e6a545fb7844342710cba71342422",
+          "sha256": "ed2a9f91f76165d7e44fa8dd2728061d2e2ec5ef451738ba61d16d38b516c7ba",
           "transforms": {
             "heading_shift": 1,
             "drop_lines": []
@@ -1937,10 +1939,82 @@
               "old": "。lint は種類を指定したときに `pause_comma`（info）の候補として出す（「を、」は候補に出ない）。",
               "new": "。",
               "count": 1
+            },
+            {
+              "old": "。lint は `copy_comma_noun`（info）の候補として出す（promo では2回目から）。",
+              "new": "。",
+              "count": 1
+            },
+            {
+              "old": "。lint は essay、promo、script、slides 以外で `bare_verb_chain`（info）の候補として出す。",
+              "new": "。",
+              "count": 1
             }
           ],
           "class": "C",
           "note": "C。カタログの9章"
+        },
+        {
+          "kind": "verbatim_edited",
+          "id": "r-calque",
+          "source": "skills/yomiyasu/references/calques.md",
+          "heading": {
+            "level": 1,
+            "text": "直訳語の見方と書き直し方",
+            "parents": []
+          },
+          "selector": {
+            "scope": "subtree"
+          },
+          "sha256": "cdfb8d20e608e426bb81ec347aadd0e21ab1c660185cad49692977561c70a9d9",
+          "transforms": {
+            "heading_shift": 1,
+            "drop_lines": []
+          },
+          "substitutions": [
+            {
+              "old": "SKILL.md Step 2 の直訳語の問いの細目。lint は、この型に当たった文に `calque`（info）の印をつける。印は直す合図ではなく、文脈を読み直すための候補で、印がついただけでは直さない。",
+              "new": "SKILL.md「Step 2: 文章の書き直し」の直訳語の問いの細目。型に当たっただけでは直さず、文脈を読み直す。",
+              "count": 1
+            },
+            {
+              "old": "「理解の入口」のような抽象的な話の入り口は slop-catalog.md 3章の「役割・位置の比喩」で見る。",
+              "new": "「理解の入口」のような抽象的な話の入り口は、この型では見ない。",
+              "count": 1
+            },
+            {
+              "old": "英語の構文ごと写した文は slop-catalog.md 2章で見る。",
+              "new": "英語の構文ごと写した文は「AI生成文の不自然な語彙・構文カタログ」の2章で見る。",
+              "count": 1
+            },
+            {
+              "old": "。lint はこれらに印をつけない。",
+              "new": "。",
+              "count": 1
+            },
+            {
+              "old": "（SKILL.md Step 1）。印は `project_term` で、4章のとおり書き直すか尋ねる。",
+              "new": "（SKILL.md「Step 1: 文脈と段落の把握」）。4章のとおり書き直すか尋ねる。",
+              "count": 1
+            },
+            {
+              "old": "として残す。lint も印を外す。",
+              "new": "として残す。",
+              "count": 1
+            },
+            {
+              "old": "印のついた語",
+              "new": "型に当たった語",
+              "count": 4
+            },
+            {
+              "old": "SKILL.md「案内用の見出し」のとおり本文の語で項目名を作り",
+              "new": "SKILL.md「案内用の見出し」と、この文書の「本文の節の細部」の同じ名前の節のとおり、本文の語で項目名を作り",
+              "count": 1
+            }
+          ],
+          "class": "C",
+          "note": "C。本体の references/calques.md（v2.2.2）。lint の印を指す文を外し、印のついた語を型に当たった語と読み替える（v2.2.1 で4か所）。mini にない slop-catalog.md 3章を指す句は、この型で見ないことだけを残す。v2.2.1 の見出しの行が指す本文の語で項目名を作る規則は、mini の SKILL.md の短い節になく r-heading にあるので、その節も指す"
         },
         {
           "kind": "verbatim_edited",
@@ -2105,8 +2179,32 @@
           "kind": "own",
           "id": "dt-head",
           "text": "extract/own/dt-head.md",
-          "text_sha256": "e2d591740d601a260808a76c6097280b17705143961f39d1884731145d0e2894",
-          "reason": "doc-types.md の題と、写した節の読み方",
+          "text_sha256": "b69d07a37e257ce606ff9ee8706d2bfb674b97afcdcbf2d4057b79a74b7437fe",
+          "reason": "doc-types.md の題",
+          "class": "own"
+        },
+        {
+          "kind": "own",
+          "id": "dt-intro-types",
+          "text": "extract/own/dt-intro-types.md",
+          "text_sha256": "95556bbb9bb656398877b0c0876fee6c296bc2e87092b2f71860a3dfca6eeedb",
+          "reason": "doc-types.md の種類・分野・読者・書き手と読み手の節の出どころ。G8（step1）でその節と一緒に外す",
+          "class": "own"
+        },
+        {
+          "kind": "own",
+          "id": "dt-intro-stance",
+          "text": "extract/own/dt-intro-stance.md",
+          "text_sha256": "cf7815674d3f12ce75f3ba1da52f5b84f9f6355fd413f3f0579036710709d481",
+          "reason": "doc-types.md の最後の「文書の立場と文末」の出どころ。G1（stance）でその節と一緒に外す",
+          "class": "own"
+        },
+        {
+          "kind": "own",
+          "id": "dt-notation",
+          "text": "extract/own/dt-notation.md",
+          "text_sha256": "2600c1db291dd9152cd5634eff28c531134c0c684a6b7cb928e17b67859378b3",
+          "reason": "doc-types.md で本文の節と参照ファイルの節を指す書き方",
           "class": "own"
         },
         {
@@ -2135,7 +2233,7 @@
               1
             ]
           },
-          "sha256": "50a7d1337eca598b3d96f5369601a317dbe9befb85eac91b44133ccc1bac5af8",
+          "sha256": "6abe42a4aa533baf24aa1f5775790773c3b84373b9c577b5b1c39abd256de644",
           "class": "C",
           "note": "C。SKILL.md Step 1 の種類の表（L213-226）"
         },
@@ -2423,7 +2521,7 @@
           "selector": {
             "scope": "subtree"
           },
-          "sha256": "65ba6b3e37da99a8cd3021088b5a1a27f95fefae4b5bfdf7c7bf0ef2439d071c",
+          "sha256": "05ce9e668516936d35bfc1509e32da69ff7aab8c46f3d2fcfee70d914f38762c",
           "transforms": {
             "heading_shift": 1,
             "drop_lines": [
@@ -2470,7 +2568,7 @@
           "selector": {
             "scope": "subtree"
           },
-          "sha256": "0f937b0dc89094813f83cdc51bc89c1eb3c9dc99a6ab08302941825ac1f54646",
+          "sha256": "9b164c2916544e417fb42454e199f5c790cbfcd233879c59f563a1942329d9bb",
           "transforms": {
             "heading_shift": 1,
             "drop_lines": [
@@ -2514,6 +2612,21 @@
             {
               "old": "完了報告の最後（確認の記録の下）",
               "new": "確認の記録の下",
+              "count": 1
+            },
+            {
+              "old": "（lint の narrative_density。`--doc-type essay` のときだけ文書に1件出る）",
+              "new": "",
+              "count": 1
+            },
+            {
+              "old": "（persona.md 5章）",
+              "new": "（「書き手と読み手（ペルソナ）」の5章）",
+              "count": 1
+            },
+            {
+              "old": "SKILL.md Step 2 の手順9のとおり",
+              "new": "SKILL.md「Step 2: 文章の書き直し」の7のとおり",
               "count": 1
             }
           ],
@@ -2589,7 +2702,7 @@
           "selector": {
             "scope": "subtree"
           },
-          "sha256": "248f57ae1f4565df79f8b8d06081187a1b7af3d7271d7f76764fc1cfd3a0ac3e",
+          "sha256": "06f8f3a39547985fc74a70c3717596070401b9d3db5fc93e3b10f76f9b6656e4",
           "transforms": {
             "heading_shift": 1,
             "drop_lines": [
@@ -2818,6 +2931,63 @@
           ],
           "class": "C",
           "note": "C。本体の doc-types/paper.md。lint の規則の行と、mini にない検査・事実の補いを指す句を外す"
+        },
+        {
+          "kind": "verbatim_edited",
+          "id": "dt-script",
+          "source": "skills/yomiyasu/references/doc-types/script.md",
+          "heading": {
+            "level": 1,
+            "text": "台詞・脚本（script）",
+            "parents": []
+          },
+          "selector": {
+            "scope": "subtree"
+          },
+          "sha256": "f74298c5d3eba21d02d6833063eee859c748f15cb22216ac81e9626cf337656f",
+          "transforms": {
+            "heading_shift": 1,
+            "drop_lines": [
+              {
+                "pattern": "^lint\\ で外す規則:\\ ",
+                "count": 1
+              }
+            ]
+          },
+          "substitutions": [
+            {
+              "old": "（lint の fragment_run と sentence_end_repetition は外す）",
+              "new": "",
+              "count": 1
+            },
+            {
+              "old": "lint の dialogue_period の印（台詞の数と、「。」で終わる割合）がついたら、台詞の最後の「。」だけを外す。",
+              "new": "台詞が10個以上あり、最後の字が「。」の台詞が半分以上なら、台詞の最後の「。」だけを外す。",
+              "count": 1
+            },
+            {
+              "old": "印がつかない台本（",
+              "new": "そうでない台本（",
+              "count": 1
+            },
+            {
+              "old": "domains/essay.md",
+              "new": "「エッセイ・オピニオン・個人発信向け仕様」",
+              "count": 1
+            },
+            {
+              "old": "persona.md 8章",
+              "new": "「書き手と読み手（ペルソナ）」の8章",
+              "count": 1
+            },
+            {
+              "old": "（`references/fact-recovery-details.md` 6章）",
+              "new": "",
+              "count": 1
+            }
+          ],
+          "class": "C",
+          "note": "C。本体の doc-types/script.md（v2.2.0）。lint の規則の行と、mini にない検査・事実の補いを指す句を外す。dialogue_period の印の条件（台詞10個以上、「。」で終わる台詞が5割以上）を、目で数える条件に書き換えた"
         },
         {
           "kind": "verbatim_edited",
@@ -3164,7 +3334,7 @@
               0
             ]
           },
-          "sha256": "33e11e93cdcc4fa3d5ba05397d694831c6c027917c3e204b8169dfa3b696e535",
+          "sha256": "9537c92c32eed461eb96aa91e09ca4efc6902258b2b3576853cd62ae0609de52",
           "transforms": {
             "heading_shift": 0,
             "drop_lines": [
@@ -3317,22 +3487,17 @@
           "sha256": "a59bc13aef2999b69eba817be3ec6f60a400c53fe06f77a4d18910ab6ac7e6ec",
           "transforms": {
             "heading_shift": 1,
-            "drop_lines": []
+            "drop_lines": [
+              {
+                "pattern": "^- SKILL\\.md の「相手との関係",
+                "count": 1
+              }
+            ]
           },
           "substitutions": [
             {
               "old": "原文の宛先が指定の読み手と違う（3章）",
               "new": "原文の宛先が指定の読み手と違う",
-              "count": 1
-            },
-            {
-              "old": "SKILL.md の「相手との関係…が分かる依頼では…語調を整えます」",
-              "new": "`references/rules.md` の「文書の立場と文末」の「相手との関係…が分かる依頼では…語調を整えます」",
-              "count": 1
-            },
-            {
-              "old": "「用途や読み手を、短い見出しや冒頭の説明で示します」",
-              "new": "同じ節の「用途や読み手を、短い見出しや冒頭の説明で示します」",
               "count": 1
             },
             {
@@ -3342,7 +3507,29 @@
             }
           ],
           "class": "C",
-          "note": "C。本体の persona.md の6章"
+          "note": "C。本体の persona.md の6章。最後の項目（本体の本文の「文書の立場と文末」の文を指す）は per-6-stance に書き直して分け、G1（stance）と G8（step1）で一緒に外す"
+        },
+        {
+          "kind": "rewritten",
+          "id": "per-6-stance",
+          "text": "extract/rewritten/per-6-stance.md",
+          "text_sha256": "edc5e640192aef476708cbe91c39097d2f92b1c04750c53af171c77648ce7b0d",
+          "from": [
+            {
+              "source": "skills/yomiyasu/references/persona.md",
+              "heading": {
+                "level": 2,
+                "text": "6. 誰にの扱い",
+                "parents": [
+                  "書き手と読み手（ペルソナ）"
+                ]
+              },
+              "scope": "subtree",
+              "sha256": "a59bc13aef2999b69eba817be3ec6f60a400c53fe06f77a4d18910ab6ac7e6ec"
+            }
+          ],
+          "class": "C",
+          "note": "本体の persona.md 6章の最後の項目。本体が指す文は、mini では doc-types.md の「文書の立場と文末」（r-stance）と SKILL.md の「文書の立場と文末」（stance）にあるので、どちらの節かを書いて指す"
         },
         {
           "kind": "verbatim_edited",
@@ -3412,6 +3599,147 @@
           "substitutions": [],
           "class": "C",
           "note": "C。本体の persona.md の9章"
+        },
+        {
+          "kind": "verbatim_edited",
+          "id": "r-stance",
+          "source": "skills/yomiyasu/SKILL.md",
+          "heading": {
+            "level": 3,
+            "text": "文書の立場と文末",
+            "parents": [
+              "yomiyasu",
+              "1. 基本原則"
+            ]
+          },
+          "selector": {
+            "scope": "own"
+          },
+          "sha256": "f9da46198497d333de4976ec71815de761b3c1e47f10a685f765bc94201968c7",
+          "transforms": {
+            "heading_shift": -1,
+            "drop_lines": [
+              {
+                "pattern": "^日本語は主語を省くことが",
+                "count": 1
+              },
+              {
+                "pattern": "^常体・敬体は、変更の指定",
+                "count": 1
+              },
+              {
+                "pattern": "^\\-\\ 立場は次の3つのどれ",
+                "count": 1
+              },
+              {
+                "pattern": "^\\ \\ \\-\\ \\*\\*勧め\\*\\*:\\ ",
+                "count": 1
+              },
+              {
+                "pattern": "^\\ \\ \\-\\ \\*\\*決まり\\*\\*:",
+                "count": 1
+              },
+              {
+                "pattern": "^\\ \\ \\-\\ \\*\\*説明\\*\\*:\\ ",
+                "count": 1
+              },
+              {
+                "pattern": "^\\-\\ 立場は、上の手がかり",
+                "count": 1
+              },
+              {
+                "pattern": "^\\ \\ 1\\.\\ 依頼にある行き",
+                "count": 1
+              },
+              {
+                "pattern": "^\\ \\ 2\\.\\ 本文の手がかり",
+                "count": 1
+              },
+              {
+                "pattern": "^\\ \\ 3\\.\\ 決まりと読む手",
+                "count": 1
+              },
+              {
+                "pattern": "^\\-\\ 文末や語尾を見直すの",
+                "count": 1
+              },
+              {
+                "pattern": "^\\ \\ \\-\\ 文末によって動作",
+                "count": 1
+              },
+              {
+                "pattern": "^\\ \\ \\-\\ 指定された文体へ",
+                "count": 1
+              },
+              {
+                "pattern": "^\\ \\ \\-\\ 依頼にある行き先",
+                "count": 1
+              },
+              {
+                "pattern": "^\\ \\ \\-\\ 地の文の「です・ます」と「だ・である」が意図なく混在するとき。",
+                "count": 1
+              },
+              {
+                "pattern": "^\\ \\ \\-\\ 立場や時制が適切",
+                "count": 1
+              },
+              {
+                "pattern": "^\\ \\ 文末が文書の中でそろ",
+                "count": 1
+              },
+              {
+                "pattern": "^\\-\\ 立場・働き・時制を直",
+                "count": 1
+              },
+              {
+                "pattern": "^\\ \\ \\-\\ 読み手への助言を",
+                "count": 1
+              },
+              {
+                "pattern": "^\\ \\ \\-\\ 決まりの文書で、",
+                "count": 1
+              },
+              {
+                "pattern": "^\\ \\ \\-\\ 説明の文書で、書",
+                "count": 1
+              },
+              {
+                "pattern": "^\\ \\ \\-\\ 地の文の「です・ます」と「だ・である」が意図なく混在するときは、",
+                "count": 1
+              },
+              {
+                "pattern": "^\\-\\ 文末をそろえるためだ",
+                "count": 1
+              },
+              {
+                "pattern": "^\\-\\ 文末をそろえたときは",
+                "count": 1
+              },
+              {
+                "pattern": "^\\-\\ 次のときは、「書き手",
+                "count": 1
+              },
+              {
+                "pattern": "^\\ \\ \\-\\ 手がかりから立場",
+                "count": 1
+              },
+              {
+                "pattern": "^\\ \\ \\-\\ 依頼の分野や行き",
+                "count": 1
+              },
+              {
+                "pattern": "^\\ \\ 文末を1つも変えなか",
+                "count": 1
+              },
+              {
+                "pattern": "^\\-\\ 依頼か説明か決まらな",
+                "count": 1
+              }
+            ]
+          },
+          "substitutions": [],
+          "class": "C",
+          "note": "C。変更報告と現在の方針（L41-42）、文脈が明確でない場合（L44）、強さと依頼の語調（L65）、呼びかけと箇条書き（L72-74）。rules.md が 100,000 バイトを超えたので（v2.2.2 の calques.md の追記で 101,669 バイト）、doc-types.md の最後に移し、見出しを1段上げた。文書の立場は行き先と読み手で決めるので、書き手と読み手の節のあとに置く"
         }
       ]
     }
@@ -3461,6 +3789,8 @@
     "output",
     "rules-head",
     "rules-skill-head",
-    "dt-head"
+    "dt-head",
+    "dt-notation",
+    "step4-close"
   ]
 }
