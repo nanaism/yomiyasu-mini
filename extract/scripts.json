@@ -1,11 +1,11 @@
 {
   "format": "yomiyasu-mini-extract-scripts",
   "format_version": 1,
-  "version": "1.0.0",
+  "version": "1.1.0",
   "source": {
     "repository": "nanaism/yomiyasu",
-    "tag": "v2.2.2",
-    "commit": "488dd37c0baa67ec65bf155aced9fa1a01d261e2",
+    "tag": "v2.4.0",
+    "commit": "ae258d7a57b335673e30b88a018ae08d4f72c449",
     "skill_dir": "skills/yomiyasu"
   },
   "modules": [
@@ -470,7 +470,7 @@
       "module": "diff",
       "name": "_mark_positions",
       "stmts": 1,
-      "sha256": "757aa08de9166e98b218b21470b97e74a08dd4c41d89d27f62641c4176af40cd"
+      "sha256": "6f9e2426fe5bc51a518b34cbbb08d1f565e044f1e9efc290ae7eb9b55ff7b7fb"
     },
     {
       "module": "diff",
@@ -518,7 +518,7 @@
       "module": "diff",
       "name": "_type_ranges",
       "stmts": 1,
-      "sha256": "7a0b3740dcc500c419707e5767d96bae2f8704e120dad427c748c8710a42401c"
+      "sha256": "4078b44b5787763379e0b5419a095f37c81366d87b7b451b2e0dd751f9159f67"
     },
     {
       "module": "diff",
@@ -530,7 +530,7 @@
       "module": "diff",
       "name": "_pair_gone_sentences",
       "stmts": 1,
-      "sha256": "e76a8837f6aee4548296b9f64304d150de0906204d92f7c4e720c909083925df"
+      "sha256": "9bc46eed29ad1f22414f2decd529bb64755c910ce8298e7649c85c7ba172eff8"
     },
     {
       "module": "diff",
@@ -560,7 +560,7 @@
       "module": "diff",
       "name": "_MODALITY_PATTERNS",
       "stmts": 1,
-      "sha256": "74cd688ec86b013d7a64c77dca66bcfb46d892a2038fb78aceae5d0c56ccf63c"
+      "sha256": "b8979dd095d4dfea8fa8365a3637289d7695d15cfdd6f2e28d7eefd53cb11195"
     },
     {
       "module": "diff",
@@ -608,13 +608,13 @@
       "module": "diff",
       "name": "_shared_ranges",
       "stmts": 1,
-      "sha256": "45900ce9199960c710afebb11dbb00b15e844666e4acb2caf706713d4c297847"
+      "sha256": "a20cced60154c4591f762d81a9592d7098a079404b0d4df9ea19353f924e0550"
     },
     {
       "module": "diff",
       "name": "_modality_changes",
       "stmts": 1,
-      "sha256": "fc407197a31b99ebe76f9bb769602f753c7319c5a8e47dce24f26221d7eb8b61"
+      "sha256": "ab0b1b4f4134880501515f6886914a76a20d3a436b19ca9c7ba7b903b669e261"
     },
     {
       "module": "diff",
@@ -752,7 +752,7 @@
       "module": "diff",
       "name": "_logic_changes",
       "stmts": 1,
-      "sha256": "cf0ac3d76c5a4ab3ef5711511946b33fb0e972f024be64fd67469b1094cf3282"
+      "sha256": "f373bd0e950b7a5e113f43e791ca05f41c5129cdee771b9ccc9afdd3a4172222"
     },
     {
       "module": "diff",
@@ -1070,7 +1070,7 @@
       "module": "diff",
       "name": "_pair_similar",
       "stmts": 1,
-      "sha256": "9cf034a98da7e8ae706ab425b648579292c2ab914e0e3f07aa0eb4c314dac9a6"
+      "sha256": "570d7cd9f229cb57238c077024e3b3d04454234b0e970a3ece62333566422eeb"
     },
     {
       "module": "diff",
@@ -1202,13 +1202,13 @@
       "module": "diff",
       "name": "_Sentence",
       "stmts": 1,
-      "sha256": "e28625fa05851924fe19fd6128aacab188436a775cceca66695f85f8e7b2a6d4"
+      "sha256": "f6ecc1b8cfa42074c3c4d2daf301706aa524b3c82b5419c8c378c46e2ab41d3f"
     },
     {
       "module": "diff",
       "name": "_line_sentences",
       "stmts": 1,
-      "sha256": "79f5a588544effab594a8ab99e0d7c24f323c13893f390fb562688c5bdbacbce"
+      "sha256": "90d105854e47eb95284edb51a93f208d34e9791e80d5d3d5d8c8439932a961e2"
     },
     {
       "module": "diff",
@@ -1274,7 +1274,7 @@
       "module": "diff",
       "name": "_UNITS",
       "stmts": 1,
-      "sha256": "29980c5db2aad2c7ecc2e6574cbfab7423494a35eae35fbc29eeba689246a39d"
+      "sha256": "b0de71120d657212dbfb44939b7f6e7da680ed1e281d5418be9c3bc9ff6de013"
     },
     {
       "module": "diff",
@@ -1322,7 +1322,7 @@
       "module": "diff",
       "name": "_KANJI_COUNTERS",
       "stmts": 1,
-      "sha256": "769bb02ef2fb6ecf6e65f9ae374cdb99ac0b4124363118c278dea0a89090694f"
+      "sha256": "fe56ba62a230afe0b546348b1756ed6b7393ead0e7199c49fb95b81fc40dfc18"
     },
     {
       "module": "diff",
@@ -1874,7 +1874,7 @@
       "module": "diff",
       "name": "_number_risks",
       "stmts": 1,
-      "sha256": "81c1606366e14a5e1097b87c0826761a47ce7fc0909bd4b4d070127fd51a8a45"
+      "sha256": "b98e743fc37c305b05c49b3156117113faaa4f27a6b5e362c1bcc69c21792474"
     },
     {
       "module": "diff",
@@ -1910,7 +1910,7 @@
       "module": "diff",
       "name": "_number_phrases",
       "stmts": 1,
-      "sha256": "008368489cbfafb7d0c8e7cd01ebf2de3a9ec0a2069578b7f97c7f54fc4b9e22"
+      "sha256": "265d4684b1b7a953e006f024c47bdcb71cca47b73416fbe1eaf67e388924b247"
     },
     {
       "module": "diff",
@@ -2000,7 +2000,7 @@
       "module": "diff",
       "name": "_cancel_notation",
       "stmts": 1,
-      "sha256": "c77a8d09926f8f34f8b77b91079d6cdf6ad85aa99087e8427202d1318a46b51f"
+      "sha256": "6ca5acd174ef18000e468bffe2bbe738390cf90388caccb0220342db65cff31b"
     },
     {
       "module": "diff",
@@ -2048,7 +2048,7 @@
       "module": "diff",
       "name": "_present",
       "stmts": 1,
-      "sha256": "69e9696de5d0319d7a11f4703164ab834ed43b643f3716b19475020efb782f9d"
+      "sha256": "d2abc1849d0f53f5e465130c241fc0d6ced3ffc073bc4a4a0d48d9d6f5324881"
     },
     {
       "module": "diff",
@@ -2186,13 +2186,13 @@
       "module": "diff",
       "name": "_negation_flip",
       "stmts": 1,
-      "sha256": "f28cec823450b9f827b7a79ec0f3e813faf8cf997957fca297149b415714416c"
+      "sha256": "c6fc63a917f2e7283da021da581134cbb1331fe12c770b40570e434c527514e4"
     },
     {
       "module": "diff",
       "name": "_negation_risks",
       "stmts": 1,
-      "sha256": "86021db9c338287f7247b7a7a0037dc3babfa8b0b43f0d49591250d826c28164"
+      "sha256": "1b8ec2a085fb09a453e3f3e1a354392fc4ae81abb5b4b533cdbad9a18e86d0ad"
     },
     {
       "module": "diff",
@@ -2306,7 +2306,7 @@
       "module": "diff",
       "name": "_find_line",
       "stmts": 1,
-      "sha256": "4b1405dab9f5a97ebfa5b75ad583aff76f6879ea7c6d8b70ab72c2b5d9ab5de5"
+      "sha256": "edf68ca4f1ab53bd92fe730347fe9cd33424e23642723b713fddd5c7c529d69c"
     },
     {
       "module": "diff",
@@ -2468,7 +2468,7 @@
       "module": "diff",
       "name": "_qualifier_after",
       "stmts": 1,
-      "sha256": "9a32e045e7c302ddbbfa5ad8359add6ac73477644fbcb68f5a55b884bbf370f0"
+      "sha256": "071a034dce6c0e35278db9291d3b86628b5cbb9bda0026132aa616fe531d9892"
     },
     {
       "module": "diff",
@@ -2510,13 +2510,13 @@
       "module": "diff",
       "name": "_qualifier_change",
       "stmts": 1,
-      "sha256": "3b51f4fd5122086cbe66ec102672449bf396ccebc701df37bb1c9063bc03e7b8"
+      "sha256": "ee9aca400173af2682951d5a6e55033b7708a1e261a2a4ed27942dfdc10e6f9f"
     },
     {
       "module": "diff",
       "name": "_qualifier_risks",
       "stmts": 1,
-      "sha256": "8e5d71e1cdeb75f02cd3e77d5e98687de8efebc67ed340363a94201c325a4c27"
+      "sha256": "070b3be663dc35dbc05c949b3869081b0caaab703bcfdf5dad055f10b7e99ffa"
     },
     {
       "module": "diff",
@@ -2528,13 +2528,13 @@
       "module": "diff",
       "name": "_meaning_risks",
       "stmts": 1,
-      "sha256": "df41a934a0607ed7b58c89d1fe73faae6e46cff7fc8fa63acc4f0cd14a17793a"
+      "sha256": "8522c9159d231d476cef8146a7103bd6f87f75b37d5a74084c98f245e92ae483"
     },
     {
       "module": "diff",
       "name": "BUILTIN_LISTS",
       "stmts": 2,
-      "sha256": "8fd34dfb31506c7722dad31c4fc60223d27e0ee301e01e7fa9b387826ee72885"
+      "sha256": "9cfbe95ef0e38933ca59abbea358ee59aa0230f2e0b68e70b74cf958779fb902"
     },
     {
       "module": "diff",
@@ -2966,7 +2966,7 @@
       "module": "diff",
       "name": "_shown_word",
       "stmts": 1,
-      "sha256": "6a76ed4bfc917512f13dd25d554c43a59c82dc3306656b6aaedb7db05a6d135b"
+      "sha256": "2c238d4b5dfc35810cacee836f4cebaa32cc4b75e82e2d573995fffcd567b940"
     },
     {
       "module": "diff",
@@ -3026,25 +3026,25 @@
       "module": "diff",
       "name": "_b_side_phrases",
       "stmts": 1,
-      "sha256": "25adaed6236452f4d1521d5be0b49f87e10decbe17808821e23b6de5d0c37a24"
+      "sha256": "d85d3e7d967fbbb033b3f919c276991051f12c7057e23f43df3c1cf6d7547d6a"
     },
     {
       "module": "diff",
       "name": "_head_clue",
       "stmts": 1,
-      "sha256": "583a5f446e1697f41d85a481b3a9a36dc19fc176accb96b93425100411fccf61"
+      "sha256": "ea766408336eedc08ec4162f8bc960d1667118f316697e6c6f5a1caf5c414975"
     },
     {
       "module": "diff",
       "name": "_contrast_risks",
       "stmts": 1,
-      "sha256": "13d123f41c80ee42d20ac8f41df95f89c92f561239d5901737e5dd7ec6b5a9a6"
+      "sha256": "f038b4cfd35039fc9e40a549b8a5f7fe8b4aacb97bfcff5b36eeead8de0504c0"
     },
     {
       "module": "diff",
       "name": "_feeling_risks",
       "stmts": 1,
-      "sha256": "b716d042aae8d10a6c666cf71033496bb9cc5482c65ad33599bd8ce869fb04e5"
+      "sha256": "c4d89f9f9493b95b4f81c645adec527e4ea3430c024a7fd33f4dbae5eddb6e0b"
     },
     {
       "module": "diff",
@@ -3164,7 +3164,7 @@
       "module": "diff",
       "name": "_certainty_negations",
       "stmts": 1,
-      "sha256": "6768ddace55d8d402317ae32955a657ec48b29a898003194531db904946c5573"
+      "sha256": "7a422022c2cfe76c8282105cceef5e817eb8c9927d16c475a439daeec07289e3"
     },
     {
       "module": "diff",
@@ -3218,7 +3218,7 @@
       "module": "diff",
       "name": "_classify_hedge_marks",
       "stmts": 1,
-      "sha256": "91e817ae25215eef28d17c8443049958805289a79ac0bef926df4bf8cbbc4270"
+      "sha256": "1f6041f648ded15fad4c7747466249fd4ab987abf16132b96b8c257c017b3dcb"
     },
     {
       "module": "diff",
@@ -3266,7 +3266,7 @@
       "module": "diff",
       "name": "_certainty_risks",
       "stmts": 1,
-      "sha256": "6ddd2358452123ffa127c44c35e348844a3bac7a9b1a8627f75cfba26e75ea40"
+      "sha256": "0bf4584b67bedf228bb552f39389ff79c61fc19286f022788f6ce864b4d7c7e4"
     },
     {
       "module": "diff",
@@ -3692,13 +3692,13 @@
       "module": "diff",
       "name": "_addition_state_risks",
       "stmts": 1,
-      "sha256": "a2ccad329644472cfe8d9b3a8bdc44b48c06ee8bedf2c0c20652fd279561b7a9"
+      "sha256": "d186594479b87745509656f7e18db3ee1e83ad05a1d8b25edebd4bad47541771"
     },
     {
       "module": "diff",
       "name": "_addition_promise_risk",
       "stmts": 1,
-      "sha256": "d21a091438c4681523b950f13618bd7a52760fc108a893ddd22c3a130d655f31"
+      "sha256": "8dd89c23787832da3ae99cbc4ab86587ead9c72605961edcc5bafda284c7d1de"
     },
     {
       "module": "diff",
@@ -3884,7 +3884,7 @@
       "module": "diff",
       "name": "_citation_number_covered",
       "stmts": 1,
-      "sha256": "f05b21eb734d5496bafb8f7a660e4b88225070cff31a9aa3f7dcbfda731cb79f"
+      "sha256": "1b490ac98f87c2440a874c66fbbbbc6f0a01afdc3e620a2cc2febb98f05ee272"
     },
     {
       "module": "diff",
@@ -3902,7 +3902,7 @@
       "module": "diff",
       "name": "_risk_line",
       "stmts": 1,
-      "sha256": "ea442b954e516e074da87adb888bc15daca45601b3b8256b9500b43a423f606f"
+      "sha256": "464efcbd18e395f67bf1219cac11f883b1b544653a730e4e7ab7ac77fe16edc2"
     },
     {
       "module": "diff",
@@ -3914,13 +3914,13 @@
       "module": "diff",
       "name": "_risk_section",
       "stmts": 1,
-      "sha256": "cef79d6fb10a685f6df847e735ede084cbecb04c0812d19430c847d448ec53b0"
+      "sha256": "e70def013390dc79740543ec27514a69842be52b064db259f7145ac6ff8ca79f"
     },
     {
       "module": "diff",
       "name": "_rule_lines",
       "stmts": 1,
-      "sha256": "41492706455c0961ca74a606bf6f188577fe6c2456858a9cb6224893bac16366"
+      "sha256": "903b607b6a0d4aedb7e84ee808b4b15bb303c811de24e14e8923dbfd1b4dcd68"
     }
   ],
   "watch": [
@@ -3935,7 +3935,7 @@
       "module": "diff",
       "name": "diff",
       "stmts": 1,
-      "sha256": "a0f7b8d1f84b1616d43c04d0f62758ccc28ed58f483475593bf781d15f604d80",
+      "sha256": "92b37d61582baa70c6183cebed5abf3e25ba37ef704953222dd18c87c60be401",
       "reason": "check() が、diff() の type_changes と meaning_risks の作り方を写している。変わったら check-cli を見直す"
     }
   ]

@@ -129,7 +129,7 @@ mini は、スキルの大きさに上限があって本体を入れられない
 
 ## 作り直すとき
 
-本体の版が上がったら、次の手順で mini を作り直せます。抽出表 `extract/table.json` と `extract/scripts.json` は、本体のファイルの場所と見出し、関数の名前で節を指し、節ごとに中身の sha256 を持っています。生成に使うのは Python 3.9 以上の標準ライブラリだけです。
+本体のバージョンが上がったら、次の手順で mini を作り直せます。抽出表 `extract/table.json` と `extract/scripts.json` は、本体のファイルの場所と見出し、関数の名前で節を指し、節ごとに中身の sha256 を持っています。生成に使うのは Python 3.9 以上の標準ライブラリだけです。
 
 1. 本体の新しい版のタグを `_main/` に取り出します（下の例は v2.2.2 です）。
 
@@ -137,7 +137,7 @@ mini は、スキルの大きさに上限があって本体を入れられない
    git clone --depth 1 --branch v2.2.2 https://github.com/nanaism/yomiyasu _main
    ```
 
-2. 本体の版が変わったら、`extract/table.json` と `extract/scripts.json` の `source`（tag と commit）を書き直します。`.github/workflows/ci.yml` の `ref` と、試験用の抽出表 `tests/fixtures/basic/extract/table.json` と `scripts.json` の `source` も同じ値にします。中身が変わったときは、mini 自身の版（`version`）も上げてください。
+2. 本体のバージョンが変わったら、`extract/table.json` と `extract/scripts.json` の `source`（tag と commit）を書き直します。`.github/workflows/ci.yml` の `ref` と、試験用の抽出表 `tests/fixtures/basic/extract/table.json` と `scripts.json` の `source` も同じ値にします。中身が変わったときは、mini 自身の版（`version`）も上げてください。
 3. 生成します。
 
    ```bash

@@ -4,8 +4,8 @@
   "version": "1.0.0",
   "source": {
     "repository": "nanaism/yomiyasu",
-    "tag": "v2.2.2",
-    "commit": "488dd37c0baa67ec65bf155aced9fa1a01d261e2",
+    "tag": "v2.4.0",
+    "commit": "ae258d7a57b335673e30b88a018ae08d4f72c449",
     "skill_dir": "skills/yomiyasu"
   },
   "output_dir": "skills/yomiyasu-mini",
@@ -21,7 +21,7 @@
         {
           "source": "skills/yomiyasu/SKILL.md",
           "region": "front_matter",
-          "sha256": "c7207175a688329a311d1a5492544a6b7204b81efa994b8a1e89b89cc99829cb"
+          "sha256": "925b64a800a90d4406bde137c50623946449b5096a57d745712d8b9efef8e8b8"
         }
       ],
       "text_sha256": "9f0fb879fc8608657429c50c8bda111fd72020b9ea46b9c4aa07664d6b868581"
@@ -93,7 +93,7 @@
               "selector": {
                 "scope": "own"
               },
-              "sha256": "4ea84b32aeef7cd020976fa582f974120c29987210b725aa250a9a98250245b6"
+              "sha256": "f93bd1b924d4e09a769fd30ba420d46ada6788c95d03de7b768703be55cc51ac"
             }
           ],
           "text_sha256": "8b9c64c453e753f559a887ee89f7a020202305e44619afa35b47e3ad612c05d8"
@@ -117,7 +117,7 @@
               0
             ]
           },
-          "sha256": "c4747d9098e0108e860ae96598b945b57c913237f66114bc69e418a8162cc010"
+          "sha256": "834cf6919230cf7f4935ceb2d3f89678b0b32c2188f6577daeb35bf8c08c3e6b"
         },
         {
           "kind": "verbatim_edited",

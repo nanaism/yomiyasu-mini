@@ -1,21 +1,21 @@
 {
   "format": "yomiyasu-mini-manifest",
   "format_version": 1,
-  "version": "1.0.0",
+  "version": "1.1.0",
   "source": {
     "repository": "nanaism/yomiyasu",
-    "tag": "v2.2.2",
-    "commit": "488dd37c0baa67ec65bf155aced9fa1a01d261e2"
+    "tag": "v2.4.0",
+    "commit": "ae258d7a57b335673e30b88a018ae08d4f72c449"
   },
   "output_dir": "skills/yomiyasu-mini",
   "tables": [
     {
       "path": "extract/table.json",
-      "sha256": "8f07f0370ff9d5b01d93d60f25533cc817930c9945369c4323ef847c65235676"
+      "sha256": "0d6fa6a4d65acef77bdb46adce53f8e37c004e8dc0d0a10fb6125531019b6230"
     },
     {
       "path": "extract/scripts.json",
-      "sha256": "fddef96a653af26718814cd426e62f639f1b49e1b89b82dc009450d39f0155c9"
+      "sha256": "f4bef8eaddfe699361af7703a3b9bb0f6fc11407611b64f0497b9c9c633b3df8"
     }
   ],
   "files": [
@@ -27,45 +27,45 @@
     },
     {
       "path": "skills/yomiyasu-mini/SKILL.md",
-      "bytes": 48710,
-      "chars": 17668,
-      "sha256": "056e9d55637116f54a2ed3492847767552958864913441da536717cf32e93404"
+      "bytes": 49142,
+      "chars": 17814,
+      "sha256": "6b9ec87b8885c65c1b64a7315412173b79c53c6bd73bf8110c767b436975ef19"
     },
     {
       "path": "skills/yomiyasu-mini/references/doc-types.md",
-      "bytes": 97181,
-      "chars": 36239,
-      "sha256": "c6f89ca1a252c2981cac367de2c899ca0549dfaf481f82e7b65449c3c90b159b"
+      "bytes": 99632,
+      "chars": 37120,
+      "sha256": "be8887107ba499cda6a9ed3e86b8c366388661f1f5ada7c80ad31062a45d2d71"
     },
     {
       "path": "skills/yomiyasu-mini/references/rules.md",
-      "bytes": 97371,
-      "chars": 35401,
-      "sha256": "eef6c4cf315b87059549c316618875b96a10a27a05804a4bb3d42b026f62e436"
+      "bytes": 99552,
+      "chars": 36175,
+      "sha256": "41e1df71e26b1f3f51373fb44e0a66b6bc02228ae67b34696269b00546b662a5"
     },
     {
       "path": "skills/yomiyasu-mini/scripts/mini_check.py",
-      "bytes": 88132,
-      "chars": 75575,
-      "sha256": "1fad29d5509d2a48af10cb21ba79200595a09150a7ba33fe1766c95d357620c9"
+      "bytes": 88177,
+      "chars": 75590,
+      "sha256": "303bbe572a6f0062723cc4a318bb73c011ccc86fd89495f746fc545c1848c3e3"
     },
     {
       "path": "skills/yomiyasu-mini/scripts/mini_diff_1.py",
       "bytes": 82556,
       "chars": 80342,
-      "sha256": "52f6517e87c2dc7954703f177ce576365641b90e89332212a300569d29250cb9"
+      "sha256": "bc3874136103cf2e23c07ce4276a2cee65b51c0b011f55cd8ca6ecaf0ebe5ab2"
     },
     {
       "path": "skills/yomiyasu-mini/scripts/mini_diff_2.py",
-      "bytes": 79801,
-      "chars": 72957,
-      "sha256": "a8117586f19c5c553eb0bd15a2d1344adbcd682db6773e5feb33a63431f45d0b"
+      "bytes": 80090,
+      "chars": 73246,
+      "sha256": "80159e4c1420555b869cf6e9d8a5f19f5b2c4884bbb0857f4bb8d23b9897a48e"
     },
     {
       "path": "skills/yomiyasu-mini/scripts/mini_diff_3.py",
       "bytes": 82778,
       "chars": 68004,
-      "sha256": "202bacb9d7e50ed67be2f2de71f16afac56a5b3d43c82bfa0a1798b70bf29985"
+      "sha256": "a11b8b5a7dc2af51805a2147ee62a45408a7fbea005b7873c0fb59385e90db0a"
     }
   ],
   "provenance": [
@@ -74,12 +74,12 @@
       "region": "front_matter",
       "description": {
         "text": "extract/description.txt",
-        "text_sha256": "326c6ef874b48956817e4400334f9ebe67e8316b5bebc16480d4fad57c67229f",
+        "text_sha256": "449b83015dbc174f2cada3b31ca8901985f85804c512859b58830efbcf69fa83",
         "from": [
           {
             "source": "skills/yomiyasu/SKILL.md",
             "region": "front_matter",
-            "sha256": "c7207175a688329a311d1a5492544a6b7204b81efa994b8a1e89b89cc99829cb"
+            "sha256": "925b64a800a90d4406bde137c50623946449b5096a57d745712d8b9efef8e8b8"
           }
         ]
       }
@@ -121,7 +121,7 @@
       "kind": "own",
       "id": "intro",
       "text": "extract/own/intro.md",
-      "text_sha256": "a75990a0e5f2de353168366bd5c51bbe96cbdfe6790b14cee3d78b35b80c16f3",
+      "text_sha256": "cd921c9bdf12513e2511603a9c245f8f253698837f0f7640c65891e9980314d1",
       "reason": "mini の範囲、参照ファイルの場所、名前だけで呼ばれたときの対象の決め方（本体 L11 を Copilot などに合わせて書き直したもの）、検査を実行できなかったときの扱い",
       "class": "own"
     },
@@ -269,7 +269,7 @@
             ]
           },
           "scope": "own",
-          "sha256": "7689012f0be9e2162ce78b74c135f43fba8264dcd0cb61014beeee7e6bfed1c7"
+          "sha256": "2105eba43dde1c51ed14737dff170f4145a2f9f57cd68f46bef517f2bb4dd0d4"
         }
       ],
       "class": "B",
@@ -294,7 +294,7 @@
             ]
           },
           "scope": "own",
-          "sha256": "7689012f0be9e2162ce78b74c135f43fba8264dcd0cb61014beeee7e6bfed1c7"
+          "sha256": "2105eba43dde1c51ed14737dff170f4145a2f9f57cd68f46bef517f2bb4dd0d4"
         }
       ],
       "class": "B",
@@ -321,7 +321,7 @@
       "selector": {
         "scope": "own"
       },
-      "sha256": "4ea84b32aeef7cd020976fa582f974120c29987210b725aa250a9a98250245b6",
+      "sha256": "f93bd1b924d4e09a769fd30ba420d46ada6788c95d03de7b768703be55cc51ac",
       "transforms": {
         "heading_shift": 0,
         "drop_lines": [
@@ -348,6 +348,10 @@
           {
             "pattern": "^動詞を言い換えた後も語順",
             "count": 1
+          },
+          {
+            "pattern": "^他動詞の連用形を1語だけ名詞にした語",
+            "count": 1
           }
         ]
       },
@@ -359,7 +363,7 @@
         }
       ],
       "class": "A*",
-      "note": "A*。L98 と L100 をそのまま使う。L100 の参照先だけを mini の場所に替える"
+      "note": "A*。L98 と L100 をそのまま使う。L100 の参照先だけを mini の場所に替える。v2.3.0 で足された連用形名詞の段落は SKILL.md では外し（字数の上限のため）、rules.md の r-subject に置く。SKILL.md には rewritten/subject.md で短い案内を置く"
     },
     {
       "output": "SKILL.md",
@@ -367,7 +371,7 @@
       "kind": "rewritten",
       "id": "subject",
       "text": "extract/rewritten/subject.md",
-      "text_sha256": "da032cb0a6b2a95209a5e96ef3e293e6bc4aa0c9c66d316fb772d14a3cc0d252",
+      "text_sha256": "790edac80f337a0a2b23dc1be936b41f011322ddb325a7cb755bfb42dc1be87c",
       "from": [
         {
           "source": "skills/yomiyasu/SKILL.md",
@@ -380,7 +384,7 @@
             ]
           },
           "scope": "own",
-          "sha256": "4ea84b32aeef7cd020976fa582f974120c29987210b725aa250a9a98250245b6"
+          "sha256": "f93bd1b924d4e09a769fd30ba420d46ada6788c95d03de7b768703be55cc51ac"
         }
       ],
       "class": "B",
@@ -720,7 +724,7 @@
             ]
           },
           "scope": "own",
-          "sha256": "1ff8c648015d17d6fee3f93540f5245f13a63cbbbcec03cfa3595df83604199e"
+          "sha256": "3682b8441ca3a5db941ccb62a1f63ead29d4feb4d87496acbed0dfa18f6992b9"
         }
       ],
       "class": "B",
@@ -749,7 +753,7 @@
             ]
           },
           "scope": "own",
-          "sha256": "f7bde245670cb44d6fff8a2f2f686f465f478c5fb9d22970444bb049b91a3b81"
+          "sha256": "3261c0c7e83e56d40b14f2e93c01d617848ed2daa2872f4095d9fea97718dd75"
         }
       ],
       "class": "B",
@@ -792,7 +796,7 @@
       "kind": "rewritten",
       "id": "deco",
       "text": "extract/rewritten/deco.md",
-      "text_sha256": "6d393f22c131846019787ca1bfe11978a8ccda4abb1bcf6cb0d1c3b1e86167d6",
+      "text_sha256": "c7c3eb1a666d07fb1449e7817e84b62154461b885d69694b52af2c0d482feeb0",
       "from": [
         {
           "source": "skills/yomiyasu/SKILL.md",
@@ -805,7 +809,7 @@
             ]
           },
           "scope": "own",
-          "sha256": "d3a074bea1495ed413639debee105598df93fd71d7ec2a9bfb09d0ea029c3092"
+          "sha256": "77f601e5739c5e03d2e57e720abd1ef116ca95feb81984e55369e7e07a935cf6"
         }
       ],
       "class": "B",
@@ -868,7 +872,7 @@
             ]
           },
           "scope": "own",
-          "sha256": "ab89982a4c51eb0cffffd2d1cd852a2b623924488a0a9ec658b3cfb295a6ab05"
+          "sha256": "85d04cdc1204fb9975e16635823b92240c5052da59e7b391292fe831031b0b49"
         }
       ],
       "class": "B",
@@ -893,7 +897,7 @@
             ]
           },
           "scope": "own",
-          "sha256": "ab89982a4c51eb0cffffd2d1cd852a2b623924488a0a9ec658b3cfb295a6ab05"
+          "sha256": "85d04cdc1204fb9975e16635823b92240c5052da59e7b391292fe831031b0b49"
         }
       ],
       "class": "B",
@@ -956,7 +960,7 @@
             ]
           },
           "scope": "own",
-          "sha256": "3bf6970c1856214fde014da7626c1679a81441e7cf2ee9ec19b13557272c0c60"
+          "sha256": "e90373e2f39acb4fb2f6e04d60392f021ae1ec5c999541a69792f7f2e6fbd99e"
         }
       ],
       "class": "B",
@@ -968,7 +972,7 @@
       "kind": "rewritten",
       "id": "calque",
       "text": "extract/rewritten/calque.md",
-      "text_sha256": "b7e55779cd9c5adde460d462d083724dd6c1743bcfa9e42281bc6bf88a3dd90c",
+      "text_sha256": "6077530ca19bfa7c0e3101ee532f637db2bbc79bdec8527806c708203f83f194",
       "from": [
         {
           "source": "skills/yomiyasu/SKILL.md",
@@ -981,7 +985,7 @@
             ]
           },
           "scope": "own",
-          "sha256": "3bf6970c1856214fde014da7626c1679a81441e7cf2ee9ec19b13557272c0c60"
+          "sha256": "e90373e2f39acb4fb2f6e04d60392f021ae1ec5c999541a69792f7f2e6fbd99e"
         }
       ],
       "class": "B",
@@ -1011,7 +1015,7 @@
           2
         ]
       },
-      "sha256": "6d90b03fe74ecf81f2908284d952c6a34e316324aa569a0de8b29a72c4d81fb4",
+      "sha256": "7867918d31f7963e1481b3f3aef408643019579b9d141ea510959f635c31cceb",
       "transforms": {
         "heading_shift": 0,
         "drop_lines": []
@@ -1037,7 +1041,7 @@
       "kind": "rewritten",
       "id": "step2-steps",
       "text": "extract/rewritten/step2-steps.md",
-      "text_sha256": "1d59d8f1a4bdce3f08f4284b56dc15bc165ac16deb4750e34a4e315c60b96b07",
+      "text_sha256": "9f54694733d1e4bb0532fe029b2e69471e8767364958be9ca3910a2dba59cc85",
       "from": [
         {
           "source": "skills/yomiyasu/SKILL.md",
@@ -1050,7 +1054,7 @@
             ]
           },
           "scope": "own",
-          "sha256": "3bf6970c1856214fde014da7626c1679a81441e7cf2ee9ec19b13557272c0c60"
+          "sha256": "e90373e2f39acb4fb2f6e04d60392f021ae1ec5c999541a69792f7f2e6fbd99e"
         }
       ],
       "class": "B",
@@ -1072,7 +1076,7 @@
       "kind": "rewritten",
       "id": "step4",
       "text": "extract/rewritten/step4.md",
-      "text_sha256": "d0375aedc10a393240d53de55709cc4167e23b2f8e2a435c9f15f8e5933ea5a0",
+      "text_sha256": "33854e588dc893adc3d3518687ad059d1dc466f7a48bff2a12717bd638104098",
       "from": [
         {
           "source": "skills/yomiyasu/SKILL.md",
@@ -1085,7 +1089,7 @@
             ]
           },
           "scope": "own",
-          "sha256": "6f5a75aead53d4552f711a249eb6ead8f3efffcf72aadf5b8a4562c67bd48cd3"
+          "sha256": "d754931bf5a63b60dc42c9457d206ec2479b3145a70db5d1edd9ceb7830b2160"
         }
       ],
       "class": "B",
@@ -1120,7 +1124,7 @@
             ]
           },
           "scope": "own",
-          "sha256": "6f5a75aead53d4552f711a249eb6ead8f3efffcf72aadf5b8a4562c67bd48cd3"
+          "sha256": "d754931bf5a63b60dc42c9457d206ec2479b3145a70db5d1edd9ceb7830b2160"
         },
         {
           "source": "skills/yomiyasu/SKILL.md",
@@ -1133,7 +1137,7 @@
             ]
           },
           "scope": "own",
-          "sha256": "805950a0736c99dc8ae63170921307cfb69a0ba3a056ceb49ff117c628034b87"
+          "sha256": "cf8c314f89f900e565160e9e6c2d1a36b752f4d208eac989dd184f10d3283cee"
         }
       ],
       "class": "B",
@@ -1158,7 +1162,7 @@
             ]
           },
           "scope": "own",
-          "sha256": "6f5a75aead53d4552f711a249eb6ead8f3efffcf72aadf5b8a4562c67bd48cd3"
+          "sha256": "d754931bf5a63b60dc42c9457d206ec2479b3145a70db5d1edd9ceb7830b2160"
         },
         {
           "source": "skills/yomiyasu/SKILL.md",
@@ -1171,7 +1175,7 @@
             ]
           },
           "scope": "own",
-          "sha256": "805950a0736c99dc8ae63170921307cfb69a0ba3a056ceb49ff117c628034b87"
+          "sha256": "cf8c314f89f900e565160e9e6c2d1a36b752f4d208eac989dd184f10d3283cee"
         }
       ],
       "class": "B",
@@ -1196,7 +1200,7 @@
             ]
           },
           "scope": "own",
-          "sha256": "6f5a75aead53d4552f711a249eb6ead8f3efffcf72aadf5b8a4562c67bd48cd3"
+          "sha256": "d754931bf5a63b60dc42c9457d206ec2479b3145a70db5d1edd9ceb7830b2160"
         },
         {
           "source": "skills/yomiyasu/SKILL.md",
@@ -1209,7 +1213,7 @@
             ]
           },
           "scope": "own",
-          "sha256": "805950a0736c99dc8ae63170921307cfb69a0ba3a056ceb49ff117c628034b87"
+          "sha256": "cf8c314f89f900e565160e9e6c2d1a36b752f4d208eac989dd184f10d3283cee"
         }
       ],
       "class": "B",
@@ -1233,7 +1237,7 @@
             ]
           },
           "scope": "subtree",
-          "sha256": "ce3964e1841429d960e0e377b7e0c852c96fec4db85cbe8c5ba9801e8ad448cc"
+          "sha256": "484a1de67ea8aa2d6970d2f7c093792dfdfe5b481e2f0f61fe9ae746bb92f5a9"
         }
       ],
       "class": "B",
@@ -1276,7 +1280,7 @@
       "selector": {
         "scope": "own"
       },
-      "sha256": "7689012f0be9e2162ce78b74c135f43fba8264dcd0cb61014beeee7e6bfed1c7",
+      "sha256": "2105eba43dde1c51ed14737dff170f4145a2f9f57cd68f46bef517f2bb4dd0d4",
       "transforms": {
         "heading_shift": 0,
         "drop_lines": [
@@ -1379,7 +1383,7 @@
       "selector": {
         "scope": "own"
       },
-      "sha256": "4ea84b32aeef7cd020976fa582f974120c29987210b725aa250a9a98250245b6",
+      "sha256": "f93bd1b924d4e09a769fd30ba420d46ada6788c95d03de7b768703be55cc51ac",
       "transforms": {
         "heading_shift": 0,
         "drop_lines": [
@@ -1408,10 +1412,20 @@
           "old": "上の「直前から同じ対象の話が続いて読み違えない文」",
           "new": "SKILL.md「主語と目的語の明確化」の「直前から同じ対象の話が続いて読み違えない文」",
           "count": 1
+        },
+        {
+          "old": "lint の renyo_noun はこの形の候補です（語の一覧は `references/lists/renyo-nouns.txt`）。",
+          "new": "",
+          "count": 1
+        },
+        {
+          "old": "diff の文体の硬化の候補に出ても、この形に戻しません。",
+          "new": "",
+          "count": 1
         }
       ],
       "class": "C",
-      "note": "C。L99、L101-105"
+      "note": "C。L99、L101-105。v2.3.0 の連用形名詞の段落から、mini にない lint の規則と語の一覧、diff の文体の硬化を指す文を外す"
     },
     {
       "output": "references/rules.md",
@@ -1607,7 +1621,7 @@
       "selector": {
         "scope": "own"
       },
-      "sha256": "1ff8c648015d17d6fee3f93540f5245f13a63cbbbcec03cfa3595df83604199e",
+      "sha256": "3682b8441ca3a5db941ccb62a1f63ead29d4feb4d87496acbed0dfa18f6992b9",
       "transforms": {
         "heading_shift": 0,
         "drop_lines": [
@@ -1649,7 +1663,7 @@
       "selector": {
         "scope": "own"
       },
-      "sha256": "f7bde245670cb44d6fff8a2f2f686f465f478c5fb9d22970444bb049b91a3b81",
+      "sha256": "3261c0c7e83e56d40b14f2e93c01d617848ed2daa2872f4095d9fea97718dd75",
       "transforms": {
         "heading_shift": 0,
         "drop_lines": []
@@ -1713,7 +1727,7 @@
       "selector": {
         "scope": "own"
       },
-      "sha256": "d3a074bea1495ed413639debee105598df93fd71d7ec2a9bfb09d0ea029c3092",
+      "sha256": "77f601e5739c5e03d2e57e720abd1ef116ca95feb81984e55369e7e07a935cf6",
       "transforms": {
         "heading_shift": 0,
         "drop_lines": [
@@ -1771,7 +1785,7 @@
       "selector": {
         "scope": "subtree"
       },
-      "sha256": "65f5c8fc5d0f4cc42a1f951a863e3b6ef4947e31e29793c2f63bb1094a381693",
+      "sha256": "a3531b41aaefe987726e928b09d59dbb312a35594b8dc6ce6a85dae10c2cc1b7",
       "transforms": {
         "heading_shift": 1,
         "drop_lines": []
@@ -1935,7 +1949,7 @@
       "selector": {
         "scope": "subtree"
       },
-      "sha256": "bf8682280bc08a581e5d838539fd5e8d722491dd4f378be648ac62c6a339be99",
+      "sha256": "4cd842b76379561e111a6582096d480d6a5396214b0ed2c78b9a532645cabea0",
       "transforms": {
         "heading_shift": 1,
         "drop_lines": []
@@ -1981,7 +1995,7 @@
       "selector": {
         "scope": "subtree"
       },
-      "sha256": "5de0f0f9d8c35c33f057507fea5a5d18ade77febf874ede44ae2d2f58fa6d92a",
+      "sha256": "34b51663b51b9169192166f3ffb120851c2559775d8197fbd1d0427fb89951fb",
       "transforms": {
         "heading_shift": 1,
         "drop_lines": []
@@ -2003,7 +2017,7 @@
           "count": 1
         },
         {
-          "old": "。lint はこの文に印をつけないので、印のない「と言えるでしょう」は直さない。lint は `say_hedge`（info）の候補として出す。",
+          "old": "。lint はこの文に指摘を出さないので、指摘の出ない「と言えるでしょう」は直さない。lint は `say_hedge`（info）の候補として出す。",
           "new": "。",
           "count": 1
         }
@@ -2143,14 +2157,31 @@
       "selector": {
         "scope": "subtree"
       },
-      "sha256": "cdfb8d20e608e426bb81ec347aadd0e21ab1c660185cad49692977561c70a9d9",
+      "sha256": "0f4cd78823f40685fd56517bcda3cb671e7962c698f40285b218ed3108c7f454",
       "transforms": {
         "heading_shift": 1,
-        "drop_lines": []
+        "drop_lines": [
+          {
+            "pattern": "^型4の3行は、lint が",
+            "count": 1
+          },
+          {
+            "pattern": "^\\-\\ 重なる決まり:\\ ",
+            "count": 1
+          },
+          {
+            "pattern": "\\|\\ 社外からの接続は、この入口を通ります。\\ \\|\\ 入口が何を指し",
+            "count": 1
+          },
+          {
+            "pattern": "\\|\\ 集計を毎時回すと、全店舗に響きます。\\ \\|\\ 何がどうなるかを書いた文がない",
+            "count": 1
+          }
+        ]
       },
       "substitutions": [
         {
-          "old": "SKILL.md Step 2 の直訳語の問いの細目。lint は、この型に当たった文に `calque`（info）の印をつける。印は直す合図ではなく、文脈を読み直すための候補で、印がついただけでは直さない。",
+          "old": "SKILL.md Step 2 の直訳語の問いの細目。lint は、この型に当たった文に `calque`（info）の指摘を出す。指摘は直す合図ではなく、文脈を読み直すための候補で、指摘が出ただけでは直さない。",
           "new": "SKILL.md「Step 2: 文章の書き直し」の直訳語の問いの細目。型に当たっただけでは直さず、文脈を読み直す。",
           "count": 1
         },
@@ -2165,22 +2196,22 @@
           "count": 1
         },
         {
-          "old": "。lint はこれらに印をつけない。",
+          "old": "。lint はこれらに指摘を出さない。",
           "new": "。",
-          "count": 1
+          "count": 2
         },
         {
-          "old": "（SKILL.md Step 1）。印は `project_term` で、4章のとおり書き直すか尋ねる。",
+          "old": "（SKILL.md Step 1）。指摘は `project_term` で、4章のとおり書き直すか尋ねる。",
           "new": "（SKILL.md「Step 1: 文脈と段落の把握」）。4章のとおり書き直すか尋ねる。",
           "count": 1
         },
         {
-          "old": "として残す。lint も印を外す。",
+          "old": "として残す。lint も指摘を外す。",
           "new": "として残す。",
           "count": 1
         },
         {
-          "old": "印のついた語",
+          "old": "指摘の出た語",
           "new": "型に当たった語",
           "count": 4
         },
@@ -2191,7 +2222,7 @@
         }
       ],
       "class": "C",
-      "note": "C。本体の references/calques.md（v2.2.2）。lint の印を指す文を外し、印のついた語を型に当たった語と読み替える（v2.2.1 で4か所）。mini にない slop-catalog.md 3章を指す句は、この型で見ないことだけを残す。v2.2.1 の見出しの行が指す本文の語で項目名を作る規則は、mini の SKILL.md の短い節になく r-heading にあるので、その節も指す"
+      "note": "C。本体の references/calques.md（v2.2.2）。lint の印を指す文を外し、印のついた語を型に当たった語と読み替える（v2.2.1 で4か所）。mini にない slop-catalog.md 3章を指す句は、この型で見ないことだけを残す。v2.2.1 の見出しの行が指す本文の語で項目名を作る規則は、mini の SKILL.md の短い節になく r-heading にあるので、その節も指す。v2.4.0 の型4（版、頭、印）はそのまま写す。5章の例の前の、lint の指摘を避けるためのカギ括弧の説明の行は外す（mini に lint はない）。参照ファイルの上限（100,000バイト）に収めるため、ほかの節への案内だけの「重なる決まり」の行と、前後の文に中身がないときに本文を残して尋ねる例の3組のうち2組の行（入口、響きます）を外す（拾いますの組は残す）"
     },
     {
       "output": "references/rules.md",
@@ -2239,7 +2270,7 @@
       "selector": {
         "scope": "subtree"
       },
-      "sha256": "bafce9f12d0fb6da1c93fbdef7384d6f0fce76cde31fa2b6cc314d29e04b6f00",
+      "sha256": "6a6f18c7e94ffa08e1ac5fc7d225639b4f6cc81601af452c8535e4f42db62a11",
       "transforms": {
         "heading_shift": 0,
         "drop_lines": [
@@ -2427,7 +2458,7 @@
           1
         ]
       },
-      "sha256": "6abe42a4aa533baf24aa1f5775790773c3b84373b9c577b5b1c39abd256de644",
+      "sha256": "f25d7d82fd6e34ec48d10428b0391ddb2439dd72b0e243a22adb42da66188cc4",
       "class": "C",
       "note": "C。SKILL.md Step 1 の種類の表（L213-226）"
     },
@@ -2729,7 +2760,7 @@
       "selector": {
         "scope": "subtree"
       },
-      "sha256": "05ce9e668516936d35bfc1509e32da69ff7aab8c46f3d2fcfee70d914f38762c",
+      "sha256": "a4e9f08113fc7efeaa523d67fb6125c33c7e179886698f1d76f72bf049ad1e51",
       "transforms": {
         "heading_shift": 1,
         "drop_lines": [
@@ -2759,10 +2790,20 @@
           "old": "domains/tech.md",
           "new": "「技術記事・エンジニア発信向け仕様」",
           "count": 1
+        },
+        {
+          "old": "（slop-catalog.md 6章の「チャット応答の名残」として削らない）",
+          "new": "（`references/rules.md` の「AI生成文の不自然な語彙・構文カタログ」の6章の「チャット応答の名残」として削らない）",
+          "count": 1
+        },
+        {
+          "old": "。lint の slide_comma が、この種類のときだけ候補を出す。",
+          "new": "。",
+          "count": 1
         }
       ],
       "class": "C",
-      "note": "C。本体の doc-types/slides.md。lint の規則の行と、mini にない検査・事実の補いを指す句を外す"
+      "note": "C。本体の doc-types/slides.md。lint の規則の行と、mini にない検査・事実の補いを指す句を外す。v2.4.0 の見出しと箇条の読点と、スライドの前後の注記を残す決まりは写す。lint の slide_comma の文は外し、slop-catalog.md の参照は mini の場所に替える"
     },
     {
       "output": "references/doc-types.md",
@@ -3084,7 +3125,7 @@
       "selector": {
         "scope": "subtree"
       },
-      "sha256": "ed2957332ef12464d4bc43bc22ca2250229eca57f39b11597d2632fab020f12c",
+      "sha256": "39a7ff9aca340a003c637153c374f0dc1d668cda3520aab99923bffbc1c37f94",
       "transforms": {
         "heading_shift": 1,
         "drop_lines": [
@@ -3101,7 +3142,7 @@
             "count": 1
           },
           {
-            "pattern": "^\\ \\ \\-\\ 引用の印の変化は",
+            "pattern": "^\\ \\ \\-\\ 引用の書き方の変化は",
             "count": 1
           },
           {
@@ -3164,7 +3205,7 @@
       "selector": {
         "scope": "subtree"
       },
-      "sha256": "f74298c5d3eba21d02d6833063eee859c748f15cb22216ac81e9626cf337656f",
+      "sha256": "41bc1c8ebb9f5fea7c18b70b18a3e8ee86073e38f85d62d4ad00ae0719acb49a",
       "transforms": {
         "heading_shift": 1,
         "drop_lines": [
@@ -3181,12 +3222,12 @@
           "count": 1
         },
         {
-          "old": "lint の dialogue_period の印（台詞の数と、「。」で終わる割合）がついたら、台詞の最後の「。」だけを外す。",
+          "old": "lint の dialogue_period の指摘（台詞の数と、「。」で終わる割合）が出たら、台詞の最後の「。」だけを外す。",
           "new": "台詞が10個以上あり、最後の字が「。」の台詞が半分以上なら、台詞の最後の「。」だけを外す。",
           "count": 1
         },
         {
-          "old": "印がつかない台本（",
+          "old": "指摘が出ない台本（",
           "new": "そうでない台本（",
           "count": 1
         },
@@ -3252,7 +3293,7 @@
       "selector": {
         "scope": "subtree"
       },
-      "sha256": "7d5be30f2bac61b7f47849193f02eaecebd8b27ef5f00e75af12144c9ab061ea",
+      "sha256": "416d0752959ae43cd030f2cbcee76425d457ae37f153164db64f7884f7df7685",
       "transforms": {
         "heading_shift": 1,
         "drop_lines": []
@@ -3731,7 +3772,7 @@
       "selector": {
         "scope": "subtree"
       },
-      "sha256": "a59bc13aef2999b69eba817be3ec6f60a400c53fe06f77a4d18910ab6ac7e6ec",
+      "sha256": "5a659ec40122fd263d550567843fc13d8f7a2053187212e9d367a6f048d95e99",
       "transforms": {
         "heading_shift": 1,
         "drop_lines": [
@@ -3774,7 +3815,7 @@
             ]
           },
           "scope": "subtree",
-          "sha256": "a59bc13aef2999b69eba817be3ec6f60a400c53fe06f77a4d18910ab6ac7e6ec"
+          "sha256": "5a659ec40122fd263d550567843fc13d8f7a2053187212e9d367a6f048d95e99"
         }
       ],
       "class": "C",
@@ -3796,7 +3837,7 @@
       "selector": {
         "scope": "subtree"
       },
-      "sha256": "28d2e2cab63c840f51369951794ab3f6c76492ae36a921ce0b5dd06a04523fd9",
+      "sha256": "94cadf41c704a8609b2f3ece15934ca7f7664068b28ce91b22bcae6ebfa56ed9",
       "transforms": {
         "heading_shift": 1,
         "drop_lines": []
@@ -4206,9 +4247,9 @@
         },
         {
           "output": "scripts/mini_diff_2.py",
-          "bytes": 79801,
+          "bytes": 80090,
           "units": 167,
-          "body_bytes": 77039,
+          "body_bytes": 77328,
           "names": [
             "vis:normalize_doc_type",
             "diff:_END",
@@ -4596,9 +4637,9 @@
         },
         {
           "output": "scripts/mini_check.py",
-          "bytes": 88132,
+          "bytes": 88177,
           "units": 105,
-          "body_bytes": 76734,
+          "body_bytes": 76779,
           "names": [
             "diff:MARKERS",
             "diff:_MARKER_REGEXES",

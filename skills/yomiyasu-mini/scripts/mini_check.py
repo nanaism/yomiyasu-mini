@@ -1,4 +1,4 @@
-# yomiyasu-mini 1.0.0。nanaism/yomiyasu v2.2.2（488dd37c0baa67ec65bf155aced9fa1a01d261e2）から tools/generate.py で生成した。手で直さない。
+# yomiyasu-mini 1.1.0。nanaism/yomiyasu v2.4.0（ae258d7a57b335673e30b88a018ae08d4f72c449）から tools/generate.py で生成した。手で直さない。
 # 取り出した名前と中身の sha256 は extract/scripts.json と MANIFEST.json にある。
 """yomiyasu-mini の意味の検査。原文と最終稿を比べ、意味が変わる恐れのある場所を挙げる。
 本体 yomiyasu（版は SOURCE_TAG）の diff() の meaning_risks、markers、new_words、lost_words、type_changes と同じ値を出す。
@@ -100,9 +100,9 @@ def _mini_bind(name, names):
     except Exception as error:
         _mini_on_error(name, error)
 
-__version__ = "1.0.0"
-SOURCE_TAG = "v2.2.2"
-SOURCE_COMMIT = "488dd37c0baa67ec65bf155aced9fa1a01d261e2"
+__version__ = "1.1.0"
+SOURCE_TAG = "v2.4.0"
+SOURCE_COMMIT = "ae258d7a57b335673e30b88a018ae08d4f72c449"
 
 _mini_bind("mini_diff_1", "_ExactSequenceMatcher _Sides _line_sentences _sentence_pairs decode_source full_diff normalize")
 _mini_bind("mini_diff_2", "_LAST_TYPE_RANGES _RISK_ORDER _is_question _is_quote_row _logic_risks _mark_positions _marks_in _marks_risks _modality_risks _negation_marks _negation_risks _number_risks _protected_risks _question_risks _range_sentences _risk _sentence_spans _swap_risks _type_changes _type_ranges normalize_doc_type")
@@ -1233,20 +1233,20 @@ def _risk_line(risk):
                     where, detail["from"], "、".join(detail["old_hits"]), detail["to"], "、".join(detail["new_hits"])))
     if kind == "number_qualifier":
         def side(number, names, markers):
-            label = "・".join(_QUALIFIER_LABELS[name] for name in names) or "印なし"
+            label = "・".join(_QUALIFIER_LABELS[name] for name in names) or "なし"
             return "{}（{}）".format(number, label) if not markers else "{}（{}: {}）".format(number, label, "、".join(markers))
         change = "{} → {}".format(side(detail["old_number"], detail["from"], detail["old_markers"]),
                                   side(detail["new_number"], detail["to"], detail["new_markers"]))
         if subkind == "lost":
-            advice = ("原文は、数に概数か範囲の印を付けています。印を落として、ちょうどその数と読める書き方に変えていないか"
-                      "確かめ、変えていれば原文の印を戻してください。")
+            advice = ("原文は、数に概数か範囲を表す語を付けています。その語を落として、ちょうどその数と読める書き方に変えていないか"
+                      "確かめ、変えていれば原文の語を戻してください。")
         elif subkind == "added":
-            advice = ("原文は、数に概数や範囲の印を付けていません。依頼にない印を足して、数の意味を変えていないか確かめ、"
+            advice = ("原文は、数に概数や範囲を表す語を付けていません。依頼にない語を足して、数の意味を変えていないか確かめ、"
                       "足していれば外してください。")
         else:
-            advice = ("原文と印の種類が違います（以上と超、以下と未満は、その数を含むかどうかが違います）。数の範囲を"
-                      "変えていないか確かめ、変えていれば原文の印に戻してください。")
-        return "数に付いた概数・範囲の印が変わった{}: {}。{}".format(where, change, advice)
+            advice = ("原文と語の種類が違います（以上と超、以下と未満は、その数を含むかどうかが違います）。数の範囲を"
+                      "変えていないか確かめ、変えていれば原文の語に戻してください。")
+        return "数に付いた概数・範囲を表す語が変わった{}: {}。{}".format(where, change, advice)
     if kind == "promise_review":
         return ("原文にない「〜します」{}: {}。--fail-on には数えません。説明や手順の文なら残し、"
                 "書き手の約束として足したのなら外してください。".format(
@@ -1298,7 +1298,7 @@ def _risk_line(risk):
             text += "（資料にある値）"
         return text
     if kind == "citation":
-        return "引用の印が変わった{}: {} → {}".format(where, "、".join(detail.get("removed", [])) or "なし",
+        return "引用の書き方が変わった{}: {} → {}".format(where, "、".join(detail.get("removed", [])) or "なし",
                                               "、".join(detail.get("added", [])) or "なし")
     if kind == "negation":
         return "否定の有無が変わった{}: {} → {}".format(where, detail.get("old", ""), detail.get("new", ""))
@@ -1347,7 +1347,7 @@ def _risk_section(d):
         if risk.get("new") is not None:
             lines.append("  後: " + risk["new"])
     if marks:
-        lines.append("- 文の種類の印が変わった: {}件（下の「■ 文の種類の印が変わった文」を見る）".format(marks))
+        lines.append("- 文の種類を表す語が変わった: {}件（下の「■ 文の種類を表す語が変わった文」を見る）".format(marks))
     return "\n".join(lines)
 
 def _rule_lines(d, rewritten_only=True):
@@ -1374,11 +1374,11 @@ def _rule_lines(d, rewritten_only=True):
             sent = c["rewrite"] if len(c["rewrite"]) <= 44 else c["rewrite"][:44] + "…"
             lines.append(f"- {c['orig_kind']} → {c['rewrite_kind']}: {sent}")
     if d.get("type_changes"):
-        lines.append("■ 文の種類の印が変わった文（伝聞・推量・意見・例え・依頼が、元の文と同じか見る）")
+        lines.append("■ 文の種類を表す語が変わった文（伝聞・推量・意見・例え・依頼が、元の文と同じか見る）")
         for c in d["type_changes"]:
             lines.append(f"- 元: {c['orig'] if len(c['orig']) <= 60 else c['orig'][:60] + '…'}")
             lines.append(f"  後: {c['rewrite'] if len(c['rewrite']) <= 60 else c['rewrite'][:60] + '…'}")
-            for label, side in (("消えた印", "lost"), ("増えた印", "added")):
+            for label, side in (("消えた語", "lost"), ("増えた語", "added")):
                 if c[side]:
                     lines.append(f"  {label}: " + "、".join(f"{m['kind']}（{'、'.join(m['hits'])}）" for m in c[side]))
     if rewritten_only and e.get("flags"):

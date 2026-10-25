@@ -1,4 +1,4 @@
-# yomiyasu-mini 1.0.0。nanaism/yomiyasu v2.2.2（488dd37c0baa67ec65bf155aced9fa1a01d261e2）から tools/generate.py で生成した。手で直さない。
+# yomiyasu-mini 1.1.0。nanaism/yomiyasu v2.4.0（ae258d7a57b335673e30b88a018ae08d4f72c449）から tools/generate.py で生成した。手で直さない。
 # 取り出した名前と中身の sha256 は extract/scripts.json と MANIFEST.json にある。
 """yomiyasu-mini の意味の検査の部品。本体の yomiyasu_diff.py と markdown_visibility.py の定義を、元の字のまま入れている。
 単独では使わない。同じフォルダの mini_check.py が読む。"""
@@ -56,9 +56,9 @@ def _mini_bind(name, names):
     except Exception as error:
         _mini_on_error(name, error)
 
-__version__ = "1.0.0"
-SOURCE_TAG = "v2.2.2"
-SOURCE_COMMIT = "488dd37c0baa67ec65bf155aced9fa1a01d261e2"
+__version__ = "1.1.0"
+SOURCE_TAG = "v2.4.0"
+SOURCE_COMMIT = "ae258d7a57b335673e30b88a018ae08d4f72c449"
 
 _mini_bind("mini_diff_1", "_line_sentences normalize")
 _mini_bind("mini_diff_2", "TYPE_MARKERS _K _QUALIFIER_SENTENCE _QUALIFIER_SPLIT_DECIMAL _STIFF_KANJI _bigrams _group_index _is_question _mark_positions _negation_marks _negative_zu _qualifier_change _qualifier_reach _qualifier_states _risk _sentence_numbers _sentence_spans")

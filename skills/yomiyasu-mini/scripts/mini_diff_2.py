@@ -1,4 +1,4 @@
-# yomiyasu-mini 1.0.0。nanaism/yomiyasu v2.2.2（488dd37c0baa67ec65bf155aced9fa1a01d261e2）から tools/generate.py で生成した。手で直さない。
+# yomiyasu-mini 1.1.0。nanaism/yomiyasu v2.4.0（ae258d7a57b335673e30b88a018ae08d4f72c449）から tools/generate.py で生成した。手で直さない。
 # 取り出した名前と中身の sha256 は extract/scripts.json と MANIFEST.json にある。
 """yomiyasu-mini の意味の検査の部品。本体の yomiyasu_diff.py と markdown_visibility.py の定義を、元の字のまま入れている。
 単独では使わない。同じフォルダの mini_check.py が読む。"""
@@ -56,9 +56,9 @@ def _mini_bind(name, names):
     except Exception as error:
         _mini_on_error(name, error)
 
-__version__ = "1.0.0"
-SOURCE_TAG = "v2.2.2"
-SOURCE_COMMIT = "488dd37c0baa67ec65bf155aced9fa1a01d261e2"
+__version__ = "1.1.0"
+SOURCE_TAG = "v2.4.0"
+SOURCE_COMMIT = "ae258d7a57b335673e30b88a018ae08d4f72c449"
 
 _mini_bind("mini_diff_1", "DOC_TYPES _CHAR_ALIGN_LIMIT _HALF_WIDTH _KeySet _UNITS _WEAK_EACH _WEAK_SINGLE _affix_ratio _common_affix _image_path_start _normalize_choice _unit_pattern")
 
@@ -355,22 +355,28 @@ def _pair_gone_sentences(o, r, opcodes, groups, moved, gone, r_spans):
         for gram in grams:
             spans_with.setdefault(gram, []).append(idx)
     candidates = []
+    passed_by_grams = {}
     for gi, (text, _, _) in enumerate(gone):
         grams = _bigrams(text)
-        shared_counts = Counter()
-        for gram in grams:
-            found = spans_with.get(gram)
-            if found:
-                shared_counts.update(found)
-        for idx in sorted(shared_counts):
-            shared_count = shared_counts[idx]
-            least = 3 if min(len(grams), len(r_grams[idx])) <= 6 else 4
-            if shared_count < least or shared_count < 0.5 * min(len(grams), len(r_grams[idx])):
-                continue
-            shared = grams & r_grams[idx]
-            if len(shared - owner_grams[idx]) < least:
-                continue
-            candidates.append((dice(grams, r_grams[idx]), gi, idx))
+        key = frozenset(grams)
+        passed = passed_by_grams.get(key)
+        if passed is None:
+            passed = passed_by_grams[key] = []
+            shared_counts = Counter()
+            for gram in grams:
+                found = spans_with.get(gram)
+                if found:
+                    shared_counts.update(found)
+            for idx in sorted(shared_counts):
+                shared_count = shared_counts[idx]
+                least = 3 if min(len(grams), len(r_grams[idx])) <= 6 else 4
+                if shared_count < least or shared_count < 0.5 * min(len(grams), len(r_grams[idx])):
+                    continue
+                shared = grams & r_grams[idx]
+                if len(shared - owner_grams[idx]) < least:
+                    continue
+                passed.append((dice(grams, r_grams[idx]), idx))
+        candidates.extend((score, gi, idx) for score, idx in passed)
     candidates.sort(key=lambda c: (-c[0], c[1], c[2]))
     used_gone, used_r, drop = set(), {}, set()
     for score, gi, idx in candidates:
