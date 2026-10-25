@@ -4,7 +4,7 @@
 
 ## これは何？
 
-yomiyasu-mini は、AIが書いた日本語を推敲するスキル [yomiyasu](https://github.com/nanaism/yomiyasu)（以下「本体」）を、スキルの大きさに上限がある環境に入るように短くしたスキルです。本体 v2.2.2 から、抽出表と生成のスクリプトで作っています。
+yomiyasu-mini は、AIが書いた日本語を推敲するスキル [yomiyasu](https://github.com/nanaism/yomiyasu)（以下「本体」）を、スキルの大きさに上限がある環境に入るように短くしたスキルです。本体 v2.4.0 から、抽出表と生成のスクリプトで作っています。
 
 意味を守る決まりは SKILL.md の本文に置き、細部と事例は2つの参照ファイルに移しました。意味が変わる恐れを数える検査は、本体の `yomiyasu_diff.py` と `markdown_visibility.py` から要る定義だけを取り出したスクリプトで行います。
 
@@ -12,7 +12,7 @@ yomiyasu-mini は、AIが書いた日本語を推敲するスキル [yomiyasu](h
 
 | ファイル・フォルダ | 中身 |
 |---|---|
-| `skills/yomiyasu-mini/SKILL.md` | スキルの本文（先頭の YAML を含めて17,668字） |
+| `skills/yomiyasu-mini/SKILL.md` | スキルの本文（先頭の YAML を含めて17,814字） |
 | `skills/yomiyasu-mini/references/` | `rules.md`（規則の細部と事例）と `doc-types.md`（文書の種類、分野、読者、書き手と読み手、文書の立場と文末） |
 | `skills/yomiyasu-mini/scripts/` | 検査の `mini_check.py` と、本体の diff から取り出した `mini_diff_1.py`〜`mini_diff_3.py` |
 | `skills/yomiyasu-mini/LICENSE.txt` | MIT ライセンス |
@@ -35,7 +35,7 @@ mini は SKILL.md を先頭の YAML を含めて18,000字以下、スクリプ�
 
 ## なぜ作ったか
 
-本体は42,982字の SKILL.md（v2.2.2）と参照ファイル、検査のための Python スクリプトでできています。スクリプトのうち lint、diff、check は、どれも1本で100KBを超えます。
+本体は43,482字の SKILL.md（v2.4.0）と参照ファイル、検査のための Python スクリプトでできています。スクリプトのうち lint、diff、check は、どれも1本で100KBを超えます。
 
 Copilot の Agent Builder で、v2.0.0 から v2.1.0 までの本体を読み込めなかったという報告が、複数の利用者からありました。別の利用者からは、Copilot のほかのアプリで、ファイルの数やスクリプト1本の大きさで引っかかったという報告がありました。
 
@@ -54,23 +54,23 @@ cd yomiyasu-mini
 ```
 
 ```bash
-python3 tools/build_zip.py --out dist/yomiyasu-mini-1.0.0.zip
+python3 tools/build_zip.py --out dist/yomiyasu-mini-1.1.0.zip
 ```
 
 `.zip` の中身は `yomiyasu-mini/` フォルダの下の8つのファイルです。`build_zip.py` は作る前と作ったあとに上の上限を確かめ、超えていれば何も書かずに止まります。同じ中身からは、いつ作っても同じバイトの `.zip` ができます。
 
 ### スキルのフォルダとして置く
 
-`skills/yomiyasu-mini/` を、使うツールがスキルを読むフォルダに写します。測定では Codex CLI の作業フォルダの `.agents/skills/yomiyasu-mini/` に置きました。
+`skills/yomiyasu-mini/` を、使うツールがスキルを読むフォルダに写します。測定では Claude Code の作業フォルダの `.claude/skills/yomiyasu-mini/` に置きました。
 
 ### 頼み方
 
 名前を出して頼みます（「yomiyasu-mini で推敲して」「$yomiyasu-mini」など）。SKILL.md の description には、名前を出さずに文章を書かせる依頼では使わないと書いています。
 
-SKILL.md では、出力の形の指定がなければ、書き直した本文、変えたところ、確認の記録を返すように決めています。残したAIっぽいところと書き手に確かめたい点の欄は、あるときだけ付けます。確認の記録には、検査のスクリプトが出した状態の行をそのまま写します。測定（Codex CLI）では、mini の51本の返事のすべてにこの行がありました。
+SKILL.md では、出力の形の指定がなければ、書き直した本文、変えたところ、確認の記録を返すように決めています。残したAIっぽいところと書き手に確かめたい点の欄は、あるときだけ付けます。確認の記録には、検査のスクリプトが出した状態の行をそのまま写します。測定（Claude Code）では、mini の153回の返事のすべてにこの行がありました。
 
 ```text
-yomiyasu-mini-check: ran version=1.0.0 base=v2.2.2@488dd37 meaning_risk=0 counted=0
+yomiyasu-mini-check: ran version=1.1.0 base=v2.4.0@ae258d7 meaning_risk=0 counted=0
 ```
 
 `ran` は検査を最後まで実行したこと、`meaning_risk` は意味が変わる恐れの件数、`counted` はそのうち本体の `--fail-on meaning-risk` が数える件数です。Python がないときは `not_run reason=no_python`、実行を断られたときは `not_run reason=not_allowed` と書き、検査をしたとは書かないように決めています。
@@ -90,34 +90,38 @@ SKILL.md は本体と同じ「基本原則」「実行手順」「出力フォ�
 - 言い切りの強さを上げないことと、条件・否定・因果・時系列を保つことは、本体の節から短く書き直して SKILL.md に入れています。
 - 比喩、主語と目的語、AIらしい言い回し、文の長さ、見出し、装飾などの節は、短く書き直して SKILL.md に置き、SKILL.md に入らなかった文と事例を `references/rules.md` に写しています。
 - 文書の種類ごと（13種類）、分野ごと、読者、書き手と読み手の扱いは、`references/doc-types.md` に写しています。
+- 英語の短い術語に当てた漢字1字の名詞（版、頭、印）を含む直訳語の4つの型を SKILL.md に入れ、細部と事例を `references/rules.md` に写しています。他動詞を1語だけ名詞にして「の」で受ける形（「結果の確かめ」）の段落は `references/rules.md` に写し、SKILL.md には直し方を述べる1文と、rules.md の節への案内だけを置いています。スライドの見出しと1行の箇条で間を作るだけの読点を外す決まりと、スライドの前後に付いた依頼者あての前置きや注記を残す決まりは、`references/doc-types.md` のスライドの節に写しています。
 
-本体から外したのは、おもに mini にない道具に関わる手順と出力の欄です。lint の規則の名前、diff の文体の硬化と勢いの検査、check の実行の記録、資料から事実を補う手順と「事実の確かめ」の欄、lint が読む語のファイル（`references/lists/`）、Step 5「提出の前の照合」がこれに当たります。ほかに、本体の「情報の不増補」の、相対の日付に日付を添える段落を入れていません。参照ファイルのうち、slop-catalog.md の3章（lint の語彙と同じ一覧）、gemini-syntax.md の調査の節と原則2〜14（SKILL.md や写した節と重なる）、persona.md と audience.md の一部の章（読む場面と決め方、読者像、例など）も写していません。部品ごとの扱いと理由は [extract/NOTES-content.md](./extract/NOTES-content.md) の8章と、[extract/table.json](./extract/table.json) の各部品の `note` にあります。
+本体から外したのは、おもに mini にない道具に関わる手順と出力の欄です。lint の規則の名前、diff の文体の硬化と勢いの検査、diff の「原文にない人や担当を足した文」の候補、check の実行の記録、資料から事実を補う手順と「事実の確かめ」の欄、lint が読む語のファイル（`references/lists/`）、Step 5「提出の前の照合」がこれに当たります。ほかに、本体の「情報の不増補」の、相対の日付に日付を添える段落を入れていません。参照ファイルのうち、slop-catalog.md の3章（lint の語彙と同じ一覧）、gemini-syntax.md の調査の節と原則2〜14（SKILL.md や写した節と重なる）、persona.md と audience.md の一部の章（読む場面と決め方、読者像、例など）も写していません。部品ごとの扱いと理由は [extract/NOTES-content.md](./extract/NOTES-content.md) の8章と、[extract/table.json](./extract/table.json) の各部品の `note` にあります。
 
 ## 測った結果
 
-本体 v2.2.2 の `tests/corpus/` の51本（`raw_ai/` 26本、`blacklist_ai/` 24本、`edge_cases/` 1本）を、本体 v2.2.2 と mini で1回ずつ推敲させました。推敲させたのは Codex CLI 0.163.0 の gpt-6-astra で、effort は high です。本体と mini で同じモデルと設定を使いました。意味が変わる恐れは本体 v2.2.2 の `yomiyasu_diff.py --fail-on meaning-risk` で、残った候補は `yomiyasu_lint.py` で数えました。
+本体 v2.4.0 の `tests/corpus/` の51本（`raw_ai/` 26本、`blacklist_ai/` 24本、`edge_cases/` 1本）を、本体 v2.4.0 と mini で3回ずつ推敲させました。推敲させたのは Claude Code の claude-opus-5-5 で、effort は high です。本体と mini で同じモデルと設定を使いました。意味が変わる恐れは本体 v2.4.0 の `yomiyasu_diff.py --fail-on meaning-risk` で、残った候補は `yomiyasu_lint.py` で数えました。
 
 | | 本体 | mini |
 |---|---|---|
-| 意味が変わる恐れ（51本） | 2 | 4 |
-| 書き直した文に残った warn 以上の候補（元の文では30） | 23 | 22 |
-| 書き換えた量の中央値（元の文の空白を除く1,000字あたりの字数） | 21.9 | 28.0 |
-| 入力トークンの中央値（1本） | 414,510 | 324,740 |
+| 意味が変わる恐れ（`--fail-on meaning-risk` が数える件数。51本×3回の合計） | 1 | 3 |
+| 意味が変わる恐れ（1回目・2回目・3回目） | 1・0・0 | 1・1・1 |
+| 書き直した文に残った warn 以上の候補（1回目・2回目・3回目。元の文では30） | 22・22・22 | 21・21・22 |
+| 書き換えた量の中央値（元の文の空白を除く1,000字あたりの字数。1回目・2回目・3回目） | 12.5・13.9・11.4 | 15.7・10.4・15.7 |
+| 入力トークンの中央値（1本） | 271,182 | 147,956 |
 
-mini の意味が変わる恐れは、本体より2件多く出ました。4件のうち2件は、本体も同じ文を同じように書き直したものです。mini にだけ出た2件は1件ずつ読みました。1件は「BFFを1枚挟む」を「BFFを1層設ける」にしたもので、数は同じで、意味は変わっていません。もう1件は、提案の文末「…見えないようにします」を「…見えないようにしてください」にしたもので、言い切りの強さが1段上がっています。本体は同じ文を「…ようにしましょう」にしていました。
+mini の意味が変わる恐れは、本体より2件多く出ました。測る前に決めた合格の条件（mini の3回の合計が、同じ51本の本体の3回の合計を超えないこと）を、mini は満たしていません。
 
-この51本は、測るつもりだった115本のうち、途中で止めるまでに終わった分です。測ったのは各原稿1回ずつの結果です。規則を外した写しを比べる測定は回していないので、測った数字で外した規則はありません。測り方と1件ずつの読みは [measurement/README.md](./measurement/README.md) に、1本ごとの数は [measurement/results.json](./measurement/results.json) にあります。
+本体の1件と mini の3件を1件ずつ読みました。どれも同じ原稿の同じ文です。原稿では「提案は三つです。」のあとに「まず…切り出してください。」「次に…見えないようにします。」が続きます。mini は3回とも、2つ目の提案の文末を「…見えないようにしてください。」にして、1つ目の提案と同じ依頼の形にそろえました。言い切りの強さが1段上がっています。mini は3回とも返事の「変えたところ」にこの変更と理由を書き、1回目と3回目は「書き手に確かめたい点」にも出しました。本体は1回目に同じ直しをし、2回目と3回目は元の文末のまま残しました。
+
+測り方と1件ずつの読みは [measurement/README.md](./measurement/README.md) に、1本ごとの数は [measurement/results.json](./measurement/results.json) にあります。本体 v2.2.2 から作った mini 1.0.0 の測定は [measurement/v2.2.2/README.md](./measurement/v2.2.2/README.md) にあります。
 
 ## 本体との違い
 
 | | yomiyasu-mini | yomiyasu（本体） |
 |---|---|---|
-| SKILL.md | 17,668字 | 42,982字（v2.2.2） |
+| SKILL.md | 17,814字 | 43,482字（v2.4.0） |
 | 参照ファイル | 2本（規則と事例、文書の種類と読者） | 種類ごと、分野ごとに分かれた参照ファイルと、lint が読む語のファイル |
 | 検査 | 意味が変わる恐れ（本体の diff と同じ結果） | lint（AIらしい言い回しの候補）、diff、最終稿の照合と記録 |
 | 状態の行 | `yomiyasu-mini-check: ran …` | `yomiyasu-check: executed …` |
 
-mini の検査は、本体の diff が出す意味が変わる恐れ（`meaning_risks`）を、本体と同じ結果で出します。本体の `tests/corpus/` の48組と、本体の試験から集めた3,919の入力で、本体 v2.2.2 の `yomiyasu_diff.py` と同じ結果になることを試験で確かめています。
+mini の検査は、本体の diff が出す意味が変わる恐れ（`meaning_risks`）を、本体と同じ結果で出します。本体の `tests/corpus/` の48組と、本体の試験から集めた4,130の入力で、本体 v2.4.0 の `yomiyasu_diff.py` と同じ結果になることを試験で確かめています。
 
 mini には lint がありません。AIらしい言い回しや直訳語、プロジェクトの語の一覧（`.yomiyasu-words/` の `allow.txt` と `flag.txt`）の語が残っていないかは、モデルが文を読んで確かめるように SKILL.md で決めています。本体の check の実行の記録（run と verify）もないので、mini の状態の行は本体と別の形にしています。
 
@@ -131,13 +135,13 @@ mini は、スキルの大きさに上限があって本体を入れられない
 
 本体のバージョンが上がったら、次の手順で mini を作り直せます。抽出表 `extract/table.json` と `extract/scripts.json` は、本体のファイルの場所と見出し、関数の名前で節を指し、節ごとに中身の sha256 を持っています。生成に使うのは Python 3.9 以上の標準ライブラリだけです。
 
-1. 本体の新しい版のタグを `_main/` に取り出します（下の例は v2.2.2 です）。
+1. 本体の新しいバージョンのタグを `_main/` に取り出します（下の例は v2.4.0 です）。
 
    ```bash
-   git clone --depth 1 --branch v2.2.2 https://github.com/nanaism/yomiyasu _main
+   git clone --depth 1 --branch v2.4.0 https://github.com/nanaism/yomiyasu _main
    ```
 
-2. 本体のバージョンが変わったら、`extract/table.json` と `extract/scripts.json` の `source`（tag と commit）を書き直します。`.github/workflows/ci.yml` の `ref` と、試験用の抽出表 `tests/fixtures/basic/extract/table.json` と `scripts.json` の `source` も同じ値にします。中身が変わったときは、mini 自身の版（`version`）も上げてください。
+2. 本体のバージョンが変わったら、`extract/table.json` と `extract/scripts.json` の `source`（tag と commit）を書き直します。`.github/workflows/ci.yml` の `ref` と、試験用の抽出表 `tests/fixtures/basic/extract/table.json` と `scripts.json` の `source` も同じ値にします。中身が変わったときは、mini 自身のバージョン（`version`）も上げてください。
 3. 生成します。
 
    ```bash
