@@ -1,0 +1,8010 @@
+{
+ "runs": [
+  {
+   "cond": "main",
+   "doc": "blacklist_ai/01_tech_arch_sonnet_casual",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 151.3,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 78.7,
+   "input_tokens": 337656,
+   "cached_input_tokens": 280725,
+   "output_tokens": 6645
+  },
+  {
+   "cond": "main",
+   "doc": "blacklist_ai/01_tech_arch_sonnet_default",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 174.9,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 72.9,
+   "input_tokens": 336667,
+   "cached_input_tokens": 279001,
+   "output_tokens": 6026
+  },
+  {
+   "cond": "main",
+   "doc": "blacklist_ai/01_tech_arch_sonnet_formal",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 68.0,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 61.0,
+   "input_tokens": 279445,
+   "cached_input_tokens": 223342,
+   "output_tokens": 5049
+  },
+  {
+   "cond": "main",
+   "doc": "blacklist_ai/02_incident_report_sonnet_casual",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 2,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 2,
+    "info": 0
+   },
+   "changed_per_1000": 29.7,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 66.4,
+   "input_tokens": 329887,
+   "cached_input_tokens": 274203,
+   "output_tokens": 4979
+  },
+  {
+   "cond": "main",
+   "doc": "blacklist_ai/02_incident_report_sonnet_default",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 2,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 2,
+    "info": 0
+   },
+   "changed_per_1000": 15.9,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 45.3,
+   "input_tokens": 274856,
+   "cached_input_tokens": 221560,
+   "output_tokens": 3238
+  },
+  {
+   "cond": "main",
+   "doc": "blacklist_ai/02_incident_report_sonnet_formal",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 1,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 1,
+    "info": 0
+   },
+   "changed_per_1000": 77.9,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 59.2,
+   "input_tokens": 279553,
+   "cached_input_tokens": 223765,
+   "output_tokens": 4968
+  },
+  {
+   "cond": "main",
+   "doc": "blacklist_ai/03_pr_description_sonnet_casual",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 2,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 2,
+    "info": 0
+   },
+   "changed_per_1000": 49.4,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 46.1,
+   "input_tokens": 269398,
+   "cached_input_tokens": 217472,
+   "output_tokens": 3774
+  },
+  {
+   "cond": "main",
+   "doc": "blacklist_ai/03_pr_description_sonnet_default",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 2,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 2,
+    "info": 0
+   },
+   "changed_per_1000": 2.3,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 43.5,
+   "input_tokens": 271745,
+   "cached_input_tokens": 219722,
+   "output_tokens": 2994
+  },
+  {
+   "cond": "main",
+   "doc": "blacklist_ai/03_pr_description_sonnet_formal",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 36.1,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 55.0,
+   "input_tokens": 329804,
+   "cached_input_tokens": 275508,
+   "output_tokens": 4201
+  },
+  {
+   "cond": "main",
+   "doc": "blacklist_ai/04_slack_announce_sonnet_casual",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 0.0,
+   "identical": true,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 43.4,
+   "input_tokens": 269889,
+   "cached_input_tokens": 218440,
+   "output_tokens": 2899
+  },
+  {
+   "cond": "main",
+   "doc": "blacklist_ai/04_slack_announce_sonnet_default",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 5.2,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 49.5,
+   "input_tokens": 211994,
+   "cached_input_tokens": 163066,
+   "output_tokens": 3079
+  },
+  {
+   "cond": "main",
+   "doc": "blacklist_ai/04_slack_announce_sonnet_formal",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 17.9,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 55.8,
+   "input_tokens": 267410,
+   "cached_input_tokens": 216117,
+   "output_tokens": 4138
+  },
+  {
+   "cond": "main",
+   "doc": "blacklist_ai/05_comparison_sonnet_casual",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 47.0,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 66.1,
+   "input_tokens": 326680,
+   "cached_input_tokens": 271615,
+   "output_tokens": 5682
+  },
+  {
+   "cond": "main",
+   "doc": "blacklist_ai/05_comparison_sonnet_default",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 0.0,
+   "identical": true,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 31.8,
+   "input_tokens": 209909,
+   "cached_input_tokens": 162074,
+   "output_tokens": 2564
+  },
+  {
+   "cond": "main",
+   "doc": "blacklist_ai/05_comparison_sonnet_formal",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 1,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 44.6,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 62.1,
+   "input_tokens": 331718,
+   "cached_input_tokens": 277319,
+   "output_tokens": 4634
+  },
+  {
+   "cond": "main",
+   "doc": "blacklist_ai/06_spec_draft_sonnet_casual",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 3.7,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 41.2,
+   "input_tokens": 274586,
+   "cached_input_tokens": 221176,
+   "output_tokens": 3509
+  },
+  {
+   "cond": "main",
+   "doc": "blacklist_ai/06_spec_draft_sonnet_default",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 10.6,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 52.6,
+   "input_tokens": 276718,
+   "cached_input_tokens": 222584,
+   "output_tokens": 4421
+  },
+  {
+   "cond": "main",
+   "doc": "blacklist_ai/06_spec_draft_sonnet_formal",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 0.0,
+   "identical": true,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 53.0,
+   "input_tokens": 324716,
+   "cached_input_tokens": 272433,
+   "output_tokens": 3681
+  },
+  {
+   "cond": "main",
+   "doc": "blacklist_ai/07_code_review_sonnet_casual",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 1,
+   "counted": 1,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 16.5,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 52.9,
+   "input_tokens": 269246,
+   "cached_input_tokens": 217694,
+   "output_tokens": 4278
+  },
+  {
+   "cond": "main",
+   "doc": "blacklist_ai/07_code_review_sonnet_default",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 3,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 3,
+    "info": 0
+   },
+   "changed_per_1000": 4.7,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 46.4,
+   "input_tokens": 273348,
+   "cached_input_tokens": 220256,
+   "output_tokens": 3026
+  },
+  {
+   "cond": "main",
+   "doc": "blacklist_ai/07_code_review_sonnet_formal",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 9.6,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 55.8,
+   "input_tokens": 327281,
+   "cached_input_tokens": 274129,
+   "output_tokens": 4439
+  },
+  {
+   "cond": "main",
+   "doc": "blacklist_ai/08_essay_retrospective_sonnet_casual",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 1
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 29.7,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 43.6,
+   "input_tokens": 216290,
+   "cached_input_tokens": 165476,
+   "output_tokens": 3656
+  },
+  {
+   "cond": "main",
+   "doc": "blacklist_ai/08_essay_retrospective_sonnet_default",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 1
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 1
+   },
+   "changed_per_1000": 11.8,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 42.1,
+   "input_tokens": 265675,
+   "cached_input_tokens": 214951,
+   "output_tokens": 3000
+  },
+  {
+   "cond": "main",
+   "doc": "blacklist_ai/08_essay_retrospective_sonnet_formal",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 5.1,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 44.0,
+   "input_tokens": 270887,
+   "cached_input_tokens": 218638,
+   "output_tokens": 3745
+  },
+  {
+   "cond": "main",
+   "doc": "edge_cases/edge_kiku_45",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 0.0,
+   "identical": true,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 21.8,
+   "input_tokens": 157139,
+   "cached_input_tokens": 110508,
+   "output_tokens": 1227
+  },
+  {
+   "cond": "main",
+   "doc": "raw_ai/01_tech_arch_sonnet_casual",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 1
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 1
+   },
+   "changed_per_1000": 0.0,
+   "identical": true,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 49.6,
+   "input_tokens": 214981,
+   "cached_input_tokens": 165008,
+   "output_tokens": 3866
+  },
+  {
+   "cond": "main",
+   "doc": "raw_ai/01_tech_arch_sonnet_default",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 155.5,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 71.1,
+   "input_tokens": 281009,
+   "cached_input_tokens": 224239,
+   "output_tokens": 6192
+  },
+  {
+   "cond": "main",
+   "doc": "raw_ai/01_tech_arch_sonnet_formal",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 7.1,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 55.1,
+   "input_tokens": 322527,
+   "cached_input_tokens": 269370,
+   "output_tokens": 3719
+  },
+  {
+   "cond": "main",
+   "doc": "raw_ai/02_incident_report_sonnet_casual",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 1,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 1,
+    "info": 0
+   },
+   "changed_per_1000": 12.5,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 54.0,
+   "input_tokens": 327870,
+   "cached_input_tokens": 273527,
+   "output_tokens": 3693
+  },
+  {
+   "cond": "main",
+   "doc": "raw_ai/02_incident_report_sonnet_default",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 2,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 2,
+    "info": 0
+   },
+   "changed_per_1000": 18.1,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 59.9,
+   "input_tokens": 331304,
+   "cached_input_tokens": 275315,
+   "output_tokens": 4459
+  },
+  {
+   "cond": "main",
+   "doc": "raw_ai/02_incident_report_sonnet_formal",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 1,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 1,
+    "info": 0
+   },
+   "changed_per_1000": 0.0,
+   "identical": true,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 40.2,
+   "input_tokens": 263038,
+   "cached_input_tokens": 214091,
+   "output_tokens": 2649
+  },
+  {
+   "cond": "main",
+   "doc": "raw_ai/03_pr_description_sonnet_casual",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 0.0,
+   "identical": true,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 45.2,
+   "input_tokens": 270332,
+   "cached_input_tokens": 218682,
+   "output_tokens": 3161
+  },
+  {
+   "cond": "main",
+   "doc": "raw_ai/03_pr_description_sonnet_default",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 2,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 2,
+    "info": 0
+   },
+   "changed_per_1000": 5.1,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 46.5,
+   "input_tokens": 274972,
+   "cached_input_tokens": 221218,
+   "output_tokens": 3495
+  },
+  {
+   "cond": "main",
+   "doc": "raw_ai/03_pr_description_sonnet_formal",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 1,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 1,
+    "info": 0
+   },
+   "changed_per_1000": 25.7,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 56.5,
+   "input_tokens": 277012,
+   "cached_input_tokens": 222329,
+   "output_tokens": 4440
+  },
+  {
+   "cond": "main",
+   "doc": "raw_ai/04_slack_announce_sonnet_casual",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 15.2,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 46.3,
+   "input_tokens": 280365,
+   "cached_input_tokens": 224996,
+   "output_tokens": 3526
+  },
+  {
+   "cond": "main",
+   "doc": "raw_ai/04_slack_announce_sonnet_default",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 108.3,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 45.5,
+   "input_tokens": 214712,
+   "cached_input_tokens": 164517,
+   "output_tokens": 4030
+  },
+  {
+   "cond": "main",
+   "doc": "raw_ai/04_slack_announce_sonnet_formal",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 5.4,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 46.7,
+   "input_tokens": 279230,
+   "cached_input_tokens": 224584,
+   "output_tokens": 3033
+  },
+  {
+   "cond": "main",
+   "doc": "raw_ai/05_comparison_sonnet_casual",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 13.3,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 34.4,
+   "input_tokens": 212892,
+   "cached_input_tokens": 163520,
+   "output_tokens": 2615
+  },
+  {
+   "cond": "main",
+   "doc": "raw_ai/05_comparison_sonnet_default",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 7.6,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 40.8,
+   "input_tokens": 269177,
+   "cached_input_tokens": 217678,
+   "output_tokens": 2905
+  },
+  {
+   "cond": "main",
+   "doc": "raw_ai/05_comparison_sonnet_formal",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 2.6,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 44.4,
+   "input_tokens": 212296,
+   "cached_input_tokens": 163219,
+   "output_tokens": 2657
+  },
+  {
+   "cond": "main",
+   "doc": "raw_ai/06_spec_draft_sonnet_casual",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 13.4,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 48.9,
+   "input_tokens": 214107,
+   "cached_input_tokens": 164172,
+   "output_tokens": 3972
+  },
+  {
+   "cond": "main",
+   "doc": "raw_ai/06_spec_draft_sonnet_default",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 0.0,
+   "identical": true,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 40.2,
+   "input_tokens": 210851,
+   "cached_input_tokens": 162854,
+   "output_tokens": 2930
+  },
+  {
+   "cond": "main",
+   "doc": "raw_ai/06_spec_draft_sonnet_formal",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 2.4,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 38.8,
+   "input_tokens": 211785,
+   "cached_input_tokens": 162820,
+   "output_tokens": 3108
+  },
+  {
+   "cond": "main",
+   "doc": "raw_ai/07_code_review_sonnet_casual",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 1,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 1,
+    "info": 0
+   },
+   "changed_per_1000": 5.2,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 38.3,
+   "input_tokens": 271592,
+   "cached_input_tokens": 219250,
+   "output_tokens": 2883
+  },
+  {
+   "cond": "main",
+   "doc": "raw_ai/07_code_review_sonnet_default",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 9.3,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 50.8,
+   "input_tokens": 327811,
+   "cached_input_tokens": 274256,
+   "output_tokens": 4120
+  },
+  {
+   "cond": "main",
+   "doc": "raw_ai/07_code_review_sonnet_formal",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 12.9,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 53.3,
+   "input_tokens": 218328,
+   "cached_input_tokens": 166260,
+   "output_tokens": 5015
+  },
+  {
+   "cond": "main",
+   "doc": "raw_ai/08_essay_retrospective_sonnet_casual",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 18.3,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 43.5,
+   "input_tokens": 215323,
+   "cached_input_tokens": 165110,
+   "output_tokens": 3682
+  },
+  {
+   "cond": "main",
+   "doc": "raw_ai/08_essay_retrospective_sonnet_default",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 44.3,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 51.2,
+   "input_tokens": 322012,
+   "cached_input_tokens": 269766,
+   "output_tokens": 3497
+  },
+  {
+   "cond": "main",
+   "doc": "raw_ai/08_essay_retrospective_sonnet_formal",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 1
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 1
+   },
+   "changed_per_1000": 2.3,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 43.3,
+   "input_tokens": 263336,
+   "cached_input_tokens": 213503,
+   "output_tokens": 2963
+  },
+  {
+   "cond": "main",
+   "doc": "raw_ai/09_listicle_patterns",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 2,
+    "info": 1
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 8,
+    "info": 5
+   },
+   "changed_per_1000": 437.9,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 79.1,
+   "input_tokens": 289600,
+   "cached_input_tokens": 228514,
+   "output_tokens": 6867
+  },
+  {
+   "cond": "main",
+   "doc": "raw_ai/10_essay_fragments",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 2
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 2,
+    "info": 6
+   },
+   "changed_per_1000": 120.8,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 58.8,
+   "input_tokens": 282684,
+   "cached_input_tokens": 225821,
+   "output_tokens": 4739
+  },
+  {
+   "cond": "main",
+   "doc": "blacklist_ai/01_tech_arch_sonnet_casual",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 47.3,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 51.9,
+   "input_tokens": 274955,
+   "cached_input_tokens": 220243,
+   "output_tokens": 4312
+  },
+  {
+   "cond": "main",
+   "doc": "blacklist_ai/01_tech_arch_sonnet_default",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 157.8,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 62.7,
+   "input_tokens": 220506,
+   "cached_input_tokens": 167342,
+   "output_tokens": 5766
+  },
+  {
+   "cond": "main",
+   "doc": "blacklist_ai/01_tech_arch_sonnet_formal",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 34.0,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 62.8,
+   "input_tokens": 331150,
+   "cached_input_tokens": 276361,
+   "output_tokens": 4930
+  },
+  {
+   "cond": "main",
+   "doc": "blacklist_ai/02_incident_report_sonnet_casual",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 2,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 2,
+    "info": 0
+   },
+   "changed_per_1000": 29.7,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 59.2,
+   "input_tokens": 329076,
+   "cached_input_tokens": 273988,
+   "output_tokens": 4500
+  },
+  {
+   "cond": "main",
+   "doc": "blacklist_ai/02_incident_report_sonnet_default",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 2,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 2,
+    "info": 0
+   },
+   "changed_per_1000": 11.4,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 38.9,
+   "input_tokens": 265657,
+   "cached_input_tokens": 215393,
+   "output_tokens": 2883
+  },
+  {
+   "cond": "main",
+   "doc": "blacklist_ai/02_incident_report_sonnet_formal",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 1,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 1,
+    "info": 0
+   },
+   "changed_per_1000": 38.0,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 58.7,
+   "input_tokens": 329333,
+   "cached_input_tokens": 274377,
+   "output_tokens": 4723
+  },
+  {
+   "cond": "main",
+   "doc": "blacklist_ai/03_pr_description_sonnet_casual",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 2,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 2,
+    "info": 0
+   },
+   "changed_per_1000": 64.4,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 51.5,
+   "input_tokens": 272807,
+   "cached_input_tokens": 218680,
+   "output_tokens": 3962
+  },
+  {
+   "cond": "main",
+   "doc": "blacklist_ai/03_pr_description_sonnet_default",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 2,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 2,
+    "info": 0
+   },
+   "changed_per_1000": 2.3,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 37.7,
+   "input_tokens": 212213,
+   "cached_input_tokens": 163320,
+   "output_tokens": 2785
+  },
+  {
+   "cond": "main",
+   "doc": "blacklist_ai/03_pr_description_sonnet_formal",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 13.9,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 42.3,
+   "input_tokens": 212521,
+   "cached_input_tokens": 163330,
+   "output_tokens": 3228
+  },
+  {
+   "cond": "main",
+   "doc": "blacklist_ai/04_slack_announce_sonnet_casual",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 0.0,
+   "identical": true,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 42.1,
+   "input_tokens": 320976,
+   "cached_input_tokens": 269244,
+   "output_tokens": 2920
+  },
+  {
+   "cond": "main",
+   "doc": "blacklist_ai/04_slack_announce_sonnet_default",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 5.2,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 45.8,
+   "input_tokens": 263881,
+   "cached_input_tokens": 213837,
+   "output_tokens": 3427
+  },
+  {
+   "cond": "main",
+   "doc": "blacklist_ai/04_slack_announce_sonnet_formal",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 26.9,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 42.6,
+   "input_tokens": 212679,
+   "cached_input_tokens": 163342,
+   "output_tokens": 3192
+  },
+  {
+   "cond": "main",
+   "doc": "blacklist_ai/05_comparison_sonnet_casual",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 9.9,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 50.2,
+   "input_tokens": 266385,
+   "cached_input_tokens": 214979,
+   "output_tokens": 4317
+  },
+  {
+   "cond": "main",
+   "doc": "blacklist_ai/05_comparison_sonnet_default",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 0.0,
+   "identical": true,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 37.2,
+   "input_tokens": 210058,
+   "cached_input_tokens": 162130,
+   "output_tokens": 2626
+  },
+  {
+   "cond": "main",
+   "doc": "blacklist_ai/05_comparison_sonnet_formal",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 25.8,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 75.5,
+   "input_tokens": 339803,
+   "cached_input_tokens": 279864,
+   "output_tokens": 6523
+  },
+  {
+   "cond": "main",
+   "doc": "blacklist_ai/06_spec_draft_sonnet_casual",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 20.5,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 48.0,
+   "input_tokens": 276388,
+   "cached_input_tokens": 221993,
+   "output_tokens": 3961
+  },
+  {
+   "cond": "main",
+   "doc": "blacklist_ai/06_spec_draft_sonnet_default",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 4.2,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 54.1,
+   "input_tokens": 336460,
+   "cached_input_tokens": 281283,
+   "output_tokens": 4575
+  },
+  {
+   "cond": "main",
+   "doc": "blacklist_ai/06_spec_draft_sonnet_formal",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 0.0,
+   "identical": true,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 39.3,
+   "input_tokens": 264422,
+   "cached_input_tokens": 215147,
+   "output_tokens": 2531
+  },
+  {
+   "cond": "main",
+   "doc": "blacklist_ai/07_code_review_sonnet_casual",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 14.7,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 58.4,
+   "input_tokens": 274680,
+   "cached_input_tokens": 220606,
+   "output_tokens": 4605
+  },
+  {
+   "cond": "main",
+   "doc": "blacklist_ai/07_code_review_sonnet_default",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 3,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 3,
+    "info": 0
+   },
+   "changed_per_1000": 4.7,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 39.0,
+   "input_tokens": 264865,
+   "cached_input_tokens": 214675,
+   "output_tokens": 2663
+  },
+  {
+   "cond": "main",
+   "doc": "blacklist_ai/07_code_review_sonnet_formal",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 12.8,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 44.1,
+   "input_tokens": 271224,
+   "cached_input_tokens": 218697,
+   "output_tokens": 3471
+  },
+  {
+   "cond": "main",
+   "doc": "blacklist_ai/08_essay_retrospective_sonnet_casual",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 1
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 24.3,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 50.1,
+   "input_tokens": 270893,
+   "cached_input_tokens": 218377,
+   "output_tokens": 3832
+  },
+  {
+   "cond": "main",
+   "doc": "blacklist_ai/08_essay_retrospective_sonnet_default",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 1
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 1
+   },
+   "changed_per_1000": 59.2,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 38.6,
+   "input_tokens": 216089,
+   "cached_input_tokens": 165253,
+   "output_tokens": 3476
+  },
+  {
+   "cond": "main",
+   "doc": "blacklist_ai/08_essay_retrospective_sonnet_formal",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 12.8,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 41.8,
+   "input_tokens": 265651,
+   "cached_input_tokens": 215600,
+   "output_tokens": 3592
+  },
+  {
+   "cond": "main",
+   "doc": "edge_cases/edge_kiku_45",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 0.0,
+   "identical": true,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 28.4,
+   "input_tokens": 257516,
+   "cached_input_tokens": 210438,
+   "output_tokens": 1466
+  },
+  {
+   "cond": "main",
+   "doc": "raw_ai/01_tech_arch_sonnet_casual",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 1
+   },
+   "changed_per_1000": 82.7,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 42.0,
+   "input_tokens": 214721,
+   "cached_input_tokens": 164579,
+   "output_tokens": 3617
+  },
+  {
+   "cond": "main",
+   "doc": "raw_ai/01_tech_arch_sonnet_default",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 32.4,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 38.4,
+   "input_tokens": 213561,
+   "cached_input_tokens": 163872,
+   "output_tokens": 2971
+  },
+  {
+   "cond": "main",
+   "doc": "raw_ai/01_tech_arch_sonnet_formal",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 26.1,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 33.1,
+   "input_tokens": 212912,
+   "cached_input_tokens": 163568,
+   "output_tokens": 2815
+  },
+  {
+   "cond": "main",
+   "doc": "raw_ai/02_incident_report_sonnet_casual",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 1,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 1,
+    "info": 0
+   },
+   "changed_per_1000": 0.0,
+   "identical": true,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 40.1,
+   "input_tokens": 264540,
+   "cached_input_tokens": 215012,
+   "output_tokens": 2553
+  },
+  {
+   "cond": "main",
+   "doc": "raw_ai/02_incident_report_sonnet_default",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 2,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 2,
+    "info": 0
+   },
+   "changed_per_1000": 27.1,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 56.5,
+   "input_tokens": 281214,
+   "cached_input_tokens": 224864,
+   "output_tokens": 4971
+  },
+  {
+   "cond": "main",
+   "doc": "raw_ai/02_incident_report_sonnet_formal",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 1,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 1,
+    "info": 0
+   },
+   "changed_per_1000": 0.0,
+   "identical": true,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 39.8,
+   "input_tokens": 262853,
+   "cached_input_tokens": 213759,
+   "output_tokens": 2906
+  },
+  {
+   "cond": "main",
+   "doc": "raw_ai/03_pr_description_sonnet_casual",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 0.0,
+   "identical": true,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 39.0,
+   "input_tokens": 263271,
+   "cached_input_tokens": 214122,
+   "output_tokens": 2772
+  },
+  {
+   "cond": "main",
+   "doc": "raw_ai/03_pr_description_sonnet_default",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 2,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 2,
+    "info": 0
+   },
+   "changed_per_1000": 2.6,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 53.9,
+   "input_tokens": 276006,
+   "cached_input_tokens": 221755,
+   "output_tokens": 3794
+  },
+  {
+   "cond": "main",
+   "doc": "raw_ai/03_pr_description_sonnet_formal",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 1,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 1,
+    "info": 0
+   },
+   "changed_per_1000": 25.7,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 37.8,
+   "input_tokens": 215753,
+   "cached_input_tokens": 164002,
+   "output_tokens": 3284
+  },
+  {
+   "cond": "main",
+   "doc": "raw_ai/04_slack_announce_sonnet_casual",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 5.1,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 44.1,
+   "input_tokens": 270178,
+   "cached_input_tokens": 218110,
+   "output_tokens": 3546
+  },
+  {
+   "cond": "main",
+   "doc": "raw_ai/04_slack_announce_sonnet_default",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 104.8,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 52.0,
+   "input_tokens": 282241,
+   "cached_input_tokens": 226235,
+   "output_tokens": 3956
+  },
+  {
+   "cond": "main",
+   "doc": "raw_ai/04_slack_announce_sonnet_formal",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 2.7,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 38.4,
+   "input_tokens": 278799,
+   "cached_input_tokens": 224301,
+   "output_tokens": 2877
+  },
+  {
+   "cond": "main",
+   "doc": "raw_ai/05_comparison_sonnet_casual",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 31.8,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 68.2,
+   "input_tokens": 324075,
+   "cached_input_tokens": 270175,
+   "output_tokens": 4699
+  },
+  {
+   "cond": "main",
+   "doc": "raw_ai/05_comparison_sonnet_default",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 2.5,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 33.8,
+   "input_tokens": 211619,
+   "cached_input_tokens": 162884,
+   "output_tokens": 2266
+  },
+  {
+   "cond": "main",
+   "doc": "raw_ai/05_comparison_sonnet_formal",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 2.6,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 36.5,
+   "input_tokens": 274264,
+   "cached_input_tokens": 221210,
+   "output_tokens": 3028
+  },
+  {
+   "cond": "main",
+   "doc": "raw_ai/06_spec_draft_sonnet_casual",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 13.4,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 39.6,
+   "input_tokens": 213304,
+   "cached_input_tokens": 163750,
+   "output_tokens": 3524
+  },
+  {
+   "cond": "main",
+   "doc": "raw_ai/06_spec_draft_sonnet_default",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 0.0,
+   "identical": true,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 40.9,
+   "input_tokens": 324676,
+   "cached_input_tokens": 272388,
+   "output_tokens": 3007
+  },
+  {
+   "cond": "main",
+   "doc": "raw_ai/06_spec_draft_sonnet_formal",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 19.5,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 52.0,
+   "input_tokens": 268927,
+   "cached_input_tokens": 218036,
+   "output_tokens": 4488
+  },
+  {
+   "cond": "main",
+   "doc": "raw_ai/07_code_review_sonnet_casual",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 1,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 1,
+    "info": 0
+   },
+   "changed_per_1000": 5.2,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 43.7,
+   "input_tokens": 272207,
+   "cached_input_tokens": 219398,
+   "output_tokens": 3344
+  },
+  {
+   "cond": "main",
+   "doc": "raw_ai/07_code_review_sonnet_default",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 11.7,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 38.4,
+   "input_tokens": 325466,
+   "cached_input_tokens": 272940,
+   "output_tokens": 3137
+  },
+  {
+   "cond": "main",
+   "doc": "raw_ai/07_code_review_sonnet_formal",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 28.0,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 69.2,
+   "input_tokens": 334031,
+   "cached_input_tokens": 278075,
+   "output_tokens": 5510
+  },
+  {
+   "cond": "main",
+   "doc": "raw_ai/08_essay_retrospective_sonnet_casual",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 18.3,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 50.5,
+   "input_tokens": 264725,
+   "cached_input_tokens": 214508,
+   "output_tokens": 3679
+  },
+  {
+   "cond": "main",
+   "doc": "raw_ai/08_essay_retrospective_sonnet_default",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 18.2,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 49.6,
+   "input_tokens": 213823,
+   "cached_input_tokens": 163990,
+   "output_tokens": 3635
+  },
+  {
+   "cond": "main",
+   "doc": "raw_ai/08_essay_retrospective_sonnet_formal",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 1
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 1
+   },
+   "changed_per_1000": 0.0,
+   "identical": true,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 45.7,
+   "input_tokens": 322729,
+   "cached_input_tokens": 270572,
+   "output_tokens": 3050
+  },
+  {
+   "cond": "main",
+   "doc": "raw_ai/09_listicle_patterns",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 2,
+    "info": 3
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 8,
+    "info": 5
+   },
+   "changed_per_1000": 271.2,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 68.7,
+   "input_tokens": 228645,
+   "cached_input_tokens": 172524,
+   "output_tokens": 6052
+  },
+  {
+   "cond": "main",
+   "doc": "raw_ai/10_essay_fragments",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 2
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 2,
+    "info": 6
+   },
+   "changed_per_1000": 120.8,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 42.6,
+   "input_tokens": 219314,
+   "cached_input_tokens": 167428,
+   "output_tokens": 3301
+  },
+  {
+   "cond": "main",
+   "doc": "blacklist_ai/01_tech_arch_sonnet_casual",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 52.0,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 64.6,
+   "input_tokens": 276712,
+   "cached_input_tokens": 221647,
+   "output_tokens": 5641
+  },
+  {
+   "cond": "main",
+   "doc": "blacklist_ai/01_tech_arch_sonnet_default",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 45.6,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 48.5,
+   "input_tokens": 215951,
+   "cached_input_tokens": 165110,
+   "output_tokens": 3844
+  },
+  {
+   "cond": "main",
+   "doc": "blacklist_ai/01_tech_arch_sonnet_formal",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 18.0,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 58.2,
+   "input_tokens": 278074,
+   "cached_input_tokens": 222624,
+   "output_tokens": 5043
+  },
+  {
+   "cond": "main",
+   "doc": "blacklist_ai/02_incident_report_sonnet_casual",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 2,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 2,
+    "info": 0
+   },
+   "changed_per_1000": 11.4,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 54.6,
+   "input_tokens": 327828,
+   "cached_input_tokens": 273420,
+   "output_tokens": 4334
+  },
+  {
+   "cond": "main",
+   "doc": "blacklist_ai/02_incident_report_sonnet_default",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 2,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 2,
+    "info": 0
+   },
+   "changed_per_1000": 15.9,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 47.7,
+   "input_tokens": 327893,
+   "cached_input_tokens": 274118,
+   "output_tokens": 3072
+  },
+  {
+   "cond": "main",
+   "doc": "blacklist_ai/02_incident_report_sonnet_formal",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 1,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 1,
+    "info": 0
+   },
+   "changed_per_1000": 94.2,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 63.9,
+   "input_tokens": 339043,
+   "cached_input_tokens": 282014,
+   "output_tokens": 5559
+  },
+  {
+   "cond": "main",
+   "doc": "blacklist_ai/03_pr_description_sonnet_casual",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 2,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 2,
+    "info": 0
+   },
+   "changed_per_1000": 47.2,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 63.7,
+   "input_tokens": 386646,
+   "cached_input_tokens": 331112,
+   "output_tokens": 4892
+  },
+  {
+   "cond": "main",
+   "doc": "blacklist_ai/03_pr_description_sonnet_default",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 2,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 2,
+    "info": 0
+   },
+   "changed_per_1000": 2.3,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 38.3,
+   "input_tokens": 265311,
+   "cached_input_tokens": 215325,
+   "output_tokens": 2673
+  },
+  {
+   "cond": "main",
+   "doc": "blacklist_ai/03_pr_description_sonnet_formal",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 16.7,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 38.4,
+   "input_tokens": 265929,
+   "cached_input_tokens": 216099,
+   "output_tokens": 3044
+  },
+  {
+   "cond": "main",
+   "doc": "blacklist_ai/04_slack_announce_sonnet_casual",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 0.0,
+   "identical": true,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 49.0,
+   "input_tokens": 329450,
+   "cached_input_tokens": 274666,
+   "output_tokens": 3447
+  },
+  {
+   "cond": "main",
+   "doc": "blacklist_ai/04_slack_announce_sonnet_default",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 2.6,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 49.6,
+   "input_tokens": 272516,
+   "cached_input_tokens": 219768,
+   "output_tokens": 3500
+  },
+  {
+   "cond": "main",
+   "doc": "blacklist_ai/04_slack_announce_sonnet_formal",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 17.9,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 49.5,
+   "input_tokens": 331645,
+   "cached_input_tokens": 277781,
+   "output_tokens": 4240
+  },
+  {
+   "cond": "main",
+   "doc": "blacklist_ai/05_comparison_sonnet_casual",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 27.2,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 42.3,
+   "input_tokens": 214058,
+   "cached_input_tokens": 164112,
+   "output_tokens": 3389
+  },
+  {
+   "cond": "main",
+   "doc": "blacklist_ai/05_comparison_sonnet_default",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 0.0,
+   "identical": true,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 33.2,
+   "input_tokens": 209948,
+   "cached_input_tokens": 162081,
+   "output_tokens": 2494
+  },
+  {
+   "cond": "main",
+   "doc": "blacklist_ai/05_comparison_sonnet_formal",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 61.0,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 63.1,
+   "input_tokens": 278985,
+   "cached_input_tokens": 223082,
+   "output_tokens": 5223
+  },
+  {
+   "cond": "main",
+   "doc": "blacklist_ai/06_spec_draft_sonnet_casual",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 26.1,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 54.4,
+   "input_tokens": 278041,
+   "cached_input_tokens": 222875,
+   "output_tokens": 4508
+  },
+  {
+   "cond": "main",
+   "doc": "blacklist_ai/06_spec_draft_sonnet_default",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 8.5,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 48.3,
+   "input_tokens": 215490,
+   "cached_input_tokens": 164838,
+   "output_tokens": 4174
+  },
+  {
+   "cond": "main",
+   "doc": "blacklist_ai/06_spec_draft_sonnet_formal",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 0.0,
+   "identical": true,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 38.0,
+   "input_tokens": 264215,
+   "cached_input_tokens": 214831,
+   "output_tokens": 2526
+  },
+  {
+   "cond": "main",
+   "doc": "blacklist_ai/07_code_review_sonnet_casual",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 3.7,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 49.1,
+   "input_tokens": 214778,
+   "cached_input_tokens": 164535,
+   "output_tokens": 3728
+  },
+  {
+   "cond": "main",
+   "doc": "blacklist_ai/07_code_review_sonnet_default",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 3,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 3,
+    "info": 0
+   },
+   "changed_per_1000": 4.7,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 40.4,
+   "input_tokens": 215526,
+   "cached_input_tokens": 164419,
+   "output_tokens": 2974
+  },
+  {
+   "cond": "main",
+   "doc": "blacklist_ai/07_code_review_sonnet_formal",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 9.6,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 38.5,
+   "input_tokens": 212857,
+   "cached_input_tokens": 163454,
+   "output_tokens": 3269
+  },
+  {
+   "cond": "main",
+   "doc": "blacklist_ai/08_essay_retrospective_sonnet_casual",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 1
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 29.7,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 38.1,
+   "input_tokens": 214086,
+   "cached_input_tokens": 164065,
+   "output_tokens": 2990
+  },
+  {
+   "cond": "main",
+   "doc": "blacklist_ai/08_essay_retrospective_sonnet_default",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 1
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 1
+   },
+   "changed_per_1000": 9.5,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 44.2,
+   "input_tokens": 274412,
+   "cached_input_tokens": 220960,
+   "output_tokens": 3124
+  },
+  {
+   "cond": "main",
+   "doc": "blacklist_ai/08_essay_retrospective_sonnet_formal",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 45.9,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 37.8,
+   "input_tokens": 212416,
+   "cached_input_tokens": 163281,
+   "output_tokens": 3264
+  },
+  {
+   "cond": "main",
+   "doc": "edge_cases/edge_kiku_45",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 0.0,
+   "identical": true,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 26.8,
+   "input_tokens": 257913,
+   "cached_input_tokens": 210740,
+   "output_tokens": 1424
+  },
+  {
+   "cond": "main",
+   "doc": "raw_ai/01_tech_arch_sonnet_casual",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 1
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 1
+   },
+   "changed_per_1000": 32.3,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 56.6,
+   "input_tokens": 218369,
+   "cached_input_tokens": 166716,
+   "output_tokens": 4626
+  },
+  {
+   "cond": "main",
+   "doc": "raw_ai/01_tech_arch_sonnet_default",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 51.8,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 43.9,
+   "input_tokens": 215745,
+   "cached_input_tokens": 164993,
+   "output_tokens": 3646
+  },
+  {
+   "cond": "main",
+   "doc": "raw_ai/01_tech_arch_sonnet_formal",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 7.1,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 38.2,
+   "input_tokens": 270990,
+   "cached_input_tokens": 218890,
+   "output_tokens": 2848
+  },
+  {
+   "cond": "main",
+   "doc": "raw_ai/02_incident_report_sonnet_casual",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 1,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 1,
+    "info": 0
+   },
+   "changed_per_1000": 0.0,
+   "identical": true,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 41.6,
+   "input_tokens": 270624,
+   "cached_input_tokens": 219064,
+   "output_tokens": 2396
+  },
+  {
+   "cond": "main",
+   "doc": "raw_ai/02_incident_report_sonnet_default",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 2,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 2,
+    "info": 0
+   },
+   "changed_per_1000": 14.4,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 49.3,
+   "input_tokens": 215878,
+   "cached_input_tokens": 165217,
+   "output_tokens": 3679
+  },
+  {
+   "cond": "main",
+   "doc": "raw_ai/02_incident_report_sonnet_formal",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 1,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 1,
+    "info": 0
+   },
+   "changed_per_1000": 2.4,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 38.9,
+   "input_tokens": 264380,
+   "cached_input_tokens": 214695,
+   "output_tokens": 2322
+  },
+  {
+   "cond": "main",
+   "doc": "raw_ai/03_pr_description_sonnet_casual",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 0.0,
+   "identical": true,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 36.0,
+   "input_tokens": 271554,
+   "cached_input_tokens": 219761,
+   "output_tokens": 2427
+  },
+  {
+   "cond": "main",
+   "doc": "raw_ai/03_pr_description_sonnet_default",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 2,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 2,
+    "info": 0
+   },
+   "changed_per_1000": 10.3,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 45.7,
+   "input_tokens": 216874,
+   "cached_input_tokens": 165864,
+   "output_tokens": 3812
+  },
+  {
+   "cond": "main",
+   "doc": "raw_ai/03_pr_description_sonnet_formal",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 1,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 1,
+    "info": 0
+   },
+   "changed_per_1000": 17.1,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 58.4,
+   "input_tokens": 380227,
+   "cached_input_tokens": 326869,
+   "output_tokens": 3830
+  },
+  {
+   "cond": "main",
+   "doc": "raw_ai/04_slack_announce_sonnet_casual",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 15.2,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 44.3,
+   "input_tokens": 271182,
+   "cached_input_tokens": 219219,
+   "output_tokens": 3356
+  },
+  {
+   "cond": "main",
+   "doc": "raw_ai/04_slack_announce_sonnet_default",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 108.3,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 47.1,
+   "input_tokens": 215400,
+   "cached_input_tokens": 164861,
+   "output_tokens": 4101
+  },
+  {
+   "cond": "main",
+   "doc": "raw_ai/04_slack_announce_sonnet_formal",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 2.7,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 41.8,
+   "input_tokens": 278765,
+   "cached_input_tokens": 224143,
+   "output_tokens": 2897
+  },
+  {
+   "cond": "main",
+   "doc": "raw_ai/05_comparison_sonnet_casual",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 8.0,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 44.6,
+   "input_tokens": 271228,
+   "cached_input_tokens": 218757,
+   "output_tokens": 3346
+  },
+  {
+   "cond": "main",
+   "doc": "raw_ai/05_comparison_sonnet_default",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 0.0,
+   "identical": true,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 33.4,
+   "input_tokens": 259458,
+   "cached_input_tokens": 211531,
+   "output_tokens": 2481
+  },
+  {
+   "cond": "main",
+   "doc": "raw_ai/05_comparison_sonnet_formal",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 2.6,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 58.0,
+   "input_tokens": 336096,
+   "cached_input_tokens": 279945,
+   "output_tokens": 3984
+  },
+  {
+   "cond": "main",
+   "doc": "raw_ai/06_spec_draft_sonnet_casual",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 13.4,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 47.9,
+   "input_tokens": 318784,
+   "cached_input_tokens": 267382,
+   "output_tokens": 3822
+  },
+  {
+   "cond": "main",
+   "doc": "raw_ai/06_spec_draft_sonnet_default",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 0.0,
+   "identical": true,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 45.2,
+   "input_tokens": 272471,
+   "cached_input_tokens": 220001,
+   "output_tokens": 3368
+  },
+  {
+   "cond": "main",
+   "doc": "raw_ai/06_spec_draft_sonnet_formal",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 2.4,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 58.4,
+   "input_tokens": 328222,
+   "cached_input_tokens": 273018,
+   "output_tokens": 4988
+  },
+  {
+   "cond": "main",
+   "doc": "raw_ai/07_code_review_sonnet_casual",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 1,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 1,
+    "info": 0
+   },
+   "changed_per_1000": 13.0,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 47.6,
+   "input_tokens": 328384,
+   "cached_input_tokens": 274612,
+   "output_tokens": 4088
+  },
+  {
+   "cond": "main",
+   "doc": "raw_ai/07_code_review_sonnet_default",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 7.0,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 60.9,
+   "input_tokens": 324158,
+   "cached_input_tokens": 270267,
+   "output_tokens": 3991
+  },
+  {
+   "cond": "main",
+   "doc": "raw_ai/07_code_review_sonnet_formal",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 25.8,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 67.7,
+   "input_tokens": 278153,
+   "cached_input_tokens": 222652,
+   "output_tokens": 6006
+  },
+  {
+   "cond": "main",
+   "doc": "raw_ai/08_essay_retrospective_sonnet_casual",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 18.3,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 36.7,
+   "input_tokens": 262975,
+   "cached_input_tokens": 213293,
+   "output_tokens": 3116
+  },
+  {
+   "cond": "main",
+   "doc": "raw_ai/08_essay_retrospective_sonnet_default",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 0.0,
+   "identical": true,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 37.5,
+   "input_tokens": 209963,
+   "cached_input_tokens": 162085,
+   "output_tokens": 2586
+  },
+  {
+   "cond": "main",
+   "doc": "raw_ai/08_essay_retrospective_sonnet_formal",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 1
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 1
+   },
+   "changed_per_1000": 2.3,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 59.5,
+   "input_tokens": 327897,
+   "cached_input_tokens": 273352,
+   "output_tokens": 4058
+  },
+  {
+   "cond": "main",
+   "doc": "raw_ai/09_listicle_patterns",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 2,
+    "info": 2
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 8,
+    "info": 5
+   },
+   "changed_per_1000": 341.8,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 74.1,
+   "input_tokens": 286415,
+   "cached_input_tokens": 227477,
+   "output_tokens": 5954
+  },
+  {
+   "cond": "main",
+   "doc": "raw_ai/10_essay_fragments",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 2
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 2,
+    "info": 6
+   },
+   "changed_per_1000": 130.4,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 69.5,
+   "input_tokens": 392320,
+   "cached_input_tokens": 335035,
+   "output_tokens": 4666
+  },
+  {
+   "cond": "mini",
+   "doc": "blacklist_ai/01_tech_arch_sonnet_casual",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 101.7,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 59.4,
+   "input_tokens": 161461,
+   "cached_input_tokens": 132294,
+   "output_tokens": 4993
+  },
+  {
+   "cond": "mini",
+   "doc": "blacklist_ai/01_tech_arch_sonnet_default",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 165.4,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 55.6,
+   "input_tokens": 194423,
+   "cached_input_tokens": 161339,
+   "output_tokens": 4703
+  },
+  {
+   "cond": "mini",
+   "doc": "blacklist_ai/01_tech_arch_sonnet_formal",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 10.0,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 44.7,
+   "input_tokens": 157952,
+   "cached_input_tokens": 127177,
+   "output_tokens": 3774
+  },
+  {
+   "cond": "mini",
+   "doc": "blacklist_ai/02_incident_report_sonnet_casual",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 2,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 2,
+    "info": 0
+   },
+   "changed_per_1000": 0.0,
+   "identical": true,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 36.3,
+   "input_tokens": 158297,
+   "cached_input_tokens": 128723,
+   "output_tokens": 2570
+  },
+  {
+   "cond": "mini",
+   "doc": "blacklist_ai/02_incident_report_sonnet_default",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 2,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 2,
+    "info": 0
+   },
+   "changed_per_1000": 15.9,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 31.8,
+   "input_tokens": 136494,
+   "cached_input_tokens": 102504,
+   "output_tokens": 2689
+  },
+  {
+   "cond": "mini",
+   "doc": "blacklist_ai/02_incident_report_sonnet_formal",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 1,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 1,
+    "info": 0
+   },
+   "changed_per_1000": 36.2,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 53.2,
+   "input_tokens": 227322,
+   "cached_input_tokens": 182183,
+   "output_tokens": 4465
+  },
+  {
+   "cond": "mini",
+   "doc": "blacklist_ai/03_pr_description_sonnet_casual",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 2,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 2,
+    "info": 0
+   },
+   "changed_per_1000": 49.4,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 59.9,
+   "input_tokens": 206490,
+   "cached_input_tokens": 170619,
+   "output_tokens": 5147
+  },
+  {
+   "cond": "mini",
+   "doc": "blacklist_ai/03_pr_description_sonnet_default",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 2,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 2,
+    "info": 0
+   },
+   "changed_per_1000": 27.2,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 48.9,
+   "input_tokens": 163092,
+   "cached_input_tokens": 130539,
+   "output_tokens": 4334
+  },
+  {
+   "cond": "mini",
+   "doc": "blacklist_ai/03_pr_description_sonnet_formal",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 19.4,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 48.4,
+   "input_tokens": 161444,
+   "cached_input_tokens": 127526,
+   "output_tokens": 3903
+  },
+  {
+   "cond": "mini",
+   "doc": "blacklist_ai/04_slack_announce_sonnet_casual",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 0.0,
+   "identical": true,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 29.8,
+   "input_tokens": 92188,
+   "cached_input_tokens": 66975,
+   "output_tokens": 2326
+  },
+  {
+   "cond": "mini",
+   "doc": "blacklist_ai/04_slack_announce_sonnet_default",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 0.0,
+   "identical": true,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 25.3,
+   "input_tokens": 61193,
+   "cached_input_tokens": 38529,
+   "output_tokens": 1876
+  },
+  {
+   "cond": "mini",
+   "doc": "blacklist_ai/04_slack_announce_sonnet_formal",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 29.9,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 35.6,
+   "input_tokens": 90927,
+   "cached_input_tokens": 65887,
+   "output_tokens": 3243
+  },
+  {
+   "cond": "mini",
+   "doc": "blacklist_ai/05_comparison_sonnet_casual",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 37.1,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 39.6,
+   "input_tokens": 122091,
+   "cached_input_tokens": 95109,
+   "output_tokens": 3694
+  },
+  {
+   "cond": "mini",
+   "doc": "blacklist_ai/05_comparison_sonnet_default",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 2.6,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 37.4,
+   "input_tokens": 125219,
+   "cached_input_tokens": 96381,
+   "output_tokens": 2958
+  },
+  {
+   "cond": "mini",
+   "doc": "blacklist_ai/05_comparison_sonnet_formal",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 1,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 61.0,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 74.4,
+   "input_tokens": 263874,
+   "cached_input_tokens": 214899,
+   "output_tokens": 6633
+  },
+  {
+   "cond": "mini",
+   "doc": "blacklist_ai/06_spec_draft_sonnet_casual",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 20.5,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 49.3,
+   "input_tokens": 160038,
+   "cached_input_tokens": 126821,
+   "output_tokens": 4644
+  },
+  {
+   "cond": "mini",
+   "doc": "blacklist_ai/06_spec_draft_sonnet_default",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 57.3,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 51.6,
+   "input_tokens": 126494,
+   "cached_input_tokens": 97886,
+   "output_tokens": 4387
+  },
+  {
+   "cond": "mini",
+   "doc": "blacklist_ai/06_spec_draft_sonnet_formal",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 0.0,
+   "identical": true,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 36.8,
+   "input_tokens": 124907,
+   "cached_input_tokens": 97036,
+   "output_tokens": 2971
+  },
+  {
+   "cond": "mini",
+   "doc": "blacklist_ai/07_code_review_sonnet_casual",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 1,
+   "counted": 1,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 73.4,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 59.3,
+   "input_tokens": 136648,
+   "cached_input_tokens": 101305,
+   "output_tokens": 5463
+  },
+  {
+   "cond": "mini",
+   "doc": "blacklist_ai/07_code_review_sonnet_default",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 3,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 3,
+    "info": 0
+   },
+   "changed_per_1000": 0.0,
+   "identical": true,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 34.7,
+   "input_tokens": 159502,
+   "cached_input_tokens": 127164,
+   "output_tokens": 2081
+  },
+  {
+   "cond": "mini",
+   "doc": "blacklist_ai/07_code_review_sonnet_formal",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 9.6,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 38.2,
+   "input_tokens": 166581,
+   "cached_input_tokens": 131004,
+   "output_tokens": 2764
+  },
+  {
+   "cond": "mini",
+   "doc": "blacklist_ai/08_essay_retrospective_sonnet_casual",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 1
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 24.3,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 29.5,
+   "input_tokens": 137503,
+   "cached_input_tokens": 106600,
+   "output_tokens": 2683
+  },
+  {
+   "cond": "mini",
+   "doc": "blacklist_ai/08_essay_retrospective_sonnet_default",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 1
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 1
+   },
+   "changed_per_1000": 2.4,
+   "identical": true,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 21.2,
+   "input_tokens": 61940,
+   "cached_input_tokens": 38587,
+   "output_tokens": 1960
+  },
+  {
+   "cond": "mini",
+   "doc": "blacklist_ai/08_essay_retrospective_sonnet_formal",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 2.6,
+   "identical": true,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 27.0,
+   "input_tokens": 88960,
+   "cached_input_tokens": 65086,
+   "output_tokens": 2441
+  },
+  {
+   "cond": "mini",
+   "doc": "edge_cases/edge_kiku_45",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 0.0,
+   "identical": true,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 20.3,
+   "input_tokens": 112351,
+   "cached_input_tokens": 89786,
+   "output_tokens": 1311
+  },
+  {
+   "cond": "mini",
+   "doc": "raw_ai/01_tech_arch_sonnet_casual",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 1
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 1
+   },
+   "changed_per_1000": 44.4,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 37.9,
+   "input_tokens": 125304,
+   "cached_input_tokens": 97162,
+   "output_tokens": 3372
+  },
+  {
+   "cond": "mini",
+   "doc": "raw_ai/01_tech_arch_sonnet_default",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 75.6,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 36.1,
+   "input_tokens": 90612,
+   "cached_input_tokens": 65950,
+   "output_tokens": 3676
+  },
+  {
+   "cond": "mini",
+   "doc": "raw_ai/01_tech_arch_sonnet_formal",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 30.8,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 32.8,
+   "input_tokens": 89446,
+   "cached_input_tokens": 65368,
+   "output_tokens": 2855
+  },
+  {
+   "cond": "mini",
+   "doc": "raw_ai/02_incident_report_sonnet_casual",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 1,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 1,
+    "info": 0
+   },
+   "changed_per_1000": 0.0,
+   "identical": true,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 52.2,
+   "input_tokens": 270659,
+   "cached_input_tokens": 232508,
+   "output_tokens": 3957
+  },
+  {
+   "cond": "mini",
+   "doc": "raw_ai/02_incident_report_sonnet_default",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 2,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 2,
+    "info": 0
+   },
+   "changed_per_1000": 50.5,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 55.4,
+   "input_tokens": 167074,
+   "cached_input_tokens": 132390,
+   "output_tokens": 5184
+  },
+  {
+   "cond": "mini",
+   "doc": "raw_ai/02_incident_report_sonnet_formal",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 1,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 1,
+    "info": 0
+   },
+   "changed_per_1000": 0.0,
+   "identical": true,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 30.2,
+   "input_tokens": 123931,
+   "cached_input_tokens": 96332,
+   "output_tokens": 1922
+  },
+  {
+   "cond": "mini",
+   "doc": "raw_ai/03_pr_description_sonnet_casual",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 0.0,
+   "identical": true,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 33.2,
+   "input_tokens": 147956,
+   "cached_input_tokens": 120587,
+   "output_tokens": 2997
+  },
+  {
+   "cond": "mini",
+   "doc": "raw_ai/03_pr_description_sonnet_default",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 2,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 2,
+    "info": 0
+   },
+   "changed_per_1000": 5.1,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 31.1,
+   "input_tokens": 121878,
+   "cached_input_tokens": 95196,
+   "output_tokens": 2700
+  },
+  {
+   "cond": "mini",
+   "doc": "raw_ai/03_pr_description_sonnet_formal",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 1,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 1,
+    "info": 0
+   },
+   "changed_per_1000": 20.0,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 32.6,
+   "input_tokens": 123854,
+   "cached_input_tokens": 95835,
+   "output_tokens": 2551
+  },
+  {
+   "cond": "mini",
+   "doc": "raw_ai/04_slack_announce_sonnet_casual",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 7.6,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 36.1,
+   "input_tokens": 135532,
+   "cached_input_tokens": 102151,
+   "output_tokens": 2987
+  },
+  {
+   "cond": "mini",
+   "doc": "raw_ai/04_slack_announce_sonnet_default",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 104.8,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 41.3,
+   "input_tokens": 153591,
+   "cached_input_tokens": 124759,
+   "output_tokens": 3444
+  },
+  {
+   "cond": "mini",
+   "doc": "raw_ai/04_slack_announce_sonnet_formal",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 5.4,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 43.1,
+   "input_tokens": 207307,
+   "cached_input_tokens": 168858,
+   "output_tokens": 3389
+  },
+  {
+   "cond": "mini",
+   "doc": "raw_ai/05_comparison_sonnet_casual",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 15.9,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 29.9,
+   "input_tokens": 126231,
+   "cached_input_tokens": 97460,
+   "output_tokens": 2382
+  },
+  {
+   "cond": "mini",
+   "doc": "raw_ai/05_comparison_sonnet_default",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 5.1,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 24.8,
+   "input_tokens": 61894,
+   "cached_input_tokens": 38551,
+   "output_tokens": 2155
+  },
+  {
+   "cond": "mini",
+   "doc": "raw_ai/05_comparison_sonnet_formal",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 26.0,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 34.3,
+   "input_tokens": 121310,
+   "cached_input_tokens": 94223,
+   "output_tokens": 3097
+  },
+  {
+   "cond": "mini",
+   "doc": "raw_ai/06_spec_draft_sonnet_casual",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 15.7,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 41.9,
+   "input_tokens": 193161,
+   "cached_input_tokens": 161589,
+   "output_tokens": 3966
+  },
+  {
+   "cond": "mini",
+   "doc": "raw_ai/06_spec_draft_sonnet_default",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 0.0,
+   "identical": true,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 32.7,
+   "input_tokens": 122281,
+   "cached_input_tokens": 95608,
+   "output_tokens": 2586
+  },
+  {
+   "cond": "mini",
+   "doc": "raw_ai/06_spec_draft_sonnet_formal",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 7.3,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 54.2,
+   "input_tokens": 165185,
+   "cached_input_tokens": 129842,
+   "output_tokens": 4910
+  },
+  {
+   "cond": "mini",
+   "doc": "raw_ai/07_code_review_sonnet_casual",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 1,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 1,
+    "info": 0
+   },
+   "changed_per_1000": 7.8,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 33.3,
+   "input_tokens": 116861,
+   "cached_input_tokens": 92321,
+   "output_tokens": 2648
+  },
+  {
+   "cond": "mini",
+   "doc": "raw_ai/07_code_review_sonnet_default",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 9.3,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 41.8,
+   "input_tokens": 159251,
+   "cached_input_tokens": 130233,
+   "output_tokens": 3535
+  },
+  {
+   "cond": "mini",
+   "doc": "raw_ai/07_code_review_sonnet_formal",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 0.0,
+   "identical": true,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 40.0,
+   "input_tokens": 125233,
+   "cached_input_tokens": 97158,
+   "output_tokens": 3245
+  },
+  {
+   "cond": "mini",
+   "doc": "raw_ai/08_essay_retrospective_sonnet_casual",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 0.0,
+   "identical": true,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 33.2,
+   "input_tokens": 130411,
+   "cached_input_tokens": 100381,
+   "output_tokens": 2770
+  },
+  {
+   "cond": "mini",
+   "doc": "raw_ai/08_essay_retrospective_sonnet_default",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 46.9,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 31.8,
+   "input_tokens": 93739,
+   "cached_input_tokens": 67407,
+   "output_tokens": 2758
+  },
+  {
+   "cond": "mini",
+   "doc": "raw_ai/08_essay_retrospective_sonnet_formal",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 1
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 1
+   },
+   "changed_per_1000": 0.0,
+   "identical": true,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 39.1,
+   "input_tokens": 148042,
+   "cached_input_tokens": 121482,
+   "output_tokens": 2999
+  },
+  {
+   "cond": "mini",
+   "doc": "raw_ai/09_listicle_patterns",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 1,
+    "info": 1
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 8,
+    "info": 5
+   },
+   "changed_per_1000": 392.7,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 72.2,
+   "input_tokens": 260783,
+   "cached_input_tokens": 205801,
+   "output_tokens": 6958
+  },
+  {
+   "cond": "mini",
+   "doc": "raw_ai/10_essay_fragments",
+   "rep": 1,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 2
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 2,
+    "info": 6
+   },
+   "changed_per_1000": 135.3,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 48.0,
+   "input_tokens": 209817,
+   "cached_input_tokens": 170579,
+   "output_tokens": 4048
+  },
+  {
+   "cond": "mini",
+   "doc": "blacklist_ai/01_tech_arch_sonnet_casual",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 104.0,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 45.7,
+   "input_tokens": 119078,
+   "cached_input_tokens": 94227,
+   "output_tokens": 3920
+  },
+  {
+   "cond": "mini",
+   "doc": "blacklist_ai/01_tech_arch_sonnet_default",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 13.3,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 32.5,
+   "input_tokens": 149513,
+   "cached_input_tokens": 121996,
+   "output_tokens": 2739
+  },
+  {
+   "cond": "mini",
+   "doc": "blacklist_ai/01_tech_arch_sonnet_formal",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 58.0,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 57.4,
+   "input_tokens": 132401,
+   "cached_input_tokens": 99539,
+   "output_tokens": 5149
+  },
+  {
+   "cond": "mini",
+   "doc": "blacklist_ai/02_incident_report_sonnet_casual",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 2,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 2,
+    "info": 0
+   },
+   "changed_per_1000": 0.0,
+   "identical": true,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 28.9,
+   "input_tokens": 121573,
+   "cached_input_tokens": 94655,
+   "output_tokens": 2040
+  },
+  {
+   "cond": "mini",
+   "doc": "blacklist_ai/02_incident_report_sonnet_default",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 2,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 2,
+    "info": 0
+   },
+   "changed_per_1000": 11.4,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 27.7,
+   "input_tokens": 92963,
+   "cached_input_tokens": 67107,
+   "output_tokens": 2169
+  },
+  {
+   "cond": "mini",
+   "doc": "blacklist_ai/02_incident_report_sonnet_formal",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 1,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 1,
+    "info": 0
+   },
+   "changed_per_1000": 47.1,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 57.7,
+   "input_tokens": 232115,
+   "cached_input_tokens": 186617,
+   "output_tokens": 5130
+  },
+  {
+   "cond": "mini",
+   "doc": "blacklist_ai/03_pr_description_sonnet_casual",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 2,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 2,
+    "info": 0
+   },
+   "changed_per_1000": 0.0,
+   "identical": true,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 41.2,
+   "input_tokens": 129420,
+   "cached_input_tokens": 98534,
+   "output_tokens": 3462
+  },
+  {
+   "cond": "mini",
+   "doc": "blacklist_ai/03_pr_description_sonnet_default",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 2,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 2,
+    "info": 0
+   },
+   "changed_per_1000": 40.8,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 56.3,
+   "input_tokens": 229491,
+   "cached_input_tokens": 175988,
+   "output_tokens": 4241
+  },
+  {
+   "cond": "mini",
+   "doc": "blacklist_ai/03_pr_description_sonnet_formal",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 58.3,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 50.2,
+   "input_tokens": 123920,
+   "cached_input_tokens": 95860,
+   "output_tokens": 4310
+  },
+  {
+   "cond": "mini",
+   "doc": "blacklist_ai/04_slack_announce_sonnet_casual",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 0.0,
+   "identical": true,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 51.4,
+   "input_tokens": 244933,
+   "cached_input_tokens": 203719,
+   "output_tokens": 3526
+  },
+  {
+   "cond": "mini",
+   "doc": "blacklist_ai/04_slack_announce_sonnet_default",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 7.8,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 41.3,
+   "input_tokens": 160359,
+   "cached_input_tokens": 127643,
+   "output_tokens": 3605
+  },
+  {
+   "cond": "mini",
+   "doc": "blacklist_ai/04_slack_announce_sonnet_formal",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 38.8,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 41.1,
+   "input_tokens": 156823,
+   "cached_input_tokens": 127890,
+   "output_tokens": 3824
+  },
+  {
+   "cond": "mini",
+   "doc": "blacklist_ai/05_comparison_sonnet_casual",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 5.0,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 41.8,
+   "input_tokens": 192047,
+   "cached_input_tokens": 161232,
+   "output_tokens": 3726
+  },
+  {
+   "cond": "mini",
+   "doc": "blacklist_ai/05_comparison_sonnet_default",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 0.0,
+   "identical": true,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 24.4,
+   "input_tokens": 124771,
+   "cached_input_tokens": 96783,
+   "output_tokens": 1990
+  },
+  {
+   "cond": "mini",
+   "doc": "blacklist_ai/05_comparison_sonnet_formal",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 7.0,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 39.5,
+   "input_tokens": 133905,
+   "cached_input_tokens": 101005,
+   "output_tokens": 3617
+  },
+  {
+   "cond": "mini",
+   "doc": "blacklist_ai/06_spec_draft_sonnet_casual",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 24.3,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 44.0,
+   "input_tokens": 194947,
+   "cached_input_tokens": 162171,
+   "output_tokens": 4050
+  },
+  {
+   "cond": "mini",
+   "doc": "blacklist_ai/06_spec_draft_sonnet_default",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 59.4,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 56.1,
+   "input_tokens": 164532,
+   "cached_input_tokens": 128611,
+   "output_tokens": 4856
+  },
+  {
+   "cond": "mini",
+   "doc": "blacklist_ai/06_spec_draft_sonnet_formal",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 51.9,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 57.8,
+   "input_tokens": 159541,
+   "cached_input_tokens": 126328,
+   "output_tokens": 4969
+  },
+  {
+   "cond": "mini",
+   "doc": "blacklist_ai/07_code_review_sonnet_casual",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 1,
+   "counted": 1,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 25.7,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 41.5,
+   "input_tokens": 120549,
+   "cached_input_tokens": 95129,
+   "output_tokens": 3515
+  },
+  {
+   "cond": "mini",
+   "doc": "blacklist_ai/07_code_review_sonnet_default",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 3,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 3,
+    "info": 0
+   },
+   "changed_per_1000": 4.7,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 30.6,
+   "input_tokens": 122378,
+   "cached_input_tokens": 95541,
+   "output_tokens": 2800
+  },
+  {
+   "cond": "mini",
+   "doc": "blacklist_ai/07_code_review_sonnet_formal",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 9.6,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 34.7,
+   "input_tokens": 194863,
+   "cached_input_tokens": 162053,
+   "output_tokens": 3066
+  },
+  {
+   "cond": "mini",
+   "doc": "blacklist_ai/08_essay_retrospective_sonnet_casual",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 1
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 24.3,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 43.3,
+   "input_tokens": 168283,
+   "cached_input_tokens": 131880,
+   "output_tokens": 2869
+  },
+  {
+   "cond": "mini",
+   "doc": "blacklist_ai/08_essay_retrospective_sonnet_default",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 1
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 1
+   },
+   "changed_per_1000": 2.4,
+   "identical": true,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 29.4,
+   "input_tokens": 88879,
+   "cached_input_tokens": 65065,
+   "output_tokens": 2544
+  },
+  {
+   "cond": "mini",
+   "doc": "blacklist_ai/08_essay_retrospective_sonnet_formal",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 5.1,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 32.0,
+   "input_tokens": 116054,
+   "cached_input_tokens": 92257,
+   "output_tokens": 2509
+  },
+  {
+   "cond": "mini",
+   "doc": "edge_cases/edge_kiku_45",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 0.0,
+   "identical": true,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 23.3,
+   "input_tokens": 90423,
+   "cached_input_tokens": 65930,
+   "output_tokens": 1343
+  },
+  {
+   "cond": "mini",
+   "doc": "raw_ai/01_tech_arch_sonnet_casual",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 1
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 1
+   },
+   "changed_per_1000": 0.0,
+   "identical": true,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 42.1,
+   "input_tokens": 62643,
+   "cached_input_tokens": 38654,
+   "output_tokens": 3185
+  },
+  {
+   "cond": "mini",
+   "doc": "raw_ai/01_tech_arch_sonnet_default",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 71.3,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 35.5,
+   "input_tokens": 63046,
+   "cached_input_tokens": 38610,
+   "output_tokens": 3506
+  },
+  {
+   "cond": "mini",
+   "doc": "raw_ai/01_tech_arch_sonnet_formal",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 28.4,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 38.0,
+   "input_tokens": 155218,
+   "cached_input_tokens": 125127,
+   "output_tokens": 2979
+  },
+  {
+   "cond": "mini",
+   "doc": "raw_ai/02_incident_report_sonnet_casual",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 1,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 1,
+    "info": 0
+   },
+   "changed_per_1000": 4.2,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 26.9,
+   "input_tokens": 96608,
+   "cached_input_tokens": 69023,
+   "output_tokens": 1972
+  },
+  {
+   "cond": "mini",
+   "doc": "raw_ai/02_incident_report_sonnet_default",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 2,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 2,
+    "info": 0
+   },
+   "changed_per_1000": 0.0,
+   "identical": true,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 34.4,
+   "input_tokens": 127286,
+   "cached_input_tokens": 98005,
+   "output_tokens": 2730
+  },
+  {
+   "cond": "mini",
+   "doc": "raw_ai/02_incident_report_sonnet_formal",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 1,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 1,
+    "info": 0
+   },
+   "changed_per_1000": 0.0,
+   "identical": true,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 38.2,
+   "input_tokens": 202989,
+   "cached_input_tokens": 169063,
+   "output_tokens": 3375
+  },
+  {
+   "cond": "mini",
+   "doc": "raw_ai/03_pr_description_sonnet_casual",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 0.0,
+   "identical": true,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 39.9,
+   "input_tokens": 159902,
+   "cached_input_tokens": 127149,
+   "output_tokens": 2556
+  },
+  {
+   "cond": "mini",
+   "doc": "raw_ai/03_pr_description_sonnet_default",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 2,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 2,
+    "info": 0
+   },
+   "changed_per_1000": 5.1,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 29.9,
+   "input_tokens": 121438,
+   "cached_input_tokens": 94621,
+   "output_tokens": 2713
+  },
+  {
+   "cond": "mini",
+   "doc": "raw_ai/03_pr_description_sonnet_formal",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 1,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 1,
+    "info": 0
+   },
+   "changed_per_1000": 34.3,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 33.1,
+   "input_tokens": 151803,
+   "cached_input_tokens": 124800,
+   "output_tokens": 2922
+  },
+  {
+   "cond": "mini",
+   "doc": "raw_ai/04_slack_announce_sonnet_casual",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 10.1,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 40.2,
+   "input_tokens": 154357,
+   "cached_input_tokens": 125615,
+   "output_tokens": 3072
+  },
+  {
+   "cond": "mini",
+   "doc": "raw_ai/04_slack_announce_sonnet_default",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 106.6,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 41.9,
+   "input_tokens": 162207,
+   "cached_input_tokens": 129465,
+   "output_tokens": 3262
+  },
+  {
+   "cond": "mini",
+   "doc": "raw_ai/04_slack_announce_sonnet_formal",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 0.0,
+   "identical": true,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 29.5,
+   "input_tokens": 160515,
+   "cached_input_tokens": 129236,
+   "output_tokens": 2126
+  },
+  {
+   "cond": "mini",
+   "doc": "raw_ai/05_comparison_sonnet_casual",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 15.9,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 30.9,
+   "input_tokens": 89604,
+   "cached_input_tokens": 65401,
+   "output_tokens": 2973
+  },
+  {
+   "cond": "mini",
+   "doc": "raw_ai/05_comparison_sonnet_default",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 2.5,
+   "identical": true,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 25.5,
+   "input_tokens": 114855,
+   "cached_input_tokens": 91437,
+   "output_tokens": 2116
+  },
+  {
+   "cond": "mini",
+   "doc": "raw_ai/05_comparison_sonnet_formal",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 10.4,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 37.3,
+   "input_tokens": 91613,
+   "cached_input_tokens": 66452,
+   "output_tokens": 3412
+  },
+  {
+   "cond": "mini",
+   "doc": "raw_ai/06_spec_draft_sonnet_casual",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 20.1,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 59.0,
+   "input_tokens": 185543,
+   "cached_input_tokens": 157471,
+   "output_tokens": 4869
+  },
+  {
+   "cond": "mini",
+   "doc": "raw_ai/06_spec_draft_sonnet_default",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 0.0,
+   "identical": true,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 32.9,
+   "input_tokens": 130039,
+   "cached_input_tokens": 100328,
+   "output_tokens": 2540
+  },
+  {
+   "cond": "mini",
+   "doc": "raw_ai/06_spec_draft_sonnet_formal",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 9.7,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 36.2,
+   "input_tokens": 62824,
+   "cached_input_tokens": 38573,
+   "output_tokens": 3094
+  },
+  {
+   "cond": "mini",
+   "doc": "raw_ai/07_code_review_sonnet_casual",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 1,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 1,
+    "info": 0
+   },
+   "changed_per_1000": 7.8,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 44.4,
+   "input_tokens": 240056,
+   "cached_input_tokens": 202747,
+   "output_tokens": 3432
+  },
+  {
+   "cond": "mini",
+   "doc": "raw_ai/07_code_review_sonnet_default",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 23.3,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 60.3,
+   "input_tokens": 291082,
+   "cached_input_tokens": 242633,
+   "output_tokens": 4413
+  },
+  {
+   "cond": "mini",
+   "doc": "raw_ai/07_code_review_sonnet_formal",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 10.8,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 52.1,
+   "input_tokens": 92868,
+   "cached_input_tokens": 67004,
+   "output_tokens": 4852
+  },
+  {
+   "cond": "mini",
+   "doc": "raw_ai/08_essay_retrospective_sonnet_casual",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 15.7,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 49.1,
+   "input_tokens": 251096,
+   "cached_input_tokens": 209703,
+   "output_tokens": 3550
+  },
+  {
+   "cond": "mini",
+   "doc": "raw_ai/08_essay_retrospective_sonnet_default",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 33.9,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 41.3,
+   "input_tokens": 216552,
+   "cached_input_tokens": 155829,
+   "output_tokens": 3780
+  },
+  {
+   "cond": "mini",
+   "doc": "raw_ai/08_essay_retrospective_sonnet_formal",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 1
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 1
+   },
+   "changed_per_1000": 0.0,
+   "identical": true,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 51.3,
+   "input_tokens": 172581,
+   "cached_input_tokens": 134023,
+   "output_tokens": 3611
+  },
+  {
+   "cond": "mini",
+   "doc": "raw_ai/09_listicle_patterns",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 1,
+    "info": 1
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 8,
+    "info": 5
+   },
+   "changed_per_1000": 355.9,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 80.8,
+   "input_tokens": 200149,
+   "cached_input_tokens": 146169,
+   "output_tokens": 7094
+  },
+  {
+   "cond": "mini",
+   "doc": "raw_ai/10_essay_fragments",
+   "rep": 2,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 3
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 2,
+    "info": 6
+   },
+   "changed_per_1000": 140.1,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 65.9,
+   "input_tokens": 177913,
+   "cached_input_tokens": 122996,
+   "output_tokens": 5334
+  },
+  {
+   "cond": "mini",
+   "doc": "blacklist_ai/01_tech_arch_sonnet_casual",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 80.4,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 50.5,
+   "input_tokens": 160365,
+   "cached_input_tokens": 131276,
+   "output_tokens": 4293
+  },
+  {
+   "cond": "mini",
+   "doc": "blacklist_ai/01_tech_arch_sonnet_default",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 7.6,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 39.8,
+   "input_tokens": 151424,
+   "cached_input_tokens": 123214,
+   "output_tokens": 3165
+  },
+  {
+   "cond": "mini",
+   "doc": "blacklist_ai/01_tech_arch_sonnet_formal",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 50.0,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 53.9,
+   "input_tokens": 198488,
+   "cached_input_tokens": 164878,
+   "output_tokens": 4123
+  },
+  {
+   "cond": "mini",
+   "doc": "blacklist_ai/02_incident_report_sonnet_casual",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 2,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 2,
+    "info": 0
+   },
+   "changed_per_1000": 16.0,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 26.6,
+   "input_tokens": 121289,
+   "cached_input_tokens": 94420,
+   "output_tokens": 2156
+  },
+  {
+   "cond": "mini",
+   "doc": "blacklist_ai/02_incident_report_sonnet_default",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 2,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 2,
+    "info": 0
+   },
+   "changed_per_1000": 29.6,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 36.0,
+   "input_tokens": 155663,
+   "cached_input_tokens": 127525,
+   "output_tokens": 2455
+  },
+  {
+   "cond": "mini",
+   "doc": "blacklist_ai/02_incident_report_sonnet_formal",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 1,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 1,
+    "info": 0
+   },
+   "changed_per_1000": 30.8,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 54.0,
+   "input_tokens": 271548,
+   "cached_input_tokens": 229242,
+   "output_tokens": 4633
+  },
+  {
+   "cond": "mini",
+   "doc": "blacklist_ai/03_pr_description_sonnet_casual",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 2,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 2,
+    "info": 0
+   },
+   "changed_per_1000": 66.5,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 33.4,
+   "input_tokens": 62873,
+   "cached_input_tokens": 38624,
+   "output_tokens": 3072
+  },
+  {
+   "cond": "mini",
+   "doc": "blacklist_ai/03_pr_description_sonnet_default",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 2,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 2,
+    "info": 0
+   },
+   "changed_per_1000": 18.1,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 46.1,
+   "input_tokens": 163424,
+   "cached_input_tokens": 129706,
+   "output_tokens": 4454
+  },
+  {
+   "cond": "mini",
+   "doc": "blacklist_ai/03_pr_description_sonnet_formal",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 36.1,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 43.5,
+   "input_tokens": 154628,
+   "cached_input_tokens": 126290,
+   "output_tokens": 4185
+  },
+  {
+   "cond": "mini",
+   "doc": "blacklist_ai/04_slack_announce_sonnet_casual",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 0.0,
+   "identical": true,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 43.9,
+   "input_tokens": 261166,
+   "cached_input_tokens": 216687,
+   "output_tokens": 3178
+  },
+  {
+   "cond": "mini",
+   "doc": "blacklist_ai/04_slack_announce_sonnet_default",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 0.0,
+   "identical": true,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 31.7,
+   "input_tokens": 118996,
+   "cached_input_tokens": 93796,
+   "output_tokens": 2387
+  },
+  {
+   "cond": "mini",
+   "doc": "blacklist_ai/04_slack_announce_sonnet_formal",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 47.8,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 35.6,
+   "input_tokens": 89961,
+   "cached_input_tokens": 65900,
+   "output_tokens": 3160
+  },
+  {
+   "cond": "mini",
+   "doc": "blacklist_ai/05_comparison_sonnet_casual",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 5.0,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 39.4,
+   "input_tokens": 154612,
+   "cached_input_tokens": 125081,
+   "output_tokens": 3298
+  },
+  {
+   "cond": "mini",
+   "doc": "blacklist_ai/05_comparison_sonnet_default",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 0.0,
+   "identical": true,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 42.3,
+   "input_tokens": 196774,
+   "cached_input_tokens": 162792,
+   "output_tokens": 3274
+  },
+  {
+   "cond": "mini",
+   "doc": "blacklist_ai/05_comparison_sonnet_formal",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 96.2,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 64.4,
+   "input_tokens": 251116,
+   "cached_input_tokens": 194684,
+   "output_tokens": 5635
+  },
+  {
+   "cond": "mini",
+   "doc": "blacklist_ai/06_spec_draft_sonnet_casual",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 13.1,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 43.4,
+   "input_tokens": 186054,
+   "cached_input_tokens": 157332,
+   "output_tokens": 3496
+  },
+  {
+   "cond": "mini",
+   "doc": "blacklist_ai/06_spec_draft_sonnet_default",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 14.9,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 38.4,
+   "input_tokens": 118857,
+   "cached_input_tokens": 94130,
+   "output_tokens": 3186
+  },
+  {
+   "cond": "mini",
+   "doc": "blacklist_ai/06_spec_draft_sonnet_formal",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 0.0,
+   "identical": true,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 36.3,
+   "input_tokens": 153525,
+   "cached_input_tokens": 125164,
+   "output_tokens": 2888
+  },
+  {
+   "cond": "mini",
+   "doc": "blacklist_ai/07_code_review_sonnet_casual",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 1,
+   "counted": 1,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 23.9,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 41.6,
+   "input_tokens": 154098,
+   "cached_input_tokens": 126577,
+   "output_tokens": 3126
+  },
+  {
+   "cond": "mini",
+   "doc": "blacklist_ai/07_code_review_sonnet_default",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 3,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 3,
+    "info": 0
+   },
+   "changed_per_1000": 0.0,
+   "identical": true,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 24.9,
+   "input_tokens": 125180,
+   "cached_input_tokens": 97071,
+   "output_tokens": 1876
+  },
+  {
+   "cond": "mini",
+   "doc": "blacklist_ai/07_code_review_sonnet_formal",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 83.1,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 48.4,
+   "input_tokens": 190555,
+   "cached_input_tokens": 157682,
+   "output_tokens": 4420
+  },
+  {
+   "cond": "mini",
+   "doc": "blacklist_ai/08_essay_retrospective_sonnet_casual",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 1
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 27.0,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 54.3,
+   "input_tokens": 232874,
+   "cached_input_tokens": 186244,
+   "output_tokens": 4111
+  },
+  {
+   "cond": "mini",
+   "doc": "blacklist_ai/08_essay_retrospective_sonnet_default",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 1
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 1
+   },
+   "changed_per_1000": 0.0,
+   "identical": true,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 20.1,
+   "input_tokens": 61234,
+   "cached_input_tokens": 38584,
+   "output_tokens": 1693
+  },
+  {
+   "cond": "mini",
+   "doc": "blacklist_ai/08_essay_retrospective_sonnet_formal",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 5.1,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 32.4,
+   "input_tokens": 116231,
+   "cached_input_tokens": 92214,
+   "output_tokens": 2718
+  },
+  {
+   "cond": "mini",
+   "doc": "edge_cases/edge_kiku_45",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 0.0,
+   "identical": true,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 21.2,
+   "input_tokens": 119081,
+   "cached_input_tokens": 94276,
+   "output_tokens": 1514
+  },
+  {
+   "cond": "mini",
+   "doc": "raw_ai/01_tech_arch_sonnet_casual",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 1
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 1
+   },
+   "changed_per_1000": 8.1,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 47.2,
+   "input_tokens": 127378,
+   "cached_input_tokens": 98414,
+   "output_tokens": 4144
+  },
+  {
+   "cond": "mini",
+   "doc": "raw_ai/01_tech_arch_sonnet_default",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 54.0,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 35.2,
+   "input_tokens": 90061,
+   "cached_input_tokens": 65683,
+   "output_tokens": 3339
+  },
+  {
+   "cond": "mini",
+   "doc": "raw_ai/01_tech_arch_sonnet_formal",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 19.0,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 40.0,
+   "input_tokens": 123906,
+   "cached_input_tokens": 96133,
+   "output_tokens": 3227
+  },
+  {
+   "cond": "mini",
+   "doc": "raw_ai/02_incident_report_sonnet_casual",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 1,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 1,
+    "info": 0
+   },
+   "changed_per_1000": 33.3,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 67.8,
+   "input_tokens": 397722,
+   "cached_input_tokens": 327950,
+   "output_tokens": 4762
+  },
+  {
+   "cond": "mini",
+   "doc": "raw_ai/02_incident_report_sonnet_default",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 2,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 2,
+    "info": 0
+   },
+   "changed_per_1000": 41.5,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 51.5,
+   "input_tokens": 188963,
+   "cached_input_tokens": 158977,
+   "output_tokens": 4315
+  },
+  {
+   "cond": "mini",
+   "doc": "raw_ai/02_incident_report_sonnet_formal",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 1,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 1,
+    "info": 0
+   },
+   "changed_per_1000": 2.4,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 46.7,
+   "input_tokens": 190164,
+   "cached_input_tokens": 157345,
+   "output_tokens": 3045
+  },
+  {
+   "cond": "mini",
+   "doc": "raw_ai/03_pr_description_sonnet_casual",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 2.7,
+   "identical": true,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 43.8,
+   "input_tokens": 162094,
+   "cached_input_tokens": 129733,
+   "output_tokens": 2685
+  },
+  {
+   "cond": "mini",
+   "doc": "raw_ai/03_pr_description_sonnet_default",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 2,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 2,
+    "info": 0
+   },
+   "changed_per_1000": 5.1,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 38.8,
+   "input_tokens": 152837,
+   "cached_input_tokens": 125876,
+   "output_tokens": 2862
+  },
+  {
+   "cond": "mini",
+   "doc": "raw_ai/03_pr_description_sonnet_formal",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 1,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 1,
+    "info": 0
+   },
+   "changed_per_1000": 14.3,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 35.6,
+   "input_tokens": 151661,
+   "cached_input_tokens": 124864,
+   "output_tokens": 2703
+  },
+  {
+   "cond": "mini",
+   "doc": "raw_ai/04_slack_announce_sonnet_casual",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 10.1,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 34.2,
+   "input_tokens": 121053,
+   "cached_input_tokens": 95600,
+   "output_tokens": 2838
+  },
+  {
+   "cond": "mini",
+   "doc": "raw_ai/04_slack_announce_sonnet_default",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 103.0,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 43.1,
+   "input_tokens": 139051,
+   "cached_input_tokens": 103808,
+   "output_tokens": 3849
+  },
+  {
+   "cond": "mini",
+   "doc": "raw_ai/04_slack_announce_sonnet_formal",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 0.0,
+   "identical": true,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 25.8,
+   "input_tokens": 123180,
+   "cached_input_tokens": 96052,
+   "output_tokens": 2050
+  },
+  {
+   "cond": "mini",
+   "doc": "raw_ai/05_comparison_sonnet_casual",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 15.9,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 51.0,
+   "input_tokens": 246081,
+   "cached_input_tokens": 205125,
+   "output_tokens": 4629
+  },
+  {
+   "cond": "mini",
+   "doc": "raw_ai/05_comparison_sonnet_default",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 5.1,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 26.9,
+   "input_tokens": 88445,
+   "cached_input_tokens": 64874,
+   "output_tokens": 2361
+  },
+  {
+   "cond": "mini",
+   "doc": "raw_ai/05_comparison_sonnet_formal",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 13.0,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 31.4,
+   "input_tokens": 93364,
+   "cached_input_tokens": 67314,
+   "output_tokens": 2718
+  },
+  {
+   "cond": "mini",
+   "doc": "raw_ai/06_spec_draft_sonnet_casual",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 15.7,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 47.7,
+   "input_tokens": 157569,
+   "cached_input_tokens": 129328,
+   "output_tokens": 3693
+  },
+  {
+   "cond": "mini",
+   "doc": "raw_ai/06_spec_draft_sonnet_default",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 0.0,
+   "identical": true,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 35.5,
+   "input_tokens": 122643,
+   "cached_input_tokens": 95880,
+   "output_tokens": 2404
+  },
+  {
+   "cond": "mini",
+   "doc": "raw_ai/06_spec_draft_sonnet_formal",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 2.4,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 36.9,
+   "input_tokens": 123120,
+   "cached_input_tokens": 95382,
+   "output_tokens": 3063
+  },
+  {
+   "cond": "mini",
+   "doc": "raw_ai/07_code_review_sonnet_casual",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 1,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 1,
+    "info": 0
+   },
+   "changed_per_1000": 18.2,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 34.6,
+   "input_tokens": 123439,
+   "cached_input_tokens": 95444,
+   "output_tokens": 2997
+  },
+  {
+   "cond": "mini",
+   "doc": "raw_ai/07_code_review_sonnet_default",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 1,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 25.6,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 28.1,
+   "input_tokens": 62253,
+   "cached_input_tokens": 38534,
+   "output_tokens": 2712
+  },
+  {
+   "cond": "mini",
+   "doc": "raw_ai/07_code_review_sonnet_formal",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 12.9,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 38.1,
+   "input_tokens": 63282,
+   "cached_input_tokens": 38602,
+   "output_tokens": 3729
+  },
+  {
+   "cond": "mini",
+   "doc": "raw_ai/08_essay_retrospective_sonnet_casual",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 18.3,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 37.6,
+   "input_tokens": 124593,
+   "cached_input_tokens": 96420,
+   "output_tokens": 3095
+  },
+  {
+   "cond": "mini",
+   "doc": "raw_ai/08_essay_retrospective_sonnet_default",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 0
+   },
+   "changed_per_1000": 41.7,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 36.4,
+   "input_tokens": 158977,
+   "cached_input_tokens": 128218,
+   "output_tokens": 3010
+  },
+  {
+   "cond": "mini",
+   "doc": "raw_ai/08_essay_retrospective_sonnet_formal",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 1
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 0,
+    "info": 1
+   },
+   "changed_per_1000": 2.3,
+   "identical": true,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 36.6,
+   "input_tokens": 118254,
+   "cached_input_tokens": 93650,
+   "output_tokens": 3300
+  },
+  {
+   "cond": "mini",
+   "doc": "raw_ai/09_listicle_patterns",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 1,
+    "info": 1
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 8,
+    "info": 5
+   },
+   "changed_per_1000": 347.5,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 82.9,
+   "input_tokens": 191828,
+   "cached_input_tokens": 141914,
+   "output_tokens": 7640
+  },
+  {
+   "cond": "mini",
+   "doc": "raw_ai/10_essay_fragments",
+   "rep": 3,
+   "status": "ok",
+   "meaning_risk": 0,
+   "counted": 0,
+   "lint_after": {
+    "error": 0,
+    "warn": 0,
+    "info": 2
+   },
+   "lint_before": {
+    "error": 0,
+    "warn": 2,
+    "info": 6
+   },
+   "changed_per_1000": 130.4,
+   "identical": false,
+   "check_ran": true,
+   "status_line": true,
+   "wall_seconds": 63.8,
+   "input_tokens": 296265,
+   "cached_input_tokens": 243769,
+   "output_tokens": 5250
+  }
+ ],
+ "risks": [
+  {
+   "cond": "main",
+   "doc": "blacklist_ai/07_code_review_sonnet_casual",
+   "rep": 1,
+   "kind": "sentence_type",
+   "subkind": "marks",
+   "counted": true,
+   "old_line": 3,
+   "new_line": 3,
+   "old": "次に決済APIの呼び出しは `PaymentGateway` というインターフェースの裏に隠し、サービスからはHTTPの詳細が見えないようにします。",
+   "new": "次に決済APIの呼び出しは `PaymentGateway` というインターフェースの裏に隠し、サービスからはHTTPの詳細が見えないようにしてください。"
+  },
+  {
+   "cond": "mini",
+   "doc": "blacklist_ai/07_code_review_sonnet_casual",
+   "rep": 1,
+   "kind": "sentence_type",
+   "subkind": "marks",
+   "counted": true,
+   "old_line": 3,
+   "new_line": 3,
+   "old": "次に決済APIの呼び出しは `PaymentGateway` というインターフェースの裏に隠し、サービスからはHTTPの詳細が見えないようにします。",
+   "new": "次に決済APIは `PaymentGateway` というインターフェースを通して呼び出す形にし、サービスからはHTTPの詳細が見えないようにしてください。"
+  },
+  {
+   "cond": "mini",
+   "doc": "blacklist_ai/07_code_review_sonnet_casual",
+   "rep": 2,
+   "kind": "sentence_type",
+   "subkind": "marks",
+   "counted": true,
+   "old_line": 3,
+   "new_line": 3,
+   "old": "次に決済APIの呼び出しは `PaymentGateway` というインターフェースの裏に隠し、サービスからはHTTPの詳細が見えないようにします。",
+   "new": "次に決済APIの呼び出しは `PaymentGateway` というインターフェースの裏に隠し、サービスからはHTTPの詳細が見えないようにしてください。"
+  },
+  {
+   "cond": "mini",
+   "doc": "blacklist_ai/07_code_review_sonnet_casual",
+   "rep": 3,
+   "kind": "sentence_type",
+   "subkind": "marks",
+   "counted": true,
+   "old_line": 3,
+   "new_line": 3,
+   "old": "次に決済APIの呼び出しは `PaymentGateway` というインターフェースの裏に隠し、サービスからはHTTPの詳細が見えないようにします。",
+   "new": "次に決済APIの呼び出しは `PaymentGateway` というインターフェースの裏に隠し、サービスからはHTTPの詳細が見えないようにしてください。"
+  }
+ ]
+}
