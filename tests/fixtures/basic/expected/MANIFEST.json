@@ -4,18 +4,18 @@
   "version": "1.0.0",
   "source": {
     "repository": "nanaism/yomiyasu",
-    "tag": "v2.4.0",
-    "commit": "ae258d7a57b335673e30b88a018ae08d4f72c449"
+    "tag": "v2.5.0",
+    "commit": "29d67ccb05e370b5958d72920a9cd1aa829dee80"
   },
   "output_dir": "skills/yomiyasu-mini",
   "tables": [
     {
       "path": "extract/table.json",
-      "sha256": "49e6c7be75b3b730e9f01713dea6bd0420f0bfc6c7e8f944289518159a71e1dd"
+      "sha256": "96e0009922aac8f242b355d6706455bf7fe19de32a715b0e216fd9d27c856e90"
     },
     {
       "path": "extract/scripts.json",
-      "sha256": "078385d8d24a580e6e85559314fddfbfc8e5611d8d78f6f1a0a94a0f6360bf33"
+      "sha256": "c861869af8f6829e851c699b275188235d3e537ac17b69eaed56ab4fb2ab2104"
     }
   ],
   "files": [
@@ -29,7 +29,7 @@
       "path": "skills/yomiyasu-mini/SKILL.md",
       "bytes": 11893,
       "chars": 4295,
-      "sha256": "5ba40e1a220251efefda843795df05fcd245bb024ac9738b09bb3763756dfe34"
+      "sha256": "8a5c75ad2d29a66e486b2c4008df7abb59c40c00b9a079822ceb9c0adb904883"
     },
     {
       "path": "skills/yomiyasu-mini/UNICODE-LICENSE.txt",
@@ -47,19 +47,19 @@
       "path": "skills/yomiyasu-mini/scripts/mini_check.py",
       "bytes": 3495,
       "chars": 3221,
-      "sha256": "415799665f8ca899f12686a6afca9b4d79568800a853aa05b8fd3602264d578e"
+      "sha256": "30cce1cc3c20348f9b6c66da1ca7e1e902c5dddac8099ca88f0cd0162d93e6cb"
     },
     {
       "path": "skills/yomiyasu-mini/scripts/mini_diff_1.py",
       "bytes": 1574,
       "chars": 1478,
-      "sha256": "c85b91148b6538b9d79c8d7e7fc563b5e60634ce264d9ddcb63004bd20a79ceb"
+      "sha256": "9241052972bd2ff188d26183d767fdf358dccfe2869a23d81c55b98da97f76fb"
     },
     {
       "path": "skills/yomiyasu-mini/scripts/mini_diff_2.py",
       "bytes": 1183,
       "chars": 937,
-      "sha256": "8707653153e865f9ef054b0a4bdd615d3f334306e2430353665774b84f9b2d67"
+      "sha256": "a073ae017405b89c1a1c7500a736de36b06028af82818f1a0f115f880e57f6e7"
     }
   ],
   "provenance": [
@@ -72,7 +72,7 @@
           {
             "source": "skills/yomiyasu/SKILL.md",
             "region": "front_matter",
-            "sha256": "925b64a800a90d4406bde137c50623946449b5096a57d745712d8b9efef8e8b8"
+            "sha256": "a740a73a51d95c11f68dd66e867c668809f12e5c42a42d47190449d79a109b59"
           }
         ],
         "text_sha256": "9f0fb879fc8608657429c50c8bda111fd72020b9ea46b9c4aa07664d6b868581"
@@ -230,7 +230,16 @@
           "count": 1
         }
       ],
-      "sha256": "f9a3b65efba02fa5fc6e9cc79deb13e74f060270577071d0e72877cbd1972bea"
+      "transforms": {
+        "drop_lines": [
+          {
+            "pattern": "^コード、関数、クラス、サービスの働き",
+            "count": 1
+          }
+        ],
+        "heading_shift": 0
+      },
+      "sha256": "aef69adec930885b30f3dc77364668dda0bd96881a8ebb42791cab1538346d92"
     },
     {
       "output": "SKILL.md",
@@ -270,7 +279,7 @@
               "2. 実行手順"
             ]
           },
-          "sha256": "296b196d51fe7553476dfb325541981029711a63f247a201cfbfced39d57596b"
+          "sha256": "bb6cbc9050b223095beb7ab1218a75fb9d84d519f1d3bd77d5647c1928300d81"
         }
       ],
       "text_sha256": "8c84dabdf95159725b6f152204a90c00a0e861f0c1a322e381a6bd8495b92b60"

@@ -2,7 +2,7 @@
 """Agent Builder に上げる .zip を、配る一式（skills/yomiyasu-mini/）から作る。
 
 使い方:
-  python3 -B tools/build_zip.py [--root <リポジトリ>] --out dist/yomiyasu-mini-1.1.0.zip
+  python3 -B tools/build_zip.py [--root <リポジトリ>] --out dist/yomiyasu-mini-1.2.0.zip
 
 - 入れるのは MANIFEST.json の files のうち、output_dir（skills/yomiyasu-mini/）の下にあるものだけ。
   フォルダにほかのファイル（__pycache__、.DS_Store を含む）があるか、中身が MANIFEST.json の sha256 と違えば止める。

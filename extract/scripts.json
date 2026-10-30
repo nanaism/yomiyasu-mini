@@ -1,11 +1,11 @@
 {
   "format": "yomiyasu-mini-extract-scripts",
   "format_version": 1,
-  "version": "1.1.0",
+  "version": "1.2.0",
   "source": {
     "repository": "nanaism/yomiyasu",
-    "tag": "v2.4.0",
-    "commit": "ae258d7a57b335673e30b88a018ae08d4f72c449",
+    "tag": "v2.5.0",
+    "commit": "29d67ccb05e370b5958d72920a9cd1aa829dee80",
     "skill_dir": "skills/yomiyasu"
   },
   "modules": [
@@ -3935,7 +3935,7 @@
       "module": "diff",
       "name": "diff",
       "stmts": 1,
-      "sha256": "92b37d61582baa70c6183cebed5abf3e25ba37ef704953222dd18c87c60be401",
+      "sha256": "fe466b05df92ee38de17ea93143ac883e149409dbbbbe8e381a062818e8c6c62",
       "reason": "check() が、diff() の type_changes と meaning_risks の作り方を写している。変わったら check-cli を見直す"
     }
   ]

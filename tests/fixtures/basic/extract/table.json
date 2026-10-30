@@ -4,8 +4,8 @@
   "version": "1.0.0",
   "source": {
     "repository": "nanaism/yomiyasu",
-    "tag": "v2.4.0",
-    "commit": "ae258d7a57b335673e30b88a018ae08d4f72c449",
+    "tag": "v2.5.0",
+    "commit": "29d67ccb05e370b5958d72920a9cd1aa829dee80",
     "skill_dir": "skills/yomiyasu"
   },
   "output_dir": "skills/yomiyasu-mini",
@@ -21,7 +21,7 @@
         {
           "source": "skills/yomiyasu/SKILL.md",
           "region": "front_matter",
-          "sha256": "925b64a800a90d4406bde137c50623946449b5096a57d745712d8b9efef8e8b8"
+          "sha256": "a740a73a51d95c11f68dd66e867c668809f12e5c42a42d47190449d79a109b59"
         }
       ],
       "text_sha256": "9f0fb879fc8608657429c50c8bda111fd72020b9ea46b9c4aa07664d6b868581"
@@ -170,7 +170,16 @@
               "count": 1
             }
           ],
-          "sha256": "f9a3b65efba02fa5fc6e9cc79deb13e74f060270577071d0e72877cbd1972bea"
+          "transforms": {
+            "drop_lines": [
+              {
+                "pattern": "^コード、関数、クラス、サービスの働き",
+                "count": 1
+              }
+            ],
+            "heading_shift": 0
+          },
+          "sha256": "aef69adec930885b30f3dc77364668dda0bd96881a8ebb42791cab1538346d92"
         },
         {
           "kind": "verbatim",
@@ -206,7 +215,7 @@
                   "2. 実行手順"
                 ]
               },
-              "sha256": "296b196d51fe7553476dfb325541981029711a63f247a201cfbfced39d57596b"
+              "sha256": "bb6cbc9050b223095beb7ab1218a75fb9d84d519f1d3bd77d5647c1928300d81"
             }
           ],
           "text_sha256": "8c84dabdf95159725b6f152204a90c00a0e861f0c1a322e381a6bd8495b92b60"

@@ -1,11 +1,11 @@
 {
   "format": "yomiyasu-mini-extract",
   "format_version": 1,
-  "version": "1.1.0",
+  "version": "1.2.0",
   "source": {
     "repository": "nanaism/yomiyasu",
-    "tag": "v2.4.0",
-    "commit": "ae258d7a57b335673e30b88a018ae08d4f72c449",
+    "tag": "v2.5.0",
+    "commit": "29d67ccb05e370b5958d72920a9cd1aa829dee80",
     "skill_dir": "skills/yomiyasu"
   },
   "output_dir": "skills/yomiyasu-mini",
@@ -22,7 +22,7 @@
         {
           "source": "skills/yomiyasu/SKILL.md",
           "region": "front_matter",
-          "sha256": "925b64a800a90d4406bde137c50623946449b5096a57d745712d8b9efef8e8b8"
+          "sha256": "a740a73a51d95c11f68dd66e867c668809f12e5c42a42d47190449d79a109b59"
         }
       ]
     },
@@ -63,9 +63,10 @@
           "kind": "own",
           "id": "intro",
           "text": "extract/own/intro.md",
-          "text_sha256": "cd921c9bdf12513e2511603a9c245f8f253698837f0f7640c65891e9980314d1",
+          "text_sha256": "6aedb5657f24c4d2f1ce37e817e02b83f212a2706aff65ced2d720a19d88c273",
           "reason": "mini の範囲、参照ファイルの場所、名前だけで呼ばれたときの対象の決め方（本体 L11 を Copilot などに合わせて書き直したもの）、検査を実行できなかったときの扱い",
-          "class": "own"
+          "class": "own",
+          "note": "1.2.0 で SKILL.md の上限に収めるため、検査を実行できなかったときの1文（Step 3 と出力フォーマットと同じ中身）を外した"
         },
         {
           "kind": "verbatim_edited",
@@ -199,7 +200,7 @@
                 ]
               },
               "scope": "own",
-              "sha256": "2105eba43dde1c51ed14737dff170f4145a2f9f57cd68f46bef517f2bb4dd0d4"
+              "sha256": "92b03d87dfb9b2f6597edf81932c98761882e71eb573a6ddbe6cc35c6a42a5de"
             }
           ],
           "class": "B",
@@ -209,7 +210,7 @@
           "kind": "rewritten",
           "id": "logic",
           "text": "extract/rewritten/logic.md",
-          "text_sha256": "0298309765dfaab2bf5aa9cc34002ce4072d2ef9205af04e72f865d3e37d4900",
+          "text_sha256": "a3ccdf55dee107bd84e78654340e41c1b08f62fb3c3750e2c0c3dbd29092c68b",
           "from": [
             {
               "source": "skills/yomiyasu/SKILL.md",
@@ -222,7 +223,7 @@
                 ]
               },
               "scope": "own",
-              "sha256": "2105eba43dde1c51ed14737dff170f4145a2f9f57cd68f46bef517f2bb4dd0d4"
+              "sha256": "92b03d87dfb9b2f6597edf81932c98761882e71eb573a6ddbe6cc35c6a42a5de"
             }
           ],
           "class": "B",
@@ -295,7 +296,7 @@
           "kind": "rewritten",
           "id": "subject",
           "text": "extract/rewritten/subject.md",
-          "text_sha256": "790edac80f337a0a2b23dc1be936b41f011322ddb325a7cb755bfb42dc1be87c",
+          "text_sha256": "6a90f2ef1b26fccd9a2673b750de42c0190f378fecaa63528b622277d684f0c0",
           "from": [
             {
               "source": "skills/yomiyasu/SKILL.md",
@@ -312,7 +313,7 @@
             }
           ],
           "class": "B",
-          "note": "L99、L101、L102 を短くした。L99、L101-105 の全文は rules.md の r-subject。v2.2.0 で L99 に足された、他動詞を読点で並べて止める文の1文も r-subject にだけ置いた（本体の推敲の前後の比べで、直せた件数が 4/6 のまま変わらなかったため）",
+          "note": "L99、L101、L102 を短くした。L99、L101-105 の全文は rules.md の r-subject。v2.2.0 で L99 に足された、他動詞を読点で並べて止める文の1文も r-subject にだけ置いた（本体の推敲の前後の比べで、直せた件数が 4/6 のまま変わらなかったため）。1.2.0 で SKILL.md の上限に収めるため、rules.md を指す最後の1文を外した（冒頭の説明が、細部は rules.md にあると書いている）",
           "drop_with": [
             "r-subject",
             "r-gemini-head",
@@ -334,10 +335,15 @@
           "selector": {
             "scope": "own"
           },
-          "sha256": "f9a3b65efba02fa5fc6e9cc79deb13e74f060270577071d0e72877cbd1972bea",
+          "sha256": "aef69adec930885b30f3dc77364668dda0bd96881a8ebb42791cab1538346d92",
           "transforms": {
             "heading_shift": 0,
-            "drop_lines": []
+            "drop_lines": [
+              {
+                "pattern": "^コード、関数、クラス、サービスの働き",
+                "count": 1
+              }
+            ]
           },
           "substitutions": [
             {
@@ -347,7 +353,33 @@
             }
           ],
           "class": "A*",
-          "note": "A*。mini に写さない本体の参照ファイルへの括弧だけを外す"
+          "note": "A*。mini に写さない本体の参照ファイルへの括弧だけを外す。v2.5.0 のコードやシステムを説明する文書の段落は外し、短くした文を personify-code に、全文を rules.md の r-personify に置いた"
+        },
+        {
+          "kind": "rewritten",
+          "id": "personify-code",
+          "text": "extract/rewritten/personify-code.md",
+          "text_sha256": "dcfc65e362f9d87ca04dcbec9fadc5bea70bfa295fdc5c571f0484554663522f",
+          "from": [
+            {
+              "source": "skills/yomiyasu/SKILL.md",
+              "heading": {
+                "level": 3,
+                "text": "擬人化の解消",
+                "parents": [
+                  "yomiyasu",
+                  "1. 基本原則"
+                ]
+              },
+              "scope": "own",
+              "sha256": "aef69adec930885b30f3dc77364668dda0bd96881a8ebb42791cab1538346d92"
+            }
+          ],
+          "class": "B",
+          "note": "v2.5.0 で足されたコードやシステムを説明する文書の段落を短くした。全文は rules.md の r-personify",
+          "drop_with": [
+            "r-personify"
+          ]
         },
         {
           "kind": "verbatim_edited",
@@ -434,7 +466,7 @@
           "selector": {
             "scope": "own"
           },
-          "sha256": "1abbbd5c849ca555f5918c3542957be5668a7174b3185e518913da51cee397e1",
+          "sha256": "70499a9f943138c2e55d8d03fff49abf057d060b10c769d3e25c116b607e2870",
           "transforms": {
             "heading_shift": 0,
             "drop_lines": [
@@ -445,18 +477,22 @@
               {
                 "pattern": "^直前で問いなどとして挙げ",
                 "count": 1
+              },
+              {
+                "pattern": "^用語や状態を説明する文が",
+                "count": 1
               }
             ]
           },
           "substitutions": [],
           "class": "A",
-          "note": "A。L123 と L125（否定対比）をそのまま使う。L124 は rules.md、L126 は rules.md のカタログ2章の表と重なるので外す"
+          "note": "A。L123 と L125（否定対比）をそのまま使う。L124 は rules.md、L126 は rules.md のカタログ2章の表と重なるので外す。v2.5.0 で足された否定で終わる定義文の段落（L130）は rules.md の r-selflabel にだけ置き、SKILL.md には selflabel に短い文を足した"
         },
         {
           "kind": "rewritten",
           "id": "selflabel",
           "text": "extract/rewritten/selflabel.md",
-          "text_sha256": "f9b18779db54da30f0901fae650fdb242eaaec2188efe2926653f6aa85a97800",
+          "text_sha256": "42a7fc073194dac039bbda5af08a004f6dcbe1d47ca134e5c89f9785e97c16a9",
           "from": [
             {
               "source": "skills/yomiyasu/SKILL.md",
@@ -469,7 +505,7 @@
                 ]
               },
               "scope": "own",
-              "sha256": "1abbbd5c849ca555f5918c3542957be5668a7174b3185e518913da51cee397e1"
+              "sha256": "70499a9f943138c2e55d8d03fff49abf057d060b10c769d3e25c116b607e2870"
             }
           ],
           "class": "B",
@@ -567,7 +603,7 @@
           "kind": "rewritten",
           "id": "noun",
           "text": "extract/rewritten/noun.md",
-          "text_sha256": "9652be276e8c6fc9713e6b6cbde5b9fd4a953239adafd4d452ad0a98bf8bab43",
+          "text_sha256": "e734ce2dec69ed9f6f93afe16aaa4dfe68e7caf85fe54a3c5e09453007d8e52f",
           "from": [
             {
               "source": "skills/yomiyasu/SKILL.md",
@@ -580,7 +616,7 @@
                 ]
               },
               "scope": "own",
-              "sha256": "487b1efdb7df11b67ba5a8aa23d0d885c8f9df2e16e984904d851d6b50f96049"
+              "sha256": "8cf87d5065c456c25263536e37b8bf334ca0124a8cda58d4bfb94b17f458f7b1"
             }
           ],
           "class": "B",
@@ -613,7 +649,7 @@
           "kind": "rewritten",
           "id": "length",
           "text": "extract/rewritten/length.md",
-          "text_sha256": "2b6d9dd166015e0a33dd6aaa8055c75019008e3dc1f12b9411caa36a84418b83",
+          "text_sha256": "7cf0f6cd34914988dba6b43468c2699d70cee6487c386fc7039c80c5b4590eeb",
           "from": [
             {
               "source": "skills/yomiyasu/SKILL.md",
@@ -626,7 +662,7 @@
                 ]
               },
               "scope": "own",
-              "sha256": "3682b8441ca3a5db941ccb62a1f63ead29d4feb4d87496acbed0dfa18f6992b9"
+              "sha256": "84c1dea67e03f612eb9a2005450a9f3aede7825bcfeffeea2e7fa5c833496cb8"
             }
           ],
           "class": "B",
@@ -640,7 +676,7 @@
           "kind": "rewritten",
           "id": "heading",
           "text": "extract/rewritten/heading.md",
-          "text_sha256": "057e282b65a4f18eb3dd24a367198e78cd0a2345cbcdcd3be3ad1d62e593b68b",
+          "text_sha256": "9802659b8dc327e80534d7dc40c9bf41e146c4d7b360aa7ed08308061c3283dd",
           "from": [
             {
               "source": "skills/yomiyasu/SKILL.md",
@@ -653,7 +689,7 @@
                 ]
               },
               "scope": "own",
-              "sha256": "3261c0c7e83e56d40b14f2e93c01d617848ed2daa2872f4095d9fea97718dd75"
+              "sha256": "37e9cc1a18284e1d46f261b7b333d09dd3a2651c39fe4445e98c0fa1d17cb09f"
             }
           ],
           "class": "B",
@@ -846,7 +882,7 @@
                 ]
               },
               "scope": "own",
-              "sha256": "e90373e2f39acb4fb2f6e04d60392f021ae1ec5c999541a69792f7f2e6fbd99e"
+              "sha256": "3f1605828764d3779d7ea0f56db253a9a14245222a958331fec6680bf7364f93"
             }
           ],
           "class": "B",
@@ -869,7 +905,7 @@
                 ]
               },
               "scope": "own",
-              "sha256": "e90373e2f39acb4fb2f6e04d60392f021ae1ec5c999541a69792f7f2e6fbd99e"
+              "sha256": "3f1605828764d3779d7ea0f56db253a9a14245222a958331fec6680bf7364f93"
             }
           ],
           "class": "B",
@@ -904,8 +940,8 @@
           },
           "substitutions": [
             {
-              "old": "ほかの例は rephrase-test.md",
-              "new": "ほかの例は `references/rules.md` の「言い直しテスト」",
+              "old": "。ほかの例は rephrase-test.md",
+              "new": "",
               "count": 1
             },
             {
@@ -915,7 +951,7 @@
             }
           ],
           "class": "A*",
-          "note": "A*。言い直しテスト（L245）。参照先だけを mini の場所に替える"
+          "note": "A*。言い直しテスト（L245）。参照先だけを mini の場所に替える。1.2.0 で SKILL.md の上限（18,000字）に収めるため、言い直しテストのほかの例を指す括弧を外した（同じ節の最後の文が rules.md の「言い直しテスト」を指す）"
         },
         {
           "kind": "rewritten",
@@ -934,7 +970,7 @@
                 ]
               },
               "scope": "own",
-              "sha256": "e90373e2f39acb4fb2f6e04d60392f021ae1ec5c999541a69792f7f2e6fbd99e"
+              "sha256": "3f1605828764d3779d7ea0f56db253a9a14245222a958331fec6680bf7364f93"
             }
           ],
           "class": "B",
@@ -983,7 +1019,7 @@
           "kind": "rewritten",
           "id": "step4-visual",
           "text": "extract/rewritten/step4-visual.md",
-          "text_sha256": "aa3d1c1f2432be54b176fad5f870bee5c4cf1ab8abf55692e4bb1de09c17c065",
+          "text_sha256": "85d6939c9a1b6ad0389b7c28c6cdb99aa19bc04d5a76c05c3812493631e378cf",
           "from": [
             {
               "source": "skills/yomiyasu/SKILL.md",
@@ -1009,7 +1045,7 @@
                 ]
               },
               "scope": "own",
-              "sha256": "cf8c314f89f900e565160e9e6c2d1a36b752f4d208eac989dd184f10d3283cee"
+              "sha256": "9fdd8c2f87a6e12bbcc1d7b895eca599009614ddaa416a25d260a184d0194898"
             }
           ],
           "class": "B",
@@ -1045,7 +1081,7 @@
                 ]
               },
               "scope": "own",
-              "sha256": "cf8c314f89f900e565160e9e6c2d1a36b752f4d208eac989dd184f10d3283cee"
+              "sha256": "9fdd8c2f87a6e12bbcc1d7b895eca599009614ddaa416a25d260a184d0194898"
             }
           ],
           "class": "B",
@@ -1081,7 +1117,7 @@
                 ]
               },
               "scope": "own",
-              "sha256": "cf8c314f89f900e565160e9e6c2d1a36b752f4d208eac989dd184f10d3283cee"
+              "sha256": "9fdd8c2f87a6e12bbcc1d7b895eca599009614ddaa416a25d260a184d0194898"
             }
           ],
           "class": "B",
@@ -1091,7 +1127,7 @@
           "kind": "rewritten",
           "id": "output",
           "text": "extract/rewritten/output.md",
-          "text_sha256": "5a541e19504a8bd0d22c451900a4b9402b0a685ddbce0ed96f5af9cd7f30da18",
+          "text_sha256": "1cbdb4862b22e3ffd479dfd8a39fe2c3b82fe0c467570cc7de366bfcd4f3bd68",
           "from": [
             {
               "source": "skills/yomiyasu/SKILL.md",
@@ -1107,7 +1143,7 @@
             }
           ],
           "class": "B",
-          "note": "mini にない欄（事実の確かめ、硬化の検査、勢いの検査、見直し候補、verify の行、mode=）を外し、状態の行を mini の形にした"
+          "note": "mini にない欄（事実の確かめ、硬化の検査、勢いの検査、見直し候補、verify の行、mode=）を外し、状態の行を mini の形にした。1.2.0 で SKILL.md の上限に収めるため、確認の記録の状態の行の説明と、本文の欄の括弧の一部（Step 3 と基本原則と同じ中身）を縮めた"
         }
       ]
     },
@@ -1145,7 +1181,7 @@
           "selector": {
             "scope": "own"
           },
-          "sha256": "2105eba43dde1c51ed14737dff170f4145a2f9f57cd68f46bef517f2bb4dd0d4",
+          "sha256": "92b03d87dfb9b2f6597edf81932c98761882e71eb573a6ddbe6cc35c6a42a5de",
           "transforms": {
             "heading_shift": 0,
             "drop_lines": [
@@ -1290,6 +1326,46 @@
         },
         {
           "kind": "verbatim_edited",
+          "id": "r-personify",
+          "source": "skills/yomiyasu/SKILL.md",
+          "heading": {
+            "level": 3,
+            "text": "擬人化の解消",
+            "parents": [
+              "yomiyasu",
+              "1. 基本原則"
+            ]
+          },
+          "selector": {
+            "scope": "own"
+          },
+          "transforms": {
+            "heading_shift": 0,
+            "drop_lines": [
+              {
+                "pattern": "^非生物主語を直すのは",
+                "count": 1
+              }
+            ]
+          },
+          "substitutions": [
+            {
+              "old": "（gemini-syntax.md 原則3）",
+              "new": "",
+              "count": 1
+            },
+            {
+              "old": "（`references/slop-catalog.md` 8章、`references/audience.md`）",
+              "new": "（この文書のカタログの8章と、`references/doc-types.md` の「文書の種類と読者」）",
+              "count": 1
+            }
+          ],
+          "sha256": "aef69adec930885b30f3dc77364668dda0bd96881a8ebb42791cab1538346d92",
+          "class": "C",
+          "note": "C。v2.5.0 で足されたコードやシステムを説明する文書の段落。前の段落は SKILL.md の personify にある"
+        },
+        {
+          "kind": "verbatim_edited",
           "id": "r-hiyu",
           "source": "skills/yomiyasu/SKILL.md",
           "heading": {
@@ -1362,7 +1438,7 @@
           "selector": {
             "scope": "own"
           },
-          "sha256": "1abbbd5c849ca555f5918c3542957be5668a7174b3185e518913da51cee397e1",
+          "sha256": "70499a9f943138c2e55d8d03fff49abf057d060b10c769d3e25c116b607e2870",
           "transforms": {
             "heading_shift": 0,
             "drop_lines": [
@@ -1380,9 +1456,15 @@
               }
             ]
           },
-          "substitutions": [],
+          "substitutions": [
+            {
+              "old": "言い直しテスト（`references/rephrase-test.md`）の6点は変えません。",
+              "new": "言い直しテストの6点は変えません。",
+              "count": 1
+            }
+          ],
           "class": "C",
-          "note": "C。L124（もちろん）"
+          "note": "C。L124（もちろん）。v2.5.0 で足された否定で終わる定義文の段落の、mini にない rephrase-test.md への括弧を外した"
         },
         {
           "kind": "verbatim_edited",
@@ -1442,7 +1524,7 @@
           "selector": {
             "scope": "own"
           },
-          "sha256": "487b1efdb7df11b67ba5a8aa23d0d885c8f9df2e16e984904d851d6b50f96049",
+          "sha256": "8cf87d5065c456c25263536e37b8bf334ca0124a8cda58d4bfb94b17f458f7b1",
           "transforms": {
             "heading_shift": 0,
             "drop_lines": []
@@ -1472,7 +1554,7 @@
           "selector": {
             "scope": "own"
           },
-          "sha256": "3682b8441ca3a5db941ccb62a1f63ead29d4feb4d87496acbed0dfa18f6992b9",
+          "sha256": "84c1dea67e03f612eb9a2005450a9f3aede7825bcfeffeea2e7fa5c833496cb8",
           "transforms": {
             "heading_shift": 0,
             "drop_lines": [
@@ -1484,18 +1566,28 @@
           },
           "substitutions": [
             {
-              "old": "lint の pause_comma の候補は手がかりで（「を、」は候補に出ません）、候補でも上の残す読点",
-              "new": "上の残す読点",
+              "old": "lint の pause_comma の候補は手がかりで（6字以内の短い目的語の「を、」も候補に出ます。並べと長い目的語には出ません）、候補でも上の残す読点に当たるもの（長い主語や節の主語のあとなど）は外しません。",
+              "new": "",
               "count": 1
             },
             {
               "old": "文書の種類を決めずに lint の候補が出ないときも、提出の前に",
               "new": "提出の前に",
               "count": 1
+            },
+            {
+              "old": "、`references/slop-catalog.md` 9章のとおり残します",
+              "new": "、この文書のカタログの9章のとおり残します",
+              "count": 1
+            },
+            {
+              "old": "（スライドの見出しと箇条は `references/doc-types/slides.md` のとおりです）",
+              "new": "（スライドの見出しと箇条は `references/doc-types.md` の「スライド（slides）」のとおりです）",
+              "count": 1
             }
           ],
           "class": "C",
-          "note": "C。L152-158。lint の候補を指す句を外す"
+          "note": "C。L152-158 と、v2.5.0 で足された推敲で読点を足さない段落。lint の候補を指す句を外す。1.2.0 では、lint の pause_comma の候補を指す文をまるごと外した（残す読点の一覧は上にある）"
         },
         {
           "kind": "verbatim_edited",
@@ -1512,20 +1604,23 @@
           "selector": {
             "scope": "own"
           },
-          "sha256": "3261c0c7e83e56d40b14f2e93c01d617848ed2daa2872f4095d9fea97718dd75",
+          "sha256": "37e9cc1a18284e1d46f261b7b333d09dd3a2651c39fe4445e98c0fa1d17cb09f",
           "transforms": {
             "heading_shift": 0,
-            "drop_lines": []
+            "drop_lines": [
+              {
+                "pattern": "^議事録を推敲するときは、見出しを短",
+                "count": 1
+              },
+              {
+                "pattern": "^紹介記事・宣伝文の見出しのキャッチコ",
+                "count": 1
+              }
+            ]
           },
-          "substitutions": [
-            {
-              "old": "`references/domains/business.md` 3章",
-              "new": "`references/doc-types.md` の「業務・仕様・実務ドキュメント向け仕様」の3章",
-              "count": 1
-            }
-          ],
+          "substitutions": [],
           "class": "C",
-          "note": "C。節の全文"
+          "note": "C。節の全文。1.2.0 で上限に収めるため、議事録の見出しの行と紹介記事・宣伝文の見出しの行（SKILL.md の heading と同じ中身）を外した"
         },
         {
           "kind": "verbatim_edited",
@@ -1545,7 +1640,12 @@
           "sha256": "3fb018556f2f27a2b1b4b7d2c51c792121dcc5be9786cfb585570f5579033e51",
           "transforms": {
             "heading_shift": 0,
-            "drop_lines": []
+            "drop_lines": [
+              {
+                "pattern": "^意味を取り違えるおそれがなく、主語",
+                "count": 1
+              }
+            ]
           },
           "substitutions": [
             {
@@ -1555,7 +1655,7 @@
             }
           ],
           "class": "C",
-          "note": "C。節の全文。lint の規則の名前の文を外す"
+          "note": "C。節の全文。lint の規則の名前の文を外す。1.2.0 で上限に収めるため、助詞のあとで区切らない段落（r-length と SKILL.md の length と同じ中身）を外した"
         },
         {
           "kind": "verbatim_edited",
@@ -1594,7 +1694,7 @@
             },
             {
               "old": "lint の bold_label_list の候補は手がかりで、ラベルとコロンと太字はこの段落で決めます。",
-              "new": "ラベルとコロンと太字はこの段落で決めます。",
+              "new": "",
               "count": 1
             },
             {
@@ -1614,7 +1714,7 @@
             }
           ],
           "class": "C",
-          "note": "C。L180-187"
+          "note": "C。L180-187。1.2.0 では、lint の bold_label_list の候補を指す文をまるごと外した"
         },
         {
           "kind": "verbatim_edited",
@@ -1673,10 +1773,25 @@
               "old": "slop-catalog.md 7章",
               "new": "この文書の「AI生成文の不自然な語彙・構文カタログ」の7章",
               "count": 1
+            },
+            {
+              "old": "（「Aを B に置き換える」「Aは B に置き換える」の形は出さない。読点を挟んだ「Aを、B に置き換える」と「Aを B に変える」は出ることがある。見出しと「Aは使わず」「Aはせず」の文で、「まず」「第一に」などの語だけの句のあとに、原文で肯定していた側の語を A より後ろに肯定で出した形（## 手作業ではなく自動化で回す → ## まず、手作業の手順を自動化する）も出さない）",
+              "new": "",
+              "count": 1
+            },
+            {
+              "old": "同じ文（見出しと「Aは使わず」「Aはせず」では、A を肯定した節）に出たときと、「AとB」「Aに加えてB」「AだけでなくB」のように B と並べて肯定されたときに",
+              "new": "同じ文に出たときと、B と並べて肯定されたときに",
+              "count": 1
+            },
+            {
+              "old": "「まず、Aを減らす」「まず、Aを自動化する」のように A を減らす・変える推敲でも",
+              "new": "A を減らす・変える推敲（「まず、Aを減らす」）でも",
+              "count": 1
             }
           ],
           "class": "C",
-          "note": "C。本体の rephrase-test.md の全文。本体の diff を指す所を mini_check に替える（mini_check は本体 diff の meaning_risks を同じ値で出す）"
+          "note": "C。本体の rephrase-test.md の全文。本体の diff を指す所を mini_check に替える（mini_check は本体 diff の meaning_risks を同じ値で出す）。1.2.0 で上限に収めるため、否定対比の節（3章）の4の、mini_check が出す形と出さない形の細部（括弧の中の並び、同じ場合の2つ目の例）を外した。推敲の決まり（A を目的や優先の側へ移すのは誤り、候補がなくても読み比べる）は残した"
         },
         {
           "kind": "verbatim_edited",
@@ -1695,9 +1810,15 @@
             "heading_shift": 1,
             "drop_lines": []
           },
-          "substitutions": [],
+          "substitutions": [
+            {
+              "old": "原文が読者に伝えている未定や調査中の状態は本文に残し、推敲側が意味を読み取れないことについての説明や質問は本文に入れず、「変えたところ」や「書き手に確かめたい点」に置く。",
+              "new": "",
+              "count": 1
+            }
+          ],
           "class": "C",
-          "note": "C。カタログの題と前書き"
+          "note": "C。カタログの題と前書き。1.2.0 で上限に収めるため、未定と調査中の状態を本文に残す文（SKILL.md の tentative-keep と同じ中身）を外した"
         },
         {
           "kind": "verbatim_edited",
@@ -1716,11 +1837,16 @@
           "sha256": "23d3314affe5284a6909777542ffdc969c720921126f531a42368a66ba2aca63",
           "transforms": {
             "heading_shift": 1,
-            "drop_lines": []
+            "drop_lines": [
+              {
+                "pattern": "なお、「骨が折れる」「手を焼く」",
+                "count": 1
+              }
+            ]
           },
           "substitutions": [],
           "class": "C",
-          "note": "C。カタログの1章"
+          "note": "C。カタログの1章。1.2.0 で上限に収めるため、慣用句を残す段落（SKILL.md の hiyu と rules.md の r-hiyu と同じ中身）を外した"
         },
         {
           "kind": "verbatim_edited",
@@ -1739,11 +1865,16 @@
           "sha256": "a82306fa86882cc42681d16ae96fd824d65986fc0e053e3eaffff55b249ac7b1",
           "transforms": {
             "heading_shift": 1,
-            "drop_lines": []
+            "drop_lines": [
+              {
+                "pattern": "\\| \\*delve into\\*",
+                "count": 1
+              }
+            ]
           },
           "substitutions": [],
           "class": "C",
-          "note": "C。カタログの2章"
+          "note": "C。カタログの2章。1.2.0 で上限に収めるため、delve into の行を外した（同じ型の行が表に残る）"
         },
         {
           "kind": "verbatim_edited",
@@ -1909,10 +2040,15 @@
           "selector": {
             "scope": "subtree"
           },
-          "sha256": "5a8a26b172fdd2be9a9407022693a1d989916d0e515af080355dcf81c00c2370",
+          "sha256": "575954a86253f89539c0dee472a6cf2d002af5e794a7eea9db2b3e6647923a6b",
           "transforms": {
             "heading_shift": 1,
-            "drop_lines": []
+            "drop_lines": [
+              {
+                "pattern": "^\\|\\ 技術文のコードに人の知識や役目を持たせる",
+                "count": 1
+              }
+            ]
           },
           "substitutions": [
             {
@@ -1927,7 +2063,7 @@
             }
           ],
           "class": "C",
-          "note": "C。カタログの8章"
+          "note": "C。カタログの8章。v2.5.0 で足されたコードの擬人化の行は外した（r-personify の段落と同じ中身）"
         },
         {
           "kind": "verbatim_edited",
@@ -1943,14 +2079,19 @@
           "selector": {
             "scope": "subtree"
           },
-          "sha256": "ed2a9f91f76165d7e44fa8dd2728061d2e2ec5ef451738ba61d16d38b516c7ba",
+          "sha256": "46b827f739c775960bbf8f6df5eee49d963d79cde17d9157cfcc7c7a03630121",
           "transforms": {
             "heading_shift": 1,
-            "drop_lines": []
+            "drop_lines": [
+              {
+                "pattern": "^\\|\\ 短い主題、目的語、副詞のあとに読点が続き",
+                "count": 1
+              }
+            ]
           },
           "substitutions": [
             {
-              "old": "。lint は種類を指定したときに `pause_comma`（info）の候補として出す（「を、」は候補に出ない）。",
+              "old": "。lint は種類を指定したときに `pause_comma`（info）の候補として出す（6字以内の短い目的語の「を、」も候補に出す。並べと長い目的語には出さず、読み物の essay では出さない）。",
               "new": "。",
               "count": 1
             },
@@ -1966,7 +2107,7 @@
             }
           ],
           "class": "C",
-          "note": "C。カタログの9章"
+          "note": "C。カタログの9章。v2.5.0 で足された、短い区切りが続く文の行は外した（r-length の推敲で読点を足さない段落と同じ中身）"
         },
         {
           "kind": "verbatim_edited",
@@ -2116,12 +2257,30 @@
               {
                 "pattern": "^動詞を平易に言い換えた後",
                 "count": 1
+              },
+              {
+                "pattern": "^目的語を書かない他動詞の前に比較や条件の句が挟まると",
+                "count": 1
+              },
+              {
+                "pattern": "^\\|\\ 使い倒すことで、",
+                "count": 1
+              },
+              {
+                "pattern": "^\\|\\ 前後を取り違えると、",
+                "count": 1
               }
             ]
           },
-          "substitutions": [],
+          "substitutions": [
+            {
+              "old": "主題の「〜は」「〜では」は文末まで掛かって読まれる。主題のあとに「〜ため、」「〜て、」などで節が続く文は、後半も主題の話として読めるかを確かめる。主題が部品や処理の名前で、後半に別の名前（設定、マクロ、ファイル、ライブラリなど）を扱う動作が出てくる文は、後半もその主題の中の話かを原文と前後で確かめ、確かめられなければ主体や場所を足さずに原文を残し、どの主題の話かを書き手に確認する。後半が別のものの話だと原文から言えれば、後半の冒頭にその主体を書く。後半に主体が書いてある文と、主題の性質の続きの文は残す。次の表の文はすべて合成の例。",
+              "new": "次の表は、この文書の「主語と目的語の明確化」の目的語と主題の段落の例（すべて合成）。",
+              "count": 1
+            }
+          ],
           "class": "C",
-          "note": "C。原則 1。L41-45 と L47 は、この文書の「主語と目的語の明確化」と「段落と文の論理構造（つながり）」に同じ中身があるので外す"
+          "note": "C。原則 1。L41-45 と L47 は、この文書の「主語と目的語の明確化」と「段落と文の論理構造（つながり）」に同じ中身があるので外す。1.2.0 で上限（100KB）に収めるため、目的語の段落と主題の段落（どちらも r-subject の1つ目と2つ目の段落と同じ中身）を表への短い案内に替え、表の例4行のうち2行（使い倒す、前後を取り違える）を外した"
         },
         {
           "kind": "rewritten",
@@ -2160,17 +2319,16 @@
           "sha256": "f4d528d916f8dd5ead52559f07b4e5bc3e16c97a08783a09135a44110ef29610",
           "transforms": {
             "heading_shift": 1,
-            "drop_lines": []
+            "drop_lines": [
+              {
+                "pattern": "^\\-\\ 本文内の反復:",
+                "count": 1
+              }
+            ]
           },
-          "substitutions": [
-            {
-              "old": "doc-types/promo.md",
-              "new": "`references/doc-types.md` の「紹介記事・宣伝文（promo）」",
-              "count": 1
-            }
-          ],
+          "substitutions": [],
           "class": "C",
-          "note": "C。候補に出なくても確かめること"
+          "note": "C。候補に出なくても確かめること。1.2.0 で上限に収めるため、本文内の反復の行（r-logic と SKILL.md の logic と同じ中身）を外した"
         },
         {
           "kind": "verbatim_edited",
@@ -2552,12 +2710,16 @@
           "selector": {
             "scope": "subtree"
           },
-          "sha256": "a4e9f08113fc7efeaa523d67fb6125c33c7e179886698f1d76f72bf049ad1e51",
+          "sha256": "9bd9dac1e4886ebdc23cefc46d68ec1eeb06b98442eff1b34f992b5997d6213d",
           "transforms": {
             "heading_shift": 1,
             "drop_lines": [
               {
                 "pattern": "^lint\\ で外す規則:\\ ",
+                "count": 1
+              },
+              {
+                "pattern": "^\\| - その夜、直す前と後を比べた \\|",
                 "count": 1
               }
             ]
@@ -2595,7 +2757,7 @@
             }
           ],
           "class": "C",
-          "note": "C。本体の doc-types/slides.md。lint の規則の行と、mini にない検査・事実の補いを指す句を外す。v2.4.0 の見出しと箇条の読点と、スライドの前後の注記を残す決まりは写す。lint の slide_comma の文は外し、slop-catalog.md の参照は mini の場所に替える"
+          "note": "C。本体の doc-types/slides.md。lint の規則の行と、mini にない検査・事実の補いを指す句を外す。v2.4.0 の見出しと箇条の読点と、スライドの前後の注記を残す決まりは写す。lint の slide_comma の文は外し、slop-catalog.md の参照は mini の場所に替える。1.2.0 で上限に収めるため、短い時の句の読点の例の行を外した"
         },
         {
           "kind": "verbatim_edited",
@@ -2750,6 +2912,14 @@
               {
                 "pattern": "^lint\\ で外す規則:\\ ",
                 "count": 1
+              },
+              {
+                "pattern": "^\\| 2\\. 焦がしニンニク油が香る本格派",
+                "count": 1
+              },
+              {
+                "pattern": "^\\| 自宅用にも配り用にも大活躍する",
+                "count": 1
               }
             ]
           },
@@ -2811,7 +2981,7 @@
             }
           ],
           "class": "C",
-          "note": "C。本体の doc-types/promo.md。lint の規則の行と、mini にない検査・事実の補いを指す句を外す"
+          "note": "C。本体の doc-types/promo.md。lint の規則の行と、mini にない検査・事実の補いを指す句を外す。1.2.0 で上限に収めるため、表の例の行を2つ（焦がしニンニク油、大活躍）外した（残す型の例は表に残る）"
         },
         {
           "kind": "verbatim_edited",
@@ -2992,6 +3162,10 @@
               {
                 "pattern": "^lint\\ で外す規則:\\ ",
                 "count": 1
+              },
+              {
+                "pattern": "^\\| 少年「やった！」 \\|",
+                "count": 1
               }
             ]
           },
@@ -3028,7 +3202,7 @@
             }
           ],
           "class": "C",
-          "note": "C。本体の doc-types/script.md（v2.2.0）。lint の規則の行と、mini にない検査・事実の補いを指す句を外す。dialogue_period の印の条件（台詞10個以上、「。」で終わる台詞が5割以上）を、目で数える条件に書き換えた"
+          "note": "C。本体の doc-types/script.md（v2.2.0）。lint の規則の行と、mini にない検査・事実の補いを指す句を外す。dialogue_period の印の条件（台詞10個以上、「。」で終わる台詞が5割以上）を、目で数える条件に書き換えた。1.2.0 で上限に収めるため、「やった！」の例の行を外した（同じ決まりの例が残る）"
         },
         {
           "kind": "verbatim_edited",
@@ -3042,10 +3216,19 @@
           "selector": {
             "scope": "subtree"
           },
-          "sha256": "faeaf3ea41d93e11ef3f679263df23b02a6156da6baecb4eb4dd03f58aa41dd1",
+          "sha256": "efcd3b633477b816bab2e0257099394d89cc35ae943999e96ce7451df6fcbc1a",
           "transforms": {
             "heading_shift": 1,
-            "drop_lines": []
+            "drop_lines": [
+              {
+                "pattern": "^\\| 設定を保存した瞬間に、古いキャッシュが静かに壊れます。 \\|",
+                "count": 1
+              },
+              {
+                "pattern": "^コードやシステムの働きを、人の知識や会話",
+                "count": 1
+              }
+            ]
           },
           "substitutions": [
             {
@@ -3055,7 +3238,7 @@
             }
           ],
           "class": "C",
-          "note": "C。本体の domains/tech.md。調査の出典（著者とリンク）は本体のまま写す"
+          "note": "C。本体の domains/tech.md。調査の出典（著者とリンク）は本体のまま写す。1.2.0 で上限に収めるため、v2.5.0 で足されたコードの擬人化と calques.md を指す行（mini では SKILL.md と rules.md の「擬人化の解消」にある）と、「静かに壊れます」の例の行（同じ表に同じ型の例が残る）を外した"
         },
         {
           "kind": "verbatim_edited",
@@ -3072,7 +3255,16 @@
           "sha256": "416d0752959ae43cd030f2cbcee76425d457ae37f153164db64f7884f7df7685",
           "transforms": {
             "heading_shift": 1,
-            "drop_lines": []
+            "drop_lines": [
+              {
+                "pattern": "^\\| 現状の課題について解像度を上げます。 \\|",
+                "count": 1
+              },
+              {
+                "pattern": "^\\| 新機能の手触り感を確認します。 \\|",
+                "count": 1
+              }
+            ]
           },
           "substitutions": [
             {
@@ -3082,7 +3274,7 @@
             }
           ],
           "class": "C",
-          "note": "C。本体の domains/business.md"
+          "note": "C。本体の domains/business.md。1.2.0 で上限に収めるため、表の例の行を2つ（解像度を上げる、手触り感）外した（同じ型の例が残る）"
         },
         {
           "kind": "verbatim_edited",

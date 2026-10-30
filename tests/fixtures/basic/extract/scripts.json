@@ -4,8 +4,8 @@
   "version": "1.0.0",
   "source": {
     "repository": "nanaism/yomiyasu",
-    "tag": "v2.4.0",
-    "commit": "ae258d7a57b335673e30b88a018ae08d4f72c449",
+    "tag": "v2.5.0",
+    "commit": "29d67ccb05e370b5958d72920a9cd1aa829dee80",
     "skill_dir": "skills/yomiyasu"
   },
   "scripts": [

@@ -152,11 +152,13 @@
 部品ごとの扱いは extract/table.json の各部品の class と note にある。写していないもの（D）は次のとおり。
 
 - 本体の道具に関わる手順と欄: SKILL.md Step 3 の check の CLI（run、--stdin、--stance、--fact-gaps、--material、--doc-type、--reader）、Step 5「提出の前の照合」（verify、ハッシュ、記録、--no-record）、出力の雛形の「事実の確かめ」「硬化の検査」「勢いの検査」「見直し候補」と verify の行、lint の規則の名前と「lint は…候補として出す」の文、diff の文体の硬化と勢い。mini には lint も check の記録もない。Step 5 のうち、残った直訳語と flag.txt の語を見直す確かめは、Step 4 の目で見る点検（step4-calque）に書き直した。
+- 本体 v2.4.0 と v2.5.0 で diff と check に足された節: 原文にない人や担当を足した文の候補（v2.4.0）と、見出しの形が変わった所と読点が増えた推敲を示す節（v2.5.0）。mini の検査は意味が変わる恐れだけを本体と同じ値で出す。v2.5.0 の2つの節は、入れると検査のスクリプトがもう1本要り、配るファイルが8つを超える。
+- 本体 v2.5.0 の SKILL.md の、検査のスクリプトの呼び出し方の決まり（python3、python、py -3 の順に試す）と、front matter の allowed-tools。mini はスクリプトの名前と呼び方が本体と違うため。
 - 本体 SKILL.md「情報の不増補（足さない）」の、相対の日付（昨日、先週）に日付を添える段落。本文に足す規則で、本体では check の「資料にない数値・名前」と組んで働くため。
 - references/fact-recovery.md と fact-recovery-details.md（資料と会話から事実を補う、直す）。check の --fact-gaps と「事実の確かめ」の欄に頼る仕組みなので、mini は資料から事実を補ったり直したりしない。
 - references/lists/ の語のファイル5個。本体の lint と diff が読む一覧で、mini には lint がない。rules.md のカタログの行は例の語を行の中に持っている。
-- references/slop-catalog.md の3章（2026年急増語）。lint の語彙と同じ一覧で、大きさの余りを残すため。
+- references/slop-catalog.md の3章（2026年急増語）。lint の語彙と同じ一覧で、大きさの余りを残すため。v2.5.0 で足された10章（2026年に見つかった言い回し）も写していない。lint が `ai_phrase` と `calque` の型3で出す候補の扱いを並べた章で、mini には lint がないため。
 - references/gemini-syntax.md の調査の節と原則2〜14。SKILL.md 1章と、rules.md に写した節と重なる。写したのは頭と原則1（SKILL.md が「例は原則1」と指す先）だけ。
-- references/persona.md の1章（いつ読むか）と3章（決め方）、references/audience.md の1章、3〜5章、11〜14章。読むときと決め方は SKILL.md の Step 1 にあり、audience.md 13章の表は SKILL.md の種類の表と重なる。ほかは読者像の書き方と例。
+- references/persona.md の1章（いつ読むか）と3章（決め方）、references/audience.md の1章、3〜5章、11〜14章。読むときと決め方は SKILL.md の Step 1 にあり、audience.md 13章の表は SKILL.md の種類の表と重なる。ほかは読者像の書き方と例。11章に v2.5.0 で足された初心者向けの口調の項目も、参照ファイルの上限（100KB）に入らないので写していない。
 - references/review-points.md の1章と2章（本体の check の出力の読み方）。
 - assets/ の画像と .codex-plugin/plugin.json。

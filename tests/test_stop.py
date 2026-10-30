@@ -101,9 +101,9 @@ class FixtureStopTest(unittest.TestCase):
         done = self.generate()
         self.assertReview(done, ["subject-third", "subject-head from 0"], ["subject-first", "personify"])
 
-    # 置き換え元の語が本体から消えると止まる
+    # 置き換え元の語が本体から消えると止まる（v2.5.0 で同じ語がコードの段落にも入ったので、part が使う前の段落の1か所だけを消す）
     def test_substitution_source_removed_stops(self):
-        _util.edit(self.path(SKILL), "（gemini-syntax.md 原則3）", "")
+        _util.edit(self.path(SKILL), "その人の行動として書きます（gemini-syntax.md 原則3）", "その人の行動として書きます")
         self.assertStopped(self.generate(), "COUNT", "（gemini-syntax.md 原則3）")
 
     def test_drop_lines_count_changed_stops(self):

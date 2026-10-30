@@ -1,4 +1,4 @@
-# yomiyasu-mini 1.1.0。nanaism/yomiyasu v2.4.0（ae258d7a57b335673e30b88a018ae08d4f72c449）から tools/generate.py で生成した。手で直さない。
+# yomiyasu-mini 1.2.0。nanaism/yomiyasu v2.5.0（29d67ccb05e370b5958d72920a9cd1aa829dee80）から tools/generate.py で生成した。手で直さない。
 # 取り出した名前と中身の sha256 は extract/scripts.json と MANIFEST.json にある。
 """yomiyasu-mini の意味の検査の部品。本体の yomiyasu_diff.py と markdown_visibility.py の定義を、元の字のまま入れている。
 単独では使わない。同じフォルダの mini_check.py が読む。"""
@@ -56,9 +56,9 @@ def _mini_bind(name, names):
     except Exception as error:
         _mini_on_error(name, error)
 
-__version__ = "1.1.0"
-SOURCE_TAG = "v2.4.0"
-SOURCE_COMMIT = "ae258d7a57b335673e30b88a018ae08d4f72c449"
+__version__ = "1.2.0"
+SOURCE_TAG = "v2.5.0"
+SOURCE_COMMIT = "29d67ccb05e370b5958d72920a9cd1aa829dee80"
 
 _ASCII_PUNCT = set('!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~')
 _HTML_BLOCK_TAGS = set(('address article aside base basefont blockquote body caption center col colgroup '

@@ -1,4 +1,4 @@
-# yomiyasu-mini 1.1.0。nanaism/yomiyasu v2.4.0（ae258d7a57b335673e30b88a018ae08d4f72c449）から tools/generate.py で生成した。手で直さない。
+# yomiyasu-mini 1.2.0。nanaism/yomiyasu v2.5.0（29d67ccb05e370b5958d72920a9cd1aa829dee80）から tools/generate.py で生成した。手で直さない。
 # 取り出した名前と中身の sha256 は extract/scripts.json と MANIFEST.json にある。
 """yomiyasu-mini の意味の検査。原文と最終稿を比べ、意味が変わる恐れのある場所を挙げる。
 本体 yomiyasu（版は SOURCE_TAG）の diff() の meaning_risks、markers、new_words、lost_words、type_changes と同じ値を出す。
@@ -100,9 +100,9 @@ def _mini_bind(name, names):
     except Exception as error:
         _mini_on_error(name, error)
 
-__version__ = "1.1.0"
-SOURCE_TAG = "v2.4.0"
-SOURCE_COMMIT = "ae258d7a57b335673e30b88a018ae08d4f72c449"
+__version__ = "1.2.0"
+SOURCE_TAG = "v2.5.0"
+SOURCE_COMMIT = "29d67ccb05e370b5958d72920a9cd1aa829dee80"
 
 _mini_bind("mini_diff_1", "_ExactSequenceMatcher _Sides _line_sentences _sentence_pairs decode_source full_diff normalize")
 _mini_bind("mini_diff_2", "_LAST_TYPE_RANGES _RISK_ORDER _is_question _is_quote_row _logic_risks _mark_positions _marks_in _marks_risks _modality_risks _negation_marks _negation_risks _number_risks _protected_risks _question_risks _range_sentences _risk _sentence_spans _swap_risks _type_changes _type_ranges normalize_doc_type")

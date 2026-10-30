@@ -5,8 +5,8 @@ license: MIT
 metadata:
   version: "1.0.0"
   source-repository: "nanaism/yomiyasu"
-  source-tag: "v2.4.0"
-  source-commit: "ae258d7a57b335673e30b88a018ae08d4f72c449"
+  source-tag: "v2.5.0"
+  source-commit: "29d67ccb05e370b5958d72920a9cd1aa829dee80"
 ---
 
 # yomiyasu-mini
