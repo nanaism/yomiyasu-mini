@@ -1,0 +1,24 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "yomiyasu-mini",
+  "description": "Claude Code marketplace for yomiyasu-mini",
+  "owner": {
+    "name": "nanaism",
+    "email": "datealife2525@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "yomiyasu-mini",
+      "description": "AIが書いた日本語を推敲するスキル yomiyasu を、スキルの大きさに上限がある環境向けに短くしたスキル",
+      "version": "1.2.0",
+      "author": {
+        "name": "nanaism"
+      },
+      "source": "./",
+      "category": "productivity",
+      "homepage": "https://github.com/nanaism/yomiyasu-mini",
+      "repository": "https://github.com/nanaism/yomiyasu-mini",
+      "license": "MIT"
+    }
+  ]
+}

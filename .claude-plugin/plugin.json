@@ -1,0 +1,12 @@
+{
+  "name": "yomiyasu-mini",
+  "description": "AIが書いた日本語を推敲するスキル yomiyasu を、スキルの大きさに上限がある環境向けに短くしたスキル",
+  "version": "1.2.0",
+  "skills": "./skills/",
+  "author": {
+    "name": "nanaism"
+  },
+  "homepage": "https://github.com/nanaism/yomiyasu-mini",
+  "repository": "https://github.com/nanaism/yomiyasu-mini",
+  "license": "MIT"
+}
