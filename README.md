@@ -8,7 +8,7 @@ yomiyasu-mini は、AIが書いた日本語を推敲するスキル [yomiyasu](h
 
 意味を守る決まりは SKILL.md の本文に置き、細部と事例は2つの参照ファイルに移しました。意味が変わる恐れを数える検査は、本体の `yomiyasu_diff.py` と `markdown_visibility.py` から要る定義だけを取り出したスクリプトで行います。
 
-**使うのは [`skills/yomiyasu-mini/`](./skills/yomiyasu-mini/) の8つのファイルだけです。** このリポジトリのほかのファイルは、本体から作り直したり、本体と比べて測ったりするためのものです。
+**使うのは [`skills/yomiyasu-mini/`](./skills/yomiyasu-mini/) の8つのファイルだけです。** このリポジトリのほかのファイルは、Claude Code のプラグインとして入れるための設定（`.claude-plugin/`）と、本体から作り直したり、本体と比べて測ったりするためのものです。
 
 | ファイル・フォルダ | 中身 |
 |---|---|
@@ -16,6 +16,7 @@ yomiyasu-mini は、AIが書いた日本語を推敲するスキル [yomiyasu](h
 | `skills/yomiyasu-mini/references/` | `rules.md`（規則の細部と事例）と `doc-types.md`（文書の種類、分野、読者、書き手と読み手、文書の立場と文末） |
 | `skills/yomiyasu-mini/scripts/` | 検査の `mini_check.py` と、本体の diff から取り出した `mini_diff_1.py`〜`mini_diff_3.py` |
 | `skills/yomiyasu-mini/LICENSE.txt` | MIT ライセンス |
+| `.claude-plugin/` | Claude Code のプラグインとして入れるための設定（`plugin.json` と `marketplace.json`） |
 | `extract/`、`tools/`、`MANIFEST.json` | 本体から作り直すための抽出表、生成と `.zip` のスクリプト、生成の記録 |
 | `measurement/` | 本体と比べて測った結果 |
 | `tests/` | 生成、上限、本体との一致の試験 |
@@ -58,6 +59,27 @@ python3 tools/build_zip.py --out dist/yomiyasu-mini-1.2.0.zip
 ```
 
 `.zip` の中身は `yomiyasu-mini/` フォルダの下の8つのファイルです。`build_zip.py` は作る前と作ったあとに上の上限を確かめ、超えていれば何も書かずに止まります。同じ中身からは、いつ作っても同じバイトの `.zip` ができます。
+
+### Claude Code のプラグインとして入れる
+
+```text
+/plugin marketplace add nanaism/yomiyasu-mini
+/plugin install yomiyasu-mini@yomiyasu-mini
+```
+
+Claude Code にプラグインで入れたスキルは `yomiyasu-mini:yomiyasu-mini` という名前になります。
+
+入れたプラグインを最新版へ更新するときは、ターミナルで次のコマンドを実行します。
+
+```bash
+# マーケットプレイスの情報を更新
+claude plugin marketplace update yomiyasu-mini
+
+# プラグインを最新版へ更新
+claude plugin update yomiyasu-mini@yomiyasu-mini
+```
+
+更新を反映するには、Claude Code を再起動してください。
 
 ### スキルのフォルダとして置く
 
@@ -142,7 +164,7 @@ mini は、スキルの大きさに上限があって本体を入れられない
    git clone --depth 1 --branch v2.5.0 https://github.com/nanaism/yomiyasu _main
    ```
 
-2. 本体のバージョンが変わったら、`extract/table.json` と `extract/scripts.json` の `source`（tag と commit）を書き直します。`.github/workflows/ci.yml` の `ref` と、試験用の抽出表 `tests/fixtures/basic/extract/table.json` と `scripts.json` の `source` も同じ値にします。中身が変わったときは、mini 自身のバージョン（`version`）も上げてください。
+2. 本体のバージョンが変わったら、`extract/table.json` と `extract/scripts.json` の `source`（tag と commit）を書き直します。`.github/workflows/ci.yml` の `ref` と、試験用の抽出表 `tests/fixtures/basic/extract/table.json` と `scripts.json` の `source` も同じ値にします。中身が変わったときは、mini 自身のバージョン（`version`）も上げてください。上げたときは、`.claude-plugin/plugin.json` と `.claude-plugin/marketplace.json` の `version` も同じ値にします（`tests/test_plugin.py` が確かめます）。
 3. 生成します。
 
    ```bash
